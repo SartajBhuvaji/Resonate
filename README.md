@@ -1,2 +1,3 @@
 # Resonate
-Data Science Capstone Projecct
+Data Science Capstone Project
+CPSC 5830 01 24WQ Data Science Capstone Project
