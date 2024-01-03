@@ -1,2 +1,2 @@
 # Resonate
-Data Science Capstone Projecct
+Data Science Capstone Project
