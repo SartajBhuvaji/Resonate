@@ -1,5 +1,5 @@
+# # Taken from https://github.com/yinruiqing/pyannote-whisper
 from pyannote.core import Segment, Annotation, Timeline
-
 
 def get_text_with_timestamp(transcribe_res):
     timestamp_texts = []
