@@ -1,6 +1,8 @@
 # AWS utility functions for Resonate
 # Author: Sartaj
 
+# Documentation: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/transcribe/client/start_transcription_job.html
+
 import boto3
 import dotenv
 import os
