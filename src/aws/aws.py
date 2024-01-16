@@ -166,7 +166,7 @@ def delete_s3_bucket(s3, bucket_name):
         return False  
 
 
-def transcribe_audio(transcribe_client: boto3.client, URI: str, output_bucket: str, transcribe_job_name: str='job')-> dict:
+def transcribe_audio(transcribe_client: boto3.client, uri: str, output_bucket: str, transcribe_job_name: str='job')-> dict:
     """
     Start a transcription job for audio stored in an S3 bucket using the AWS Transcribe service.
 
@@ -187,7 +187,7 @@ def transcribe_audio(transcribe_client: boto3.client, URI: str, output_bucket: s
             'ChannelIdentification': False,
         },  
         Media = {
-            'MediaFileUri': URI
+            'MediaFileUri': uri
         },
         Subtitles={
             'Formats': ['vtt']
