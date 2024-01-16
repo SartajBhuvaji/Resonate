@@ -137,24 +137,33 @@ def delete_from_s3(s3: boto3.client, bucket_name: str, object_name: str) -> bool
         return False
 
 
-def delete_s3_bucket(s3: boto3.client, bucket_name: str) -> bool:
+def delete_s3_bucket(s3, bucket_name):
     """
-    Delete an S3 bucket using the provided AWS S3 client.
+    Delete an S3 bucket along with its contents using the provided AWS S3 client.
 
     :param s3: The AWS S3 client used to interact with S3 services.
     :type s3: boto3.client
     :param bucket_name: The name of the S3 bucket.
     :type bucket_name: str
-    :return: True if the S3 bucket was deleted successfully, else False.
+    :return: True if the S3 bucket and its contents were deleted successfully, else False.
     :rtype: bool
     """    
     try:
+        # List all objects in the bucket
+        objects = s3.list_objects(Bucket=bucket_name).get('Contents', [])
+        
+        # Delete each object in the bucket
+        for obj in objects:
+            s3.delete_object(Bucket=bucket_name, Key=obj['Key'])
+            print(f"Object '{obj['Key']}' deleted successfully from '{bucket_name}'")
+
+        # Delete the bucket
         s3.delete_bucket(Bucket=bucket_name)
-        print(f"S3 bucket '{bucket_name}' deleted successfully.")
+        print(f"S3 bucket '{bucket_name}' and its contents deleted successfully.")
         return True
     except Exception as e:
         print(f"Error deleting S3 bucket '{bucket_name}': {e}")
-        return False    
+        return False  
 
 
 def transcribe_audio(transcribe_client: boto3.client, URI: str, output_bucket: str, transcribe_job_name: str='job')-> dict:
@@ -210,7 +219,6 @@ def runner():
     # Download transcription job output
     print(download_from_s3(s3_client, transcribe_job_name, output_bucket, local_directory='.'))
 
-    transcribe_client.delete_transcription_job(TranscriptionJobName=transcribe_job_name)
+    transcribe_client.delete_transcription_job(TranscriptionJobName = transcribe_job_name)
     transcribe_client.close()
     s3_client.close()
-    
