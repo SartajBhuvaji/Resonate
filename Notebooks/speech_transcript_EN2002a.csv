@@ -32,13 +32,13 @@ start,end,speaker,text
 36.0,37.0,SPEAKER_01, Mm-hmm.
 37.0,39.0,SPEAKER_02," Oh, I've got a blind spot."
 39.0,40.0,SPEAKER_02," Oh, my God."
-40.0,42.0,, Give it a sec.
+40.0,42.0,SPEAKER_02, Give it a sec.
 42.0,43.0,SPEAKER_05, Give it a sec.
 43.0,44.0,SPEAKER_05, Give it a sec.
 44.0,45.0,SPEAKER_02, Give it a sec.
 45.0,46.0,SPEAKER_02, Give it a sec.
-46.0,47.0,, Give it a sec.
-47.0,48.0,, Okay.
+46.0,47.0,SPEAKER_02, Give it a sec.
+47.0,48.0,SPEAKER_03, Okay.
 48.0,49.0,SPEAKER_03," So, yeah."
 49.0,52.0,SPEAKER_03, We've got a browser we've got.
 52.0,59.0,SPEAKER_03," A browser we've, which comes up automatically with the transcription box and the topics."
@@ -51,7 +51,7 @@ start,end,speaker,text
 85.0,90.0,SPEAKER_03, That makes sense.
 90.0,97.0,SPEAKER_03," The transcription box has got a summarised box, but not just doing it."
 97.0,104.0,SPEAKER_03," Now, I wonder how we want to do, you know, we want to pop up, we know where this speaker character"
-104.0,115.0,," is. Either we could do that, you know, when does it pop up come either, we can, when you click on the ID, any sort of ID in the transcription box."
+104.0,115.0,SPEAKER_03," is. Either we could do that, you know, when does it pop up come either, we can, when you click on the ID, any sort of ID in the transcription box."
 115.0,120.0,SPEAKER_03," Or we can put an extra button, extra for the buttons, and extra for the button."
 120.0,128.0,SPEAKER_03," So that you actually in the transcription box, but so you click on the button and then it opens and it's via that speaker character."
 128.0,138.0,SPEAKER_03," The problem is the left click is already used because it highlights that part speech or whatever that, what do you think?"
@@ -143,8 +143,8 @@ start,end,speaker,text
 364.0,367.52,SPEAKER_05," With that speaker characterization, that's what we call the"
 367.52,369.0,SPEAKER_03, other thing. Yeah.
 369.0,372.0,SPEAKER_03, So should we try to do a right click when you're in it?
-372.0,373.0,, Yeah.
-373.0,374.0,, All right.
+372.0,373.0,SPEAKER_03, Yeah.
+373.0,374.0,SPEAKER_02, All right.
 374.0,376.0,SPEAKER_06," Well, is that just from the main?"
 376.0,377.0,SPEAKER_06, No.
 377.0,385.0,SPEAKER_06," Even if it's one, because I have a particular window, like if we want to try to get like it were on the users versus like a topic or something."
@@ -166,7 +166,7 @@ start,end,speaker,text
 410.0,421.0,SPEAKER_03, So we have basically two options of browsing the meetings is by either searching and opening individual observations.
 421.0,424.0,SPEAKER_03, And then we have the interlinking by right click.
 424.0,425.0,SPEAKER_06, Okay.
-425.0,426.0,, Right.
+425.0,426.0,SPEAKER_06, Right.
 426.0,427.0,SPEAKER_06, Actually.
 427.0,428.0,SPEAKER_06, Yeah.
 428.0,435.0,SPEAKER_06," Like another company like if we have it so set up that's, if you double click and it goes to a default thing on the menu, I mean that's kind of a typical kind of action."
@@ -208,18 +208,18 @@ start,end,speaker,text
 526.0,530.0,SPEAKER_03," I don't, I don't, I really don't see anything obvious that."
 530.0,531.0,SPEAKER_03, I don't know.
 531.0,534.0,SPEAKER_03, I don't know if you can think of something like that.
-534.0,535.0,, Yeah.
-535.0,536.0,, Okay.
-536.0,537.0,, So.
+534.0,535.0,SPEAKER_03, Yeah.
+535.0,536.0,SPEAKER_03, Okay.
+536.0,537.0,SPEAKER_03, So.
 537.0,538.0,SPEAKER_03, Okay.
 538.0,539.0,SPEAKER_03, So.
 539.0,540.0,SPEAKER_02, So.
-540.0,541.0,, Okay.
-541.0,542.0,, So.
+540.0,541.0,SPEAKER_02, Okay.
+541.0,542.0,SPEAKER_02, So.
 542.0,543.0,SPEAKER_02, So.
 543.0,544.0,SPEAKER_02, So.
 544.0,545.0,SPEAKER_02, Please.
-545.0,546.0,, Yeah.
+545.0,546.0,SPEAKER_03, Yeah.
 546.0,547.0,SPEAKER_02, What you're clicking on.
 547.0,548.0,SPEAKER_02," Oh, sorry."
 548.0,549.0,SPEAKER_03," Um, yeah."
@@ -263,8 +263,8 @@ start,end,speaker,text
 601.0,602.0,SPEAKER_05, Yeah.
 602.0,603.0,SPEAKER_05, Before.
 603.0,604.0,SPEAKER_05, Yeah.
-604.0,605.0,, Before.
-605.0,606.0,, Yeah.
+604.0,605.0,SPEAKER_02, Before.
+605.0,606.0,SPEAKER_06, Yeah.
 606.0,612.0,SPEAKER_03," And yeah, what do people think in general about the Windows Cluttering?"
 612.0,613.0,SPEAKER_03, That you can mention.
 613.0,619.0,SPEAKER_06, Do you think we call it a need that don't tap the full flexibility we need to have.
@@ -307,7 +307,7 @@ start,end,speaker,text
 688.0,689.0,SPEAKER_05, Maybe sometimes.
 689.0,692.0,SPEAKER_05, It's a bit of a couple.
 692.0,693.0,SPEAKER_03, I can have a look.
-693.0,694.0,, Yeah.
+693.0,694.0,SPEAKER_06, Yeah.
 694.0,695.0,SPEAKER_02, Yeah.
 695.0,696.0,SPEAKER_02, Yeah.
 696.0,697.0,SPEAKER_02, Yeah.
@@ -317,8 +317,8 @@ start,end,speaker,text
 702.0,703.0,SPEAKER_02, Yeah.
 703.0,704.0,SPEAKER_02, Yeah.
 704.0,705.0,SPEAKER_06, Yeah.
-705.0,706.0,, Yeah.
-706.0,707.0,, Yeah.
+705.0,706.0,SPEAKER_05, Yeah.
+706.0,707.0,SPEAKER_02, Yeah.
 707.0,709.0,SPEAKER_06, We're even just have buttons on it.
 709.0,710.0,SPEAKER_06, Totally buttons or something on the toolbar.
 710.0,711.0,SPEAKER_06, That window.
@@ -352,7 +352,7 @@ start,end,speaker,text
 747.0,748.0,SPEAKER_03, You do manage them.
 748.0,749.0,SPEAKER_05, Yeah.
 749.0,750.0,SPEAKER_05, Yeah.
-750.0,751.0,, Yeah.
+750.0,751.0,SPEAKER_04, Yeah.
 751.0,752.0,SPEAKER_05, Yeah.
 752.0,753.0,SPEAKER_05, Yeah.
 753.0,756.0,SPEAKER_05," Unless Katie, I thought I suppose you can minimize them and stuff like that."
@@ -373,7 +373,7 @@ start,end,speaker,text
 780.0,781.0,SPEAKER_03, Yeah.
 781.0,782.0,SPEAKER_03, That was a plan for the dysphonuses anyway.
 782.0,783.0,SPEAKER_03, Yeah.
-783.0,784.0,," So, yeah."
+783.0,784.0,SPEAKER_02," So, yeah."
 784.0,787.0,SPEAKER_03, Do you want to do that with some reason?
 787.0,790.0,SPEAKER_03, Put the summaries in the same window.
 790.0,791.0,SPEAKER_03, Me tree.
@@ -388,8 +388,8 @@ start,end,speaker,text
 806.0,807.0,SPEAKER_03, Yeah.
 807.0,808.0,SPEAKER_05, Yeah.
 808.0,813.0,SPEAKER_03, Yeah.
-813.0,815.0,, Yeah.
-815.0,816.0,, Yeah.
+813.0,815.0,SPEAKER_01, Yeah.
+815.0,816.0,SPEAKER_02, Yeah.
 816.0,817.0,SPEAKER_03, Yeah.
 817.0,823.0,SPEAKER_03," And for the late prototype, he's a bit of a little more kind of prototype could be pretty used."
 823.0,824.0,SPEAKER_06, I need a few more.
@@ -421,7 +421,7 @@ start,end,speaker,text
 887.0,888.0,SPEAKER_02, Yeah.
 888.0,889.0,SPEAKER_02, Yeah.
 889.0,890.0,SPEAKER_00, I know.
-890.0,891.0,, Yeah.
+890.0,891.0,SPEAKER_00, Yeah.
 891.0,892.0,SPEAKER_06, Yeah.
 892.0,900.0,SPEAKER_06," Actually, just the code accessible, like the GUI stuff that you've done, like can we just like copy and like play this stuff, like your directory."
 900.0,903.0,SPEAKER_06," Um, like if we're going to just try and take a look or something."
@@ -456,7 +456,7 @@ start,end,speaker,text
 944.0,945.0,SPEAKER_03, You can.
 945.0,946.0,SPEAKER_03," Oh, for."
 946.0,947.0,SPEAKER_03," For five, five, five."
-947.0,948.0,," For six, oh."
+947.0,948.0,SPEAKER_03," For six, oh."
 948.0,949.0,SPEAKER_03," For five, five, six, oh."
 949.0,950.0,SPEAKER_03," For five, five, six, oh."
 950.0,951.0,SPEAKER_03, And then it's.
@@ -528,7 +528,7 @@ start,end,speaker,text
 1055.0,1056.0,SPEAKER_03, Yeah.
 1056.0,1057.0,SPEAKER_03, So you think you should be too difficult?
 1057.0,1059.0,SPEAKER_03, I don't know.
-1059.0,1060.0,, I was a bit worried about one.
+1059.0,1060.0,SPEAKER_03, I was a bit worried about one.
 1060.0,1065.0,SPEAKER_02," Well, I mean, talk about this with a file."
 1065.0,1066.0,SPEAKER_02, There's no one else.
 1066.0,1075.0,SPEAKER_02," I mean, how much do you actually need to do, like, like, extracting things from the XML files and stuff, to be able to do the indexing?"
@@ -548,7 +548,7 @@ start,end,speaker,text
 1102.0,1103.0,SPEAKER_05, Yeah.
 1103.0,1104.0,SPEAKER_01, Yeah.
 1104.0,1105.0,SPEAKER_05, Okay.
-1105.0,1106.0,, Yeah.
+1105.0,1106.0,SPEAKER_01, Yeah.
 1106.0,1107.0,SPEAKER_01," I mean,"
 1107.0,1115.0,SPEAKER_03," I mean, you should have, you have a look at the browser code then, because, you know, they already extract, for example, transcripts."
 1115.0,1116.0,SPEAKER_03, Yeah.
@@ -556,7 +556,7 @@ start,end,speaker,text
 1117.0,1118.0,SPEAKER_05, Yeah.
 1118.0,1119.0,SPEAKER_05, Yeah.
 1119.0,1120.0,SPEAKER_05, Yeah.
-1120.0,1121.0,," Oh, yeah."
+1120.0,1121.0,SPEAKER_05," Oh, yeah."
 1121.0,1122.0,SPEAKER_05, I don't know.
 1122.0,1127.0,SPEAKER_05, I'm sure I'm making a maze of it.
 1127.0,1129.0,SPEAKER_05, I'm not making a maze of it.
@@ -569,10 +569,10 @@ start,end,speaker,text
 1151.0,1152.0,SPEAKER_05, Should share as much as possible.
 1152.0,1153.0,SPEAKER_05, Yeah.
 1153.0,1154.0,SPEAKER_02, My worries.
-1154.0,1155.0,, Yeah.
+1154.0,1155.0,SPEAKER_02, Yeah.
 1155.0,1156.0,SPEAKER_02, Yeah.
 1156.0,1157.0,SPEAKER_02," Should we,"
-1157.0,1160.0,," I don't know, meet up and see what we could get."
+1157.0,1160.0,SPEAKER_02," I don't know, meet up and see what we could get."
 1160.0,1165.0,SPEAKER_02," I mean, I don't know, see what you've done, and see what we need."
 1165.0,1166.0,SPEAKER_02, Yeah.
 1166.0,1167.0,SPEAKER_02, When we need maybe.
@@ -619,7 +619,7 @@ start,end,speaker,text
 1255.0,1257.0,SPEAKER_05, I have a privilege.
 1257.0,1258.0,SPEAKER_05, Yeah.
 1258.0,1260.0,SPEAKER_05," So, that's the same way."
-1260.0,1263.0,," It's got, the, the ID is pretty."
+1260.0,1263.0,SPEAKER_05," It's got, the, the ID is pretty."
 1263.0,1268.0,SPEAKER_03," So, they don't, they don't say, look, that might fall there."
 1268.0,1269.0,SPEAKER_03, Yeah.
 1269.0,1270.0,SPEAKER_03," So,"
@@ -644,7 +644,7 @@ start,end,speaker,text
 1357.0,1359.0,SPEAKER_03," like, and is it?"
 1359.0,1367.0,SPEAKER_03," Well, it's in the code, just like, you know, you define a search object, and then search, that's the string."
 1367.0,1371.0,SPEAKER_03," I had to figure out how to, how to do the same thing, but somewhere that's how I, how to see,"
-1371.0,1376.0,," how to understand, how to do the transcript, how they did that, how they did the transcript, to do something like that."
+1371.0,1376.0,SPEAKER_03," how to understand, how to do the transcript, how they did that, how they did the transcript, to do something like that."
 1376.0,1377.0,SPEAKER_03," So,"
 1377.0,1379.0,SPEAKER_05," did you have to write it in the way that they write it, so we did?"
 1379.0,1380.0,SPEAKER_03, Yeah.
@@ -673,8 +673,8 @@ start,end,speaker,text
 1447.0,1448.0,SPEAKER_00, Yeah.
 1448.0,1449.0,SPEAKER_05, Yeah.
 1449.0,1450.0,SPEAKER_05, Yeah.
-1450.0,1451.0,, Yeah.
-1451.0,1452.0,, Yeah.
+1450.0,1451.0,SPEAKER_02, Yeah.
+1451.0,1452.0,SPEAKER_02, Yeah.
 1452.0,1453.0,SPEAKER_05, Yeah.
 1453.0,1454.0,SPEAKER_05, Yeah.
 1454.0,1455.0,SPEAKER_05, Yeah.
@@ -705,12 +705,12 @@ start,end,speaker,text
 1485.0,1488.0,SPEAKER_03," Am I supposed to do the, some realization thing about?"
 1488.0,1489.0,SPEAKER_01, Yeah.
 1489.0,1490.0,SPEAKER_01, Yeah.
-1490.0,1491.0,, Hey.
+1490.0,1491.0,SPEAKER_02, Hey.
 1491.0,1494.0,SPEAKER_03, Yeah.
 1494.0,1495.0,SPEAKER_03, Right.
 1495.0,1497.0,SPEAKER_06," Uh, what's doing?"
-1497.0,1498.0,, Yeah.
-1498.0,1499.0,, Right.
+1497.0,1498.0,SPEAKER_02, Yeah.
+1498.0,1499.0,SPEAKER_02, Right.
 1499.0,1500.0,SPEAKER_06, Yeah.
 1500.0,1501.0,SPEAKER_06, Yeah.
 1501.0,1502.0,SPEAKER_01, Yeah.
@@ -723,8 +723,8 @@ start,end,speaker,text
 1511.0,1512.0,SPEAKER_06, Yeah.
 1512.0,1513.0,SPEAKER_03, Yeah.
 1513.0,1514.0,SPEAKER_03, That should make sure you did it.
-1514.0,1515.0,, Yeah.
-1515.0,1516.0,, Yeah.
+1514.0,1515.0,SPEAKER_03, Yeah.
+1515.0,1516.0,SPEAKER_04, Yeah.
 1516.0,1518.0,SPEAKER_05, That's a lot of courses you should take.
 1518.0,1519.0,SPEAKER_05, We'll take it to a little bit in there.
 1519.0,1520.0,SPEAKER_05, Yeah.
@@ -909,7 +909,7 @@ start,end,speaker,text
 2063.64,2065.64,SPEAKER_02, I don't know if there was something.
 2065.64,2073.64,SPEAKER_02, I think it basically said the same things as college.
 2073.64,2075.64,SPEAKER_02, I could do it.
-2075.64,2077.64,, Okay.
+2075.64,2077.64,SPEAKER_02, Okay.
 2077.64,2078.64,SPEAKER_06, Maybe that.
 2078.64,2079.64,SPEAKER_06, Okay.
 2079.64,2088.64,SPEAKER_06," Uh, I think it's a really wonderful windows from a single app."
@@ -939,7 +939,7 @@ start,end,speaker,text
 2123.64,2124.64,SPEAKER_02, Okay.
 2124.64,2127.64,SPEAKER_05, Just signing off.
 2127.64,2128.64,SPEAKER_02, Yeah.
-2128.64,2129.64,, Okay.
+2128.64,2129.64,SPEAKER_02, Okay.
 2129.64,2130.64,SPEAKER_03, Okay.
 2130.64,2132.64,SPEAKER_03, She was trying to stop her.
 2132.64,2133.64,SPEAKER_03, Okay.
