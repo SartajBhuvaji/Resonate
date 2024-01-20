@@ -75,7 +75,7 @@ def aws_transcribe_parser(transcript: pd.DataFrame) -> None:
     transcript['group'] = (transcript['speaker_label'] != transcript['speaker_label'].shift()).cumsum()
     result_df = transcript.groupby(['group', 'speaker_label'], as_index=False).agg({'start_time': 'first', 'end_time': 'last', 'text': ' '.join})
     result_df = result_df.drop(columns=['group'])
-    transcript = result_df.copy()    
+    return result_df    
 
 
 def runner():
@@ -84,5 +84,5 @@ def runner():
     """
     file_name = 'test'
     transcript = combine_files(file_name)
-    aws_transcribe_parser(transcript)
+    transcript = aws_transcribe_parser(transcript)
     transcript.to_csv(f'./{file_name}.csv')
