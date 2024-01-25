@@ -9,8 +9,8 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 
 
 # Loading Transcripts from CSV file
-def load_transcript(file_name):
-    transcript = pd.read_csv(file_name)
+def load_transcript(transcript):
+    # transcript = pd.read_csv(file_name)
     transcript.drop(["end_time"], axis=1, inplace=True)
 
     # Iterate through rows and update the text column
@@ -22,8 +22,8 @@ def load_transcript(file_name):
     # Resetting index after dropping rows
     transcript.reset_index(drop=True, inplace=True)
     # Display the updated dataframe
-    print("Transcript")
-    display(transcript)
+    # print("Transcript")
+    # display(transcript)
     return transcript
 
 

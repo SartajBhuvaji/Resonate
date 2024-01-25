@@ -366,7 +366,9 @@ def combine_files(file_name: str) -> pd.DataFrame:
     return transcript
 
 
-def aws_transcribe_parser(transcript_df: pd.DataFrame, output_filename: str) -> bool:
+def aws_transcribe_parser(
+    transcript_df: pd.DataFrame, output_filename: str
+) -> pd.DataFrame:
     """
     Parses the AWS Transcribe output by cleaning duplicate texts and merging consecutive rows with
     the same speaker.
@@ -421,9 +423,9 @@ def aws_transcribe_parser(transcript_df: pd.DataFrame, output_filename: str) -> 
         {"start_time": "first", "end_time": "last", "text": " ".join}
     )
     result_df = result_df.drop(columns=["group"])
-    result_df.to_csv(f"./{output_filename}.csv", index=False)
-    print(f"Transcript saved to {output_filename}.csv")
-    return True
+    # result_df.to_csv(f"./{output_filename}.csv", index=False)
+    # print(f"Transcript saved to {output_filename}.csv")
+    return result_df
 
 
 def delete_local_temp_file(file_path: str) -> bool:
@@ -534,7 +536,7 @@ def runner(
         create_s3_bucket(s3_client, output_bucket),
     )
 
-    URI = upload_to_s3(s3_client, file_name + ".wav", input_bucket)
+    URI = upload_to_s3(s3_client, file_name, input_bucket)
     transcribe_audio(
         transcribe_client, URI, output_bucket, transcribe_job_name=transcribe_job_name
     )
@@ -578,13 +580,16 @@ def runner(
     df_transcript_combined = combine_files(
         transcribe_job_name
     )  # transcribe_job_name is the name of the file that contains the json and vtt results
-    print(
-        f"Transcript parsed successfully: {aws_transcribe_parser(transcript_df=df_transcript_combined, output_filename=transcribe_job_name)}"
+    df_transcript_combined_parsed = aws_transcribe_parser(
+        transcript_df=df_transcript_combined, output_filename=transcribe_job_name
     )
+    print(f"Transcript parsed successfully")
 
     # delete the temporary local files
     delete_local_temp_file(transcribe_job_name + ".json")
     delete_local_temp_file(transcribe_job_name + ".vtt")
+
+    return df_transcript_combined_parsed
 
 
 if __name__ == "__main__":
@@ -596,7 +601,7 @@ if __name__ == "__main__":
     input_bucket = "resonate-input"
     output_bucket = "resonate-output"
     transcribe_job_name = "resonate-job"
-    runner(
+    df = runner(
         file_name=file_name,
         input_bucket=input_bucket,
         output_bucket=output_bucket,
