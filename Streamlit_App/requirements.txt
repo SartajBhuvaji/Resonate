@@ -1,0 +1,21 @@
+# Core
+numpy
+pandas
+tqdm
+ipykernel
+boto3
+botocore
+jupyter
+ipywidgets
+python-dotenv
+waiting
+
+# Project Specific
+openai
+langchain-community
+langchain-openai
+langchain
+pinecone-client
+streamlit
+tiktoken
+webvtt-py
