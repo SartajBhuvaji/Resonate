@@ -112,13 +112,12 @@ class PineconeServerless:
                     "meeting_date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                     "meeting_video_file": meeting_video_file,
                     "meeting_members": meeting_members,
-                    
                 }
             )
             return data    
 
 
-    def _get_meeting_details(self, namespace: str, base_data_path: str) -> str:
+    def _get_meeting_details(self, namespace: str, base_data_path: str) -> tuple[int, int]:
         meeting_details_file = os.path.join(base_data_path, f'{namespace}.json')  
         if not os.path.exists(meeting_details_file):
            print('Namespace does not exist in JSON Store')
