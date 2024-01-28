@@ -290,9 +290,3 @@ class PineconeServerless:
                 df = pd.concat([df, pd.DataFrame(data, index=[0])], ignore_index=True)     
 
         return df
-
-def runner():
-    # If user wants to create a new namespace or use an existing namespace
-    # This would be handled in UI
-    # Call PineconeServerless with existing namespace or the namespace text input taken from UI
-    obj = PineconeServerless(namespace='default_namespace')
