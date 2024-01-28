@@ -7,12 +7,13 @@ from pinecone import Pinecone, ServerlessSpec
 from langchain.embeddings.openai import OpenAIEmbeddings
 import time
 dotenv.load_dotenv()
+from tqdm.autonotebook import tqdm
 
-# TODO : Move these to a config file
+# PENDING : Move these to a config file
 INDEX_NAME = 'langchain-retrieval-transcript'
 PINECONE_VECTOR_DIMENSION = 1536
 PINECONE_UPSERT_BATCH_LIMIT = 90
-PINECONE_TOP_K_RESULTS = 10
+PINECONE_TOP_K_RESULTS = 2
 DELTA = 2
 CLOUD_PROVIDER = 'aws'
 REGION = 'us-west-2'
@@ -30,7 +31,7 @@ class PineconeServerless:
         self.pinecone = Pinecone(api_key=PINECONE_API_KEY)
 
 
-    def check_index_already_exists(self) -> None:
+    def check_index_already_exists(self) -> bool:
         return self.index_name in self.pinecone.list_indexes()
 
 
@@ -38,10 +39,10 @@ class PineconeServerless:
         return self.pinecone.Index(self.index_name)
     
 
-    def _create_index(self) -> None:
+    def _create_index(self, INDEX_NAME: str) -> None:
         try:
             self.pinecone.create_index(
-                name=self.index_name,
+                name=INDEX_NAME,
                 metric=METRIC,
                 dimension=PINECONE_VECTOR_DIMENSION,
             
@@ -68,14 +69,14 @@ class PineconeServerless:
             return {}
 
     
-    def __delete_index(self, index_name: str) -> None:
+    def _delete_index(self, index_name: str) -> None:
         try:
             self.pinecone.delete_index(index_name)
         except Exception as e:
             print('Index does not exist: ', e)
 
 
-    def _set_new_meeting_json(self, namespace: str, last_conversation_no: str, meeting_members: list[str]) -> dict:
+    def _set_new_meeting_json(self, namespace: str, last_conversation_no: str, meeting_video_file: bool,meeting_members: list[str]) -> dict:
         data = {
                 "index": INDEX_NAME,
                 "namespace": namespace,
@@ -85,7 +86,9 @@ class PineconeServerless:
                 "meetings": [
                     {
                         "meeting_no": 1,
+                        "meeting_last_conversation_no": last_conversation_no,
                         "meeting_date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        "meeting_video_file": meeting_video_file,
                         "meeting_members": meeting_members,
                     },
                 ]
@@ -93,7 +96,7 @@ class PineconeServerless:
         return data
     
 
-    def _append_meeting_details(self,meeting_details_file: str, last_meeting_no: int, last_conversation_no: int, meeting_members: list[str]) -> dict:
+    def _append_meeting_details(self,meeting_details_file: str, last_meeting_no: int, last_conversation_no: int, meeting_video_file: bool, meeting_members: list[str]) -> dict:
         with open(meeting_details_file, 'r') as f:
             data = json.load(f)
             data['last_meeting_no'] = last_meeting_no + 1
@@ -105,8 +108,11 @@ class PineconeServerless:
             data['meetings'].append(
                 {
                     "meeting_no": last_meeting_no + 1,
+                    "meeting_last_conversation_no": last_conversation_no,
                     "meeting_date": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "meeting_video_file": meeting_video_file,
                     "meeting_members": meeting_members,
+                    
                 }
             )
             return data    
@@ -115,16 +121,16 @@ class PineconeServerless:
     def _get_meeting_details(self, namespace: str, base_data_path: str) -> str:
         meeting_details_file = os.path.join(base_data_path, f'{namespace}.json')  
         if not os.path.exists(meeting_details_file):
-           print('Namespace does not exist')
-           return 1, 1
+           print('Namespace does not exist in JSON Store')
+           return 1, 0
         
         with open(meeting_details_file, 'r') as f:
             data = json.load(f)
-            return data['last_meeting_no'], data['last_conversation_no']
+            return data['last_meeting_no'] + 1, data['last_conversation_no']
         
 
-    def _set_meeting_details(self, namespace: str, last_meeting_no: int, last_conversation_no: int, meeting_members: list[str], base_data_path:str ) -> None:
-        # TODO : Update the meeting details in the Firebase database
+    def _set_meeting_details(self, namespace: str, last_meeting_no: int, last_conversation_no: int, meeting_video_file: bool, meeting_members: list[str], base_data_path: str ) -> None:
+        # PENDING : Update the meeting details in the Firebase database
 
         if not os.path.exists(base_data_path):
             os.makedirs(base_data_path)
@@ -132,13 +138,16 @@ class PineconeServerless:
         meeting_details_file = os.path.join(base_data_path, f'{namespace}.json')  
 
         if not os.path.exists(meeting_details_file):
-            data = self._set_new_meeting_json(namespace, last_conversation_no, meeting_members)
+            data = self._set_new_meeting_json(namespace, last_conversation_no,meeting_video_file, meeting_members)
         else:
-            data = self._append_meeting_details(meeting_details_file, last_meeting_no, last_conversation_no, meeting_members)
+            data = self._append_meeting_details(meeting_details_file, last_meeting_no, last_conversation_no, meeting_video_file, meeting_members)
 
         with open(meeting_details_file, 'w') as f:
             json.dump(data, f, indent=4)
 
+    def _get_meeting_members(self, transcript: pd.DataFrame) -> list[str]:
+        return list(transcript['speaker_label'].unique())
+    
         
     def _get_vector_embedder(self, EMBEDDING: str = 'OpenAI'):
         if EMBEDDING == 'OpenAI':
@@ -146,18 +155,26 @@ class PineconeServerless:
                 model=EMBEDDING_MODEL,
                 openai_api_key=self.OPENAI_API_KEY)
         
+    
+    # PENDING 3 : get_entire_namespace_data 
+    def get_entire_namespace_data(self, namespace: str) -> pd.DataFrame: ##################
+        try:
+            index = self._get_index()
+            self.response = index.fetch_all(namespace=namespace) # does not work
+            return pd.DataFrame(self.response['vectors']).T
+        except Exception as e:
+            print('Error fetching from Pinecone: ', e)
+            return pd.DataFrame(columns=['id', 'meeting_id', 'speaker', 'start_time', 'text'])    
 
-    def pinecone_upsert(self, transcript: pd.DataFrame) -> None:
-        #TODO: TEST THIS
-        PINECONE_UPSERT_BATCH_LIMIT = 90
+
+    def pinecone_upsert(self, transcript: pd.DataFrame, meeting_video_file: bool=False) -> None:
         texts = []
         metadatas = []
 
         base_data_path = os.path.join(os.getcwd(), '../../','bin/data/', INDEX_NAME)
         meeting_no, last_conversation_no = self._get_meeting_details(self.namespace, base_data_path) 
 
-        #TODO: Get the meeting members from the transcript
-        meeting_members = ['test1', 'test2']
+        meeting_members = self._get_meeting_members(transcript) 
         embed = self._get_vector_embedder(EMBEDDING)
         index = self._get_index()
 
@@ -166,7 +183,7 @@ class PineconeServerless:
                 'speaker': record['speaker_label'],
                 'start_time': round(record['start_time'], 4), # fix a time format
                 'meeting_id': meeting_no,
-                'text': record['text'], # Storing the text in the metadata for now, later we'd need to decode it from vectors
+                'text': record['text'], 
             }
 
             texts.append(record['text']) 
@@ -193,10 +210,9 @@ class PineconeServerless:
             except Exception as e:
                 print('Error upserting into Pinecone: ', e)
 
-        self._set_meeting_details(self.namespace, meeting_no, last_conversation_no, meeting_members, base_data_path)     
+        self._set_meeting_details(self.namespace, meeting_no, last_conversation_no, meeting_video_file, meeting_members, base_data_path)     
 
 
-    #TODO: Querying pinecone
     def query_pinecone(self, query: str, namespace: str) -> list:
         try:
             index = self._get_index()
@@ -218,28 +234,47 @@ class PineconeServerless:
         return list(int(match['id']) for match in response['matches'])
 
 
-    def query_delta_conversations(self, namespace: str) -> dict:
+    # PENDING 2 : query_every_namespace returns all data from all indexes
+    def query_every_namespace(self, query:str) -> list: ################## ##################
+        index_info = self.describe_index_stats()
+        all_namespaces = index_info['namespaces']
+        print('All namespaces: ', all_namespaces)
+        self.response = []
+        for namespace in all_namespaces:
+            try:
+                namespace_response = self.query_pinecone(query, namespace=namespace)
+                self.response.append(namespace_response)
+            except Exception as e:
+                print('Error querying Pinecone namespace: ', namespace, 'Error:' , e)
+                continue
+
+        return self.response
+
+    def query_delta_conversations(self, namespace: str) -> pd.DataFrame:
         ids = self._extract_id_from_response(self.response)
         base_data_path = os.path.join(os.getcwd(), '../../','bin/data/', INDEX_NAME)
         _ , last_conversation_no = self._get_meeting_details(self.namespace, base_data_path) 
 
         index = self._get_index()
-        conversation = pd.DataFrame(columns=['flag_id', 'id', 'meeting_id', 'speaker', 'start_time', 'text'])
+        conversation = {}
+        print("Fetching conversation IDs: ", ids)
         for id in ids:
             left = id - DELTA if id - DELTA > 0 else 1
             right = id + DELTA if id + DELTA <= last_conversation_no else last_conversation_no
             window = [str(i) for i in range(left, right+1)]
+            print("Fetching ID in window size: ", window)
             try:
-                fetch_response = index.fetch(ids=window,namespace=namespace)
-                conversation[id] = fetch_response
+                fetch_response = index.fetch(ids=window,namespace=namespace) 
+                conversation[id] = fetch_response 
 
             except Exception as e:
-                print('Error fetching from Pinecone: ', e)    
+                print('Error fetching from Pinecone for id: ', id, " Error: ", e)    
+                continue
 
-            return self.parse_query_delta_conversations(conversation)
+        return self._parse_query_delta_conversations(conversation)
 
 
-    def parse_query_delta_conversations(self, conversation) -> pd.DataFrame:  
+    def _parse_query_delta_conversations(self, conversation) -> pd.DataFrame:  
         df = pd.DataFrame(columns=['primary_id', 'id', 'meeting_id', 'speaker', 'start_time', 'text'])
         for primary_id, values in conversation.items():
             for id_, details in values['vectors'].items():
@@ -248,11 +283,13 @@ class PineconeServerless:
                 speaker = details['metadata']['speaker']
                 text = details['metadata']['text']
 
-                df = df.append({'primary_id': primary_id, 'id': id_, 'meeting_id': meeting_id, 'speaker': speaker,
-                                 'start_time': start_time, 'text': text}, ignore_index=True)     
+                data = {'primary_id': primary_id, 'id': id_, 
+                        'meeting_id': meeting_id, 'speaker': speaker,
+                        'start_time': start_time, 'text': text}
+
+                df = pd.concat([df, pd.DataFrame(data, index=[0])], ignore_index=True)     
 
         return df
-    
 
 def runner():
     # If user wants to create a new namespace or use an existing namespace
