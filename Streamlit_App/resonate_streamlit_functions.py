@@ -67,20 +67,25 @@ def api_keys_input():
             st.session_state.api_keys["aws_access_key"] = aws_access_key
             st.session_state.api_keys["aws_secret_access_key"] = aws_secret_access_key
 
-            # os.environ["OPENAI_API_KEY"] = st.session_state.api_keys["openai_api_key"]
-            # os.environ["PINECONE_API_KEY"] = st.session_state.api_keys[
-            #     "pinecone_api_key"
-            # ]
-            # os.environ["AWS_ACCESS_KEY"] = st.session_state.api_keys["aws_access_key"]
-            # os.environ["AWS_SECRET_ACCESS_KEY"] = st.session_state.api_keys[
-            #     "aws_secret_access_key"
-            # ]
+            os.environ["OPENAI_API_KEY"] = st.session_state.api_keys["openai_api_key"]
+            os.environ["PINECONE_API_KEY"] = st.session_state.api_keys[
+                "pinecone_api_key"
+            ]
+            os.environ["AWS_ACCESS_KEY"] = st.session_state.api_keys["aws_access_key"]
+            os.environ["AWS_SECRET_ACCESS_KEY"] = st.session_state.api_keys[
+                "aws_secret_access_key"
+            ]
 
             st.session_state.api_keys_input = False
             st.rerun()
 
 
 def add_meeting(aws_config, pinecone_config, pinecone_index):
+    aws_config["aws_access_key"] = st.session_state.api_keys["aws_access_key"]
+    aws_config["aws_secret_access_key"] = st.session_state.api_keys[
+        "aws_secret_access_key"
+    ]
+
     with st.form("add_meeting_form"):
         uploaded_file = st.file_uploader("Choose a file", type=["mp3", "wav", "mp4"])
 
@@ -88,11 +93,6 @@ def add_meeting(aws_config, pinecone_config, pinecone_index):
         meeting_name = st.text_input("Enter Meeting Name:")
 
         save_meeting_button = st.form_submit_button("Save Meeting")
-
-        aws_config["aws_access_key"] = st.session_state.api_keys["aws_access_key"]
-        aws_config["aws_secret_access_key"] = st.session_state.api_keys[
-            "aws_secret_access_key"
-        ]
 
         if save_meeting_button:
             if not meeting_name:
@@ -155,6 +155,10 @@ def chat_resonate():
 def init_streamlit(aws_config, pinecone_config):
     # Initializing Components
 
+    # Initializing Pinecone
+    pinecone_index = None
+    pinecone = None
+
     # Set initial state of the sidebar
     st.set_page_config(initial_sidebar_state="collapsed")
     st.title("Resonate - Meeting Chatter")
@@ -168,48 +172,35 @@ def init_streamlit(aws_config, pinecone_config):
             st.session_state.api_keys_input = not st.session_state.api_keys_input
             if st.session_state.add_meeting == True:
                 st.session_state.add_meeting = False
-            if st.session_state.chat_resonate == True:
-                st.session_state.chat_resonate = False
+
+        if st.session_state.api_keys_input:
+            try:
+                api_keys_input()
+
+                # Initializing Pinecone
+                pinecone, pinecone_index = init_pinecone(
+                    pinecone_config["pinecone_api_key"],
+                    pinecone_config["pinecone_index_name"],
+                    pinecone_config["pinecone_index_metric"],
+                    pinecone_config["pinecone_index_dimension"],
+                    pinecone_config["pinecone_cloud_type"],
+                    pinecone_config["pinecone_cloud_region"],
+                )
+
+                # st.success("Pinecone Initialized successfully!")
+            # except TypeError as e:
+            #     print("API Keys Empty")
+            except Exception as e:
+                print(e)
 
         if st.session_state.api_keys["pinecone_api_key"] != "":
             if st.sidebar.button("Add Meeting"):
                 st.session_state.add_meeting = not st.session_state.add_meeting
                 if st.session_state.api_keys_input == True:
                     st.session_state.api_keys_input = False
-                if st.session_state.chat_resonate == True:
-                    st.session_state.chat_resonate = False
 
-            if st.sidebar.button("Chat Resonate"):
-                st.session_state.chat_resonate = not st.session_state.chat_resonate
-                if st.session_state.api_keys_input == True:
-                    st.session_state.api_keys_input = False
-                if st.session_state.add_meeting == True:
-                    st.session_state.add_meeting = False
-
-    # Initializing Pinecone
-    pinecone_index = None
-    if st.session_state.api_keys_input:
-        try:
-            api_keys_input()
-
-            # Initializing Pinecone
-            pinecone, pinecone_index = init_pinecone(
-                pinecone_config["pinecone_api_key"],
-                pinecone_config["pinecone_index_name"],
-                pinecone_config["pinecone_index_metric"],
-                pinecone_config["pinecone_index_dimension"],
-                pinecone_config["pinecone_cloud_type"],
-                pinecone_config["pinecone_cloud_region"],
-            )
-
-            # st.success("Pinecone Initialized successfully!")
-        # except TypeError as e:
-        #     print("API Keys Empty")
-        except Exception as e:
-            print(e)
+            if st.session_state.add_meeting:
+                add_meeting(aws_config, pinecone_config, pinecone_index)
 
     if st.session_state.api_keys["pinecone_api_key"] != "":
-        if st.session_state.chat_resonate:
-            chat_resonate()
-        if st.session_state.add_meeting:
-            add_meeting(aws_config, pinecone_config, pinecone_index)
+        chat_resonate()

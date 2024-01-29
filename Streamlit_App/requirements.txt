@@ -8,8 +8,6 @@ botocore
 jupyter
 ipywidgets
 python-dotenv
-waiting
-matplotlib
 
 # Project Specific
 openai
