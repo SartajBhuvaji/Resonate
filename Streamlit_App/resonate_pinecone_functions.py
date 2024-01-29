@@ -3,6 +3,8 @@ import time
 import pandas as pd
 from IPython.display import HTML, display
 from pinecone import Pinecone, ServerlessSpec
+from openai import OpenAI
+from tqdm.auto import tqdm
 
 display(HTML("<style>.container { width:100% !important; }</style>"))
 # pd.set_option("display.max_rows", None)
@@ -63,3 +65,55 @@ def init_pinecone(
         "pinecone_index.describe_index_stats()", pinecone_index.describe_index_stats()
     )
     return pinecone, pinecone_index
+
+
+def upsert_pinecone(pinecone_index, transcript, model_name, pinecone_namespace):
+    # Initializing Embedding
+    embed = OpenAIEmbeddings(model=model_name)
+
+    batch_limit = 90
+    transcript_texts = []
+    metadata_records = []
+    meeting_id = 1
+    start_id = 0
+
+    for i, record in tqdm(transcript.iterrows()):
+        # Extracting and Preparing metadata fields for each row of transcript
+        metadata = {
+            "speaker": record["speaker_label"],
+            "start_time": round(record["start_time"], 3),  # limit to 3 decimal places
+            "meeting_id": meeting_id,
+            "text": record["text"],
+        }  # Storing the text in the metadata for now, later we'd need to decode it from vectors
+
+        record_texts = record["text"]
+
+        transcript_texts.append(record_texts)
+        metadata_records.append(metadata)
+
+        # if we've reached the batch limit, then index the batch
+        if len(transcript_texts) >= batch_limit:
+            ids = [
+                str(i + 1) for i in range(start_id, (start_id + len(transcript_texts)))
+            ]
+            start_id += len(transcript_texts)
+            embeds = embed.embed_documents(transcript_texts)
+
+            pinecone_index.upsert(
+                vectors=zip(ids, embeds, metadata_records), namespace=pinecone_namespace
+            )
+            transcript_texts = []
+            metadata_records = []
+            meeting_id += 1
+
+    # add any remaining texts to the index
+    if len(transcript_texts) > 0:
+        ids = [str(i + 1) for i in range(start_id, (start_id + len(transcript_texts)))]
+
+        embeds = embed.embed_documents(transcript_texts)
+        pinecone_index.upsert(
+            vectors=zip(ids, embeds, metadata_records), namespace=pinecone_namespace
+        )
+
+    time.sleep(5)
+    # display(pinecone_index.describe_index_stats()) # Check index stats / data Freshness
