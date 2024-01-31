@@ -2,8 +2,9 @@ import time
 
 import pandas as pd
 from IPython.display import HTML, display
-from pinecone import Pinecone, ServerlessSpec
+from langchain_openai import OpenAIEmbeddings
 from openai import OpenAI
+from pinecone import Pinecone, ServerlessSpec
 from tqdm.auto import tqdm
 
 display(HTML("<style>.container { width:100% !important; }</style>"))
@@ -67,7 +68,7 @@ def init_pinecone(
     return pinecone, pinecone_index
 
 
-def upsert_pinecone(pinecone_index, transcript, model_name, pinecone_namespace):
+def upsert_pinecone(pinecone_index, transcript, model_name, pinecone_namespace=None):
     # Initializing Embedding
     embed = OpenAIEmbeddings(model=model_name)
 

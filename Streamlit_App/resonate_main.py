@@ -20,16 +20,15 @@ from resonate_streamlit_functions import init_streamlit
 # )
 
 # from IPython.display import HTML, display
-# from langchain_openai import OpenAIEmbeddings
 
 
 def main():
     # Initializing Variables
     aws_config = {
         "aws_region_name": "us-east-2",
-        "aws_input_bucket": "resonate-input",
-        "aws_output_bucket": "resonate-output",
-        "aws_transcribe_job_name": "resonate-job",
+        "aws_input_bucket": "resonate-input-jay",
+        "aws_output_bucket": "resonate-output-jay",
+        "aws_transcribe_job_name": "resonate-job-jay",
     }
 
     pinecone_config = {

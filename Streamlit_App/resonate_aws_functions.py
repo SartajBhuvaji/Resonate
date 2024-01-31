@@ -508,13 +508,13 @@ def runner(
     >>> runner(file_name, "input_bucket", "output_bucket", "transcribe_job", "access_key", "secret_key", "region_name")
     """
 
-    print("file_name : ", file_name)
-    print("input_bucket : ", input_bucket)
-    print("output_bucket : ", output_bucket)
-    print("transcribe_job_name : ", transcribe_job_name)
-    print("aws_access_key : ", aws_access_key)
-    print("aws_secret_access_key : ", aws_secret_access_key)
-    print("aws_region_name : ", aws_region_name)
+    # print("file_name : ", file_name)
+    # print("input_bucket : ", input_bucket)
+    # print("output_bucket : ", output_bucket)
+    # print("transcribe_job_name : ", transcribe_job_name)
+    # print("aws_access_key : ", aws_access_key)
+    # print("aws_secret_access_key : ", aws_secret_access_key)
+    # print("aws_region_name : ", aws_region_name)
 
     transcribe_client, s3_client = create_client(
         aws_access_key=aws_access_key,
@@ -522,8 +522,8 @@ def runner(
         aws_region_name=aws_region_name,
     )
 
-    print("transcribe_client : ", transcribe_client)
-    print("s3_client : ", s3_client)
+    # print("transcribe_client : ", transcribe_client)
+    # print("s3_client : ", s3_client)
 
     # Delete old S3 buckets and transcribe job
     try:
@@ -605,16 +605,15 @@ def runner(
 
 
 if __name__ == "__main__":
-    # dotenv.load_dotenv()
-    # aws_access_key = os.getenv("AWS_ACCESS_KEY")
-    # aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
-    aws_access_key = "AKIAVRUVQR37S262WVNF"
-    aws_secret_access_key = "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"
+    dotenv.load_dotenv()
+    aws_access_key = os.getenv("AWS_ACCESS_KEY")
+    aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+    print(aws_access_key, aws_secret_access_key)
     aws_region_name = "us-east-2"
     file_name = "test.wav"
-    input_bucket = "resonate-input"
-    output_bucket = "resonate-output"
-    transcribe_job_name = "resonate-job"
+    input_bucket = "resonate-input-jay"
+    output_bucket = "resonate-output-jay"
+    transcribe_job_name = "resonate-job-jay"
     df = runner(
         file_name=file_name,
         input_bucket=input_bucket,

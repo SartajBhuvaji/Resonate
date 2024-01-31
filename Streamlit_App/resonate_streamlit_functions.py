@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 from resonate_aws_functions import *
 from resonate_pinecone_functions import init_pinecone, upsert_pinecone
@@ -27,6 +28,9 @@ def initialize_session_state():
             "aws_access_key": "",
             "aws_secret_access_key": "",
         }
+
+    if "df_transcript" not in st.session_state:
+        st.session_state.df_transcript = pd.DataFrame()
 
 
 def get_bot_response(user_input):
@@ -107,7 +111,7 @@ def add_meeting(aws_config, pinecone_config, pinecone_index):
                         f.write(uploaded_file.getbuffer())
                         f.close()
 
-                    df_transcript = runner(
+                    st.session_state.df_transcript = runner(
                         file_name=file,
                         input_bucket=aws_config["aws_input_bucket"],
                         output_bucket=aws_config["aws_output_bucket"],
@@ -117,17 +121,18 @@ def add_meeting(aws_config, pinecone_config, pinecone_index):
                         aws_region_name=aws_config["aws_region_name"],
                     )
 
-                    pinecone_config["pinecone_namespace"] = meeting_name
+                    # df_transcript.to_csv(f"{meeting_name}.csv", index=False)
+                    # st.session_state.df_transcript = pd.read_csv(f"{meeting_name}.csv")
 
                     st.success("File uploaded and transcribed successfully!")
 
-                    upsert_pinecone(
-                        pinecone_index,
-                        transcript=df_transcript,
-                        model_name=pinecone_config["pinecone_embedding_model_name"],
-                        pinecone_namespace=pinecone_config["pinecone_namespace"],
-                    )
-                    st.success("Pinecone upsert completed successfully!")
+                    # upsert_pinecone(
+                    #     pinecone_index,
+                    #     transcript=df_transcript,
+                    #     model_name=pinecone_config["pinecone_embedding_model_name"],
+                    #     pinecone_namespace=pinecone_config["pinecone_namespace"],
+                    # )
+                    # st.success("Pinecone upsert completed successfully!")
 
 
 def chat_resonate():
@@ -160,7 +165,8 @@ def init_streamlit(aws_config, pinecone_config):
     pinecone = None
 
     # Set initial state of the sidebar
-    st.set_page_config(initial_sidebar_state="collapsed")
+    # st.set_page_config(initial_sidebar_state="collapsed")
+    st.set_page_config()
     st.title("Resonate - Meeting Chatter")
 
     # Initializing session state for all Streamlit components
@@ -187,9 +193,6 @@ def init_streamlit(aws_config, pinecone_config):
                     pinecone_config["pinecone_cloud_region"],
                 )
 
-                # st.success("Pinecone Initialized successfully!")
-            # except TypeError as e:
-            #     print("API Keys Empty")
             except Exception as e:
                 print(e)
 
@@ -203,4 +206,19 @@ def init_streamlit(aws_config, pinecone_config):
                 add_meeting(aws_config, pinecone_config, pinecone_index)
 
     if st.session_state.api_keys["pinecone_api_key"] != "":
+        if not st.session_state.df_transcript.empty:
+            st.dataframe(st.session_state.df_transcript)
+
+            # Allow users to edit the 'text' column
+            st.write("\n\nEdit 'text' column:")
+            for index, row in st.session_state.df_transcript.iterrows():
+                new_text = st.text_input(
+                    f"Edit 'text' for row {index + 1}", row["text"]
+                )
+                st.session_state.df_transcript.at[index, "text"] = new_text
+
+            # Display the updated DataFrame
+            st.write("\n\nUpdated DataFrame:")
+            st.write(st.session_state.df_transcript)
+
         chat_resonate()
