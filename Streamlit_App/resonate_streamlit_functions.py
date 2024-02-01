@@ -1,36 +1,65 @@
 import streamlit as st
+from streamlit import session_state as ss
 import pandas as pd
 
+from datetime import timedelta
 from resonate_aws_functions import *
 from resonate_pinecone_functions import init_pinecone, upsert_pinecone
 
 
-def initialize_session_state():
-    # Initialize chat history in session state
-    if "chat_history" not in st.session_state:
-        st.session_state.chat_history = []
+def initialize_session_state(aws_config, pinecone_config):
+    # Initialize - Config
+    if "pinecone_config" not in ss:
+        ss.pinecone_config = pinecone_config
 
-    if "user_input" not in st.session_state:
-        st.session_state.user_input = ""
+    if "aws_config" not in ss:
+        ss.aws_config = aws_config
 
-    if "api_keys_input" not in st.session_state:
-        st.session_state.api_keys_input = False
-    if "add_meeting" not in st.session_state:
-        st.session_state.add_meeting = False
-    if "chat_resonate" not in st.session_state:
-        st.session_state.chat_resonate = False
+    if "pinecone_index" not in ss:
+        ss.pinecone_index = None
+    if "pinecone" not in ss:
+        ss.pinecone = None
+
+    # Initialize - Sidebar Components
+    if "api_keys_input" not in ss:
+        ss.api_keys_input = False
+    if "add_meeting" not in ss:
+        ss.add_meeting = False
+
+    # Initialize - Main Screen - Transcript Editor
+    if "transcript_speaker_editor" not in ss:
+        ss.transcript_speaker_editor = False
+
+    if "transcript_text_editor" not in ss:
+        ss.transcript_text_editor = False
+
+    # # Initialize - Main Screen - chat history
+    if "chat_history" not in ss:
+        ss.chat_history = []
+
+    # Initialize - Main Screen - User input and Chatbox
+    if "user_input" not in ss:
+        ss.user_input = ""
+    if "chat_resonate" not in ss:
+        ss.chat_resonate = False
 
     # Initialize API keys in session state if not present
-    if "api_keys" not in st.session_state:
-        st.session_state.api_keys = {
+    if "api_keys" not in ss:
+        ss.api_keys = {
             "openai_api_key": "",
             "pinecone_api_key": "",
             "aws_access_key": "",
             "aws_secret_access_key": "",
         }
 
-    if "df_transcript" not in st.session_state:
-        st.session_state.df_transcript = pd.DataFrame()
+    if "df_transcript_speaker" not in ss:
+        ss.df_transcript_speaker = pd.DataFrame()
+
+    if "df_transcript_text" not in ss:
+        ss.df_transcript_text = pd.DataFrame()
+
+    if "updated_df" not in ss:
+        ss.updated_transcript_df_to_embed = pd.DataFrame()
 
 
 def get_bot_response(user_input):
@@ -44,51 +73,45 @@ def api_keys_input():
         openai_api_key = st.text_input(
             "OpenAPI Key:",
             type="password",
-            value=st.session_state.api_keys["openai_api_key"],
+            value=ss.api_keys["openai_api_key"],
         )
         pinecone_api_key = st.text_input(
             "Pinecone Key:",
             type="password",
-            value=st.session_state.api_keys["pinecone_api_key"],
+            value=ss.api_keys["pinecone_api_key"],
         )
         aws_access_key = st.text_input(
             "AWS Access Key:",
             type="password",
-            value=st.session_state.api_keys["aws_access_key"],
+            value=ss.api_keys["aws_access_key"],
         )
         aws_secret_access_key = st.text_input(
             "AWS Secret Access Key:",
             type="password",
-            value=st.session_state.api_keys["aws_secret_access_key"],
+            value=ss.api_keys["aws_secret_access_key"],
         )
 
         # Add a button to save the keys
         save_button = st.form_submit_button("Save API Keys")
 
         if save_button:
-            st.session_state.api_keys["openai_api_key"] = openai_api_key
-            st.session_state.api_keys["pinecone_api_key"] = pinecone_api_key
-            st.session_state.api_keys["aws_access_key"] = aws_access_key
-            st.session_state.api_keys["aws_secret_access_key"] = aws_secret_access_key
+            ss.api_keys["openai_api_key"] = openai_api_key
+            ss.api_keys["pinecone_api_key"] = pinecone_api_key
+            ss.api_keys["aws_access_key"] = aws_access_key
+            ss.api_keys["aws_secret_access_key"] = aws_secret_access_key
 
-            os.environ["OPENAI_API_KEY"] = st.session_state.api_keys["openai_api_key"]
-            os.environ["PINECONE_API_KEY"] = st.session_state.api_keys[
-                "pinecone_api_key"
-            ]
-            os.environ["AWS_ACCESS_KEY"] = st.session_state.api_keys["aws_access_key"]
-            os.environ["AWS_SECRET_ACCESS_KEY"] = st.session_state.api_keys[
-                "aws_secret_access_key"
-            ]
+            os.environ["OPENAI_API_KEY"] = ss.api_keys["openai_api_key"]
+            os.environ["PINECONE_API_KEY"] = ss.api_keys["pinecone_api_key"]
+            os.environ["AWS_ACCESS_KEY"] = ss.api_keys["aws_access_key"]
+            os.environ["AWS_SECRET_ACCESS_KEY"] = ss.api_keys["aws_secret_access_key"]
 
-            st.session_state.api_keys_input = False
+            ss.api_keys_input = False
             st.rerun()
 
 
-def add_meeting(aws_config, pinecone_config, pinecone_index):
-    aws_config["aws_access_key"] = st.session_state.api_keys["aws_access_key"]
-    aws_config["aws_secret_access_key"] = st.session_state.api_keys[
-        "aws_secret_access_key"
-    ]
+def add_meeting(aws_config):
+    aws_config["aws_access_key"] = ss.api_keys["aws_access_key"]
+    aws_config["aws_secret_access_key"] = ss.api_keys["aws_secret_access_key"]
 
     with st.form("add_meeting_form"):
         uploaded_file = st.file_uploader("Choose a file", type=["mp3", "wav", "mp4"])
@@ -111,7 +134,7 @@ def add_meeting(aws_config, pinecone_config, pinecone_index):
                         f.write(uploaded_file.getbuffer())
                         f.close()
 
-                    st.session_state.df_transcript = runner(
+                    ss.df_transcript_speaker = runner(
                         file_name=file,
                         input_bucket=aws_config["aws_input_bucket"],
                         output_bucket=aws_config["aws_output_bucket"],
@@ -121,70 +144,151 @@ def add_meeting(aws_config, pinecone_config, pinecone_index):
                         aws_region_name=aws_config["aws_region_name"],
                     )
 
-                    # df_transcript.to_csv(f"{meeting_name}.csv", index=False)
-                    # st.session_state.df_transcript = pd.read_csv(f"{meeting_name}.csv")
+                    # ss.df_transcript_speaker = pd.read_csv(f"{meeting_name}.csv")
 
                     st.success("File uploaded and transcribed successfully!")
 
-                    # upsert_pinecone(
-                    #     pinecone_index,
-                    #     transcript=df_transcript,
-                    #     model_name=pinecone_config["pinecone_embedding_model_name"],
-                    #     pinecone_namespace=pinecone_config["pinecone_namespace"],
-                    # )
-                    # st.success("Pinecone upsert completed successfully!")
+
+def transcript_speaker_editor():
+    with st.form("transcript_speaker_editor_form"):
+        st.write("Transcript Speaker Editor:")
+        st.write(ss.df_transcript_speaker)
+
+        df = ss.df_transcript_speaker.copy(deep=True)
+
+        # Create a list of unique speaker labels
+        speaker_labels = df["speaker_label"].unique()
+
+        # Create a dictionary to store the updated values
+        updated_speaker_names = {}
+
+        # Display text input boxes for each speaker label
+        for speaker_label in speaker_labels:
+            new_name = st.text_input(
+                f"Edit speaker label '{speaker_label}'", speaker_label
+            )
+            updated_speaker_names[speaker_label] = new_name
+
+        # Update the DataFrame with the new speaker label names
+        for old_name, new_name in updated_speaker_names.items():
+            df["speaker_label"] = df["speaker_label"].replace(old_name, new_name)
+
+        update_speaker_button = st.form_submit_button("Update Speakers")
+
+    if update_speaker_button and df is not None:
+        ss.df_transcript_speaker = pd.DataFrame()
+        ss.df_transcript_text = df.copy(deep=True)
+
+        del df
+        st.rerun()
+
+
+def transcript_text_editor_minutes_to_hhmmss(minutes):
+    time_delta = timedelta(minutes=minutes)
+    hhmmss_format = str(time_delta)
+    return hhmmss_format
+
+
+# Function to update the text column
+def transcript_text_editor_update_text(row_index, new_text):
+    ss.updated_transcript_df_to_embed.at[row_index, "text"] = new_text
+
+
+def transcript_text_editor():
+    # with st.form("transcript_text_editor_form"):
+    st.write("Transcript Text Editor:")
+    st.write(ss.df_transcript_text)
+
+    df = ss.df_transcript_text.copy(deep=True)
+    ss.updated_transcript_df_to_embed = df.copy(deep=True)
+
+    # Convert start_time and end_time to HH:MM:SS format
+    df["start_time"] = df["start_time"].apply(transcript_text_editor_minutes_to_hhmmss)
+    df["end_time"] = df["end_time"].apply(transcript_text_editor_minutes_to_hhmmss)
+
+    row_index = st.number_input(
+        "Enter the row index:",
+        min_value=0,
+        max_value=len(df) - 1,
+        value=0,
+        step=1,
+    )
+    new_text = st.text_area("Enter the new text:", df.at[row_index, "text"])
+
+    update_text_button_inner = st.button("Update Text")
+
+    if update_text_button_inner:
+        transcript_text_editor_update_text(row_index, new_text)
+        st.success("Text updated successfully!")
+
+    # Display the updated dataframe
+    st.header("Updated Dataframe")
+    st.table(ss.updated_transcript_df_to_embed)
+
+    update_text_button = st.button("Finish Transcript Editing")
+    if update_text_button:
+        ss.df_transcript_text = pd.DataFrame()
+
+        upsert_pinecone(
+            ss.pinecone_index,
+            transcript=ss.updated_transcript_df_to_embed,
+            model_name=ss.pinecone_config["pinecone_embedding_model_name"],
+            pinecone_namespace=ss.pinecone_config["pinecone_namespace"],
+        )
+        st.success("Pinecone upsert completed successfully!")
+
+        st.rerun()
 
 
 def chat_resonate():
     # Input box for user to enter queries as text
-    user_input = st.text_input("User Input:", value=st.session_state.user_input)
+    user_input = st.text_input("User Input:", value=ss.user_input)
 
     # Send button to simulate sending user input
     if st.button("Send") and user_input:
         # Adding user input to chat history
-        st.session_state.chat_history.append(f"User: {user_input}")
+        ss.chat_history.append(f"User: {user_input}")
 
         # Getting response from LLM and adding it to chatbot response of chat history
         bot_response = get_bot_response(user_input)
-        st.session_state.chat_history.append(bot_response)
+        ss.chat_history.append(bot_response)
 
         # Clearing the user input field for next query
-        st.session_state.user_input = ""
+        ss.user_input = ""
 
     # Initializing chat history
     st.subheader("Chat History")
-    for entry in st.session_state.chat_history:
+    for entry in ss.chat_history:
         st.write(entry)
 
 
 def init_streamlit(aws_config, pinecone_config):
     # Initializing Components
 
-    # Initializing Pinecone
-    pinecone_index = None
-    pinecone = None
+    # Initializing session state for all Streamlit components
+    initialize_session_state(aws_config=aws_config, pinecone_config=pinecone_config)
 
     # Set initial state of the sidebar
-    # st.set_page_config(initial_sidebar_state="collapsed")
-    st.set_page_config()
+    if ss.api_keys["pinecone_api_key"] != "":
+        st.set_page_config(initial_sidebar_state="collapsed")
     st.title("Resonate - Meeting Chatter")
-
-    # Initializing session state for all Streamlit components
-    initialize_session_state()
 
     # Initializing sidebar and its components
     with st.sidebar:
         if st.sidebar.button("API Keys"):
-            st.session_state.api_keys_input = not st.session_state.api_keys_input
-            if st.session_state.add_meeting == True:
-                st.session_state.add_meeting = False
+            ss.api_keys_input = not ss.api_keys_input
+            if ss.add_meeting == True:
+                ss.add_meeting = False
 
-        if st.session_state.api_keys_input:
+        if ss.api_keys_input:
             try:
                 api_keys_input()
 
                 # Initializing Pinecone
-                pinecone, pinecone_index = init_pinecone(
+                (
+                    ss.pinecone,
+                    ss.pinecone_index,
+                ) = init_pinecone(
                     pinecone_config["pinecone_api_key"],
                     pinecone_config["pinecone_index_name"],
                     pinecone_config["pinecone_index_metric"],
@@ -196,29 +300,25 @@ def init_streamlit(aws_config, pinecone_config):
             except Exception as e:
                 print(e)
 
-        if st.session_state.api_keys["pinecone_api_key"] != "":
+        if ss.api_keys["pinecone_api_key"] != "":
             if st.sidebar.button("Add Meeting"):
-                st.session_state.add_meeting = not st.session_state.add_meeting
-                if st.session_state.api_keys_input == True:
-                    st.session_state.api_keys_input = False
+                ss.add_meeting = not ss.add_meeting
+                if ss.api_keys_input == True:
+                    ss.api_keys_input = False
 
-            if st.session_state.add_meeting:
-                add_meeting(aws_config, pinecone_config, pinecone_index)
+            if ss.add_meeting:
+                add_meeting(aws_config)
 
-    if st.session_state.api_keys["pinecone_api_key"] != "":
-        if not st.session_state.df_transcript.empty:
-            st.dataframe(st.session_state.df_transcript)
+    if ss.api_keys["pinecone_api_key"] != "":
+        if not ss.df_transcript_speaker.empty:
+            ss.chat_resonate = False
+            ss.transcript_text_editor = False
+            transcript_speaker_editor()
 
-            # Allow users to edit the 'text' column
-            st.write("\n\nEdit 'text' column:")
-            for index, row in st.session_state.df_transcript.iterrows():
-                new_text = st.text_input(
-                    f"Edit 'text' for row {index + 1}", row["text"]
-                )
-                st.session_state.df_transcript.at[index, "text"] = new_text
+        if not ss.df_transcript_text.empty:
+            ss.chat_resonate = False
+            ss.transcript_speaker_editor = False
+            transcript_text_editor()
 
-            # Display the updated DataFrame
-            st.write("\n\nUpdated DataFrame:")
-            st.write(st.session_state.df_transcript)
-
-        chat_resonate()
+        if ss.df_transcript_text.empty and ss.df_transcript_speaker.empty:
+            chat_resonate()
