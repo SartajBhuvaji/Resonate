@@ -530,14 +530,14 @@ def runner(
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, input_bucket))
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, output_bucket))
     except:
-        print(f"S3 bucket does not exist.")
+        print("S3 bucket does not exist.")
 
     try:
         transcribe_client.delete_transcription_job(
             TranscriptionJobName=transcribe_job_name
         )
     except:
-        print(f"Transcription Job does not exist.")
+        print("Transcription Job does not exist.")
 
     # Create S3 buckets
     print(
@@ -575,14 +575,14 @@ def runner(
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, input_bucket))
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, output_bucket))
     except:
-        print(f"S3 bucket does not exist.")
+        print("S3 bucket does not exist.")
 
     try:
         transcribe_client.delete_transcription_job(
             TranscriptionJobName=transcribe_job_name
         )
     except:
-        print(f"Transcription Job does not exist.")
+        print("Transcription Job does not exist.")
 
     # Close clients
     transcribe_client.close()
@@ -595,7 +595,7 @@ def runner(
     df_transcript_combined_parsed = aws_transcribe_parser(
         transcript_df=df_transcript_combined, output_filename=transcribe_job_name
     )
-    print(f"Transcript parsed successfully")
+    print("Transcript parsed successfully")
 
     # delete the temporary local files
     delete_local_temp_file(transcribe_job_name + ".json")
