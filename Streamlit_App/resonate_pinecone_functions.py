@@ -32,14 +32,14 @@ def load_transcript(transcript):
 
 # Initializing Pinecone
 def init_pinecone(
-    PINECONE_API_KEY,
+    pinecone_api_key,
     pinecone_index_name,
     pinecone_index_metric,
     pinecone_index_dimension,
     pinecone_cloud_type,
     pinecone_cloud_region,
 ):
-    pinecone = Pinecone(api_key=PINECONE_API_KEY)
+    pinecone = Pinecone(api_key=pinecone_api_key)
 
     pinecone_indexes_list = [
         index.get("name") for index in pinecone.list_indexes().get("indexes", [])
