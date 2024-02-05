@@ -97,6 +97,9 @@ class PineconeServerless:
     
 
     def _append_meeting_details(self,meeting_details_file: str, last_meeting_no: int, last_conversation_no: int, meeting_video_file: bool, meeting_members: list[str]) -> dict:
+        '''
+        Appends meeting details to JSON file
+        '''
         with open(meeting_details_file, 'r') as f:
             data = json.load(f)
             data['last_meeting_no'] = last_meeting_no
@@ -118,6 +121,9 @@ class PineconeServerless:
 
 
     def _get_meeting_details(self, namespace: str) -> tuple[int, int]:
+        '''
+        Returns last meeting number and last conversation number
+        '''
         meeting_details_file = os.path.join(self.base_data_path, f'{namespace}.json')  
         if not os.path.exists(meeting_details_file):
            print('Namespace does not exist in JSON Store')
@@ -130,6 +136,10 @@ class PineconeServerless:
 
     def _set_meeting_details(self, namespace: str, last_meeting_no: int, 
                              last_conversation_no: int, meeting_video_file: bool, meeting_members: list[str] ) -> None:
+        '''
+        Updates the meeting details in the JSON file
+        '''
+
         # PENDING : Update the meeting details in the Firebase database
 
         if not os.path.exists(self.base_data_path):
@@ -157,6 +167,9 @@ class PineconeServerless:
         
     
     def get_entire_namespace_data(self, namespace:str) -> pd.DataFrame: 
+        '''
+        Returns all the conversations in a namespace
+        '''
         _ , last_conversation_no = self._get_meeting_details(namespace)
         all_conversations = [str(i) for i in range(1, last_conversation_no+1)]
 
@@ -172,6 +185,9 @@ class PineconeServerless:
         return entire_namespace_data
        
     def pinecone_upsert(self, transcript: pd.DataFrame, meeting_video_file: bool=False) -> None:
+        '''
+        Upserts the transcript into Pinecone
+        '''
         texts = []
         metadatas = []
         
@@ -217,6 +233,9 @@ class PineconeServerless:
 
 
     def query_pinecone(self, query: str, namespace: str) -> list:
+        '''
+        Queries Pinecone for the given query
+        '''
         try:
             index = self._get_index()
             embed = self._get_vector_embedder(EMBEDDING)
@@ -237,6 +256,9 @@ class PineconeServerless:
         return list(int(match['id']) for match in response['matches'])
 
     def _parse_query_for_namespace(self, namespace:str, namespace_response) -> pd.DataFrame:
+        '''
+        Parses the query response into dataframe for a given namespace
+        '''
         parsed_namespace_response = pd.DataFrame(columns=['namespace', 'id', 'meeting_no', 'speaker', 'start_time', 'text', 'score'])
 
         for match in namespace_response['matches']:
@@ -258,6 +280,9 @@ class PineconeServerless:
    
 
     def query_every_namespace(self, query:str) -> pd.DataFrame: 
+        '''
+        Queries Pinecone for the given query in all namespaces
+        '''        
         index_info = self.describe_index_stats()
         all_namespaces = list(index_info['namespaces'].keys())
         every_namespace_response = pd.DataFrame(columns=['namespace', 'id', 'meeting_no', 'speaker', 'start_time', 'text'])
@@ -273,7 +298,10 @@ class PineconeServerless:
         return every_namespace_response
 
 
-    def query_delta_conversations_all_namespaces(self, query: str) -> pd.DataFrame: ##
+    def query_delta_conversations_all_namespaces(self, query: str) -> pd.DataFrame:
+        '''
+        Queries Pinecone for the given query in all namespaces and returns the delta conversations
+        '''
         every_namespace_response = self.query_every_namespace(query)
         all_namespaces = list(every_namespace_response['namespace'].unique())
 
@@ -288,6 +316,9 @@ class PineconeServerless:
 
 
     def query_delta_conversations(self) -> pd.DataFrame:
+        '''
+        Queries Pinecone for the given query and returns the delta conversations
+        '''
         ids = self._extract_id_from_response(self.response)
         _, last_conversation_no = self._get_meeting_details(self.namespace)
         index = self._get_index()

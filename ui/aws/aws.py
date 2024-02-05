@@ -139,7 +139,7 @@ def delete_from_s3(s3: boto3.client, bucket_name: str, object_name: str) -> bool
         return False
 
 
-def delete_s3_bucket(s3, bucket_name):
+def delete_s3_bucket(s3: boto3.client, bucket_name: str):
     """
     Delete an S3 bucket along with its contents using the provided AWS S3 client.
 
@@ -200,6 +200,7 @@ def transcribe_audio(transcribe_client: boto3.client, uri: str, output_bucket: s
 
 def get_object_count(s3: boto3.client, bucket_name: str):
     return len(s3.list_objects_v2(Bucket=bucket_name)['Contents'])
+
 
 def runner():
 

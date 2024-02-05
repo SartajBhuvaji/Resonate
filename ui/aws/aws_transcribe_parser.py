@@ -5,6 +5,7 @@ import json
 import pandas as pd
 import webvtt
 import re
+import os
 
 def combine_files(file_name: str) -> pd.DataFrame:
     """
@@ -80,11 +81,20 @@ def aws_transcribe_parser(transcript: pd.DataFrame) -> None:
     return result_df    
 
 
-def runner():
+def delete_files(file_name: str) -> None:
+    """
+    Deletes the JSON and WebVTT files after parsing.
+    """
+    os.remove(f'./{file_name}.json')
+    os.remove(f'./{file_name}.vtt')
+
+def aws_parser_runner(file_name):
     """
     Runs the program.
     """
-    file_name = 'test'
     transcript = combine_files(file_name)
     transcript = aws_transcribe_parser(transcript)
-    transcript.to_csv(f'./{file_name}.csv')
+    #transcript.to_csv(f'./{file_name}.csv')
+
+    #delete_files(file_name)
+    return transcript

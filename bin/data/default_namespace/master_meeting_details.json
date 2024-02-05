@@ -1,0 +1,37 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "last_conversation_no": 60,
+    "meetings": [
+        {
+            "meeting_uuid": "375ebe69-c936-4fd9-a9b4-a58b72b3fa29",
+            "meeting_title": "Unnamed",
+            "meeting_date": "20240201161431",
+            "meeting_video_file": false,
+            "meeting_members": [
+                "spk_0",
+                "spk_1",
+                "spk_2",
+                "spk_3",
+                "spk_4",
+                "spk_5"
+            ],
+            "meeting_summary": null
+        },
+        {
+            "meeting_uuid": "9e0d7f0b-ff8b-4236-b3d3-71ea6ac84c3b",
+            "meeting_title": "Unnamed",
+            "meeting_date": "20240201161437",
+            "meeting_video_file": false,
+            "meeting_members": [
+                "spk_1",
+                "spk_0",
+                "spk_5",
+                "spk_4",
+                "spk_2",
+                "spk_3"
+            ],
+            "meeting_summary": null
+        }
+    ]
+}
