@@ -259,6 +259,7 @@ def transcribe_audio(
     Returns:
     - dict: The response from the Transcribe service containing information about the transcription job.
     """
+    print("Calling AWS Transcribe Job...")
     response = transcribe_client.start_transcription_job(
         TranscriptionJobName=transcribe_job_name,
         LanguageCode="en-US",
@@ -529,7 +530,8 @@ def runner(
     try:
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, input_bucket))
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, output_bucket))
-    except:
+    except Exception as e:
+
         print("S3 bucket does not exist.")
 
     try:
@@ -549,6 +551,7 @@ def runner(
     )
 
     URI = upload_to_s3(s3_client, file_name, input_bucket)
+    print("Upload completed now will initiate transcription job.")
     transcribe_audio(
         transcribe_client, URI, output_bucket, transcribe_job_name=transcribe_job_name
     )
@@ -598,8 +601,8 @@ def runner(
     print("Transcript parsed successfully")
 
     # delete the temporary local files
-    delete_local_temp_file(transcribe_job_name + ".json")
-    delete_local_temp_file(transcribe_job_name + ".vtt")
+    #########################    delete_local_temp_file(transcribe_job_name + ".json")
+    #########################    delete_local_temp_file(transcribe_job_name + ".vtt")
 
     return df_transcript_combined_parsed
 

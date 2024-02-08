@@ -6,23 +6,11 @@
 import os
 import time
 
-# import dotenv
-import streamlit as st
-
-from resonate_pinecone_functions import init_pinecone
 from resonate_streamlit_functions import init_streamlit
-
-# from resonate_streamlit_functions import (
-#     add_meeting,
-#     get_bot_response,
-#     initialize_session_state,
-#     show_keys_input,
-# )
-
-# from IPython.display import HTML, display
 
 
 def main():
+
     # Initializing Variables
     aws_config = {
         "aws_region_name": "us-east-2",
