@@ -81,7 +81,7 @@ def create_s3_bucket(
         )
         print(f"S3 bucket '{bucket_name}' created successfully.")
         return True
-    except s3.exceptions.BucketAlreadyExists as e:
+    except s3.exceptions.BucketAlreadyExists:
         print(f"S3 bucket '{bucket_name}' already exists.")
         return True
     except Exception as e:
@@ -530,7 +530,7 @@ def runner(
     try:
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, input_bucket))
         print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, output_bucket))
-    except Exception as e:
+    except Exception:
 
         print("S3 bucket does not exist.")
 
