@@ -58,7 +58,7 @@ def summarize_text(transcript):
     print("3 gram keywords: ", keywords_list_3)
 
     response = {
-        "transcription": formatText,
+        "transcription": format_text,
         "summary": summary,
         "keywords_list_1": keywords_list_1,
         "keywords_list_2": keywords_list_2,
@@ -69,19 +69,19 @@ def summarize_text(transcript):
 
 def summarize_summary(summary_input):
 
-    wordCount = 1024  # post_data.get('wordCount-summ')
+    word_count = 1024  # post_data.get('word_count-summ')
 
     print(
         "min: ",
-        math.ceil(int(wordCount) * 0.1),
+        math.ceil(int(word_count) * 0.1),
         "max: ",
-        math.ceil(int(wordCount) * 0.25),
+        math.ceil(int(word_count) * 0.25),
     )
     print("\n\nSummarizing again...")
     summary = summarizer(
         summary_input,
-        min_length=math.ceil(int(wordCount) * 0.1),
-        max_length=math.ceil(int(wordCount) * 0.25),
+        min_length=math.ceil(int(word_count) * 0.1),
+        max_length=math.ceil(int(word_count) * 0.25),
     )[0]["summary_text"]
     print("\n", summary, "\n")
 
@@ -100,10 +100,4 @@ def main(file_name):
 
 
 if __name__ == "__main__":
-    print("#####################################################################")
     main(file_name="data/Shark_Tank_US_Top_3_Products_For_Office_1.csv")
-    print("#####################################################################")
-    main(file_name="data/Shark_Tank_US_Top_3_Products_For_Office_2.csv")
-    print("#####################################################################")
-    main(file_name="data/Shark_Tank_US_Top_3_Products_For_Office_3.csv")
-    print("#####################################################################")
