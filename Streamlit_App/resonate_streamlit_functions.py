@@ -1,24 +1,24 @@
 import streamlit as st
 from streamlit import session_state as ss
 import pandas as pd
-
+import moviepy.editor as mp
 from datetime import timedelta
 from resonate_aws_functions import *
 from resonate_pinecone_functions import init_pinecone, upsert_pinecone
+from resonate_bert_summarizer import summarizeText, summarizeSummary
 
 
 def initialize_session_state(aws_config, pinecone_config):
     # Initialize - Config
     if "pinecone_config" not in ss:
         ss.pinecone_config = pinecone_config
-
-    if "aws_config" not in ss:
-        ss.aws_config = aws_config
-
     if "pinecone_index" not in ss:
         ss.pinecone_index = None
     if "pinecone" not in ss:
         ss.pinecone = None
+
+    if "aws_config" not in ss:
+        ss.aws_config = aws_config
 
     # Initialize - Sidebar Components
     if "api_keys_input" not in ss:
@@ -100,6 +100,11 @@ def api_keys_input():
             ss.api_keys["aws_access_key"] = aws_access_key
             ss.api_keys["aws_secret_access_key"] = aws_secret_access_key
 
+            ss.aws_config["aws_access_key"] = aws_access_key
+            ss.aws_config["aws_secret_access_key"] = aws_secret_access_key
+
+            ss.pinecone_config["pinecone_api_key"] = pinecone_api_key
+
             os.environ["OPENAI_API_KEY"] = ss.api_keys["openai_api_key"]
             os.environ["PINECONE_API_KEY"] = ss.api_keys["pinecone_api_key"]
             os.environ["AWS_ACCESS_KEY"] = ss.api_keys["aws_access_key"]
@@ -109,9 +114,13 @@ def api_keys_input():
             st.rerun()
 
 
-def add_meeting(aws_config):
-    aws_config["aws_access_key"] = ss.api_keys["aws_access_key"]
-    aws_config["aws_secret_access_key"] = ss.api_keys["aws_secret_access_key"]
+def convert_video_to_audio(video_path, audio_path):
+    # Convert video file to audio file
+    audio_clip = mp.VideoFileClip(video_path).audio
+    audio_clip.write_audiofile(audio_path)
+
+
+def add_meeting():
 
     with st.form("add_meeting_form"):
         uploaded_file = st.file_uploader("Choose a file", type=["mp3", "wav", "mp4"])
@@ -126,27 +135,43 @@ def add_meeting(aws_config):
                 st.warning("Please enter Meeting Name.")
             elif uploaded_file is None:
                 st.warning("Please upload a meeting recording.")
-
             elif meeting_name and save_meeting_button and uploaded_file:
                 with st.spinner("Processing..."):
-                    file = uploaded_file.name
-                    with open(file, "wb") as f:
+                    file_name = uploaded_file.name.replace(" ", "_")
+                    with open(file_name, "wb") as f:
                         f.write(uploaded_file.getbuffer())
                         f.close()
 
-                    ss.df_transcript_speaker = runner(
-                        file_name=file,
-                        input_bucket=aws_config["aws_input_bucket"],
-                        output_bucket=aws_config["aws_output_bucket"],
-                        transcribe_job_name=aws_config["aws_transcribe_job_name"],
-                        aws_access_key=aws_config["aws_access_key"],
-                        aws_secret_access_key=aws_config["aws_secret_access_key"],
-                        aws_region_name=aws_config["aws_region_name"],
-                    )
+                    if file_name.endswith(".mp4"):
+                        # Convert video file to audio file
+                        audio_path = file_name[:-4] + ".wav"
+                        convert_video_to_audio(file_name, audio_path)
 
-                    # ss.df_transcript_speaker = pd.read_csv(f"{meeting_name}.csv")
+                        file_name = audio_path
 
-                    st.success("File uploaded and transcribed successfully!")
+                    # Your AWS transcription code here
+                    ss.aws_config["aws_transcribe_job_name"] = file_name[:-4]
+
+                    try:
+                        ss.df_transcript_speaker = runner(
+                            file_name=file_name,
+                            input_bucket=ss.aws_config["aws_input_bucket"],
+                            output_bucket=ss.aws_config["aws_output_bucket"],
+                            transcribe_job_name=ss.aws_config[
+                                "aws_transcribe_job_name"
+                            ],
+                            aws_access_key=ss.aws_config["aws_access_key"],
+                            aws_secret_access_key=ss.aws_config[
+                                "aws_secret_access_key"
+                            ],
+                            aws_region_name=ss.aws_config["aws_region_name"],
+                        )
+                        # ss.df_transcript_speaker = pd.read_csv(f"{meeting_name}.csv")
+                        ss.df_transcript_speaker.to_csv(f"{file_name[:-4]}.csv")
+
+                        st.success("File uploaded and transcribed successfully!")
+                    except Exception as e:
+                        st.warning("Please update valid AWS keys.")
 
 
 def transcript_speaker_editor():
@@ -289,12 +314,12 @@ def init_streamlit(aws_config, pinecone_config):
                     ss.pinecone,
                     ss.pinecone_index,
                 ) = init_pinecone(
-                    pinecone_config["pinecone_api_key"],
-                    pinecone_config["pinecone_index_name"],
-                    pinecone_config["pinecone_index_metric"],
-                    pinecone_config["pinecone_index_dimension"],
-                    pinecone_config["pinecone_cloud_type"],
-                    pinecone_config["pinecone_cloud_region"],
+                    ss.pinecone_config["pinecone_api_key"],
+                    ss.pinecone_config["pinecone_index_name"],
+                    ss.pinecone_config["pinecone_index_metric"],
+                    ss.pinecone_config["pinecone_index_dimension"],
+                    ss.pinecone_config["pinecone_cloud_type"],
+                    ss.pinecone_config["pinecone_cloud_region"],
                 )
 
             except Exception as e:
@@ -307,7 +332,7 @@ def init_streamlit(aws_config, pinecone_config):
                     ss.api_keys_input = False
 
             if ss.add_meeting:
-                add_meeting(aws_config)
+                add_meeting()
 
     if ss.api_keys["pinecone_api_key"] != "":
         if not ss.df_transcript_speaker.empty:

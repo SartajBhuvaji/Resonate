@@ -8,6 +8,7 @@ botocore
 jupyter
 ipywidgets
 python-dotenv
+scikit-learn
 
 # Project Specific
 openai
@@ -18,3 +19,9 @@ pinecone-client
 streamlit
 tiktoken
 webvtt-py
+moviepy
+transformers
+keybert
+
+#Testing
+gensim
