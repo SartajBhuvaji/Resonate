@@ -11,7 +11,7 @@ summarizer = pipeline(
 kw_model = keybert.KeyBERT(model="all-mpnet-base-v2")
 
 
-def formatText(text):
+def format_text(text):
     formatted_data = [
         f"{row['speaker_label']}: {row['text']}" for _, row in text.iterrows()
     ]
@@ -19,9 +19,9 @@ def formatText(text):
     return formatted_text
 
 
-def summarizeText(transcript):
+def summarize_text(transcript):
 
-    text = formatText(transcript)
+    text = format_text(transcript)
 
     print("\n\nSummarizing Text...")
     summary = summarizer(text)[0]["summary_text"]
@@ -67,7 +67,7 @@ def summarizeText(transcript):
     return response
 
 
-def summarizeSummary(summary_input):
+def summarize_summary(summary_input):
 
     wordCount = 1024  # post_data.get('wordCount-summ')
 
@@ -92,9 +92,9 @@ def summarizeSummary(summary_input):
 def main(file_name):
     transcript = pd.read_csv(file_name, index_col=0)
 
-    summary_transcript = summarizeText(transcript)
+    summary_transcript = summarize_text(transcript)
     # print(summary_transcript["summary"])
-    summarized_summary = summarizeSummary(summary_transcript["summary"])
+    summarized_summary = summarize_summary(summary_transcript["summary"])
     final_summary = summarized_summary["summary"]
     print(final_summary)
 

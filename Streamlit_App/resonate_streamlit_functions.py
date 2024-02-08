@@ -170,7 +170,7 @@ def add_meeting():
                         ss.df_transcript_speaker.to_csv(f"{file_name[:-4]}.csv")
 
                         st.success("File uploaded and transcribed successfully!")
-                    except Exception as e:
+                    except Exception:
                         st.warning("Please update valid AWS keys.")
 
 
