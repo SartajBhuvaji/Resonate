@@ -205,9 +205,10 @@ def runner():
 
     transcribe_client, s3_client = create_client()
     input_bucket = 'resonate-input'
-    output_bucket = 'resonate-output'  
-    transcribe_job_name = 'job'
-    file = 'test.wav'
+    output_bucket = 'resonate-output' 
+    file = 'healthcare_5.wav' 
+    transcribe_job_name = 'job'+ str(int(time.time()))
+    
 
     # Create S3 buckets
     print(create_s3_bucket(s3_client, input_bucket))
@@ -215,7 +216,8 @@ def runner():
 
     URI = upload_to_s3(s3_client, file, input_bucket)
     transcribe_audio(transcribe_client, URI, output_bucket, transcribe_job_name=transcribe_job_name)
-    time.sleep(10)
+    print("now we wait")
+    time.sleep(500)
 
     # Check status of transcription job
     transcribe_client.list_transcription_jobs(Status='COMPLETED', JobNameContains='string')
@@ -226,3 +228,10 @@ def runner():
     transcribe_client.delete_transcription_job(TranscriptionJobName = transcribe_job_name)
     transcribe_client.close()
     s3_client.close()
+
+    # Delete S3 buckets
+    print(delete_s3_bucket(s3_client, input_bucket))
+    print(delete_s3_bucket(s3_client, output_bucket))
+
+if __name__ == "__main__":
+    runner()    

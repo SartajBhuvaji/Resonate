@@ -84,7 +84,9 @@ def runner():
     """
     Runs the program.
     """
-    file_name = 'test'
+    file_name = 'job1707326598'
     transcript = combine_files(file_name)
     transcript = aws_transcribe_parser(transcript)
     transcript.to_csv(f'./{file_name}.csv')
+
+runner()
