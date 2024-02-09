@@ -1,0 +1,18 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Unnamed",
+    "meeting_uuid": "9e0d7f0b-ff8b-4236-b3d3-71ea6ac84c3b",
+    "meeting_date": "20240201161437",
+    "last_conversation_no": 60,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_1",
+        "spk_0",
+        "spk_5",
+        "spk_4",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": null
+}
