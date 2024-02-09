@@ -139,7 +139,7 @@ def delete_from_s3(s3: boto3.client, bucket_name: str, object_name: str) -> bool
         return False
 
 
-def delete_s3_bucket(s3, bucket_name):
+def delete_s3_bucket(s3: boto3.client, bucket_name: str):
     """
     Delete an S3 bucket along with its contents using the provided AWS S3 client.
 
@@ -201,14 +201,14 @@ def transcribe_audio(transcribe_client: boto3.client, uri: str, output_bucket: s
 def get_object_count(s3: boto3.client, bucket_name: str):
     return len(s3.list_objects_v2(Bucket=bucket_name)['Contents'])
 
+
 def runner():
 
     transcribe_client, s3_client = create_client()
     input_bucket = 'resonate-input'
-    output_bucket = 'resonate-output' 
-    file = 'healthcare_5.wav' 
-    transcribe_job_name = 'job'+ str(int(time.time()))
-    
+    output_bucket = 'resonate-output'  
+    transcribe_job_name = 'job'
+    file = 'test.wav'
 
     # Create S3 buckets
     print(create_s3_bucket(s3_client, input_bucket))
@@ -216,8 +216,7 @@ def runner():
 
     URI = upload_to_s3(s3_client, file, input_bucket)
     transcribe_audio(transcribe_client, URI, output_bucket, transcribe_job_name=transcribe_job_name)
-    print("now we wait")
-    time.sleep(500)
+    time.sleep(10)
 
     # Check status of transcription job
     transcribe_client.list_transcription_jobs(Status='COMPLETED', JobNameContains='string')
@@ -228,10 +227,3 @@ def runner():
     transcribe_client.delete_transcription_job(TranscriptionJobName = transcribe_job_name)
     transcribe_client.close()
     s3_client.close()
-
-    # Delete S3 buckets
-    print(delete_s3_bucket(s3_client, input_bucket))
-    print(delete_s3_bucket(s3_client, output_bucket))
-
-if __name__ == "__main__":
-    runner()    
