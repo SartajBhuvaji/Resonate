@@ -26,7 +26,7 @@ def main():
         "pinecone_cloud_type": "aws",
         "pinecone_cloud_region": "us-west-2",
         "pinecone_namespace": "meeting_topic",
-        "pinecone_embedding_model_name": "text-embedding-ada-002",
+        "pinecone_embedding_model_name": "text-embedding-3-small",
     }
 
     init_streamlit(aws_config, pinecone_config)
