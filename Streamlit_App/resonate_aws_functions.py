@@ -509,6 +509,14 @@ def runner(
     >>> runner(file_name, "input_bucket", "output_bucket", "transcribe_job", "access_key", "secret_key", "region_name")
     """
 
+    # print("file_name : ", file_name)
+    # print("input_bucket : ", input_bucket)
+    # print("output_bucket : ", output_bucket)
+    # print("transcribe_job_name : ", transcribe_job_name)
+    # print("aws_access_key : ", aws_access_key)
+    # print("aws_secret_access_key : ", aws_secret_access_key)
+    # print("aws_region_name : ", aws_region_name)
+
     transcribe_client, s3_client = create_client(
         aws_access_key=aws_access_key,
         aws_secret_access_key=aws_secret_access_key,
