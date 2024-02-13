@@ -25,3 +25,4 @@ keybert
 
 #Testing
 gensim
+nltk
