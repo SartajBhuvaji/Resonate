@@ -206,7 +206,7 @@ def runner():
     transcribe_client, s3_client = create_client()
     input_bucket = 'resonate-input'
     output_bucket = 'resonate-output' 
-    file = 'IB4003.wav' 
+    file = 'IB4005.wav' 
     transcribe_job_name = 'job'+ str(int(time.time()))
     
 
