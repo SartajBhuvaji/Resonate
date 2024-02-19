@@ -2,7 +2,7 @@ from sklearn.neighbors import kneighbors_graph
 from utils import normalize_adj
 
 
-def graph_filtering(features, degree=2, lmbda=1, nn=10, alpha=.5, method="sgc", t=5):
+def graph_filtering(features, degree=2, lmbda=1, nn=10, alpha=.5, t=5,method='sgc'):
     adj = kneighbors_graph(features, n_neighbors=nn, metric='cosine')
     adj = (adj + adj.T) / 2
 

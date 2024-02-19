@@ -9,11 +9,12 @@ else:
     device = 'cpu'
 
 
-for dataset in ['abstract']:#['ag_news', 'dbpedia', 'bbc', 'classic4', 'classic3', 'ohsumed', '20ng', 'R8', 'R52']:
-    df = pd.read_csv(f'data/text/{dataset}.csv')
-    text, labels = df['text'].values, df['label'].values.reshape(-1)
-    embedder = SentenceTransformer('all-mpnet-base-v2')
-    embeddings = embedder.encode(text)
-    savemat(f'data/embeddings/{dataset}-embedding.mat', {'x': embeddings, 'y': labels})
-    print("Embedding:Done")
+dataset = 'test2' #abstract.csv
+df = pd.read_csv(f'/Users/prachiteechouhan/Documents/CPSC DSP /Topic-based clustering/SentenceTransformer-Smoothing/Clustering-meeting-TESTING/data/text/{dataset}.csv')
+text, labels = df['text'].values, df['label'].values.reshape(-1)
+embedder = SentenceTransformer('all-mpnet-base-v2') 
+embeddings = embedder.encode(text)
+
+savemat(f'/Users/prachiteechouhan/Documents/CPSC DSP /Topic-based clustering/SentenceTransformer-Smoothing/Clustering-meeting-TESTING/data/embeddings/{dataset}-sentencetransformer-embedding.mat', {'x': embeddings, 'y': labels})
+print("Embedding:Done")
 
