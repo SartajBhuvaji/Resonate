@@ -1,0 +1,797 @@
+,start_time,end_time,speaker_label,text
+0,0.0365,0.08549999999999999,spk_0,"Hi, everyone. It's January 4th 2024."
+1,0.08565,0.15465,spk_0,Happy New Year to everyone from the backdrop community.
+2,0.16133333333333333,0.22433333333333336,spk_0,"Uh, my name is Nate Lampton. I'm quick sketch on the internet. I'm COIT"
+3,0.22898333333333334,0.25516666666666665,spk_0,and technical lead for
+4,0.2585,0.28731666666666666,spk_0,the backdrop C MS project.
+5,0.2905,0.3125,spk_0,"Uh, this meeting, uh,"
+6,0.3126666666666667,0.385,spk_0,"is one that we hold almost every week to get together to talk about technical issues,"
+7,0.38848333333333335,0.45348333333333335,spk_0,"uh, that we are tackling inside of the backdrop project."
+8,0.463,0.5306666666666666,spk_0,"Uh, this week we've got, uh, some news about,"
+9,0.53715,0.5454833333333333,spk_0,"uh,"
+10,0.5456666666666667,0.5984833333333334,spk_0,the 127 release that's just around the corner and we'll be
+11,0.5986499999999999,0.6594833333333334,spk_0,talking about the state of things and kind of what issues and
+12,0.6623333333333333,0.7174833333333334,spk_0,things we've got to tackle before the release on January 15th.
+13,0.7286666666666667,0.7849833333333333,spk_0,"Uh, let's do some introductions of the people present though."
+14,0.7851666666666667,0.8444833333333333,spk_0,We've got a smallish group today still kind of the holidays.
+15,0.8504833333333334,0.8976666666666666,spk_0,"Uh, let's start with Luke and then we'll go to Tim."
+16,0.9219833333333334,0.9223333333333333,spk_1,"Hi,"
+17,0.92465,0.9601666666666666,spk_1,I'm Luke mccormick
+18,0.9673333333333333,0.9774999999999999,spk_1,in sermon
+19,0.9846666666666667,1.0078333333333334,spk_1,California. I'm a
+20,1.01565,1.0808166666666668,spk_1,web project manager and you can find me at CE
+21,1.09265,1.1189833333333334,spk_1,in various platforms.
+22,1.14615,1.1884833333333333,spk_0,"Thanks, Luke. Uh, Tim and then Irena,"
+23,1.2186666666666666,1.2883333333333333,spk_2,"uh, I'm Tim Erickson, Saint Paul Tim on the internet in Deerwood, Minnesota."
+24,1.2941666666666667,1.3235000000000001,spk_2,And that's really all I have today.
+25,1.3514833333333334,1.41715,spk_0,"Thanks, Tim and Irene, if you're uh available to introduce yourself."
+26,1.4243166666666667,1.4548333333333332,spk_3,"Uh Hi. Yes. Um, Irene, that,"
+27,1.4643333333333333,1.51465,spk_3,"um, web developer, site builder."
+28,1.5293333333333332,1.5403166666666666,spk_3,"Um,"
+29,1.5536666666666665,1.5728333333333333,spk_3,I am
+30,1.5803166666666666,1.6388333333333334,spk_3,here today to talk about bugs found in
+31,1.6453333333333333,1.72015,spk_3,D two B migrate model. There was a lot of things that were committed in
+32,1.7269999999999999,1.7613333333333334,spk_3,December as a special gift
+33,1.7638333333333334,1.8163333333333331,spk_3,or as a special New Year's gift to make migrations of goal
+34,1.8208333333333333,1.8291666666666666,spk_3,seven
+35,1.8328333333333333,1.8473166666666665,spk_3,easier.
+36,1.855,1.8759833333333333,spk_3,"And, um,"
+37,1.896,1.9175,spk_3,I hope to
+38,1.9369999999999998,1.9916666666666667,spk_3,have a demo ready for the site that migrates really nicely.
+39,1.9918333333333333,2.0455,spk_3,But also it's important to provide information
+40,2.0474833333333335,2.0566666666666666,spk_3,uh
+41,2.066666666666667,2.106,spk_3,"provide ways for people who are, you know,"
+42,2.1061666666666667,2.1773166666666666,spk_3,"early adopters and using the module for migrations to say, oh, this doesn't work."
+43,2.1783166666666665,2.2293166666666666,spk_3,So we can figure out whether it's a problem with
+44,2.25015,2.3144833333333334,spk_3,"whether it's generic problem with D two B migrations,"
+45,2.3175,2.369483333333333,spk_3,"uh sorry, drupal to backdrop migrations because"
+46,2.3754833333333334,2.4365,spk_3,uh D two B module itself is just the U I
+47,2.4498333333333333,2.5136666666666665,spk_3,"to import database and run, make, make things a little easier."
+48,2.5138333333333334,2.563483333333333,spk_3,Uh It combines installing modules and
+49,2.5683333333333334,2.5915,spk_3,importing database.
+50,2.6064833333333333,2.6703333333333332,spk_3,Uh Most of the bugs that we see when people begin
+51,2.6704833333333333,2.718,spk_3,"using the module don't come from D two B module,"
+52,2.71815,2.7535,spk_3,they come from actual migration
+53,2.7568333333333332,2.7634833333333333,spk_3,and
+54,2.7843166666666668,2.798,spk_3,solving it.
+55,2.79815,2.812333333333333,spk_3,"It's not, first of all,"
+56,2.8125,2.8889833333333335,spk_3,it's not clear whether this issue needs to be filed against D two B or
+57,2.90015,2.946483333333333,spk_3,Nate. That would be a question for you. Which module
+58,2.954,2.9665,spk_3,um
+59,2.9738166666666666,3.0541666666666667,spk_3,"is, is it core that's responsible for migration or another module?"
+60,3.054316666666667,3.092,spk_3,And then the second thing is I think that
+61,3.1153166666666667,3.19265,spk_3,"while even though these bugs are coming from D to B, they will"
+62,3.2014833333333335,3.249,spk_3,make huge impact on supporting
+63,3.258983333333333,3.2838166666666666,spk_3,actual migrations.
+64,3.321816666666667,3.34915,spk_3,So Happy New Year
+65,3.39965,3.4375,spk_0,"putting this into the agenda. Excellent, thanks,"
+66,3.4393333333333334,3.44465,spk_0,Irena.
+67,3.45715,3.4768333333333334,spk_0,"Ok. Um,"
+68,3.4894833333333333,3.5473166666666667,spk_0,"let's see, news this week, I don't think we have any"
+69,3.5528166666666667,3.6273166666666667,spk_0,uh major news items. There aren't any new contrib projects
+70,3.633166666666667,3.69965,spk_0,"uh or contributors this week, holidays are a little slow. It seems"
+71,3.7068333333333334,3.717833333333333,spk_0,um
+72,3.7276666666666665,3.7855,spk_0,the biggest thing of course is that we're preparing for
+73,3.788483333333333,3.86115,spk_0,uh the 127 release. So it comes out here in 11 days.
+74,3.8613166666666667,3.93015,spk_0,"That'll be not this Monday, but the following one on, on the 15th,"
+75,3.9401666666666664,3.9513333333333334,spk_0,um
+76,3.9629833333333333,4.027166666666667,spk_0,let's see. News about uh kind of where
+77,4.038833333333334,4.072316666666667,spk_0,"let's let's go through 127 1st,"
+78,4.0725,4.127816666666667,spk_0,just kind of where it stands and then we can get into the the other uh
+79,4.132666666666666,4.199333333333334,spk_0,topics because I don't think the 127 update will take terribly long.
+80,4.205333333333333,4.2165,spk_0,Um
+81,4.229166666666667,4.28465,spk_0,So the big news of course is that seek editor five is part of
+82,4.286816666666667,4.31865,spk_0,uh backdrop 127.
+83,4.323,4.380833333333333,spk_0,Uh We've been uh working through and getting
+84,4.387,4.46765,spk_0,uh some of the follow up issues to seek editor five completed
+85,4.47165,4.527333333333333,spk_0,uh including uh updating the telemetry that
+86,4.529166666666667,4.577483333333333,spk_0,lets us distinguish between seek editor four and five.
+87,4.5776666666666666,4.625483333333333,spk_0,Seek editor five is now enabled out of the box.
+88,4.62965,4.679333333333333,spk_0,"Uh We, let's see."
+89,4.6965,4.7774833333333335,spk_0,"Uh Let's say we update the status report message uh for seek editor five,"
+90,4.777666666666667,4.8215,spk_0,"we did some reworking, Seek editor four to"
+91,4.83265,4.86815,spk_0,clearly market as deprecated.
+92,4.876316666666667,4.918833333333334,spk_0,"Uh And there's one,"
+93,4.9190000000000005,4.9843166666666665,spk_0,there's only one seek editor five issue currently open right now.
+94,4.9845,5.0168333333333335,spk_0,It is issue
+95,5.038316666666667,5.067483333333334,spk_0,6351.
+96,5.07265,5.154483333333333,spk_0,Uh And that there's an issue where if CK editor is used inside
+97,5.15465,5.234,spk_0,"of a dialogue and that opens another dialogue that uh it doesn't,"
+98,5.240833333333334,5.297316666666666,spk_0,"it doesn't open the, the sub dialogue which can happen when uh"
+99,5.310816666666667,5.321316666666666,spk_0,like uh
+100,5.331333333333333,5.37265,spk_0,"if you're editing a block, for example,"
+101,5.374,5.424316666666667,spk_0,"you've got the rich text editor inside of the layout U I,"
+102,5.4245,5.466333333333333,spk_0,the edit block interface is inside of a dialogue.
+103,5.4715,5.540983333333333,spk_0,"And then you wanna add a link inside of that blocks text area,"
+104,5.541166666666666,5.568833333333333,spk_0,then it opens a second dialogue.
+105,5.575483333333334,5.64215,spk_0,Uh And that issue uh 6351 fixes
+106,5.6465,5.672816666666667,spk_0,a problem that we're seeing there.
+107,5.676316666666667,5.6878166666666665,spk_0,Uh
+108,5.69265,5.698,spk_0,And Gonzalo
+109,5.700666666666667,5.72265,spk_0,points out that this may
+110,5.724816666666666,5.754166666666666,spk_0,be actually a problem
+111,5.7566500000000005,5.8485,spk_0,"in seek editor four as well, at least it was reported in seek editor four for Drupal."
+112,5.852983333333333,5.927833333333333,spk_0,Um So it's possible this may be a an existing bug that we just haven't
+113,5.938983333333333,5.974166666666667,spk_0,"um addressed previously,"
+114,5.975983333333334,6.0376666666666665,spk_0,but it's nice that uh 6351 fixes it for
+115,6.042983333333333,6.0553333333333335,spk_0,uh Prissy K
+116,6.059,6.09665,spk_0,five. So we'll have that fixed going forward.
+117,6.1253166666666665,6.2043333333333335,spk_0,Uh see two other issues that uh got kind of completed at the last minute.
+118,6.210816666666666,6.310316666666667,spk_0,Uh issue 214 remove IE specific code and libraries
+119,6.31865,6.36765,spk_0,finally closed. Uh three di
+120,6.3725,6.399666666666667,spk_0,three digit issue number.
+121,6.4,6.4595,spk_0,"Uh We discussed removing internet explorer support initially,"
+122,6.45965,6.490483333333334,spk_0,it was IE eight support like
+123,6.495333333333333,6.5546500000000005,spk_0,"a long time ago, 578 years ago."
+124,6.562316666666667,6.688666666666666,spk_0,Uh But uh we never did remove anything specific to ie uh up until this release.
+125,6.688816666666667,6.754333333333333,spk_0,"And so now that Internet Explorer, all versions are completely dead."
+126,6.76,6.85465,spk_0,Uh that made it so that we can remove all of the uh internet Explorer support.
+127,6.85965,6.891333333333334,spk_0,"Uh Which right now we,"
+128,6.891483333333333,6.950816666666666,spk_0,we there's still some things like the bootstrap grid system
+129,6.950983333333333,6.989983333333333,spk_0,that we're using has some IE support in it.
+130,6.995,7.054483333333334,spk_0,But issue 214 removed the HTML five sh I
+131,7.062166666666666,7.093333333333334,spk_0,which was used for Internet Explorer eight
+132,7.093483333333333,7.1433333333333335,spk_0,and the ability to use conditional comments
+133,7.143483333333333,7.231333333333334,spk_0,which were only supported in internet explorer like um I think five through 10.
+134,7.237816666666666,7.248666666666667,spk_0,Um
+135,7.252166666666667,7.299666666666667,spk_0,But since all versions of IE are dead and conditional
+136,7.299816666666667,7.339316666666667,spk_0,comments no longer have any effects for any browser.
+137,7.354833333333334,7.386666666666667,spk_0,We now uh um
+138,7.3901666666666666,7.405833333333334,spk_0,the
+139,7.414666666666666,7.427833333333333,spk_0,what do we do
+140,7.448,7.473,spk_0,if you specify
+141,7.474816666666666,7.526483333333333,spk_0,"uh pound browsers in an attached element,"
+142,7.526666666666666,7.614983333333333,spk_0,it still accepts it there but it just silently kind of doesn't
+143,7.6193333333333335,7.6524833333333335,spk_0,"acknowledge, it just ignores it."
+144,7.660816666666666,7.72965,spk_0,Um But we had to keep support in there because uh
+145,7.745333333333333,7.75915,spk_0,uh
+146,7.77065,7.813166666666667,spk_0,if there are existing themes and sites
+147,7.813316666666667,7.870333333333333,spk_0,out there that used to use conditional comments
+148,7.875666666666667,7.889666666666667,spk_0,uh
+149,7.895833333333333,7.942983333333333,spk_0,"to output ie specific style sheets,"
+150,7.94315,8.00815,spk_0,we couldn't just start output the IE style sheets onto all
+151,8.009816666666667,8.023316666666666,spk_0,pages.
+152,8.028333333333334,8.045,spk_0,Uh because that would
+153,8.048816666666667,8.144333333333334,spk_0,cause other kinds of breakage if IE specific style sheet started showing up on non IE
+154,8.149166666666666,8.1745,spk_0,"um browsers,"
+155,8.174816666666667,8.26015,spk_0,so the key is still there but only for the purposes of suppressing the output.
+156,8.260316666666666,8.29515,spk_0,"So we still acknowledge that browsers is set,"
+157,8.295333333333334,8.340666666666667,spk_0,but then we just kind of throw away the style sheet that comes in
+158,8.346316666666667,8.425483333333334,spk_0,if uh it's set to be an Ieie only specific style sheet.
+159,8.463166666666666,8.56315,spk_0,Uh Let's see. And then one tiny small little feature issued 20 or 6264.
+160,8.566316666666667,8.630816666666666,spk_0,Uh make the mobile toggle text configurable.
+161,8.6325,8.669166666666667,spk_0,Uh This is a tiny little feature that makes it
+162,8.669316666666667,8.729816666666666,spk_0,so that the little hamburger menu that's shown on mobile.
+163,8.731983333333334,8.785666666666666,spk_0,Uh You can now change the label that is shown
+164,8.785833333333333,8.8265,spk_0,"instead of it being hard coded to just say menu,"
+165,8.82665,8.855983333333333,spk_0,"you can help, it could say other things."
+166,8.8625,8.873483333333333,spk_0,"So,"
+167,8.877166666666668,8.92865,spk_0,uh those two issues kind of slid in
+168,8.93415,8.996483333333334,spk_0,uh in the last week before uh feature freeze.
+169,8.99665,9.047816666666666,spk_0,So it was great to get those uh two things completed.
+170,9.0545,9.082666666666666,spk_0,"Uh One thing that didn't make it,"
+171,9.0835,9.150333333333334,spk_0,uh Tim noted before we started the recording was uh swappable config
+172,9.156666666666666,9.254983333333334,spk_0,"uh that issue still looking really great, but uh we couldn't quite get test coverage"
+173,9.256666666666666,9.291483333333334,spk_0,working on that poor request.
+174,9.297816666666666,9.3255,spk_0,"Uh We have some, it's, it's,"
+175,9.32565,9.372166666666667,spk_0,we've definitely moved forward on that issue quite a lot.
+176,9.375,9.448333333333334,spk_0,Uh I think Laon wants to possibly advocate for it being in 128
+177,9.452983333333334,9.470833333333333,spk_0,which would be
+178,9.473,9.48415,spk_0,great.
+179,9.490316666666667,9.499333333333333,spk_0,Uh
+180,9.517833333333334,9.542833333333334,spk_0,"So, but that's fine."
+181,9.543,9.627816666666666,spk_0,Uh 127 is still gonna be a great release with uh with the all new CK editor five module.
+182,9.627983333333333,9.666833333333333,spk_0,Uh That should be exciting for a lot of sites.
+183,9.693483333333333,9.741483333333333,spk_0,Uh There's also one issue I think that still
+184,9.741666666666667,9.795,spk_0,has a good chance of getting in before release.
+185,9.795166666666667,9.829816666666666,spk_0,That's issue 5090
+186,9.848,9.899166666666666,spk_0,which is introducing the details element.
+187,9.907983333333334,9.9755,spk_0,"Uh And then using it on more anywhere,"
+188,9.97565,10.061833333333333,spk_0,"there's a more slash less toggle uh through court, that's uh Gregory's issue Kloos"
+189,10.067483333333334,10.081666666666667,spk_0,issue.
+190,10.085316666666667,10.147166666666667,spk_0,"Um But we haven't seen any updates on it uh as of late,"
+191,10.154333333333334,10.242,spk_0,but it's possible that that can still get in because uh it's a user experience issue.
+192,10.25265,10.340316666666666,spk_0,Uh We'll see if there's uh any will to uh to move that one forward before the release
+193,10.368,10.427333333333333,spk_0,uh and welcome Herb uh to the meeting. Great to see you.
+194,10.453333333333333,10.459983333333334,spk_0,Thank you.
+195,10.475333333333333,10.488316666666666,spk_0,Um
+196,10.493166666666667,10.544833333333333,spk_0,"Since I've got you called out, uh John, could you do a,"
+197,10.545,10.5875,spk_0,a little introduction uh of yourself and then if
+198,10.587666666666667,10.624333333333333,spk_0,"you've got any questions or topics for today,"
+199,10.624483333333334,10.670316666666666,spk_0,you can just uh list those as well.
+200,10.692483333333334,10.722,spk_4,Sure. Uh her band and
+201,10.724816666666667,10.73215,spk_4,Del
+202,10.7365,10.747816666666667,spk_4,um
+203,10.763316666666666,10.76865,spk_4,"Yeah,"
+204,10.778333333333334,10.796,spk_4,Core Committer.
+205,10.816316666666667,10.828166666666666,spk_4,Um
+206,10.83415,10.8785,spk_4,"Yeah, the only one thing that's on mind is, is"
+207,10.8805,10.936983333333334,spk_4,"probably uh missed the mark on, on this release,"
+208,10.93715,10.994483333333333,spk_4,but uh could either be in the bug fix or the next
+209,10.999,11.016833333333333,spk_4,"major release,"
+210,11.021166666666666,11.034666666666666,spk_4,minor release.
+211,11.056666666666667,11.090316666666666,spk_4,"Uh The one that has to do with that,"
+212,11.09865,11.140833333333333,spk_4,that new hook for uh the field schema.
+213,11.186983333333334,11.253333333333334,spk_0,"Yeah, let's see if that issue uh hook"
+214,11.267,11.32465,spk_0,Uckfield Schema alter issue 62 08.
+215,11.34265,11.357666666666667,spk_0,Uh
+216,11.361833333333333,11.39665,spk_0,"Yeah, it's, it's R TV C. That's great."
+217,11.403166666666667,11.463666666666667,spk_0,"Um But I think it's just in the, it's in the bug fix milestone, right?"
+218,11.466,11.513,spk_0,"Oh, I see. You just moved it into the bug fix milestone."
+219,11.524000000000001,11.535983333333334,spk_0,Um
+220,11.542,11.621333333333334,spk_0,"Yeah, I, I think for because this is a cross port from Drupal,"
+221,11.621483333333334,11.655816666666666,spk_0,"I think any time there's,"
+222,11.660833333333333,11.692316666666667,spk_0,that's the way I rationalize it
+223,11.709833333333334,11.728166666666667,spk_0,anytime.
+224,11.732333333333333,11.8095,spk_0,"Uh there's a missing feature from Drupal that isn't in backdrop,"
+225,11.809666666666667,11.866483333333333,spk_0,that means sites upgrading from Drupal seven to backdrop would
+226,11.866666666666667,11.918833333333334,spk_0,"experience a bug because something that used to work,"
+227,11.919,11.938833333333333,spk_0,stopped working.
+228,11.939666666666668,12.00815,spk_0,And so a missing api from backdrop that Drupal has is a bug.
+229,12.010666666666667,12.02365,spk_0,"And so,"
+230,12.027333333333333,12.062666666666667,spk_0,uh that means that we can get it at any time
+231,12.062833333333334,12.120166666666666,spk_0,and it's not like pinned to be feature really specific.
+232,12.156816666666666,12.213666666666667,spk_4,"Yeah, I think that works for a lot of cases unless it's a major. Uh"
+233,12.231816666666667,12.267483333333333,spk_4,"probably even then if it's major, it's still"
+234,12.275333333333334,12.313666666666666,spk_4,"breaking something if we don't include it, I guess."
+235,12.334666666666667,12.342,spk_4,Yeah.
+236,12.350333333333333,12.35915,spk_0,All right.
+237,12.382333333333333,12.463833333333334,spk_0,"OK. Uh Excellent. So at hook fields, schema alter. Um"
+238,12.472816666666667,12.501333333333333,spk_0,"Yeah, it looks like RG piano"
+239,12.50715,12.538483333333334,spk_0,marked RTB C which is great.
+240,12.579666666666666,12.589,spk_0,Cool.
+241,12.6105,12.647,spk_0,"Yeah, it's also funny and this, this issue,"
+242,12.65265,12.70165,spk_0,uh was held up a little bit by benchmarking.
+243,12.701816666666666,12.754333333333333,spk_0,"Uh, looks like Laon did some benchmarks which is appreciated."
+244,12.769833333333333,12.7805,spk_0,Um
+245,12.83415,12.845833333333333,spk_0,I probably should
+246,12.850816666666667,12.91865,spk_0,"probably shouldn't get into this, this particular topic but too, too much at least."
+247,12.918833333333334,12.924483333333333,spk_0,But
+248,12.927166666666666,12.974,spk_0,"man, every time I use my Drupal sites these days,"
+249,12.974166666666667,13.044483333333334,spk_0,it's just like they are so incredibly slow.
+250,13.0775,13.092483333333334,spk_0,"So,"
+251,13.097816666666667,13.11865,spk_0,uh I guess
+252,13.125166666666667,13.158666666666667,spk_0,"I'm headed with that is I was like, well,"
+253,13.160833333333333,13.2305,spk_0,we're still gonna be a heck of a lot faster than Drupal
+254,13.241833333333334,13.287833333333333,spk_0,"and this is, this is an issue of like, um,"
+255,13.307666666666666,13.342,spk_0,"uh it's like a, like"
+256,13.348166666666666,13.425983333333333,spk_0,"400 milliseconds is like the or 4000 milliseconds is, wait,"
+257,13.429166666666667,13.481666666666667,spk_0,"yeah, 400 milliseconds is like the difference. I think that we're seeing"
+258,13.483333333333333,13.534983333333333,spk_0,"and only in ac clear situation. So it's not,"
+259,13.542166666666667,13.557816666666668,spk_0,not an issue.
+260,13.578166666666666,13.584983333333334,spk_0,Yeah.
+261,13.601983333333333,13.628333333333334,spk_0,"Ok. Um, great."
+262,13.636316666666668,13.657333333333334,spk_0,"Any other topics? Herb,"
+263,13.703166666666666,13.741483333333333,spk_4,"uh, have you discussed, uh, any"
+264,13.743316666666667,13.774,spk_4,CT editor bugs or?
+265,13.791833333333333,13.889833333333334,spk_0,Yeah. The only bug that we know of uh right now that there's an open issue for is
+266,13.902333333333333,13.940483333333333,spk_0,uh issue 6351
+267,13.950983333333333,13.990833333333333,spk_0,which uh is currently open Indigo
+268,13.994833333333334,14.021333333333333,spk_0,ported something from
+269,14.02565,14.10615,spk_0,uh Drupal that fixes an issue where seek editor is inside of a dialogue.
+270,14.106333333333334,14.132666666666667,spk_0,It can't open a sub dialogue.
+271,14.14,14.2035,spk_0,Uh but uh that pull request uh is currently
+272,14.20365,14.251983333333333,spk_0,needs review but it's in use by other projects.
+273,14.252166666666668,14.268,spk_0,And so I think that
+274,14.275333333333334,14.322,spk_0,it's probably gonna be the solution that we go with.
+275,14.351333333333333,14.413666666666666,spk_0,Uh Do you have any others that you know of that we haven't reported?
+276,14.46415,14.474333333333334,spk_0,Uh
+277,14.49,14.54,spk_4,"No, it is. Well, I guess there's the one that um"
+278,14.541833333333333,14.569316666666667,spk_4,I guess we decided uh
+279,14.58215,14.626333333333333,spk_4,it can be fixed afterwards. The one with linking
+280,14.63415,14.647816666666667,spk_4,images.
+281,14.656666666666666,14.671166666666666,spk_0,Oh yes.
+282,14.696,14.77565,spk_0,"Yeah, there's an issue where if you, you can link an image that works fine."
+283,14.777333333333333,14.841,spk_0,Uh But if you have an image that has a caption
+284,14.843483333333333,14.87765,spk_0,"and you add a link to the image,"
+285,14.888,14.941,spk_0,the link ends up also applied to the caption.
+286,14.95615,15.047816666666666,spk_0,"Uh Yep, that issue still exists. Uh Still we believe an upstream issue"
+287,15.050816666666666,15.06215,spk_0,uh with see
+288,15.064833333333333,15.091,spk_0,editor rather than something in in
+289,15.103983333333334,15.141666666666667,spk_0,image module or sorry inside of C
+290,15.148483333333333,15.219,spk_0,module may maybe it's actually not clear where the problem is coming from.
+291,15.223166666666666,15.2355,spk_0,Uh
+292,15.240483333333334,15.313,spk_0,"For whatever reason, the same problem also exists inside of Drupal 10 and 11."
+293,15.317833333333333,15.3805,spk_0,Uh And there's a sister issue over there.
+294,15.380666666666666,15.439666666666668,spk_0,Uh We're hoping someone will be able to figure that issue out.
+295,15.4605,15.468,spk_0,Yeah.
+296,15.521,15.532816666666667,spk_0,"Yeah, I"
+297,15.539316666666666,15.575816666666666,spk_0,"just also related to seek editor, I've been"
+298,15.578816666666667,15.608333333333333,spk_0,tracking uh
+299,15.6105,15.678166666666666,spk_0,like I've joined the seek editor five Slack group.
+300,15.678333333333333,15.727983333333333,spk_0,"Uh And I also keep an eye on the Drupal 11,"
+301,15.728166666666667,15.764483333333333,spk_0,Seek editor five issue cube just to see what
+302,15.764666666666667,15.814666666666668,spk_0,kinds of issues we could also be facing because
+303,15.81865,15.87665,spk_0,"problems Drupal have, we also have a pretty good chance of facing"
+304,15.8845,15.89665,spk_0,and
+305,15.90365,15.914,spk_0,uh
+306,15.917483333333333,15.947333333333333,spk_0,"by and large,"
+307,15.950166666666666,15.993316666666667,spk_0,the complaints are uh like
+308,16.014,16.04015,spk_0,"question like there,"
+309,16.040316666666666,16.09365,spk_0,there are misunderstandings about the way that seek editor five works.
+310,16.098483333333334,16.159833333333335,spk_0,Um I think that Seek editor five not using an I frame
+311,16.159983333333333,16.224,spk_0,and having the admin styles apply to the contents of the editor
+312,16.229166666666668,16.33315,spk_0,uh throws an awful lot of people for a loop. Um And also just the way that um
+313,16.343316666666666,16.3555,spk_0,uh
+314,16.357983333333333,16.44,spk_0,like classes are applied like the the use of the styles drop down
+315,16.44483333333333,16.491,spk_0,uh is a real big stumbling block for a lot of
+316,16.49115,16.565,spk_0,people that in six editor for the styles drop down.
+317,16.570833333333333,16.624816666666668,spk_0,Um You could select any bit of text and you could
+318,16.625,16.6875,spk_0,select something from the styles drop down and it would both like
+319,16.691483333333334,16.746333333333332,spk_0,change the tag and apply a class at the same time.
+320,16.75,16.829983333333335,spk_0,"And in 60 editor five, you first need to make sure that something is like an H three."
+321,16.83015,16.900983333333333,spk_0,"For example, before you can apply an H three style class to it."
+322,16.906816666666668,16.970316666666665,spk_0,"Uh And in six editor four, you could just select text, select,"
+323,16.972,17.0075,spk_0,"you know, small heading from the list"
+324,17.0095,17.075,spk_0,and it would both make it an H three and apply a class at the same time.
+325,17.083333333333332,17.110666666666667,spk_0,Um So there's just some
+326,17.1125,17.190333333333335,spk_0,behavioral differences that uh have made it so long time users of seek editor
+327,17.1905,17.255,spk_0,"for kind of stumbling over and over again on these kind of same problems,"
+328,17.255166666666668,17.269,spk_0,it seems like.
+329,17.277166666666666,17.320316666666667,spk_0,Uh it's kind of remarkable how often the same
+330,17.327666666666666,17.441666666666666,spk_0,question just gets asked repeatedly around one of those 22 problems.
+331,17.4695,17.48115,spk_0,Uh OK.
+332,17.481333333333332,17.5445,spk_0,"Anyway, uh just generally, I think we're looking really great with Seek editor."
+333,17.549316666666666,17.647316666666665,spk_0,"Uh five. I think that we're in a much, much, much, much better spot than"
+334,17.65315,17.66283333333333,spk_0,uh
+335,17.670483333333333,17.729333333333333,spk_0,Drupal was when it first introduced seek editor uh back
+336,17.7295,17.771833333333333,spk_0,"when it was uh a year and a half ago,"
+337,17.771983333333335,17.830816666666667,spk_0,a lot less of a mature project than it is now.
+338,17.881333333333334,17.89765,spk_0,All right.
+339,17.922316666666667,17.952666666666666,spk_0,"Um Yeah, so that's,"
+340,17.957166666666666,18.037666666666667,spk_0,"we don't really have a whole lot of topics for today. Uh The next couple of weeks,"
+341,18.043483333333334,18.12465,spk_0,um We'll continue to do bug fix issues. There's uh like
+342,18.129833333333334,18.150166666666667,spk_0,seven or so
+343,18.155316666666668,18.252833333333335,spk_0,uh R TV C issues. Uh We're gonna continue merging in those bug fix issues.
+344,18.257166666666667,18.3295,spk_0,"The only uh kind of last minute feature that we have is that details,"
+345,18.329666666666668,18.36215,spk_0,element one issue 5090
+346,18.365,18.415983333333333,spk_0,that could possibly still get in as a new feature.
+347,18.448983333333334,18.511333333333333,spk_0,"Um But that's, yeah, that's kind of it for the 127 update."
+348,18.518833333333333,18.592816666666668,spk_0,Uh I think we had a couple of other topics uh that people wanted to bring up.
+349,18.592983333333333,18.686,spk_0,"First of all, uh Tim, you had some issue or question about refreshing pull requests."
+350,18.695483333333332,18.73915,spk_0,What uh what did you wanna discuss there?
+351,18.752166666666668,18.780483333333333,spk_2,I'll try to keep this just
+352,18.784483333333334,18.81615,spk_2,simple. So
+353,18.836,18.868316666666665,spk_2,one of the things that I run into a lot when
+354,18.868483333333334,18.92865,spk_2,"I'm going back and looking for uh issues that are like,"
+355,18.928816666666666,18.995483333333333,spk_2,"you know, needs testing or close to finished is that there's a lot of pr s out there"
+356,19.0065,19.07415,spk_2,"that uh are old enough that the sandbox is broken and they,"
+357,19.076316666666667,19.102833333333333,spk_2,and also a apparently
+358,19.109,19.166483333333332,spk_2,the way we're doing things now you need to Reba it's uh uh
+359,19.170833333333334,19.171166666666668,spk_2,uh
+360,19.173,19.21415,spk_2,"re basing has become more sensitive,"
+361,19.220483333333334,19.232166666666668,spk_2,right? That
+362,19.242,19.298983333333332,spk_2,the pr has become out of date. Uh It seems like much quicker.
+363,19.29915,19.359166666666667,spk_2,"I don't fully understand why, but I don't, we don't need to get into the y"
+364,19.36565,19.39281666666667,spk_2,"the one of the question is how,"
+365,19.4025,19.504166666666666,spk_2,"um so if, if you could give me a, a really quick tip, uh and sort of in how you do it,"
+366,19.504333333333335,19.55615,spk_2,"I have basically been just cutting and pasting, you know,"
+367,19.561816666666665,19.604833333333332,spk_2,creating new PR s and cutting and pasting the code.
+368,19.619166666666665,19.62815,spk_2,Um
+369,19.630483333333334,19.666316666666667,spk_2,I know that there are Rebase commands in debt.
+370,19.666483333333332,19.739316666666667,spk_2,Do they generally work for these kinds of things? Is that what I should be doing or?
+371,19.75965,19.792666666666666,spk_0,"Well, the easiest thing to do"
+372,19.797483333333332,19.811166666666665,spk_0,um
+373,19.814833333333333,19.843833333333333,spk_0,is to use the button inside of the github
+374,19.8465,19.856833333333334,spk_0,U I
+375,19.862316666666665,19.887316666666667,spk_0,if have you been using that?
+376,19.907316666666667,19.946983333333332,spk_2,"Well, OK, I use, so"
+377,19.959983333333334,20.00615,spk_2,I guess part of the problem might be that these aren't my pr s.
+378,20.006333333333334,20.098666666666666,spk_2,"So if it was like, Ooo, oftentime, I'm re basing someone else's pr if it were my pr"
+379,20.10115,20.132483333333333,spk_2,"I could just uh yeah,"
+380,20.13265,20.196666666666665,spk_2,hit that Rebase button and I have been using that for those kinds of scenarios.
+381,20.202666666666666,20.268316666666667,spk_2,"But if it's someone else's so maybe I can't use the Rebase command anyways,"
+382,20.268483333333332,20.278983333333333,spk_2,I don't know.
+383,20.289833333333334,20.332,spk_2,"What is there a strategy other than,"
+384,20.336816666666667,20.346166666666665,spk_2,"I mean, I,"
+385,20.353650000000002,20.4195,spk_2,"sometimes these people aren't uh necessarily around or active. I could do a,"
+386,20.427333333333333,20.491483333333335,spk_2,"I don't know, could I do APR on their pr, is that the best way to do it or?"
+387,20.498666666666665,20.512316666666667,spk_2,Yeah. OK.
+388,20.5125,20.596666666666668,spk_0,"So you're, you're right that unless you are a maintainer or it's your pull request,"
+389,20.596833333333333,20.614316666666667,spk_0,the button to
+390,20.622816666666665,20.660833333333333,spk_0,update with Maine is not uh
+391,20.662666666666667,20.70765,spk_0,"in the U I. So yeah, that's, that's the problem."
+392,20.715,20.79531666666667,spk_0,"Um If the person is still around and still like working on the issue,"
+393,20.795483333333333,20.851316666666666,spk_0,"making a poll request against the poll request, that's a good way to go."
+394,20.85615,20.905816666666666,spk_0,Um But because only they can merge that in
+395,20.914316666666668,20.961333333333332,spk_0,uh and you don't get the full combined result
+396,20.961483333333334,20.996666666666666,spk_0,"until after it's been merged into their branch,"
+397,21.00115,21.040816666666668,spk_0,"then yes, you should just make a new, a"
+398,21.046983333333333,21.1255,spk_0,"new poll request. Uh, you know, specifically say that it replaces"
+399,21.13065,21.155316666666668,spk_0,"the previous poll request,"
+400,21.1605,21.224483333333332,spk_0,"um, and try to maintain the commit history too if that's relevant."
+401,21.22465,21.242166666666666,spk_0,"You know, so that way,"
+402,21.248833333333334,21.346166666666665,spk_0,"um although when I merge, I always squash it and I always look at all of the"
+403,21.35115,21.401816666666665,spk_0,contributors separately from the commit history.
+404,21.40598333333333,21.470483333333334,spk_0,"Um It's still, I don't know, I think polite to kind of keep the"
+405,21.47383333333333,21.547483333333332,spk_0,commits from the previous person in place in your updated poll request.
+406,21.54765,21.5715,spk_2,"Well, how would it, so would you have to,"
+407,21.574483333333333,21.616483333333335,spk_2,how would I do that to keep their commit history?
+408,21.63065,21.682483333333334,spk_0,Uh So check out their poll request
+409,21.69315,21.715,spk_0,"uh and then,"
+410,21.721983333333334,21.808333333333334,spk_0,"uh and then start from there, just add another commit to it and then push to your fork"
+411,21.8105,21.880166666666668,spk_0,and then uh make a poll request that includes all of their commits
+412,21.880316666666666,21.918316666666666,spk_0,at the beginning and then all of your commits at the end.
+413,21.943316666666668,21.983666666666668,spk_2,OK? I guess that makes sense. Um
+414,21.985833333333332,21.998833333333334,spk_2,"Usually,"
+415,22.002166666666668,22.05765,spk_2,"I mean, to be clear, I'm usually doing these on pretty simple pr S, you know,"
+416,22.057816666666668,22.09765,spk_2,usually they're 20 or 30 lines of code at most.
+417,22.097816666666667,22.109483333333333,spk_2,It's nothing.
+418,22.123,22.16815,spk_2,"Uh So I have just been actually cutting and pasting, you know,"
+419,22.168833333333332,22.223983333333333,spk_2,basically creating a new pr and cutting and pasting the code changes.
+420,22.224816666666666,22.22615,spk_2,And
+421,22.249483333333334,22.267666666666667,spk_2,"sometimes the, you know,"
+422,22.26781666666667,22.33115,spk_2,the code is shifted by 20 or 30 lines and I need to figure out where it is.
+423,22.348,22.354333333333333,spk_2,Did that?
+424,22.382166666666667,22.4605,spk_0,"Yeah, that's fine too. Uh, I think, um, just copying and pasting the changes"
+425,22.465166666666665,22.541483333333332,spk_0,"and then making a new poll request. Um, just note that, you know, it was based on the"
+426,22.54365,22.572316666666666,spk_0,"-- previous poll requests
+-- where"
+427,22.578,22.595833333333335,spk_2,"I always, yeah,"
+428,22.599316666666667,22.65965,spk_2,"I always include a comment that, that I'm copying someone else's pr"
+429,22.678,22.70815,spk_0,"Yeah. And I think that, um,"
+430,22.714666666666666,22.738983333333334,spk_0,"again, like, uh,"
+431,22.741483333333335,22.78783333333333,spk_0,you'll have to wait for a core commander to
+432,22.788,22.831666666666667,spk_0,come in and close the previous poll request.
+433,22.837833333333332,22.890333333333334,spk_0,"And then, then the focus will become on your poll request instead."
+434,22.8905,22.90565,spk_0,Sometimes we'll leave poll
+435,22.91015,22.939316666666667,spk_0,multiple poll requests open if they're
+436,22.93948333333333,22.9715,spk_0,like substantially different from each other.
+437,22.97615,23.030166666666666,spk_0,But if your poll request is just an updated
+438,23.030316666666668,23.080166666666667,spk_0,"refreshed version of the previous person's poll request,"
+439,23.0875,23.107483333333334,spk_0,uh We tried at
+440,23.115983333333332,23.191666666666666,spk_0,least I kind of try to keep only one po request open at a time
+441,23.194166666666668,23.209816666666665,spk_0,because uh
+442,23.21415,23.263166666666667,spk_0,"you know, the may be fixed by a link at the top of a github"
+443,23.265983333333335,23.276483333333335,spk_0,issue.
+444,23.279333333333334,23.322316666666666,spk_0,It's definitely better if there's only one issue there.
+445,23.322483333333334,23.38383333333333,spk_0,"Although it does support like maybe fixed by this or this issue,"
+446,23.400166666666667,23.466483333333333,spk_0,uh which I uh I also appreciate that it supports their having
+447,23.47383333333333,23.496166666666667,spk_0,multiple solutions.
+448,23.496333333333332,23.573166666666665,spk_0,"But for clarity, I kind of prefer the only the updated one be, be listed."
+449,23.594666666666665,23.59515,spk_2,OK.
+450,23.6,23.656833333333335,spk_2,"But in some cases, that's not the case yet because nobody is closed the other one."
+451,23.65965,23.660666666666668,spk_2,So
+452,23.67215,23.692983333333334,spk_2,I'll talk to you about that later on.
+453,23.701816666666666,23.722816666666667,spk_2,Maybe one other fair.
+454,23.723,23.763166666666667,spk_2,I hope this is a fairly quick question and it's sort of
+455,23.763333333333332,23.805483333333335,spk_2,related just in terms of me helping out of the issue too.
+456,23.809983333333335,23.85315,spk_2,I noticed one of your issues there needed to change record.
+457,23.86165,23.874316666666665,spk_2,"And I feel like I,"
+458,23.884166666666665,23.9405,spk_2,"I feel like I brought this up before, but I just checked and there's quite a few,"
+459,23.94065,23.966666666666665,spk_2,we've got about 30 issues.
+460,23.966833333333334,23.977166666666665,spk_2,I think
+461,23.984483333333333,24.029833333333332,spk_2,that are open saying that they need change records.
+462,24.032166666666665,24.059166666666666,spk_2,"And to be honest,"
+463,24.075833333333332,24.124316666666665,spk_2,"I'm like, I, and I know I've asked about this before because"
+464,24.130483333333334,24.1585,spk_2,"I don't know, like"
+465,24.163816666666666,24.192333333333334,spk_2,"what it, I don't, you know, I mean, I have a,"
+466,24.1925,24.231666666666666,spk_2,"an intuitive idea of what a change record is,"
+467,24.23865,24.300166666666666,spk_2,but I don't know what the criteria are. I never use them like I never go.
+468,24.300333333333334,24.32133333333333,spk_2,"So I wouldn't even,"
+469,24.33,24.3505,spk_2,I don't even know where to start.
+470,24.352666666666668,24.377833333333335,spk_2,"Like I, is it, is, is"
+471,24.379833333333334,24.418483333333334,spk_2,"helping with change records or pretty, do you need a, a"
+472,24.42031666666667,24.4635,spk_2,comprehensive understanding of the issue
+473,24.469166666666666,24.50348333333333,spk_2,or is it something that someone like me could
+474,24.50365,24.53783333333333,spk_2,just read through the issue and figure it out?
+475,24.538,24.556333333333335,spk_2,Write a change record?
+476,24.577833333333334,24.591316666666668,spk_0,Um
+477,24.616833333333332,24.682816666666668,spk_0,"It's, it's mixed sometimes it's complicated and sometimes it's not."
+478,24.682983333333333,24.756333333333334,spk_0,"Um, but yes, uh help write, change records would be appreciated."
+479,24.761483333333334,24.78515,spk_0,II I don't think there's
+480,24.78915,24.841666666666665,spk_0,"maybe I'm mistaken, but I don't think there's that many issues that"
+481,24.8465,24.920483333333333,spk_0,"actually need a change record because in theory, if they're closed issue,"
+482,24.92665,24.980483333333332,spk_0,"uh they, the change record has already been written."
+483,24.98665,24.996166666666667,spk_0,Um
+484,25.005816666666668,25.009816666666666,spk_2,You know what?
+485,25.009983333333334,25.05666666666667,spk_2,"Maybe I, I just did a search on the tag and it could be,"
+486,25.056833333333334,25.09915,spk_2,the tag exists on some closed issues and I didn't notice them.
+487,25.107316666666666,25.165983333333333,spk_0,"Yeah, there's a silly thing where maybe not silly but"
+488,25.16865,25.246666666666666,spk_0,"uh the needs change record label, there's not a separate label for"
+489,25.2485,25.262316666666667,spk_0,um
+490,25.272816666666667,25.309,spk_0,for has changed record.
+491,25.330816666666667,25.374483333333334,spk_0,"And so unlike like has, has pull"
+492,25.377166666666668,25.402833333333334,spk_0,"request, for example, like,"
+493,25.407166666666665,25.455483333333333,spk_0,um some of our states have like a needs and
+494,25.45565,25.503816666666665,spk_0,"then it also has a has but for change records,"
+495,25.503983333333334,25.53065,spk_0,we don't have two separate labels.
+496,25.530816666666666,25.566316666666665,spk_0,And so if it's marked needs change record
+497,25.571166666666667,25.623666666666665,spk_0,"and it's closed, that actually means it has a change record."
+498,25.6605,25.734166666666667,spk_0,Uh and uh that there's a couple of issues that are open
+499,25.7385,25.759816666666666,spk_0,like uh the CC
+500,25.763166666666667,25.819666666666667,spk_0,editor one and the remove ie uh
+501,25.821983333333332,25.886816666666668,spk_0,support issues. Those are two issues that are currently open
+502,25.888983333333332,25.951816666666666,spk_0,"even though the code is in, but they are marked needs change record,"
+503,25.951983333333335,25.976816666666668,spk_0,"but they're still open because they,"
+504,25.976983333333333,26.011983333333333,spk_0,they don't get closed until the change record is written.
+505,26.029166666666665,26.069816666666668,spk_2,Do we do? Is anybody aware of any doc background
+506,26.07881666666667,26.12698333333333,spk_2,specific documentation on what change records are?
+507,26.127166666666668,26.16283333333333,spk_2,"And like what, what's involved in creating them?"
+508,26.18315,26.192333333333334,spk_0,"Oh,"
+509,26.196,26.249816666666668,spk_2,"I know, you know, if you're not aware, that's fine to say that."
+510,26.274816666666666,26.316316666666665,spk_0,"Yeah. Well, let's look at uh so"
+511,26.330816666666667,26.386816666666668,spk_0,uh docs dot backdrop C ms.org
+512,26.401,26.457166666666666,spk_0,there is uh in the sidebar
+513,26.4635,26.516483333333333,spk_0,"of the home page there under the appendix slash reference,"
+514,26.516666666666666,26.551983333333332,spk_0,there's a link for change records
+515,26.558833333333332,26.63315,spk_0,"that goes to docs dot bankruptcy, ms.org/change dash records."
+516,26.6565,26.669,spk_0,And
+517,26.676,26.700333333333333,spk_0,"uh this page,"
+518,26.708666666666666,26.719333333333335,spk_0,uh
+519,26.721333333333334,26.805,spk_0,ostensibly lists all of the API changes and breaks even from Drupal seven.
+520,26.8295,26.877333333333333,spk_0,"like from the time that we've worked up until present,"
+521,26.88265,26.892983333333333,spk_0,um
+522,26.894666666666666,26.938983333333333,spk_0,"the big major API changes there,"
+523,26.94915,27.009,spk_0,uh Anyone that's uh an editor on the API website can
+524,27.009166666666665,27.06815,spk_0,create or edit additional change records and it's just not a
+525,27.081833333333332,27.109983333333332,spk_0,uh change record. I believe
+526,27.13915,27.139483333333335,spk_2,"I,"
+527,27.139666666666667,27.205483333333333,spk_2,I would just suggest that if anybody that's experienced at this
+528,27.20565,27.246983333333333,spk_2,had the time to do a short blog post or something
+529,27.258333333333333,27.303,spk_2,"like this is what change records are, why we use them and"
+530,27.3135,27.366316666666666,spk_2,"you know how you can help that would be useful, but"
+531,27.37015,27.41283333333333,spk_2,I'll try to figure it out myself. That's it. We can move on.
+532,27.419666666666668,27.49266666666667,spk_0,"Yeah, you know what, it would also be really helpful be this change record listing."
+533,27.494333333333334,27.504166666666666,spk_0,Uh
+534,27.514483333333335,27.558333333333334,spk_0,It should describe what they are
+535,27.561333333333334,27.600833333333334,spk_0,rather than just like having a listing.
+536,27.608666666666668,27.671166666666668,spk_0,Uh might also like this view also could be improved dramatically like
+537,27.680816666666665,27.714316666666665,spk_0,"um to include like,"
+538,27.719333333333335,27.72415,spk_0,"you know,"
+539,27.724316666666667,27.75615,spk_0,the version of backdrop in which the change
+540,27.756333333333334,27.79515,spk_0,record applied like we have that ability.
+541,27.799483333333335,27.867,spk_0,Um But it's not uh that this view is really minimal.
+542,27.926316666666665,27.957316666666667,spk_2,Can I just have a quick as a core developer?
+543,27.957483333333332,28.015983333333335,spk_2,Do you have to refer to them much like to remind yourself of things or
+544,28.0465,28.122316666666666,spk_2,"um I'm wondering what the like as a regular site builder, there's probably,"
+545,28.122483333333335,28.1445,spk_2,I don't need them very often.
+546,28.144666666666666,28.17815,spk_2,"Do I, I assume mostly it's about leaving"
+547,28.18016666666667,28.180316666666666,spk_2,"a,"
+548,28.186483333333335,28.243483333333334,spk_2,it's about leaving a path for develop core developers to understand. But
+549,28.258666666666667,28.275666666666666,spk_0,"yeah, I think,"
+550,28.279833333333332,28.3405,spk_0,I think it's mostly for contrib developers actually because it's like
+551,28.34065,28.4045,spk_0,"if you have implemented a certain API and the API changes,"
+552,28.409333333333333,28.49,spk_0,uh what we don't want to have to have developers do is go to the original issue.
+553,28.49715,28.549316666666666,spk_0,"Well, they can to get a deeper understanding but like"
+554,28.551983333333332,28.566666666666666,spk_0,it's like the uh
+555,28.571833333333334,28.653,spk_0,"too long didn't read version of, like here's what you need to know to actually"
+556,28.656583333333334,28.702583333333333,spk_0,deal with the change that occurred as opposed
+557,28.70275,28.756066666666666,spk_0,to reading the entire original issue and discussion about
+558,28.759566666666668,28.789066666666667,spk_0,the different options and stuff like that.
+559,28.789233333333332,28.794416666666667,spk_0,"It's,"
+560,28.794583333333332,28.863083333333332,spk_0,it's just listing like here's the final result of this API change
+561,28.86325,28.91875,spk_0,is that you used to do this and now you do that.
+562,28.919583333333332,28.989233333333335,spk_0,Um That's the typical uh expectation of a change record
+563,28.9894,29.04906666666667,spk_0,is giving you a before example and an after example
+564,29.066666666666666,29.086333333333332,spk_2,"-- that's helpful. Thank
+-- you."
+565,29.135833333333334,29.1815,spk_0,"OK. Um Great. Well, that's uh"
+566,29.1945,29.31215,spk_0,"it for uh those topics. I think uh Irena, if you want to talk about uh D two B module and"
+567,29.321833333333334,29.371983333333333,spk_0,uh any requests or updates that you have about that. Uh
+568,29.376816666666667,29.393316666666667,spk_0,"Yeah, take it away."
+569,29.411483333333333,29.449483333333333,spk_3,Hm Thank you. I
+570,29.467666666666666,29.507483333333333,spk_3,probably have more requests
+571,29.5135,29.538166666666665,spk_3,and the other way around.
+572,29.548000000000002,29.558833333333332,spk_3,Um
+573,29.571,29.57665,spk_3,mm
+574,29.612833333333334,29.692983333333334,spk_3,"I think that so first of all, I want to thank to thank very, very much everyone who"
+575,29.697316666666666,29.734483333333333,spk_3,"worked on this, you know, all"
+576,29.747816666666665,29.774816666666666,spk_3,"during December, it"
+577,29.781833333333335,29.811983333333334,spk_3,is ready for doc
+578,29.817,29.8735,spk_3,made lots of changes like we discussed um
+579,29.877166666666668,29.888816666666667,spk_3,during
+580,29.891483333333333,29.921983333333333,spk_3,bad camp session
+581,29.926483333333334,29.992166666666666,spk_3,that it might be challenging to do the SQL part.
+582,29.9985,30.0085,spk_3,But I think do
+583,30.018483333333332,30.036816666666667,spk_3,have figured it out
+584,30.042,30.055316666666666,spk_3,and
+585,30.058333333333334,30.07815,spk_3,code is
+586,30.09965,30.137316666666667,spk_3,"there, it hasn't been tested thoroughly."
+587,30.142333333333333,30.188816666666668,spk_3,Uh Like I did have some trouble uploading the
+588,30.19315,30.27215,spk_3,"database, but this, these are kind of more of the technical issues rather than"
+589,30.277666666666665,30.330816666666667,spk_3,general approach. So I think he worked out the general approach.
+590,30.351483333333334,30.405316666666668,spk_3,I am trying to record the demo on my local machine
+591,30.411816666666667,30.4635,spk_3,uh with new features which are great because
+592,30.465816666666665,30.546333333333333,spk_3,the two features that are ready to go are both quite important. One allows
+593,30.55216666666667,30.5625,spk_3,uh
+594,30.574483333333333,30.638983333333332,spk_3,one changes how models are downloaded and it's a big deal because
+595,30.650666666666666,30.688983333333333,spk_3,now it is possible that
+596,30.702666666666666,30.734983333333332,spk_3,the models that are unchecked
+597,30.74365,30.771333333333335,spk_3,in the Drupal seven site
+598,30.778,30.841666666666665,spk_3,"are not automatically checked and downloaded and that makes things much,"
+599,30.841833333333334,30.855316666666667,spk_3,much easier.
+600,30.877333333333333,30.906833333333335,spk_3,"I can do the demo now or I, I"
+601,30.910833333333333,30.95965,spk_3,hope to record it and post it this week.
+602,30.972316666666668,30.998,spk_3,But then his question was like
+603,31.015,31.076483333333332,spk_3,before we can put it into the next release because people are
+604,31.0835,31.126316666666668,spk_3,people now can install the model through.
+605,31.146833333333333,31.202833333333334,spk_3,So we want to include this very important feature in the release.
+606,31.203,31.228983333333332,spk_3,"Uh So he said, OK, I need"
+607,31.244333333333334,31.28665,spk_3,kind of something in the issue saying this
+608,31.286816666666667,31.333333333333332,spk_3,these things can be included in the release.
+609,31.355,31.400166666666667,spk_3,I did leave my notes there
+610,31.404333333333334,31.428,spk_3,but I'm not sure
+611,31.444816666666668,31.480983333333334,spk_3,what is the next step? Like what
+612,31.500333333333334,31.509983333333334,spk_3,um
+613,31.529333333333334,31.586983333333333,spk_3,"how do, what's the next step to make this next release happen?"
+614,31.598,31.60615,spk_0,Hm.
+615,31.625166666666665,31.665333333333333,spk_0,Um I'm not sure. Um
+616,31.66815,31.7235,spk_0,"because I, I haven't checked in on it uh recently. But"
+617,31.734333333333332,31.746,spk_0,uh
+618,31.766483333333333,31.82815,spk_0,"I think usually if something has already been merged, it's just a, a"
+619,31.83065,31.894666666666666,spk_0,matter of time like a matter of request or urgency
+620,31.90165,31.957983333333335,spk_0,um that another release be created. And so
+621,31.968833333333333,31.98065,spk_0,uh
+622,31.986983333333335,31.998983333333335,spk_0,you could
+623,32.00615,32.06798333333333,spk_0,"request uh if you wanted to make an issue saying please make a new release,"
+624,32.06815,32.11165,spk_0,that would be one way of just politely asking
+625,32.11615,32.141666666666666,spk_0,um or do it over Zula.
+626,32.155316666666664,32.16598333333334,spk_0,Um
+627,32.174483333333335,32.21933333333333,spk_0,"But uh yeah, if it's already been merged, then"
+628,32.23665,32.321983333333336,spk_0,"the way most authors work is, if it's been merged, it's ready for release. Um"
+629,32.325,32.373,spk_0,And so a release can be made at any time.
+630,32.38865,32.442,spk_3,OK. So I think I uh let me double check. We're
+631,32.467166666666664,32.544333333333334,spk_3,with couple of modules. So there are two issues that we're
+632,32.55331666666667,32.56648333333333,spk_3,"-- and
+-- I just,"
+633,32.57566666666666,32.61215,spk_2,"I don't know, did you see my comments last night, Irena?"
+634,32.612316666666665,32.669,spk_2,I just tried the DEV branch last night and it seems to be a regression.
+635,32.67333333333333,32.712316666666666,spk_2,So you do not want to do a release right now.
+636,32.751983333333335,32.757983333333335,spk_3,But
+637,32.76815,32.862316666666665,spk_3,"yeah, so Dev branch and 1.1 so that the most recent updates are in 1.1"
+638,32.88216666666667,32.88966666666666,spk_2,branch.
+639,32.89315,32.934333333333335,spk_2,"Yeah, that's, I think that's what I consider the DEV branch,"
+640,32.93816666666667,32.958333333333336,spk_2,but maybe I whatever.
+641,32.97448333333333,33.025333333333336,spk_2,"-- Let me check, maybe I used the wrong branch. I, I'm looking
+-- now,"
+642,33.03231666666667,33.07333333333333,spk_3,I let me double check.
+643,33.077666666666666,33.10548333333333,spk_3,There is a
+644,33.144666666666666,33.205,spk_3,"what I see there. When I go to code,"
+645,33.2135,33.23833333333334,spk_3,I can see
+646,33.24,33.30348333333333,spk_2,"the one X dash one X branch is what I used last night and it,"
+647,33.306333333333335,33.353316666666665,spk_2,"it worked worse than it did the, than the,"
+648,33.35516666666667,33.377833333333335,spk_2,than the release version did.
+649,33.384816666666666,33.43416666666667,spk_2,"Now, that could be maybe I did something wrong. I opened an issue."
+650,33.434333333333335,33.45433333333333,spk_2,I put some comments there.
+651,33.45981666666667,33.5275,spk_3,"I looked at the issue and I was, if you have time to connect,"
+652,33.52766666666667,33.56415,spk_3,we can do a little bit more testing directly.
+653,33.5835,33.61015,spk_3,"But generally speaking, Nate,"
+654,33.61031666666667,33.654833333333336,spk_3,I just wanted to confirm that it will be
+655,33.655,33.738166666666665,spk_3,helpful to create additional issues saying please create new release
+656,33.75083333333333,33.78616666666667,spk_3,or Zulip is better. What is better?
+657,33.80148333333333,33.8925,spk_0,"Uh Well, if it's so if it's more complicated than it sounds like Tim is saying that"
+658,33.89416666666666,33.951483333333336,spk_0,"there's possibly an issue making a new release, it'd be better"
+659,33.95433333333333,34.00716666666667,spk_0,"to have it be an issue. Um So that way it's, it's,"
+660,34.013,34.079166666666666,spk_0,"it's a, it's more publicly visible if it's an issue than it is in, in Zulip."
+661,34.087316666666666,34.10633333333333,spk_0,Zulip is great for
+662,34.109,34.16515,spk_0,if you want something to be done right away and it doesn't really need to be
+663,34.171,34.24216666666667,spk_0,more publicly visible. Uh You can get a quicker response sometimes.
+664,34.280833333333334,34.34863333333333,spk_3,"Well, yes, you know, I want everything done to be done today. So"
+665,34.3845,34.401833333333336,spk_3,"we, we all this g"
+666,34.41113333333333,34.47116666666667,spk_3,but uh I will create an issue because I think it will be a little.
+667,34.471333333333334,34.56231666666667,spk_3,"So Tim, let's uh let me know if you want to connect later today or tomorrow,"
+668,34.56333333333333,34.579166666666666,spk_3,tomorrow is fine.
+669,34.57933333333333,34.588166666666666,spk_3,We can
+670,34.60066666666667,34.61998333333333,spk_3,"check your,"
+671,34.6255,34.6573,spk_3,what's going on compare
+672,34.66316666666667,34.693,spk_3,uh why it is happening.
+673,34.70466666666667,34.7368,spk_3,And I think my idea is that
+674,34.74166666666667,34.774816666666666,spk_3,if you release
+675,34.7823,34.83833333333333,spk_3,"has bugs, but it's better than the previous release, then we should"
+676,34.842333333333336,34.86098333333333,spk_3,like release it.
+677,34.88016666666667,34.88033333333333,spk_3,"Uh,"
+678,34.8805,34.922983333333335,spk_3,because this is still a kind of early
+679,34.92315,34.96033333333333,spk_3,development model and we're gonna have bugs there
+680,34.97566666666667,34.983333333333334,spk_3,and
+681,34.98631666666667,35.05583333333333,spk_3,not just bugs but use cases where things don't work because
+682,35.06098333333333,35.07015,spk_3,"you know,"
+683,35.08148333333333,35.110166666666665,spk_3,"they like, for example, Logan to bug"
+684,35.11333333333334,35.157983333333334,spk_3,in MO module is gonna be causing trouble.
+685,35.164,35.2085,spk_3,"Um, no matter what, just because of the"
+686,35.22065,35.270833333333336,spk_3,"nature of the module, there are also a couple of"
+687,35.2965,35.381483333333335,spk_3,the interesting thing is about this particular D two B model that it creates
+688,35.38816666666666,35.43731666666667,spk_3,because it's just UI for the actual migration.
+689,35.48016666666667,35.56098333333333,spk_3,The the the bug is not in the D two B model but it's in the migration.
+690,35.5675,35.61181666666667,spk_3,"So by exposing this model, we're not,"
+691,35.626333333333335,35.696,spk_3,uh we are helping to expose bugs in the core migration process.
+692,35.70681666666667,35.72966666666667,spk_3,So that's kind of my
+693,35.73883333333333,35.7685,spk_3,uh approach to that
+694,35.794983333333334,35.8685,spk_2,"the bug though that I encountered I think was that the, the migration is not running."
+695,35.86898333333333,35.87566666666667,spk_2,"So,"
+696,35.88131666666666,35.8975,spk_2,and I put some screen
+697,35.905833333333334,35.911316666666664,spk_2,you and I can
+698,35.913666666666664,35.91465,spk_2,talk
+699,35.91648333333333,35.92516666666667,spk_2,about it later.
+700,35.939166666666665,35.9395,spk_3,So
+701,35.94481666666667,35.94948333333333,spk_3,do you want
+702,35.95166666666667,35.95348333333333,spk_3,to do
+703,36.1255,36.12616666666667,spk_3,it?
+704,36.13998333333333,36.17365,spk_3,"I just, I just do more, more"
+705,36.18248333333333,36.19515,spk_3,on my side
+706,36.2,36.27183333333333,spk_3,"and let's dive into details tomorrow if I can reproduce your problem,"
+707,36.277816666666666,36.30681666666667,spk_3,that will be
+708,36.309666666666665,36.321333333333335,spk_3,helpful.
+709,36.3215,36.38281666666666,spk_3,"And if no, we'll just do trouble some troubleshooting together and figure it out"
+710,36.400166666666664,36.452,spk_3,"and then we can try to move forward. But yeah,"
+711,36.4625,36.55748333333333,spk_3,uh I hope to bring this module to mid camp and to an 10 this year
+712,36.56565,36.5875,spk_3,"because I think these are,"
+713,36.592333333333336,36.602,spk_3,"um,"
+714,36.60731666666667,36.66416666666667,spk_3,"audiences that are interested in making mi migrations,"
+715,36.67216666666667,36.70516666666666,spk_3,"uh, smaller migrations simpler."
+716,36.72116666666667,36.758833333333335,spk_3,"Hopefully, it will, will be helpful."
+717,36.774316666666664,36.79333333333334,spk_3,"And, um,"
+718,36.797333333333334,36.81333333333333,spk_3,"yeah, thank you."
+719,36.81565,36.855333333333334,spk_3,"And Herb, I sent you the note"
+720,36.86598333333333,36.898983333333334,spk_3,about the feeds. My favorite module.
+721,36.9335,36.96065,spk_3,"-- Oh, great.
+-- Take a look at"
+722,37.015816666666666,37.02583333333333,spk_0,all. Right.
+723,37.029666666666664,37.038666666666664,spk_0,Um
+724,37.052816666666665,37.10248333333333,spk_0,"Yeah. Do, does anyone have any other topics they'd like to discuss?"
+725,37.10265,37.152816666666666,spk_0,We've got a couple of minutes here before the top of the hour?
+726,37.239,37.24515,spk_0,No.
+727,37.2585,37.26615,spk_0,OK.
+728,37.27065,37.33883333333333,spk_0,"Uh Well, uh that's kind of where we are."
+729,37.339,37.399483333333336,spk_0,"Uh right now for the 127 release, we're in good shape."
+730,37.40715,37.499316666666665,spk_0,"Uh No real critical issues before release uh that we know of. So,"
+731,37.50566666666667,37.53483333333333,spk_0,"uh I would encourage everyone, oh,"
+732,37.546166666666664,37.56548333333333,spk_0,be able to mention it.
+733,37.56648333333333,37.610483333333335,spk_0,I encourage everyone to use the preview release that
+734,37.61065,37.6755,spk_0,uh has been created 1 27.0 dot dash preview.
+735,37.681,37.705666666666666,spk_0,Uh It's available from
+736,37.710483333333336,37.72666666666667,spk_0,"github releases,"
+737,37.734,37.74831666666667,spk_0,uh the github
+738,37.75066666666667,37.82765,spk_0,"project page and then if you go to releases, it's marked as a pre release,"
+739,37.82781666666666,37.906,spk_0,uh it's not available through update manager because it's not an official release.
+740,37.906166666666664,37.913666666666664,spk_0,But
+741,37.91716666666667,37.958666666666666,spk_0,uh but it is available through github uh
+742,37.965983333333334,38.039,spk_0,to see if there's any kinds of regressions or problems that
+743,38.04465,38.05616666666667,spk_0,uh
+744,38.0625,38.07216666666667,spk_0,uh
+745,38.07865,38.13033333333333,spk_0,occur when you upgrade your existing sites to
+746,38.13483333333333,38.156983333333336,spk_0,1 27.0
+747,38.163,38.18148333333333,spk_0,dash preview.
+748,38.18615,38.277483333333336,spk_0,"Uh We've got, yeah, 10 days, 11 days before the release of 127."
+749,38.27765,38.3625,spk_0,"But as of right now, we don't know of any major regressions in the new release."
+750,38.36266666666667,38.393166666666666,spk_0,"Uh And honestly, new regressions"
+751,38.397666666666666,38.43665,spk_0,based on the issues that we have aren't
+752,38.43866666666667,38.50516666666667,spk_0,"very likely, especially if you keep using CC editor four."
+753,38.52633333333333,38.6045,spk_0,And I'll reiterate again that C editor four has not been removed from 127.
+754,38.60883333333334,38.6925,spk_0,It's just no longer the default editor in 127. So new sites will move to
+755,38.6975,38.7505,spk_0,uh will use CK editor five by default.
+756,38.7545,38.82848333333333,spk_0,Uh We had some discussion about hiding CK editor four so that it can't be turned on.
+757,38.82865,38.83631666666667,spk_0,But
+758,38.84065,38.9,spk_0,uh that turned out to be more difficult than expected.
+759,38.903983333333336,38.94515,spk_0,"And so for 127 release,"
+760,38.95265,38.970483333333334,spk_0,um both C
+761,38.973816666666664,39.02798333333333,spk_0,editor four and seek editor five are still visible on the modules page.
+762,39.02815,39.085,spk_0,"And if you want to, you can turn off five and go back to using four."
+763,39.09583333333333,39.19233333333333,spk_0,and existing sites will keep using four until you specifically turn on five.
+764,39.19716666666667,39.19766666666666,spk_0,"Now,"
+765,39.19815,39.25765,spk_0,there are messages on the status report uh that
+766,39.25781666666666,39.30631666666667,spk_0,tell you to move off of four if possible.
+767,39.30648333333333,39.34898333333334,spk_0,It's a warning level now. Um
+768,39.362316666666665,39.39783333333333,spk_0,"Yeah, but uh but there's no"
+769,39.40265,39.46333333333333,spk_0,technical barrier at all to people continuing to use the
+770,39.467,39.475833333333334,spk_0,editor for
+771,39.484,39.552483333333335,spk_0,um it's just no longer supported. And so we'd like to get people moving off of it.
+772,39.62166666666667,39.63248333333333,spk_0,All right.
+773,39.635333333333335,39.6475,spk_0,Um
+774,39.649816666666666,39.65298333333333,spk_0,Let me
+775,39.67183333333333,39.67381666666667,spk_2,quick
+776,39.677816666666665,39.67933333333333,spk_2,note
+777,39.681983333333335,39.7,spk_2,on that issue.
+778,39.70231666666667,39.73883333333333,spk_2,"I, I feel like we if you want to go to I"
+779,39.74316666666667,39.75365,spk_2,That's OK.
+780,39.75815,39.78033333333333,spk_3,Happy new year to everyone and
+781,39.78215,39.785983333333334,spk_3,see you.
+782,39.80665,39.81465,spk_2,"Actually,"
+783,39.82415,39.85248333333333,spk_2,"if you have just a minute, we can end the meeting,"
+784,39.85265,39.879333333333335,spk_2,"Nate and then I can ask you this question,"
+785,39.89865,39.900666666666666,spk_2,quick question.
+786,39.91465,39.91866666666667,spk_2,OK?
+787,39.920833333333334,39.921166666666664,spk_2,So
+788,39.92815,39.94931666666667,spk_2,go ahead and stop the video.
+789,39.95698333333333,39.961983333333336,spk_0,OK?
+790,39.966316666666664,39.98198333333333,spk_0,"Thank you so much, everybody."

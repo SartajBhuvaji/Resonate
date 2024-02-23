@@ -1,0 +1,539 @@
+,start_time,end_time,speaker_label,text
+0,0.09133333333333334,0.13333333333333333,spk_0,"All right. Hi, everyone and welcome to our release"
+1,0.1358,0.1675,spk_0,kickoff for milestone 16 8.
+2,0.16998333333333332,0.18865,spk_0,My name is Hillary Benson.
+3,0.1888166666666667,0.2545,spk_0,Uh I'm the product leader here at get lab for our SEC and data science sections
+4,0.25881666666666664,0.28698333333333337,spk_0,and I'll be your host for today's live stream.
+5,0.29964999999999997,0.3329833333333333,spk_0,I'm happy to introduce the other product leaders.
+6,0.33315,0.37865000000000004,spk_0,"Joining me to talk about the, the 16 8 milestone today."
+7,0.37881666666666663,0.4073333333333334,spk_0,Uh In the order they will be presenting.
+8,0.4075,0.44015,spk_0,They are Derek Ferguson who's a group product
+9,0.44033333333333335,0.48465,spk_0,manager who'll provide updates for the DEV section.
+10,0.49333333333333335,0.54815,spk_0,Sarah Walter Group product manager will provide updates for the SEC section
+11,0.5556666666666668,0.6263333333333333,spk_0,"timber, the principal PM uh will provide updates for the CIA and CD sections."
+12,0.6288166666666667,0.6819833333333333,spk_0,Josh Lambert director PM will provide updates for a core platform.
+13,0.6913166666666667,0.7278166666666667,spk_0,And Taylor mccaslin Group product product manager will
+14,0.728,0.7583333333333333,spk_0,provide updates for the data science section.
+15,0.7691666666666667,0.8311499999999999,spk_0,We are focused on delivering value iteratively with a focus on our fiscal
+16,0.8313333333333334,0.9036666666666666,spk_0,24 product investment themes which are first to build a world class de
+17,0.9083333333333333,0.9515,spk_0,"Cops experience that's focused on first class usability,"
+18,0.953,0.9988333333333334,spk_0,additional collaboration capabilities and A I powered workflows.
+19,1.017,1.07415,spk_0,Second to provide advanced security and compliance to all of our customers.
+20,1.078,1.1213166666666667,spk_0,Uh This means adding depth to our ultimate
+21,1.1215,1.1668333333333334,spk_0,uh tier in bringing software supply chain security to
+22,1.1689833333333333,1.1976666666666667,spk_0,the forefront of how software is delivered.
+23,1.2113333333333334,1.2253166666666666,spk_0,Third to bring observe
+24,1.2289833333333333,1.2723166666666668,spk_0,observable analytics and feedback into DEV
+25,1.2751666666666668,1.2835,spk_0,tech ops.
+26,1.2854833333333333,1.3378166666666667,spk_0,Uh that's all about empowering organizations to close the software
+27,1.33965,1.3908166666666668,spk_0,uh delivery life cycle uh loop with data.
+28,1.3953333333333333,1.43965,spk_0,And lastly get lab for data science which enables
+29,1.4398166666666667,1.4923333333333333,spk_0,data scientists and engineers and brings them into the DEV
+30,1.4955,1.524,spk_0,OPS platform and gives them all the benefits that
+31,1.5241500000000001,1.5851666666666666,spk_0,"their counterparts experience uh including collaboration and reproducibility,"
+32,1.587,1.621,spk_0,uh streamline deployment into into production
+33,1.6371666666666667,1.7008333333333332,spk_0,really quick before handing over to Derek. Uh I do have to quickly preface
+34,1.7026666666666666,1.7379833333333334,spk_0,today's call with our forward looking statement disclosure.
+35,1.7381666666666666,1.76065,spk_0,So bear with me for a second
+36,1.7623166666666665,1.7808166666666665,spk_0,on this live stream.
+37,1.7810000000000001,1.80215,spk_0,We'll be discussing our road map
+38,1.8023166666666666,1.8354833333333334,spk_0,which includes upcoming features and functionality.
+39,1.8363333333333334,1.8606500000000001,spk_0,It's important to note that the information
+40,1.8608333333333333,1.8965,spk_0,provided is for informational purposes only.
+41,1.899,1.9458333333333333,spk_0,Please do not rely on it for planning or purchasing decisions.
+42,1.9488333333333334,1.9821666666666666,spk_0,We plan very ambitiously here at Get Lab and all
+43,1.9823333333333333,2.0188166666666665,spk_0,the details on this live stream are subject to change.
+44,2.0189833333333334,2.051833333333333,spk_0,The timing of product features and functionality remains
+45,2.052,2.0735,spk_0,solely at the discretion of Get Lab.
+46,2.0835,2.1284833333333335,spk_0,"And with that, I will hand it over to Derek to kick us off."
+47,2.148816666666667,2.1718166666666665,spk_1,"All right, thanks Hillary."
+48,2.1774833333333334,2.25015,spk_1,So I will be going through the DEV section and uh I'll
+49,2.2503333333333333,2.322,spk_1,"start off with uh something that's adding to our observ ability,"
+50,2.3221666666666665,2.35015,spk_1,analytics and feedback theme.
+51,2.353816666666667,2.4345,spk_1,Uh the uh door performers score panel on the value streams dashboard
+52,2.437333333333333,2.5031666666666665,spk_1,is being released in 16 8. Uh We're finishing up the work on that.
+53,2.508166666666667,2.54265,spk_1,"It's been hidden behind a feature flag so that,"
+54,2.5428333333333333,2.60615,spk_1,that flag will be defaulted to on in 16.8.
+55,2.624,2.6494999999999997,spk_1,"All right, moving on to pages."
+56,2.64965,2.7156666666666665,spk_1,Uh we've been working on a few things uh for pages being able
+57,2.7158166666666665,2.7891666666666666,spk_1,to have multiple deployments uh for get lab pages so that you can
+58,2.7973166666666667,2.8836666666666666,spk_1,easily make changes and see what those changes are without changing the
+59,2.88765,2.901483333333333,spk_1,uh the the
+60,2.9129833333333335,2.937333333333333,spk_1,production deployment of
+61,2.942,2.9598166666666668,spk_1,the pages site.
+62,2.9675,3.0913166666666667,spk_1,"We'll also be adding a new way uh to uh add DNS to get lab pages uh without the,"
+63,3.0915,3.1225,spk_1,the DNS wild card.
+64,3.1226666666666665,3.1769833333333333,spk_1,Uh So this should open up some more options for users that
+65,3.18,3.231333333333333,spk_1,uh need a different way of uh of
+66,3.2388333333333335,3.3086666666666664,spk_1,"getting a, a name, a domain name onto their pages."
+67,3.32515,3.401666666666667,spk_1,"All right, we've got a lot of updates for work items. Uh And uh"
+68,3.408333333333333,3.5074833333333335,spk_1,this one is and all the rest of these will be added back to our World class Dey
+69,3.5151666666666666,3.5353166666666667,spk_1,ops experience theme.
+70,3.542316666666667,3.5596666666666668,spk_1,Uh So
+71,3.56165,3.6165000000000003,spk_1,"we're gonna be adding a couple of quick actions,"
+72,3.6166666666666667,3.686,spk_1,uh removing the child uh and removing the parent
+73,3.6894833333333334,3.7095000000000002,spk_1,for the work items.
+74,3.71265,3.759316666666667,spk_1,Also be adding an edit button
+75,3.7634833333333333,3.8166666666666664,spk_1,"uh to bring this more in line with the way that git lab,"
+76,3.8168166666666665,3.8773166666666667,spk_1,uh the rest of the git lab features work uh so that you can
+77,3.8795,3.948,spk_1,easily edit the attributes for your work items.
+78,3.96315,4.035816666666666,spk_1,Gonna be working on moving the work items to a
+79,4.040483333333333,4.1081666666666665,spk_1,new parent uh whenever an issue is moved rather than
+80,4.11165,4.16,spk_1,closing and keeping those work items uh
+81,4.169483333333333,4.2415,spk_1,"uh attributed to the, the original uh parent."
+82,4.2723,4.289633333333334,spk_1,"And then finally,"
+83,4.289816666666667,4.37165,spk_1,uh we'll be working to add uh the participants widget in work items
+84,4.3733,4.435966666666666,spk_1,uh so that it works the same way as your issues or epics do
+85,4.4389666666666665,4.474966666666667,spk_1,uh so that you can add those participants there.
+86,4.517483333333333,4.614983333333333,spk_1,Right. Moving on to remote development. Uh We have a big announcement for 16.8.
+87,4.615166666666667,4.665483333333333,spk_1,Our uh work remote development workspaces
+88,4.6690000000000005,4.7125,spk_1,will be G A in 16.8.
+89,4.716833333333334,4.768483333333333,spk_1,It's been in beta for a while now. And uh
+90,4.770333333333333,4.865166666666667,spk_1,"um January, we will be releasing this as uh fully G A."
+91,4.918333333333333,4.999,spk_1,We're also working on enabling the web ID E extension marketplace
+92,4.9991666666666665,5.0615,spk_1,uh for uh third party extensions within the web ID E.
+93,5.0648333333333335,5.107,spk_1,Uh This will be enabled for GIT lab.com uh
+94,5.10715,5.171,spk_1,SAS users only in January and we'll be working on
+95,5.174166666666666,5.2263166666666665,spk_1,adding it for self manage users uh after that. Uh
+96,5.23065,5.2975,spk_1,But so this will allow you to enable third party
+97,5.29765,5.3475,spk_1,extensions within the web ID E so that you can
+98,5.352666666666667,5.3615,spk_1,uh
+99,5.377483333333333,5.398,spk_1,you can easily
+100,5.401816666666667,5.49765,spk_1,uh work through uh the ways that you would like to uh within the extension uh
+101,5.5,5.5605,spk_1,marketplace and uh enable different workflows.
+102,5.588983333333333,5.683,spk_1,"All right. And then lastly, we'll also be enabling the setting sync for the web ID E."
+103,5.6866666666666665,5.74765,spk_1,"Uh So right now, uh the web ID E doesn't persist"
+104,5.750666666666667,5.816483333333333,spk_1,uh user preferences cross uh sessions uh
+105,5.820833333333333,5.871,spk_1,"because of the way that it's, it's built right now."
+106,5.873666666666667,5.927666666666667,spk_1,Uh And we will be adding this so that you can
+107,5.9335,6.026483333333333,spk_1,"easily sync across the board, uh all of your settings within the web ID."
+108,6.0388166666666665,6.1085,spk_1,All right. And that is it for me and I will pass it on
+109,6.292483333333333,6.316333333333334,spk_0,Sarah. I think you're up next.
+110,6.3929833333333335,6.40765,spk_2,"Thanks, Hillary."
+111,6.4125,6.430983333333334,spk_2,"Hi, everybody."
+112,6.43115,6.4495,spk_2,"I'm Sarah Waldner,"
+113,6.449666666666666,6.510666666666666,spk_2,group manager for the secure stage and I'll be walking us
+114,6.510816666666667,6.5836500000000004,spk_2,through all of the milestone kickoff highlights for the sex section.
+115,6.651666666666666,6.677666666666667,spk_2,All right. So
+116,6.68215,6.699316666666666,spk_2,before I dive in
+117,6.703666666666667,6.7485,spk_2,our section contributions for the secure and go
+118,6.751483333333333,6.778483333333334,spk_2,"stage for this milestone,"
+119,6.778666666666666,6.836666666666667,spk_2,all fall under the advanced security and compliance control scheme.
+120,6.848166666666667,6.9138166666666665,spk_2,So let's dive in starting with the threat insights team from the govern stage.
+121,6.917333333333334,6.9945,spk_2,"So this milestone threat insights will be spending it in a bug bash,"
+122,6.99465,7.031833333333333,spk_2,making the best use of the time over holidays.
+123,7.032,7.059816666666666,spk_2,We've got different people out
+124,7.066483333333333,7.119833333333333,spk_2,uh spending time to set themselves up well for the next year.
+125,7.12,7.20915,spk_2,So fixing some new exes showing up some performance items. I'm excited for it.
+126,7.233333333333333,7.273166666666667,spk_2,"Moving on from the authentication group,"
+127,7.280833333333334,7.3353166666666665,spk_2,"they'll be adding the ability for group owners to view their users,"
+128,7.3355,7.365666666666667,spk_2,email addresses in the U I.
+129,7.366483333333333,7.391666666666667,spk_2,And via the API
+130,7.39715,7.40965,spk_2,"previously,"
+131,7.409816666666667,7.449666666666666,spk_2,group owners could only retrieve email addresses through
+132,7.449816666666667,7.4965,spk_2,the API and only for provisioned users.
+133,7.501166666666666,7.575983333333333,spk_2,The definition of the enterprise user is now updated and based on domain.
+134,7.5761666666666665,7.60965,spk_2,So these changes will allow group owners to
+135,7.609816666666667,7.652333333333333,spk_2,"confirm the primary email address for their users,"
+136,7.65615,7.695,spk_2,believe it or not. This did not exist before.
+137,7.69515,7.722316666666667,spk_2,So we're really excited for this edition
+138,7.742483333333333,7.7861666666666665,spk_2,group authentication will also be adding web hook
+139,7.786316666666667,7.837666666666666,spk_2,events for expiring group and project access tokens.
+140,7.843833333333333,7.8995,spk_2,This will allow customers to stay ahead of the token. Expiration
+141,7.901983333333334,7.953483333333334,spk_2,and avoid disruption and automation by revising
+142,7.953666666666667,7.99465,spk_2,the expiration date or rotating the token
+143,8.025816666666667,8.05815,spk_2,for the authorization group.
+144,8.061666666666667,8.132,spk_2,They'll be adding four more permissions to the customizable roles framework.
+145,8.13215,8.187816666666667,spk_2,Continuing the work towards closing the remaining delta
+146,8.187983333333333,8.238816666666667,spk_2,that exists between the developer and maintainer jobs.
+147,8.245833333333334,8.290666666666667,spk_2,"This month, we will be adding permissions to manage the Tiff"
+148,8.292983333333334,8.337166666666667,spk_2,Foreign state manage group access tokens
+149,8.340983333333334,8.3625,spk_2,and the ability to add
+150,8.364666666666666,8.416166666666667,spk_2,client compliance frameworks to a project
+151,8.4445,8.489316666666667,spk_2,on to the secure stage for composition analysis.
+152,8.49265,8.530833333333334,spk_2,They'll be focused on releasing continuous
+153,8.530983333333333,8.5845,spk_2,vulnerability scanning support for container scanning.
+154,8.593,8.6275,spk_2,This will provide more timely information
+155,8.62765,8.660833333333333,spk_2,for container scanning users so that they
+156,8.660983333333334,8.742166666666666,spk_2,can understand open source risk and remediate it in a more rapid fashion.
+157,8.75365,8.817833333333333,spk_2,This is the next iteration in the continuous vulnerability scanning
+158,8.818,8.88815,spk_2,project that has we've been enabling for dependency in container scanning
+159,8.891316666666667,8.953983333333333,spk_2,and this particular iteration will be initiated when the tri
+160,8.95715,8.982666666666667,spk_2,db changes
+161,9.014,9.048,spk_2,also from composition analysis.
+162,9.0535,9.0815,spk_2,They'll be completing some follow up work.
+163,9.081666666666667,9.12,spk_2,They identified to improve the recently released
+164,9.120166666666666,9.17065,spk_2,continuous vulnerability scanning for dependencies feature.
+165,9.173333333333334,9.219,spk_2,This will consist of mainly back and enhancement work.
+166,9.241,9.2525,spk_2,All right
+167,9.258983333333333,9.295,spk_2,"back to government for security policies,"
+168,9.300983333333333,9.37765,spk_2,"they'll be working on pipeline execution policies, actions. So"
+169,9.383333333333333,9.424816666666667,spk_2,when creating scan execution policies.
+170,9.427816666666667,9.481983333333334,spk_2,They'll be extending the current OO TB git lab scan
+171,9.48215,9.55065,spk_2,options to allow users to define a new pipeline execution action
+172,9.561316666666666,9.606333333333334,spk_2,section will allow the user to enforce custom
+173,9.6065,9.656816666666666,spk_2,C I required for security and compliance form.
+174,9.656983333333333,9.678983333333333,spk_2,It's very exciting.
+175,9.7065,9.74865,spk_2,"Also coming to us from the security policy group,"
+176,9.755333333333333,9.8275,spk_2,we'll be working on linking security policies to compliance frameworks.
+177,9.83015,9.903166666666667,spk_2,An improvement to both usability and flexibility of security policies.
+178,9.9035,9.977166666666667,spk_2,User will be able to scope security policies to compliance frameworks so that
+179,9.977333333333334,10.05715,spk_2,projects with a particular label will be enforced for a given policy.
+180,10.063833333333333,10.096483333333333,spk_2,This will allow for a more atomic
+181,10.09665,10.1515,spk_2,definition and granular enforcement of security policies.
+182,10.190483333333333,10.198166666666667,spk_2,OK.
+183,10.224816666666667,10.26415,spk_2,Coming at us from static analysis in
+184,10.264316666666666,10.306666666666667,spk_2,"partnership with our vulnerability research group,"
+185,10.309316666666668,10.372,spk_2,they're working on updating our detection rules for SAS.
+186,10.373333333333333,10.442166666666667,spk_2,So the primary focus is on reducing false positive results.
+187,10.447166666666666,10.495483333333333,spk_2,So a number of updates will also help us reduce false
+188,10.49565,10.572816666666666,spk_2,negative results by identifying more variants of existing code patterns.
+189,10.577983333333334,10.658333333333333,spk_2,The languages we're currently focused on today include Java Python and go
+190,10.6625,10.722,spk_2,though we'll be moving on to the other languages that some
+191,10.72565,10.747483333333333,spk_2,group supports later.
+192,10.795833333333333,10.834983333333334,spk_2,"Additionally, from the static analysis group,"
+193,10.836983333333333,10.91015,spk_2,they'll be continuing to work on building pre perceived secret scanning.
+194,10.916666666666666,10.994316666666666,spk_2,Uh This capability blocks pushes that contain high confidence secrets.
+195,10.996816666666666,11.05615,spk_2,Our intent is to release this as experimental in January
+196,11.11865,11.153816666666666,spk_2,from our dynamic analysis group.
+197,11.158333333333333,11.185983333333333,spk_2,They're continuing to focus work on
+198,11.214483333333334,11.265,spk_2,work required to fully replace proxy based
+199,11.265833333333333,11.31965,spk_2,task with our proprietary browser based DAS
+200,11.322333333333333,11.33615,spk_2,solution.
+201,11.340316666666666,11.42165,spk_2,This includes migrating on-demand scams to our browser based solution.
+202,11.426333333333334,11.48515,spk_2,This would allow security professionals to configure the scanner in the
+203,11.485316666666666,11.573483333333334,spk_2,U I versus using the C I file streamlining user experience.
+204,11.57365,11.583333333333334,spk_2,For many
+205,11.623816666666666,11.665833333333333,spk_2,also from dynamic analysis for browser
+206,11.668,11.672333333333333,spk_2,based
+207,11.674816666666667,11.675,spk_2,"A,"
+208,11.6855,11.757666666666667,spk_2,they'll be working to enable browser based dash scanner in our auto devs
+209,11.762316666666667,11.782333333333334,spk_2,functionality
+210,11.784833333333333,11.875333333333334,spk_2,replacing the proxy based solution. Further preparing us to deprecate it in 17.0
+211,11.946483333333333,11.991,spk_2,and finally onto our compliance group.
+212,12.0015,12.046333333333333,spk_2,Uh they'll be making some improvements to the standards
+213,12.046483333333333,12.1125,spk_2,adherence report to make reporting more robust and actionable.
+214,12.11615,12.18615,spk_2,This includes grouping results by project grouping results
+215,12.186316666666666,12.23215,spk_2,by standard starting with the gate lab standard.
+216,12.23715,12.310316666666667,spk_2,The ability to filter by project compliance framework name and standard
+217,12.31215,12.345483333333334,spk_2,ability to export to CS V
+218,12.358666666666666,12.408333333333333,spk_2,"manual on demand adherence report, scanning"
+219,12.4115,12.44015,spk_2,and improved pagination.
+220,12.443,12.471,spk_2,Awesome. I'm excited about that one
+221,12.482666666666667,12.53915,spk_2,"and finally, last but not least also from the compliance group,"
+222,12.543,12.574,spk_2,they'll be working on adding more exciting
+223,12.574166666666667,12.623,spk_2,capabilities to the new compliance frameworks report.
+224,12.627816666666666,12.673483333333333,spk_2,This will include the ability to view frameworks
+225,12.67365,12.702166666666667,spk_2,and a list view within the frameworks tab
+226,12.710833333333333,12.770316666666666,spk_2,search and filter capabilities to find specific frameworks
+227,12.782666666666668,12.82565,spk_2,ability to use new compliance framework sidebar
+228,12.825816666666666,12.86415,spk_2,"to explore more details for each framework,"
+229,12.868483333333334,12.894833333333333,spk_2,the ability to edit your framework to
+230,12.895,12.947,spk_2,"view all settings including managing name description,"
+231,12.947166666666666,12.975983333333334,spk_2,"standards, adherence linking"
+232,12.978983333333334,13.000983333333334,spk_2,"and link projects,"
+233,13.001166666666666,13.041666666666666,spk_2,as well as the ability to create a quick
+234,13.041833333333333,13.101333333333333,spk_2,report of your frameworks with an export to CS V
+235,13.120833333333334,13.194483333333334,spk_2,that wrap set up for the sex section for 16.8. Thank you so much.
+236,13.19465,13.223166666666666,spk_2,"And Hillary, I'm gonna hand it back to you."
+237,13.24565,13.292166666666667,spk_0,"All right. I think Tim, you're up next with the C I CD section."
+238,13.304166666666667,13.313316666666667,spk_3,Thanks.
+239,13.31515,13.328983333333333,spk_3,"Hi, I'm Tim is the"
+240,13.330816666666667,13.394833333333333,spk_3,principal product manager in the C I section and I'm going to
+241,13.395,13.457333333333333,spk_3,kick it off uh the C I CD sections for 68.
+242,13.458833333333333,13.503333333333334,spk_3,These sections support developers and
+243,13.5035,13.547333333333333,spk_3,platform engineers to effectively communicate.
+244,13.558666666666667,13.565666666666667,spk_3,"I'm sorry,"
+245,13.565833333333334,13.631666666666666,spk_3,effectively complete their automation configuration and operations tasks and
+246,13.631816666666667,13.671,spk_3,get lab after their code has been submitted.
+247,13.6835,13.744166666666667,spk_3,The three stages within this section are verified package and deploy.
+248,13.749816666666666,13.796333333333333,spk_3,We have a few investments planned in 1680.
+249,13.815666666666667,13.86015,spk_3,"Our core theme, this release is building a world class STV"
+250,13.869833333333334,13.929166666666667,spk_3,SES experience where we have several teams making great contributions.
+251,13.942483333333334,14.019483333333334,spk_3,The first uh the pipeline execution group is focused on driving efficiency.
+252,14.01965,14.04865,spk_3,A top concern. We've heard that
+253,14.0505,14.102983333333333,spk_3,after script does not recognize canceling status in
+254,14.1125,14.171166666666666,spk_3,"this release, we're adding a keyword to lay the foundation for adding,"
+255,14.171333333333333,14.211833333333333,spk_3,canceling statuses to after script.
+256,14.216666666666667,14.2845,spk_3,"Now, if you're running tests on device farms or have blocked terra form scripts,"
+257,14.285316666666667,14.304166666666667,spk_3,there's a solution
+258,14.307666666666666,14.3295,spk_3,right around the corner for you.
+259,14.367,14.37665,spk_3,The next
+260,14.3815,14.390666666666666,spk_3,uh
+261,14.393316666666667,14.436666666666667,spk_3,the pipeline authoring team will focus on usability
+262,14.436833333333333,14.47165,spk_3,improvements for the C I CD catalog.
+263,14.471816666666667,14.51215,spk_3,"In this milestone, we have two improvements,"
+264,14.516833333333333,14.539316666666666,spk_3,one to add a new
+265,14.542833333333334,14.56765,spk_3,your resources tab.
+266,14.567833333333333,14.627166666666668,spk_3,So you can quickly find uh the components that you're looking for
+267,14.629666666666667,14.710666666666667,spk_3,and also adding the ability to sort the component by uh verified author.
+268,14.723,14.785983333333334,spk_3,The goal of these is to make finding and using the components more efficient.
+269,14.821483333333333,14.889666666666667,spk_3,The package group will improve the terraform registry by adding a new group level
+270,14.889833333333334,14.95515,spk_3,view to make it easier to find and validate a given terraform module.
+271,14.955333333333334,15.01115,spk_3,Even if you have a complex group and pro project structure
+272,15.057666666666666,15.113833333333334,spk_3,run. A core is focused on adding time stamps
+273,15.11615,15.156983333333333,spk_3,to the C I build logs for each log line
+274,15.15715,15.211316666666667,spk_3,to help debug long running scripts during C I jobs.
+275,15.233666666666666,15.246483333333334,spk_3,"In addition,"
+276,15.24665,15.329816666666666,spk_3,we'll expand the runner fleet dashboard to add a CS V export of compute minutes
+277,15.34565,15.361983333333333,spk_3,"used on instance,"
+278,15.36215,15.399333333333333,spk_3,runners to give operators an easy way of knowing
+279,15.399483333333333,15.438666666666666,spk_3,which runners in their fleet have the most usage
+280,15.47765,15.50915,spk_3,"in 16 8. We'll also add,"
+281,15.522333333333334,15.583333333333334,spk_3,we'll also add Windows 22 support so that when Windows
+282,15.5835,15.63115,spk_3,"2019 reaches its end of life on January 9th,"
+283,15.637833333333333,15.70065,spk_3,users can still build tests and deploy applications on Windows.
+284,15.730816666666666,15.758333333333333,spk_3,The second theme we're working or
+285,15.7585,15.8045,spk_3,contributing towards is advanced security and compliance
+286,15.806816666666666,15.807333333333334,spk_3,in
+287,15.809833333333334,15.825816666666666,spk_3,this domain.
+288,15.825983333333333,15.892316666666666,spk_3,The verify stage will deliver some improvements to meet compliance requirements.
+289,15.9095,15.95615,spk_3,The pipeline security team has two issues planned.
+290,15.957333333333333,16.00915,spk_3,Uh The first is delivering a GCP Secrets Manager
+291,16.022,16.07165,spk_3,where we're working on the implementations piece for both runner
+292,16.07765,16.099166666666665,spk_3,and for rails.
+293,16.105666666666668,16.166316666666667,spk_3,Uh We're also continuing to build our own secrets manager.
+294,16.168166666666668,16.169,spk_3,Oops
+295,16.205816666666667,16.214,spk_3,uh
+296,16.218,16.3255,spk_3,This milestone will be adding uh an index page as well as a secret creation page.
+297,16.338316666666667,16.39665,spk_3,This is by no means a comprehensive list of everything we're shipping.
+298,16.396816666666666,16.45815,spk_3,Please take a look at the direction pages or the kickoff videos for more
+299,16.46515,16.5125,spk_3,and that wraps it up for me and I'll pass it over to Josh.
+300,16.549,16.561316666666666,spk_4,"Thanks, Tim."
+301,16.565666666666665,16.606333333333332,spk_4,Got some pretty exciting items coming out of C I CD.
+302,16.6065,16.65365,spk_4,Let me go ahead and share my screen here
+303,16.657983333333334,16.71066666666667,spk_4,so I can talk about what's coming from the core platform section.
+304,16.7315,16.743166666666667,spk_4,Here we go.
+305,16.747816666666665,16.825333333333333,spk_4,Um So we have two major themes that we're working on uh for this milestone.
+306,16.8255,16.868483333333334,spk_4,Uh We have the World Class de experience which we talk through first
+307,16.86865,16.927333333333333,spk_4,and then some general maintenance work that we're doing uh as well.
+308,16.9275,16.955333333333332,spk_4,So let's jump into world Class DeVos
+309,16.9595,17.0255,spk_4,with our search group first and we are continuing our work towards
+310,17.02565,17.088,spk_4,rolling out uh improved code search for all of our customers.
+311,17.090983333333334,17.105483333333332,spk_4,"Um And right now,"
+312,17.10565,17.182483333333334,spk_4,we are in closed beta and we're working towards having an open opt out beta.
+313,17.186966666666667,17.230966666666667,spk_4,Um And the main at work we're working on right
+314,17.231133333333332,17.27465,spk_4,now in this release is we're working towards replication.
+315,17.279666666666667,17.31215,spk_4,Um This will allow us to accomplish two things.
+316,17.312316666666668,17.359333333333332,spk_4,The first is that we can uh do rolling deployments
+317,17.359483333333333,17.421,spk_4,of updates to our search infrastructure without causing any downtime.
+318,17.4215,17.485833333333332,spk_4,And the other items that we can also uh have resilience in the event
+319,17.486,17.542,spk_4,"of a failure with a search node um by being able to have,"
+320,17.542166666666667,17.596,spk_4,"you know, direct queries to the other uh, search nodes with the indexes."
+321,17.600166666666667,17.64565,spk_4,"And it's also help us, uh, in both those use cases."
+322,17.645833333333332,17.719333333333335,spk_4,"And, uh, we see that as a prerequisite to, uh, to make it defaulted on,"
+323,17.721166666666665,17.744,spk_4,"uh, for our customers."
+324,17.755166666666668,17.823166666666665,spk_4,"We're also working on a number of improvements to the, uh, command palette."
+325,17.823333333333334,17.848166666666668,spk_4,"If you haven't seen the command palette,"
+326,17.848333333333333,17.9135,spk_4,you can find that by topping on the slash icon or by clicking over in the
+327,17.91365,17.95381666666667,spk_4,search or go to menu as well and
+328,17.953983333333333,17.9945,spk_4,we're in general making some small improvements here.
+329,17.994666666666667,18.0635,spk_4,"Uh You can see that we have um a, a list here of what we're working on."
+330,18.067166666666665,18.12848333333333,spk_4,Um Actually I had the wrong link here. I apologize. I just noticed that now.
+331,18.12865,18.172483333333332,spk_4,Um but uh you can go find the issue.
+332,18.17265,18.226483333333334,spk_4,Uh And uh we're making some improvements to discover ability.
+333,18.22665,18.272316666666665,spk_4,We're adding a option to uh tell you what
+334,18.272483333333334,18.304666666666666,spk_4,command options are available here in the bottom right
+335,18.306333333333335,18.371833333333335,spk_4,"hand corner, um and some general other UX improvements as well."
+336,18.384166666666665,18.429166666666667,spk_4,"Moving on towards the cloud connector team,"
+337,18.429333333333332,18.491483333333335,spk_4,"we have uh the main focus being supporting, get lab duo"
+338,18.493316666666665,18.53915,spk_4,chat for self managed and our dedicated offering.
+339,18.544166666666666,18.644816666666667,spk_4,"Um This will allow us to bring the uh chat uh option here under if I was logged in,"
+340,18.644983333333332,18.657316666666667,spk_4,I could show you.
+341,18.65748333333333,18.709,spk_4,Uh but it uh there's a little menu over here. We can actually add a chat
+342,18.713333333333335,18.71815,spk_4,bot chatbot
+343,18.72065,18.754166666666666,spk_4,to ask questions to our documentation.
+344,18.756333333333334,18.807816666666668,spk_4,"And so as a question, like, how do I configure GIT lab C I"
+345,18.81365,18.88715,spk_4,"and it will give you a response with uh links, documentation as well."
+346,18.887316666666667,18.934483333333333,spk_4,This will help uh users on board more quickly as well as just
+347,18.93465,18.9965,spk_4,some quick reference questions without having to leave the get lab interface.
+348,18.996666666666666,19.022816666666667,spk_4,And so I'm looking forward to bringing that from
+349,19.023,19.072483333333334,spk_4,our SASS offering over towards self managed and dedicated
+350,19.09065,19.10165,spk_4,with GEO.
+351,19.101816666666668,19.13465,spk_4,We continue our work towards unifying the
+352,19.134816666666666,19.173666666666666,spk_4,backups into one single command interface.
+353,19.173833333333334,19.215,spk_4,This will improve the overall usability and allow us
+354,19.215166666666665,19.262666666666668,spk_4,to also offer some pretty compelling features in the future
+355,19.265816666666666,19.30965,spk_4,as we implement and work towards things like point in time
+356,19.309816666666666,19.366066666666665,spk_4,"recovery where you could issue one command to the cli,"
+357,19.366233333333334,19.41475,spk_4,ask for it to rewind to a certain point in time.
+358,19.414916666666667,19.481416666666668,spk_4,And then the cli ideally would then rewind all the data sources
+359,19.481583333333333,19.535583333333335,spk_4,back to that point in time and synchronously make sure that happens.
+360,19.5389,19.56675,spk_4,Um So we're really looking forward to doing this
+361,19.566916666666668,19.60875,spk_4,and improving the overall usability of our backups.
+362,19.626,19.66283333333333,spk_4,"Also in the backup theme in the GEO group,"
+363,19.663,19.726316666666666,spk_4,we are improving our documentation for backing up larger architectures
+364,19.726483333333334,19.788166666666665,spk_4,with the new server side backups uh for repositories.
+365,19.788333333333334,19.80216666666667,spk_4,"So previously,"
+366,19.802333333333333,19.866316666666666,spk_4,"we would have one node which tried to reach out to all the giddily repositories,"
+367,19.867,19.921666666666667,spk_4,"pull down our contents, zip them up and then"
+368,19.923333333333332,19.984166666666667,spk_4,"put them somewhere that took a long, long time. Now each Gido,"
+369,19.99315,19.998983333333335,spk_4,each
+370,20.001,20.05165,spk_4,"GLY node can independently do its own backups to object storage,"
+371,20.051983333333332,20.116666666666667,spk_4,which greatly improves the overall process and makes it highly parallelized.
+372,20.11766666666667,20.153983333333333,spk_4,And so that we're looking forward to making this documentation
+373,20.154166666666665,20.218316666666666,spk_4,available for our customers and recommending it for large architectures
+374,20.2465,20.265333333333334,spk_4,"or in the giddily group,"
+375,20.2655,20.34115,spk_4,we are working towards further improvements to supporting bundle uris for clones.
+376,20.341316666666668,20.39131666666667,spk_4,Uh What this allows us to do is uh essentially skip a lot
+377,20.391483333333333,20.45965,spk_4,of processing when you uh when the giddily node gets a clone request.
+378,20.459816666666665,20.496983333333333,spk_4,"So when a user goes to clone their code,"
+379,20.50165,20.56415,spk_4,"um oftentimes you need to know what you have and then if nothing,"
+380,20.564316666666667,20.60965,spk_4,"it can give you the full repository or if you're a certain state,"
+381,20.609816666666667,20.631666666666668,spk_4,it can give you a portion of it.
+382,20.6335,20.666150000000002,spk_4,And what we can do is bundle Uris is give you
+383,20.666316666666667,20.717166666666667,spk_4,a pre computed file for most of our users get most of
+384,20.717333333333332,20.777833333333334,spk_4,the content down and then spend less time processing the exact delta
+385,20.778,20.81865,spk_4,for you in particular to get you back up to speed.
+386,20.82065,20.893316666666667,spk_4,"So this will overall improve the utilization of our gilliard nodes and improve how,"
+387,20.893483333333332,20.919816666666666,spk_4,how fast we can handle clones
+388,20.938166666666667,20.946166666666667,spk_4,over.
+389,20.94633333333333,20.975666666666665,spk_4,"In the uh the 10 scale group,"
+390,20.975833333333334,21.02815,spk_4,we are continuing our work towards organization isolation.
+391,21.0295,21.046833333333332,spk_4,"And in this milestone,"
+392,21.046983333333333,21.103816666666667,spk_4,we are focused on adding the uh organization id
+393,21.103983333333332,21.14115,spk_4,as the starting key to a number of tables.
+394,21.14131666666667,21.177833333333332,spk_4,This will allow us to quickly determine what
+395,21.178,21.23515,spk_4,content is uh for a particular organization.
+396,21.237666666666666,21.29965,spk_4,And that will then allow us to really speed up a lot of queries across the product.
+397,21.29981666666667,21.331666666666667,spk_4,And really implement that improved isolation.
+398,21.331833333333332,21.367816666666666,spk_4,Since we have a very clear identifier on
+399,21.367983333333335,21.425833333333333,spk_4,what content and uh as associated with which organization
+400,21.4585,21.502166666666668,spk_4,"moving over towards our foundations team,"
+401,21.502333333333333,21.56565,spk_4,we are going to start looking at our kind of next spike of work
+402,21.565816666666667,21.615333333333332,spk_4,"here is a larger theme and we want to go look at settings,"
+403,21.6155,21.638166666666667,spk_4,"usability consistency,"
+404,21.6405,21.670833333333334,spk_4,uh settings has a number of places in
+405,21.671,21.708833333333335,spk_4,the group's projects and also the instance level.
+406,21.710416666666667,21.72073333333333,spk_4,"And so we,"
+407,21.720916666666668,21.767416666666666,spk_4,we want to go and spend some time identifying what usability improvements
+408,21.767583333333334,21.8249,spk_4,we want to try and make validating the proposed fixes with our customers
+409,21.825083333333332,21.871083333333335,spk_4,and our users and making sure that we have a nice crisp list
+410,21.87125,21.91075,spk_4,of things to go do to improve this part of our product.
+411,21.910916666666665,21.9594,spk_4,So we're excited about this. Um And we're going to start that research now
+412,21.98315,22.02015,spk_4,"with our import integrations team,"
+413,22.020316666666666,22.0875,spk_4,we are focused on improving the uh import speed from
+414,22.0925,22.156833333333335,spk_4,github and we plan to improve this in two ways. The first is by having a github
+415,22.159983333333333,22.18915,spk_4,app um that runs on
+416,22.191666666666666,22.206333333333333,spk_4,github enterprise cloud.
+417,22.2065,22.261,spk_4,This will allow us to have a higher number of uh
+418,22.261166666666668,22.324816666666667,spk_4,requests per hour for our uh import jobs to run.
+419,22.326,22.361983333333335,spk_4,And so this will improve the overall import speed
+420,22.36215,22.415333333333333,spk_4,for customers who have their content on github.com.
+421,22.426,22.44,spk_4,"Uh Also,"
+422,22.440166666666666,22.513,spk_4,we are working to switch how we uh uh pull content and we want to move this
+423,22.513166666666667,22.548666666666666,spk_4,over towards the timeline API which is a
+424,22.548833333333334,22.592983333333333,spk_4,more efficient way of tracking the changes in the
+425,22.59915,22.61766666666667,spk_4,in a in a project.
+426,22.617816666666666,22.690333333333335,spk_4,And this will also allow us to overall improve the migration time as you can
+427,22.6905,22.760316666666668,spk_4,see here um as well by having a more efficient usage of the API.
+428,22.7605,22.79565,spk_4,So looking forward to both those to improve
+429,22.795833333333334,22.836333333333332,spk_4,the overall experience and importing for our customers
+430,22.84498333333333,22.866483333333335,spk_4,over towards it scale.
+431,22.866666666666667,22.871983333333333,spk_4,"Again,"
+432,22.87215,22.94065,spk_4,we are also working on our routing technology for cells cells is
+433,22.940816666666667,22.983333333333334,spk_4,"the idea where we can stand up on the backhand side,"
+434,22.9835,23.061,spk_4,"transparent to users, multiple kind of additional infrastructure for to run"
+435,23.06365,23.080166666666667,spk_4,glab.com
+436,23.082816666666666,23.12865,spk_4,and be able to easily horizontally scale our service.
+437,23.130816666666668,23.204166666666666,spk_4,"And so with kind of multiple small instances, we need some to route between them."
+438,23.20531666666667,23.259983333333334,spk_4,And so we are doing a number of different routing PO CS to confirm
+439,23.26015,23.334816666666665,spk_4,the best approach to handle this uh cloud flare sto and things like that.
+440,23.336166666666667,23.374483333333334,spk_4,So looking forward to the results of that the concepts to
+441,23.37465,23.413333333333334,spk_4,determine where we go in the future for the implementation.
+442,23.428483333333332,23.490983333333332,spk_4,"Um So here is the command palette and so I apologize, I had the wrong link before."
+443,23.49115,23.534,spk_4,Uh So you can see some examples I was showing you here as well.
+444,23.534166666666668,23.582166666666666,spk_4,"So here is the commands uh to show you what command pallet,"
+445,23.582316666666667,23.609166666666667,spk_4,uh the search is going to work on improving.
+446,23.609333333333332,23.640816666666666,spk_4,So you know what to do and what you can do within
+447,23.640983333333335,23.697316666666666,spk_4,the search pallet and a number of other improvements here as well.
+448,23.70965,23.73265,spk_4,"Finally, for our database group,"
+449,23.73281666666667,23.803816666666666,spk_4,we are continuing to work on reducing the overall lightweight lock contention.
+450,23.804166666666667,23.84565,spk_4,This is an area where our database on github.com can
+451,23.845833333333335,23.899316666666667,spk_4,sometimes uh uh not perform as well as we like.
+452,23.899483333333333,23.959333333333333,spk_4,And so we want to improve the overall contention of these lightweight locks.
+453,23.959483333333335,23.980816666666666,spk_4,And one way we can do this actually by
+454,23.980983333333334,24.02665,spk_4,dropping indexes that are not frequently used on our
+455,24.028316666666665,24.07215,spk_4,database and we've identified about 10 of these and
+456,24.072316666666666,24.1125,spk_4,we are going through and dropping a few of these
+457,24.112833333333334,24.156333333333333,spk_4,um to help improve that overall or reduce the overall
+458,24.1565,24.199483333333333,spk_4,contention and improve performance for all of our users.
+459,24.203,24.23465,spk_4,And that's it for the core platform section.
+460,24.234816666666667,24.289833333333334,spk_4,I will hand things over to Taylor to take us home on
+461,24.29,24.345316666666665,spk_4,all of the things A I and uh model gately related.
+462,24.350666666666665,24.405483333333333,spk_5,"Awesome, thanks Josh. Hi, everyone. My name is Taylor mccaslin."
+463,24.40565,24.4485,spk_5,I'm a group manager for our data science section.
+464,24.455483333333333,24.50198333333333,spk_5,Um I'll start with our A I powered stage
+465,24.502166666666668,24.5565,spk_5,focused on adding generative A I capabilities to create a
+466,24.560316666666665,24.574483333333333,spk_5,world class DEV
+467,24.578483333333335,24.588166666666666,spk_5,ops dese
+468,24.596166666666665,24.677333333333333,spk_5,ops experience uh focused on transforming data into useful insights and actions.
+469,24.6775,24.710316666666667,spk_5,We'll mostly talk about do get lab duo
+470,24.712316666666666,24.727833333333333,spk_5,chat today.
+471,24.729833333333332,24.772316666666665,spk_5,The team is focused on bringing uh GLAB Duo
+472,24.774316666666667,24.819166666666668,spk_5,"chat to self managed and dedicated instances,"
+473,24.819333333333333,24.857,spk_5,which we expect to ship this milestone.
+474,24.860666666666667,24.928316666666667,spk_5,This will also be focused on mirroring the experience for.com users.
+475,24.928483333333332,24.938333333333333,spk_5,"However,"
+476,24.9385,24.978316666666668,spk_5,it will not include support for questions
+477,24.978483333333333,25.02166666666667,spk_5,about GLAB documentation due to complexity.
+478,25.025,25.083833333333335,spk_5,"Um With that implementation, we hope to add that in future releases."
+479,25.086,25.184983333333335,spk_5,We're also working on uh introducing streaming into the GIT lab duo chat and ID E
+480,25.18515,25.235316666666666,spk_5,to help receive responses faster and allow you
+481,25.2355,25.27415,spk_5,to read those responses as they're streaming in.
+482,25.277833333333334,25.350833333333334,spk_5,This will help chat feel more performant and faster at responding to questions.
+483,25.351,25.401483333333335,spk_5,This will mirror how this works in the git lab
+484,25.404833333333332,25.439833333333333,spk_5,"uh dot com U I. Today,"
+485,25.442,25.518483333333332,spk_5,we're also working on improving support for slash commands
+486,25.520833333333332,25.564833333333333,spk_5,um And the quality of the responses for that.
+487,25.565,25.618483333333334,spk_5,"Today, we support a few commands including generating tests,"
+488,25.619666666666667,25.680483333333335,spk_5,refactoring code and explaining the code within the ID E.
+489,25.68515,25.732,spk_5,Um We're expanding the context that is sent with
+490,25.732166666666668,25.786816666666667,spk_5,these commands to improve the quality of those results.
+491,25.7925,25.805816666666665,spk_5,"And then finally,"
+492,25.805983333333334,25.8675,spk_5,we're impro uh continuing to work on improving the way that we evaluate the
+493,25.86766666666667,25.905166666666666,spk_5,accuracy of chat responses to ensure that
+494,25.905316666666668,25.951483333333332,spk_5,chat responses are both accurate and useful.
+495,25.959983333333334,25.972316666666668,spk_5,"Um Next,"
+496,25.972483333333333,26.02665,spk_5,I'll move over to uh the model ops stage which
+497,26.026816666666665,26.085833333333333,spk_5,is focused on helping enable and empower data science workloads.
+498,26.086483333333334,26.125833333333333,spk_5,Our ML ops group is expecting to have
+499,26.126,26.169,spk_5,the experimental release of the model registry.
+500,26.169816666666666,26.23115,spk_5,This will allow data science teams to create models and model
+501,26.2335,26.291483333333332,spk_5,"versions, track metadata and performance of models,"
+502,26.292333333333332,26.357166666666668,spk_5,upload files uh using the ML flow client.
+503,26.357316666666666,26.428483333333332,spk_5,This will also include a simple U I to browse models and model
+504,26.42865,26.506666666666668,spk_5,versions as well as download model files directly from the GAU I.
+505,26.5125,26.55216666666667,spk_5,So that's what we're focused on for the data science section
+506,26.552333333333333,26.579166666666666,spk_5,and I'll hand it back to Hillary to wrap us up.
+507,26.5925,26.66283333333333,spk_0,"Awesome, thanks Taylor. So as per usual, there is a ton of great stuff going on."
+508,26.666666666666668,26.6925,spk_0,Um I know there's a lot of content.
+509,26.692666666666668,26.712833333333332,spk_0,"So just to wrap this up,"
+510,26.713,26.755,spk_0,uh I'll pull out a few highlights that the team just shared today.
+511,26.755166666666668,26.78715,spk_0,So Derek spoke to us for the DEV section
+512,26.790816666666668,26.806666666666665,spk_0,"uh about, you know,"
+513,26.806833333333334,26.865166666666667,spk_0,moving remote development workspaces to G A that is super exciting.
+514,26.867,26.928983333333335,spk_0,Um Also talked about adding do performers score panel to to value stream
+515,26.930983333333334,26.944666666666667,spk_0,metrics
+516,26.948983333333334,27.0135,spk_0,uh enabling the web ID extension marketplace for get lab.com as well.
+517,27.019,27.041483333333332,spk_0,"Uh In the SEC section,"
+518,27.041666666666668,27.092666666666666,spk_0,we talked about adding additional permissions for customizable roles.
+519,27.092816666666668,27.12065,spk_0,Uh extending support for continuous
+520,27.120833333333334,27.160666666666668,spk_0,vulnerability scanning to container scanning
+521,27.164316666666668,27.20365,spk_0,uh and linking security policies to compliance frameworks that
+522,27.20381666666667,27.244,spk_0,you can ensure projects are enforced for a given policy
+523,27.261333333333333,27.284,spk_0,in the C I CD section.
+524,27.284166666666668,27.313166666666667,spk_0,"Uh We got a bunch of usability improvements,"
+525,27.313333333333333,27.357316666666666,spk_0,the C I catalog to make finding and using components easier.
+526,27.357483333333334,27.398,spk_0,Um and native support for GCP secret manager
+527,27.410316666666667,27.470316666666665,spk_0,"for core core platform replication of code search across search nodes,"
+528,27.470483333333334,27.53115,spk_0,"improvements to the command pallet and support, forget lab duo chat on self managed"
+529,27.536,27.575,spk_0,and for data science streaming for chat and ID E
+530,27.575166666666668,27.63515,spk_0,improve slash command context for improved responses and model regis
+531,27.636983333333333,27.66415,spk_0,registry experimental release.
+532,27.667816666666667,27.709483333333335,spk_0,"This is just a, a sample of everything that we're working on."
+533,27.70965,27.763333333333332,spk_0,So please check out the release kickoff page for a full list of items.
+534,27.7635,27.806333333333335,spk_0,Uh also feel free to comment on our issues and engage with the team.
+535,27.8065,27.85165,spk_0,We love to get interaction from customers and folks across the community.
+536,27.851816666666668,27.87815,spk_0,So please don't hesitate to reach out
+537,27.889316666666666,27.93865,spk_0,and with that. Thank you very much for watching the 69 8 release.

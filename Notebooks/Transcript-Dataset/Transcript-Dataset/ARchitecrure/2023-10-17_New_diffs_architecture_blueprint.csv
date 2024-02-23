@@ -1,0 +1,748 @@
+,start_time,end_time,speaker_label,text
+0,0.029316666666666664,0.09966666666666667,spk_0,"All right, we are live. Welcome to another weekly of the new D"
+1,0.10766666666666666,0.185,spk_0,"architecture workflow meeting, synchronized meeting for Em"
+2,0.18916666666666665,0.2085,spk_0,and America's.
+3,0.21798333333333333,0.22965,spk_0,Um
+4,0.23515,0.30050000000000004,spk_0,I'll start off with an uh I'll hijack the agenda just for a little bit.
+5,0.30365000000000003,0.3395,spk_0,Just an fy I um
+6,0.3469833333333333,0.36365,spk_0,Natalia
+7,0.38565,0.42833333333333334,spk_0,in case you missed the update on on Slack
+8,0.43831666666666663,0.4643333333333333,spk_0,Finna is now our coach.
+9,0.47898333333333337,0.53265,spk_0,She will be helping us find a way throughout the whole process
+10,0.53715,0.61865,spk_0,"of publishing this blueprint and, and giving some advice along the way. So"
+11,0.6254833333333334,0.6313333333333334,spk_0,thanks for
+12,0.6334833333333333,0.6484833333333333,spk_0,telling for the help.
+13,0.64865,0.7226666666666667,spk_0,Um This came up in the review of the adding the blueprint to the documentation. So
+14,0.7359833333333333,0.75765,spk_0,welcome. Do you wanna
+15,0.7709833333333334,0.7849833333333333,spk_0,and s a few words?
+16,0.8088166666666667,0.8885000000000001,spk_1,"Thank you. It's nice to be in create group again, at least temporarily."
+17,0.893,0.9578333333333333,spk_0,"Yes. Like I always say, once, create, always create. So you never left."
+18,0.9765,1.01715,spk_0,Uh All right. Thank you. Uh Let's move on to ST
+19,1.0208333333333333,1.0239833333333332,spk_0,is like
+20,1.0295,1.0468333333333333,spk_0,"-- you have a little point
+-- there."
+21,1.0738333333333334,1.1395,spk_2,"Yes, I, I've populated a list of issues with this."
+22,1.1468166666666666,1.228,spk_2,"It's mostly front and focused, but I touched a little bit on the back side."
+23,1.22965,1.2895,spk_2,So feel free to explore and maybe add something else.
+24,1.3573333333333333,1.433,spk_3,"I was thinking about adding a separate section there with accessibility issues,"
+25,1.43315,1.4576500000000001,spk_3,"uh the front end, but"
+26,1.46115,1.5044833333333334,spk_3,uh there might be quite a bit of them. So
+27,1.5088166666666667,1.5091666666666668,spk_3,"yeah,"
+28,1.5218166666666666,1.5418333333333334,spk_3,extra list for that.
+29,1.57365,1.624,spk_0,"Yeah, I think you already, you already did an audit, right?"
+30,1.62415,1.6938166666666667,spk_0,"The document or at least started the audit of the current stiffs, right in the MRS."
+31,1.7034833333333332,1.7173333333333334,spk_0,Um
+32,1.72315,1.76065,spk_0,I think it would be definitely worth surfacing
+33,1.7756666666666665,1.82065,spk_0,"the the problems there,"
+34,1.8384833333333332,1.8931499999999999,spk_0,but still linking to the full audits is useful.
+35,1.8953333333333333,1.9408166666666666,spk_0,Um The document to the to the document you're getting ready.
+36,1.9495,2.012166666666667,spk_0,Um Because that would definitely be helpful for us to understand exactly
+37,2.016983333333333,2.0615,spk_0,what are the big issues um there.
+38,2.0764833333333335,2.0824833333333332,spk_0,"Yeah,"
+39,2.1388333333333334,2.1878333333333333,spk_0,cool. I was uh for the sake of everybody. Uh
+40,2.20565,2.231333333333333,spk_0,I was just gonna be sharing the screen
+41,2.2443333333333335,2.259316666666667,spk_0,real quick.
+42,2.2708333333333335,2.3051500000000003,spk_0,"Sorry, my throat is killing me a little bit."
+43,2.3175,2.3834833333333334,spk_0,So just as a like just so that we can all get a little synchronized here.
+44,2.3836666666666666,2.4198333333333335,spk_0,So you highlighted the virtual scrolling problems.
+45,2.43715,2.482666666666667,spk_0,Do you wanna do you wanna walk us through that? Love. We have a short agenda.
+46,2.4828333333333332,2.501333333333333,spk_0,Do you wanna walk us through?
+47,2.5213166666666664,2.5328333333333335,spk_4,Um
+48,2.5541666666666667,2.5856500000000002,spk_2,There's like a lot of a
+49,2.587833333333333,2.6216666666666666,spk_2,lot of stuff to cover. Um
+50,2.6329833333333332,2.71715,spk_2,I can focus on scroll issues. Um And probably everyone here
+51,2.7199833333333334,2.751333333333333,spk_2,have faced one of them
+52,2.7560000000000002,2.78815,spk_2,at least once. Uh Good luck.
+53,2.7904833333333334,2.7993333333333332,spk_2,So
+54,2.8055,2.88,spk_2,they're mostly about stuff when you click on sidebar items.
+55,2.8939833333333334,2.9774833333333333,spk_2,"If the item is not loaded, usually it will do nothing or in the worst case"
+56,2.9845,3.0141666666666667,spk_2,it can break the whole page.
+57,3.0341666666666667,3.0456666666666665,spk_2,Um
+58,3.056983333333333,3.0733166666666665,spk_2,Also
+59,3.08,3.1213166666666665,spk_2,we've had some issues in the past when you
+60,3.1228166666666666,3.1774833333333334,spk_2,linked to a specific file or to a specific line
+61,3.1841666666666666,3.2373333333333334,spk_2,and then use that link to go to a new page.
+62,3.2443333333333335,3.287333333333333,spk_2,Usually the file won't be scrolled
+63,3.29365,3.3398166666666667,spk_2,to the place. So you will just see the first file
+64,3.3468166666666668,3.4303333333333335,spk_2,and nothing will happen. So we've tried to fix that a couple of times and I see
+65,3.442833333333333,3.4828333333333332,spk_2,uh people still having issues with that.
+66,3.4901666666666666,3.517316666666667,spk_2,Um Even though we have
+67,3.5233166666666667,3.5459833333333335,spk_2,"testing in place,"
+68,3.549,3.6333333333333333,spk_2,it's still still not enough. There are some cases that we didn't cover. So
+69,3.6398166666666665,3.6843166666666667,spk_2,there's a lot of stuff to be improved in the
+70,3.6923166666666667,3.6978166666666668,spk_2,scoring
+71,3.7074833333333332,3.723,spk_2,uh area.
+72,3.73665,3.783666666666667,spk_0,So I I would provide a bit of context here.
+73,3.7875,3.8009833333333334,spk_0,Um
+74,3.81715,3.8745,spk_0,So the scrolling issues we saw coming up in the merger quests
+75,3.8841666666666668,3.931983333333333,spk_0,came up from the progress
+76,3.93615,3.9954833333333335,spk_0,through first loading the whole different ones and then
+77,3.9956666666666667,4.061833333333333,spk_0,loading the different batches which some parts weren't loaded.
+78,4.06915,4.102316666666667,spk_0,"Uh And then introducing fortress scrolling,"
+79,4.110816666666667,4.1725,spk_0,there was a bunch of changes in the dynamic on how things were loaded
+80,4.181333333333333,4.225333333333333,spk_0,that were for the sake of performance.
+81,4.225483333333333,4.285316666666667,spk_0,"But created this sort of like sometimes race conditions,"
+82,4.2855,4.3123,spk_0,whether things are loaded or not
+83,4.316983333333333,4.3373,spk_0,without proper checks.
+84,4.341333333333333,4.369,spk_0,So that's probably something that we need to
+85,4.3715,4.412316666666666,spk_0,incorporate in the architecture is that
+86,4.4125,4.480333333333333,spk_0,um being prepared for that synchronicity or
+87,4.488166666666666,4.538316666666667,spk_0,"I don't know, event driven design, so to speak. But"
+88,4.5436499999999995,4.620333333333333,spk_0,"definitely there's a lot of issues that come out of those decisions and just the,"
+89,4.6565,4.727333333333333,spk_0,"the evolution of the code base uh over time,"
+90,4.73165,4.786,spk_0,you do. Did you mention a bit of a back end uh bits here?
+91,4.7861666666666665,4.8276666666666666,spk_0,The slow Synex highlighting this ha this has been
+92,4.827833333333333,4.874,spk_0,fixed by now unable to fetch a specific file.
+93,4.874816666666667,4.912316666666666,spk_0,"However, it uses a different end point"
+94,4.923,4.96915,spk_0,that we were suspicious about the performance because it doesn't
+95,4.969333333333333,5.02,spk_0,have all the optimizations that the the normal one has.
+96,5.02015,5.060666666666667,spk_0,So we definitely should have that in mind
+97,5.060816666666667,5.103483333333333,spk_0,when we're thinking about ways of fetching things.
+98,5.1075,5.1355,spk_0,What's the best way and all that stuff?
+99,5.150166666666666,5.199,spk_0,Uh The Leon E Tech has responses and overloading riders with
+100,5.2011666666666665,5.2058333333333335,spk_0,caching
+101,5.217833333333333,5.3065,spk_0,"that one, we need backend um Folks to come over and help us out"
+102,5.315166666666666,5.348,spk_0,uh on that section.
+103,5.36965,5.383,spk_0,Cool. All right.
+104,5.38315,5.466983333333333,spk_0,"So we had a bit of a an overview and please feel free to engage there in the issue, um"
+105,5.468833333333333,5.4943333333333335,spk_0,"synchronously and, and"
+106,5.497316666666666,5.512983333333334,spk_0,"Pauline definitely,"
+107,5.513166666666667,5.5613166666666665,spk_0,the accessibility issues would definitely be useful to highlight there too
+108,5.566166666666667,5.635816666666667,spk_0,"if you have issues. Just a summary like San Love did is useful as well,"
+109,5.68415,5.687666666666667,spk_0,right.
+110,5.712166666666667,5.7566500000000005,spk_0,All right. Moving on to the next point. Uh I have it.
+111,5.757333333333333,5.784316666666666,spk_0,I just want to let everybody know that the
+112,5.7844999999999995,5.82065,spk_0,"blueprint page has been published like the draft,"
+113,5.820833333333333,5.8678333333333335,spk_0,the initial very empty placeholder kind of thing.
+114,5.867983333333333,5.884816666666667,spk_0,Um
+115,5.886666666666667,5.93215,spk_0,So the idea is not as the ongoing discussions
+116,5.932333333333333,5.990483333333334,spk_0,come to a close that will move the conclusions and
+117,6.000166666666667,6.03165,spk_0,the directions um
+118,6.039833333333333,6.063166666666667,spk_0,over to the documentation.
+119,6.072,6.1253166666666665,spk_0,So we already started doing that with the order of priorities.
+120,6.125483333333333,6.1475,spk_0,Uh We're definitely going to be doing that
+121,6.14765,6.18165,spk_0,"with the definition of done the meaningful metrics,"
+122,6.1818333333333335,6.237,spk_0,all of that will make its way to that page.
+123,6.2465,6.288166666666666,spk_0,And I'd like to remind anybody can just open the merger quest to
+124,6.288316666666667,6.342983333333334,spk_0,"add that as soon as the discussions come to a point of like,"
+125,6.34315,6.38315,spk_0,"yep, feels like we're having, we're in a good spot"
+126,6.3901666666666666,6.4495,spk_0,"just to go ahead and open the merger quest and can all review and collaborate. So,"
+127,6.475316666666667,6.508333333333333,spk_0,uh questions about that
+128,6.519333333333333,6.528333333333333,spk_0,of it.
+129,6.544833333333333,6.552666666666667,spk_0,Oops.
+130,6.605833333333333,6.6095,spk_0,Oh Yeah.
+131,6.628833333333334,6.675816666666667,spk_0,Um I wanted to bring up the time of the meeting. Um
+132,6.6965,6.733,spk_0,It's probably gonna be for the recording uh because
+133,6.73315,6.756333333333333,spk_0,"there's not a lot of people outside here,"
+134,6.7636666666666665,6.837816666666667,spk_0,"but essentially uh A PAC had no attendance again uh this week,"
+135,6.837983333333334,6.858816666666667,spk_0,this past week on Thursday.
+136,6.86765,6.952833333333333,spk_0,"The question is like, does anybody have any ideas on how we should deal with that?"
+137,6.953333333333333,7.008816666666666,spk_0,Um I haven't chatted with David and Ash that are the
+138,7.019833333333334,7.077166666666667,spk_0,immediate engineers that come to mind that are in that time zone.
+139,7.084,7.113166666666666,spk_0,Um So
+140,7.126816666666667,7.17015,spk_0,I live here. The question is open ended.
+141,7.170333333333334,7.238166666666666,spk_0,If somebody has any ideas on how we can make the A pe call a little bit more useful
+142,7.248316666666667,7.317483333333334,spk_0,"uh or give them a place to present proposals or discuss things,"
+143,7.33465,7.351983333333333,spk_0,whether we do need AAA
+144,7.353983333333334,7.38165,spk_0,call is also a question. So
+145,7.390983333333334,7.414316666666667,spk_0,uh keen to hear your feedback
+146,7.426666666666667,7.457,spk_0,"on the, on this one."
+147,7.471816666666666,7.50965,spk_0,It's currently clashing with the front end weekly meeting.
+148,7.509816666666667,7.5536666666666665,spk_0,"And the question is, should we move it to earlier or to later"
+149,7.571816666666667,7.609816666666667,spk_0,and let's see what people think Stanislav.
+150,7.653333333333333,7.667333333333334,spk_2,"Yeah, for me"
+151,7.66965,7.714666666666667,spk_2,"e is, is better because we also have"
+152,7.725816666666667,7.7345,spk_2,uh
+153,7.74615,7.753166666666667,spk_2,front
+154,7.754833333333333,7.773816666666667,spk_2,and vision group meeting
+155,7.786666666666667,7.815483333333333,spk_2,"uh near that time. So,"
+156,7.81865,7.8870000000000005,spk_2,"yeah, if you move it later, it will also collide with this meeting"
+157,7.91765,7.959,spk_0,"and then after that it's too late for you. Yeah, I get it. Yeah."
+158,7.96765,7.982333333333333,spk_0,Um
+159,7.988483333333333,8.031333333333333,spk_0,"Thomas, what time is it over there? 730"
+160,8.041983333333333,8.083,spk_5,it's 730 right now. 745.
+161,8.099666666666666,8.101816666666666,spk_0,Ok.
+162,8.1075,8.140833333333333,spk_0,That's the struggle. Um
+163,8.19415,8.23215,spk_5,"I was, yeah, I was just gonna chime in and be like, well for me,"
+164,8.232333333333333,8.263166666666667,spk_5,it would be great if we moved it later
+165,8.278166666666667,8.310666666666666,spk_0,"for you. And Carrie, that's the thing."
+166,8.3225,8.355483333333334,spk_2,If we move it to like
+167,8.35815,8.3865,spk_2,30 minutes later
+168,8.39515,8.44315,spk_2,"-- or an hour later, I think it will be fine for
+-- me."
+169,8.490833333333333,8.515666666666666,spk_0,"Ok. So,"
+170,8.527333333333333,8.575966666666666,spk_0,so I'm gonna document here the tradeoffs that we're going to be taking this
+171,8.577983333333334,8.609833333333333,spk_0,as uh asynchronously. So essentially
+172,8.611666666666666,8.627816666666666,spk_0,earlier
+173,8.675,8.710666666666667,spk_0,means uh Patrick
+174,8.723166666666666,8.75065,spk_0,might make it more often
+175,8.76115,8.778166666666667,spk_0,uh
+176,8.7835,8.8055,spk_0,more convenient.
+177,8.827333333333334,8.836983333333333,spk_0,All right.
+178,8.852816666666667,8.861316666666667,spk_0,"Yeah,"
+179,8.902983333333333,8.928816666666666,spk_0,and slash front end
+180,8.950166666666666,9.001166666666666,spk_0,"later. Oh, then that means that"
+181,9.01315,9.048166666666667,spk_0,us folks can't attend
+182,9.083833333333333,9.122816666666667,spk_0,later. Us folks can't attend.
+183,9.13815,9.1505,spk_0,Patrick
+184,9.185833333333333,9.2035,spk_0,can't make it
+185,9.221483333333333,9.223333333333333,spk_0,good.
+186,9.258833333333333,9.263833333333332,spk_6,Uh
+187,9.279166666666667,9.347816666666667,spk_2,Maybe we can move the call um to another date like Monday
+188,9.357983333333333,9.394483333333334,spk_2,because I don't see any meetings
+189,9.396333333333333,9.41515,spk_2,"-- on Monday
+-- happening."
+190,9.446,9.521166666666666,spk_0,"So, yeah, what I'm struggling with is exactly the time itself. Um"
+191,9.5275,9.585833333333333,spk_0,"The collision with the front end folks is just the front end weekly, just one of them,"
+192,9.594316666666666,9.621166666666667,spk_0,but I'm trying to understand
+193,9.627816666666666,9.699816666666667,spk_0,"maybe instead of trying to stretch things into an A P A call,"
+194,9.720166666666668,9.802983333333334,spk_0,we can potentially have a little bit more tight oscillation of times. Um
+195,9.826983333333333,9.87865,spk_0,"Yeah, I need to sit, I need to sit in front of a calendar of a time zone"
+196,9.89265,9.915833333333333,spk_0,thing and just uh
+197,9.91965,9.957983333333333,spk_0,shift things around and see where it lands. But
+198,9.965483333333333,9.980983333333333,spk_0,"um,"
+199,10.040483333333333,10.105983333333333,spk_5,so I know the the time isn't great right now. Um
+200,10.110666666666667,10.179166666666667,spk_5,But I will say that at this time of day is not like
+201,10.1855,10.273483333333333,spk_5,"it's not undoable for me, right? So like 730 is OK, Carrie, I think maybe"
+202,10.2795,10.344833333333334,spk_5,"she said the same thing. She's like 630 isn't the worst, but like,"
+203,10.35615,10.376983333333333,spk_5,"I mean, come on at 630"
+204,10.397483333333334,10.426333333333334,spk_5,"-- that's the worst.
+-- So"
+205,10.44015,10.47,spk_0,to me that's literally the worst. But
+206,10.483983333333333,10.543833333333334,spk_0,"um no, all right. So I didn't expect us to have an outcome here on the call."
+207,10.544,10.599333333333334,spk_0,So I'll take these out and I'll think of something and come
+208,10.599483333333334,10.649166666666666,spk_0,up with a proposal of synchronously and chat with you on Slack.
+209,10.670833333333333,10.7325,spk_0,Cool. So which takes us to the current things.
+210,10.732666666666667,10.806816666666666,spk_0,"Uh the current, ongoing effort to document the current state of deaths. Um"
+211,10.812833333333334,10.86115,spk_0,"And if I remember correctly, we were"
+212,10.8765,10.939483333333333,spk_0,"Oh yeah, because Igor said he'd be out of office. That's why Igor is not here too."
+213,10.947333333333333,10.979983333333333,spk_0,Uh So we're waiting on SARS
+214,10.981816666666667,11.038833333333333,spk_0,good back end. I haven't heard
+215,11.05815,11.07265,spk_0,um
+216,11.077816666666667,11.144483333333334,spk_0,"Jack, do you know if Igor has added anything for source code back end?"
+217,11.166666666666666,11.217166666666667,spk_4,"Yeah. So I'm looking at the issue right now. It looks like he had a,"
+218,11.223166666666666,11.262833333333333,spk_4,"um, a diagram for the back end"
+219,11.265666666666666,11.276166666666667,spk_4,um
+220,11.293833333333334,11.328816666666667,spk_4,part of the source code pages.
+221,11.344316666666666,11.40715,spk_4,"Um It looks like he wants some input from the,"
+222,11.41415,11.461316666666667,spk_4,from the other back end engineers as well just to
+223,11.466666666666667,11.49,spk_4,check if he's missed anything.
+224,11.50515,11.559983333333333,spk_0,"OK. That's, that's exactly right. That's exactly"
+225,11.562316666666666,11.626983333333333,spk_0,what we need to do once we have all the diagrams in place. So
+226,11.6355,11.660833333333333,spk_0,that's progress there. That's good.
+227,11.664833333333334,11.682816666666668,spk_0,I'm trying to find
+228,11.696816666666667,11.7005,spk_0,es
+229,11.713483333333333,11.796483333333333,spk_0,"um Yep, found it, got the link there. I'm gonna put it here."
+230,11.811316666666666,11.83615,spk_0,"So OK, we have that"
+231,11.837833333333334,11.907666666666668,spk_0,front end source code. We already had that from last week. That's Jack.
+232,11.921483333333333,11.9345,spk_0,Um
+233,11.9625,11.9835,spk_0,Jack added.
+234,11.995483333333333,12.04965,spk_0,"So it seems like source code, we have something to to base it off uh"
+235,12.056666666666667,12.1045,spk_0,"code review back and we had,"
+236,12.124333333333333,12.147816666666667,spk_0,what were we waiting?
+237,12.161316666666666,12.164483333333333,spk_0,Uh
+238,12.219,12.261666666666667,spk_0,We have the document condition being updated itself. I
+239,12.263666666666667,12.2865,spk_0,feel like that's
+240,12.302166666666666,12.349,spk_0,what we've had from Patrick and the folks.
+241,12.379333333333333,12.3855,spk_0,Uh
+242,12.391,12.417166666666667,spk_0,"Yeah, in the front end"
+243,12.422166666666667,12.423166666666667,spk_0,the
+244,12.425,12.426816666666667,spk_0,se
+245,12.429816666666667,12.450983333333333,spk_0,chart in the dogs now.
+246,12.465,12.49765,spk_0,So we had uh we converted that to Mermaid.
+247,12.547483333333334,12.549166666666666,spk_0,Oh
+248,12.558833333333334,12.604666666666667,spk_0,"yes, we do. Right. Thomas, go ahead."
+249,12.6365,12.71615,spk_5,"Wish we had more control over how um Merman renders. But yeah, it's, it's there. So"
+250,12.73515,12.773333333333333,spk_0,"I mean, if anything can't we"
+251,12.77565,12.823333333333334,spk_0,"inspect it and move it to. No,"
+252,12.85065,12.911666666666667,spk_0,"but we need to make it, we need to get the source code and then get it into an editor."
+253,12.923166666666667,12.952983333333334,spk_0,"But yes, so at least we have them there."
+254,12.955666666666668,12.970316666666667,spk_0,Um
+255,12.973333333333333,12.998816666666666,spk_0,So it feels like we're in a good spot.
+256,12.999,13.06965,spk_0,It feels like we're have a snapshot for all four contexts.
+257,13.080983333333334,13.094483333333333,spk_0,Um
+258,13.096333333333334,13.116,spk_0,So
+259,13.134316666666667,13.176166666666667,spk_0,what I was thinking now that we have all four
+260,13.177983333333334,13.248483333333333,spk_0,is to uh ask everybody to review them
+261,13.25515,13.318,spk_0,in the next couple of days and potentially we could have
+262,13.320316666666667,13.321483333333333,spk_0,"a, a"
+263,13.3285,13.354983333333333,spk_0,discussion um
+264,13.368833333333333,13.46415,spk_0,or just a call to answer questions. Maybe we can use the next week's call for it
+265,13.471166666666667,13.5335,spk_0,to uh clarify any particular questions that we might
+266,13.533666666666667,13.579166666666667,spk_0,have about the diagrams because the whole goal is to
+267,13.582983333333333,13.676166666666667,spk_0,"align things both on the front end and on the back end, including Italy."
+268,13.682816666666668,13.717483333333334,spk_0,"I'm particularly since the part that I don't know,"
+269,13.71765,13.749816666666666,spk_0,I'm particularly interested about the back end ones
+270,13.767166666666666,13.79015,spk_0,and getting to know that a little bit.
+271,13.795833333333333,13.813483333333334,spk_0,Um
+272,13.816833333333333,13.854816666666666,spk_0,So I'll take a look at those and see what questions I have.
+273,13.854983333333333,13.936666666666667,spk_0,"But the idea is then to try to see um things that work well, things that work,"
+274,13.936833333333333,13.948166666666667,spk_0,not so well.
+275,13.948333333333334,13.963666666666667,spk_0,"And what can we,"
+276,13.969483333333333,14.01615,spk_0,how can we converge it into a single architecture?
+277,14.021483333333334,14.0375,spk_0,But that will come
+278,14.05265,14.087833333333334,spk_0,once we all review these things.
+279,14.088,14.173483333333333,spk_0,"So I'll uh I'll take an action point to ping everybody,"
+280,14.191316666666667,14.227333333333334,spk_0,at least the dris um
+281,14.230816666666666,14.321166666666667,spk_0,to review the documentation that has been published. Then this ones uh and
+282,14.32365,14.38015,spk_0,"aim to have it discussed um or to have a,"
+283,14.380333333333333,14.46315,spk_0,an A ma or just some sort of like discussion about it in the next weekly call.
+284,14.463316666666667,14.478816666666667,spk_0,If that sounds OK.
+285,14.523483333333333,14.553983333333333,spk_0,Any other thoughts or questions
+286,14.558333333333334,14.574483333333333,spk_0,or suggestions.
+287,14.655816666666666,14.689,spk_0,Cool. I'll do that
+288,14.69465,14.706816666666667,spk_0,action.
+289,14.72565,14.747816666666667,spk_0,They will
+290,14.756816666666667,14.762316666666667,spk_0,think
+291,14.771816666666666,14.786666666666667,spk_0,everyone
+292,14.81315,14.853983333333334,spk_0,take a look and discuss
+293,14.863,14.889483333333333,spk_0,"in next weeks,"
+294,14.913316666666667,14.925166666666666,spk_0,"a, a mini style"
+295,14.96315,15.008833333333333,spk_0,"and how you do. All right, cool. Uh Thomas, you have that explain."
+296,15.034666666666666,15.0505,spk_5,Yeah. Um
+297,15.061833333333333,15.115483333333334,spk_5,"So in talking about some like technical performance metrics,"
+298,15.115666666666666,15.15365,spk_5,"um I think it's really like, I"
+299,15.1555,15.2295,spk_5,think it's really important that we define who we are trying to serve with this.
+300,15.234833333333333,15.250166666666667,spk_5,Um Because
+301,15.25715,15.302816666666667,spk_5,what I'm suggesting comes from a certain place which is
+302,15.31115,15.358833333333333,spk_5,"like really low power devices on unreliable networks,"
+303,15.358983333333333,15.392166666666666,spk_5,developing country type stuff.
+304,15.392316666666666,15.444166666666666,spk_5,"Um And we really need to nail down whether that's our target,"
+305,15.444316666666667,15.468166666666667,spk_5,whether we should be doing that.
+306,15.47065,15.48215,spk_5,Um
+307,15.491833333333334,15.562316666666666,spk_5,"Because if we're not targeting those users, we can adjust our budgets."
+308,15.56865,15.630333333333333,spk_5,Um And that's like I'm me targeting those users
+309,15.6305,15.664833333333334,spk_5,"might be making me talk past people about like,"
+310,15.675166666666666,15.708833333333333,spk_5,"like not, not being on the same page."
+311,15.711316666666667,15.781666666666666,spk_5,So I would really like to hear people's ideas about who are like target should be.
+312,15.795316666666666,15.854166666666666,spk_5,"I probably also has some ideas about this, but from my perspective,"
+313,15.854333333333333,15.8865,spk_5,the more users we serve the better for Kai.
+314,15.886666666666667,15.896816666666666,spk_5,So
+315,15.9,15.9085,spk_5,"that's,"
+316,15.910316666666667,15.94115,spk_5,that's where I'm kind of coming from. So
+317,15.951166666666667,15.98415,spk_5,"um would like to get inputs here,"
+318,16.074,16.096333333333334,spk_0,"status level, you have a point."
+319,16.12698333333333,16.15515,spk_2,"Yeah, I want to mention that"
+320,16.163666666666668,16.203983333333333,spk_2,uh most of the reports I've seen
+321,16.21015,16.242166666666666,spk_2,when people mention that measure
+322,16.245166666666666,16.287316666666666,spk_2,quests are very slow and hard to work with.
+323,16.293,16.324816666666667,spk_2,They are coming for people that are like
+324,16.33015,16.35333333333333,spk_2,trying to
+325,16.35715,16.378166666666665,spk_2,review a measure
+326,16.380333333333333,16.387833333333333,spk_2,quest that
+327,16.389833333333332,16.394,spk_2,has
+328,16.406666666666666,16.466,spk_2,"100,000 clients changed some things like that."
+329,16.474816666666666,16.48431666666667,spk_2,Um
+330,16.495833333333334,16.54015,spk_2,"So yeah, if we focus on that, that's,"
+331,16.547483333333332,16.579983333333335,spk_2,that's one issue. If we focus on like
+332,16.584983333333334,16.620166666666666,spk_2,"low power devices, that's another one."
+333,16.624166666666667,16.66315,spk_2,But I haven't seen any issues with people coming
+334,16.665316666666666,16.697483333333334,spk_2,"and saying, can I want to"
+335,16.701983333333335,16.74465,spk_2,render this on my nokia 3310
+336,16.748333333333335,16.78415,spk_2,"and it doesn't render at all. So,"
+337,16.8015,16.870483333333333,spk_5,"um so I the theory in that, in that uh issue, I, I wrote it,"
+338,16.87065,16.894833333333334,spk_5,"I think my very first comment,"
+339,16.90165,16.9785,spk_5,"my, my theory is that um those people are already not using the lab,"
+340,16.9865,17.038666666666668,spk_5,"they're just, they've just been excluded by our product already."
+341,17.041833333333333,17.0515,spk_5,Um
+342,17.0535,17.108833333333333,spk_5,"Because people on low power devices probably not a nokia 3310 but,"
+343,17.111983333333335,17.189833333333333,spk_5,"but like on low on low ish power devices, um they just, they, they can't use,"
+344,17.19,17.2045,spk_5,"they can't use dips,"
+345,17.204666666666668,17.26215,spk_5,it's like 4.5 megabytes and it takes like takes me on
+346,17.262316666666667,17.3125,spk_5,my gigabit internet like six seconds to load or something.
+347,17.312666666666665,17.3255,spk_5,"So if they're on,"
+348,17.3385,17.394816666666667,spk_5,"if they're on 100 K or something, it would be in like an hour. Um"
+349,17.401633333333333,17.411816666666667,spk_5,So
+350,17.419166666666666,17.466833333333334,spk_5,they're already gone. So we're not gonna hear issues from them.
+351,17.467,17.512666666666668,spk_5,"So that's why I'm, that's why I'm suspicious that like,"
+352,17.51631666666667,17.5815,spk_5,"just because we're not hearing from people who want to use it on like low power,"
+353,17.581666666666667,17.595483333333334,spk_5,"low bandwidth,"
+354,17.598983333333333,17.636166666666668,spk_5,um doesn't mean that they are not out there.
+355,17.676316666666665,17.68915,spk_5,The um
+356,17.6925,17.7335,spk_5,"uh this is, this goes back to, I think our last,"
+357,17.733666666666668,17.78465,spk_5,"I think it was the last meeting of this maybe or, or a front end meeting."
+358,17.78865,17.799483333333335,spk_5,Um
+359,17.802333333333333,17.82265,spk_5,"Andre mentioned the,"
+360,17.832,17.909,spk_5,the story of the youtube engineer who was trying to get youtube under 100 K
+361,17.917816666666667,17.932,spk_5,and uh
+362,17.938816666666668,18.007816666666667,spk_5,their metrics got worse when he did because suddenly people in like
+363,18.007983333333332,18.07215,spk_5,parts of the world who could never even think about using youtube before
+364,18.076816666666666,18.08915,spk_5,could.
+365,18.089316666666665,18.124483333333334,spk_5,And so then like latency started getting really bad because they
+366,18.12465,18.161483333333333,spk_5,were using it from places they'd never used it before.
+367,18.163983333333334,18.171983333333333,spk_5,So
+368,18.176316666666665,18.186,spk_5,"I think are,"
+369,18.186166666666665,18.232483333333334,spk_5,"I think those users are out there and we're just not able to serve them right now,"
+370,18.357,18.4135,spk_5,"but I want to hear comments in that issue. Um I, but it"
+371,18.425166666666666,18.472816666666667,spk_5,"doesn't really matter where there's a thread on like technical limitation,"
+372,18.473,18.488816666666665,spk_5,"technical budgets,"
+373,18.490816666666667,18.532166666666665,spk_5,um which is kind of where this is coming from.
+374,18.532316666666667,18.565333333333335,spk_5,"But if you just want to leave a comment, like here's the user,"
+375,18.5655,18.5835,spk_5,I think we should support.
+376,18.584,18.624316666666665,spk_5,"Um That can be a totally different thread if you want,"
+377,18.681666666666665,18.719333333333335,spk_0,you wanna hear comments in that issue
+378,18.723666666666666,18.75348333333333,spk_0,or do you wanna read comments in that issue
+379,18.761483333333334,18.794166666666666,spk_0,"-- either
+-- or if you want to leave an audio note? That's great."
+380,18.80216666666667,18.86865,spk_0,Uh I'll share my thoughts here too. So um
+381,18.8775,18.89131666666667,spk_0,"whenever we have,"
+382,18.891483333333333,18.95916666666667,spk_0,"we have this exercise about looking at who's our users and all that stuff,"
+383,18.959333333333333,19.021166666666666,spk_0,"there's always the thing about we should aim for where we want it to be,"
+384,19.021333333333335,19.050333333333334,spk_0,not where we are right now.
+385,19.0505,19.069983333333333,spk_0,We might say
+386,19.079333333333334,19.12415,spk_0,like we can look at the mobile users and say it's a very
+387,19.124316666666665,19.1905,spk_0,tiny fraction of users and the justification might not even be about performance.
+388,19.19065,19.2655,spk_0,"It might be that just the U I looks crunched, it looks very small and it, oh it's just,"
+389,19.26565,19.296983333333333,spk_0,it's a hard task to do.
+390,19.29715,19.35615,spk_0,"And we've trained our users to don't do it on a mobile, for example,"
+391,19.360666666666667,19.39915,spk_0,which is not to say that this project could change that.
+392,19.399316666666667,19.445833333333333,spk_0,So let's keep an open mind in that regard. Exactly.
+393,19.446,19.48281666666667,spk_0,So we should keep strict in ourselves.
+394,19.496666666666666,19.53715,spk_0,The other part of my answer or my thoughts is that
+395,19.5405,19.578316666666666,spk_0,"the every conversation I have with Kai about this,"
+396,19.578483333333335,19.652666666666665,spk_0,it's very clear that performance is the feature for our users.
+397,19.652833333333334,19.66165,spk_0,And
+398,19.667983333333332,19.692333333333334,spk_0,"whenever they complain,"
+399,19.70565,19.745316666666668,spk_0,I I don't think the majority of the
+400,19.745483333333333,19.797483333333332,spk_0,complaints like Stanislav was saying is not coming from
+401,19.804666666666666,19.847316666666668,spk_0,problems loading the app.
+402,19.847483333333333,19.9385,spk_0,"It's mostly about time processing the data that we need for the app to render,"
+403,19.94565,19.965333333333334,spk_0,which is a different
+404,19.97533333333333,20.021166666666666,spk_0,"part of the budget, but it's still"
+405,20.031833333333335,20.07015,spk_0,part of what we should be considering. So instead of
+406,20.07881666666667,20.117166666666666,spk_0,instead of like being highly focused on
+407,20.12215,20.189666666666668,spk_0,"extremely nimble bundles, which is a thing, but"
+408,20.192816666666666,20.21415,spk_0,mostly for
+409,20.22615,20.25198333333333,spk_0,processing
+410,20.255483333333334,20.271333333333335,spk_0,T BT S
+411,20.283333333333335,20.361166666666666,spk_0,"that sort of thing rather than time transferring bytes on the wire, right?"
+412,20.363166666666668,20.373166666666666,spk_0,So
+413,20.392666666666667,20.43915,spk_0,there should definitely be strictness in the bundle in the budgets.
+414,20.439316666666667,20.478316666666668,spk_0,But uh I think what we should definitely keep
+415,20.478483333333333,20.560316666666665,spk_0,an eye on is for optimizing low processing times
+416,20.58115,20.609483333333333,spk_0,"when showing that when, when"
+417,20.621666666666666,20.63,spk_0,"gosh,"
+418,20.630166666666668,20.68,spk_0,there's probably a better way to describe it from the moment the user acts
+419,20.68016666666667,20.728983333333332,spk_0,and they get the data they want or they have the render they want.
+420,20.73515,20.742,spk_0,Um
+421,20.764483333333335,20.780483333333333,spk_0,So I think we definitely
+422,20.78633333333333,20.800833333333333,spk_0,focus on
+423,20.807983333333333,20.8505,spk_0,making sure that we pick meaningful metrics that
+424,20.857483333333334,20.886166666666668,spk_0,forces into having
+425,20.895833333333332,20.974816666666666,spk_0,"those restrictions into prioritizing the desired content first,"
+426,20.98281666666667,21.050833333333333,spk_0,"all the way back from giddily, all the way to the front end application. Um"
+427,21.078983333333333,21.087316666666666,spk_0,um
+428,21.109483333333333,21.114483333333332,spk_0,"Yeah,"
+429,21.12615,21.142333333333333,spk_0,I can see that coming.
+430,21.145316666666666,21.157166666666665,spk_0,Um
+431,21.178316666666667,21.215816666666665,spk_0,"So yeah, so that's my thoughts. Uh"
+432,21.21865,21.29,spk_0,"But we should definitely discuss it in the, in the issue and uh try to advance that"
+433,21.300333333333334,21.32133333333333,spk_0,uh a sequence.
+434,21.3315,21.375333333333334,spk_0,"I'll, I'll share my thoughts there on that issue too."
+435,21.39515,21.409333333333333,spk_0,Any more?
+436,21.41415,21.459483333333335,spk_0,Anyone has any more thoughts here today?
+437,21.5875,21.607166666666668,spk_0,"All right, let's try to make"
+438,21.618483333333334,21.6695,spk_0,these issues come to a first version
+439,21.674316666666666,21.684166666666666,spk_0,soon.
+440,21.685833333333335,21.693316666666668,spk_0,Uh
+441,21.708833333333335,21.757483333333333,spk_0,"Remember, we might still revise the actual numbers as we go,"
+442,21.75765,21.78915,spk_0,might still revise the actual things but
+443,21.801983333333332,21.8375,spk_0,should definitely start to
+444,21.842666666666666,21.950166666666668,spk_0,bring this up to a close because these are the framework on how everything else the
+445,21.964316666666665,21.980316666666667,spk_0,um
+446,21.982166666666668,21.989316666666667,spk_0,"for example,"
+447,21.989483333333332,22.059333333333335,spk_0,"when we start discussing service side rendering or we start discussing streaming,"
+448,22.059483333333333,22.108833333333333,spk_0,all of those things need to be looked at
+449,22.11466666666667,22.15315,spk_0,in a framework of expectations and
+450,22.159983333333333,22.208833333333335,spk_0,benchmarks are and budgets and we'll definitely
+451,22.209,22.235666666666667,spk_0,need to have these already in place.
+452,22.235833333333332,22.24315,spk_0,So
+453,22.249483333333334,22.279333333333334,spk_0,"the quicker we can get a first version, the better"
+454,22.306666666666665,22.326316666666667,spk_0,which
+455,22.332483333333332,22.348333333333333,spk_0,brings me
+456,22.37215,22.38515,spk_0,to
+457,22.389316666666666,22.413333333333334,spk_0,the accessibility thing.
+458,22.415166666666668,22.426483333333334,spk_0,Um
+459,22.45,22.483666666666668,spk_0,"Paul. No, I oh, you already replied."
+460,22.507816666666667,22.51615,spk_3,Uh
+461,22.518833333333333,22.528983333333333,spk_3,yes
+462,22.5315,22.56365,spk_3,to your uh fantastic list.
+463,22.580983333333332,22.596983333333334,spk_3,I did.
+464,22.621333333333332,22.643483333333332,spk_0,"Uh Yeah,"
+465,22.686,22.692816666666666,spk_0,yeah.
+466,22.696983333333332,22.703483333333335,spk_0,"So I,"
+467,22.70365,22.771833333333333,spk_0,one of the things that came up in that in the accessibility for everybody to be aware
+468,22.775333333333332,22.864316666666667,spk_0,is a lot of the guidelines come to the authoring of content. And in
+469,22.867983333333335,22.874816666666668,spk_0,"DS,"
+470,22.882166666666667,22.93465,spk_0,"I mean, as far as we consider authoring content"
+471,22.938,23.009983333333334,spk_0,"is leaving comments, you can leave a comment with a little suggestion."
+472,23.0125,23.075833333333332,spk_0,But essentially the authoring of content typically happens in the editor
+473,23.076,23.1315,spk_0,"in the markdown editor or the content editor or something,"
+474,23.138816666666667,23.172316666666667,spk_0,which means that we can
+475,23.185666666666666,23.234983333333332,spk_0,"you can create some sort of guidelines for that tool,"
+476,23.236483333333332,23.305816666666665,spk_0,but it's probably not gonna be implemented by the create teams themselves or
+477,23.326483333333332,23.353483333333333,spk_0,"gosh, where is content editor?"
+478,23.3715,23.437316666666668,spk_0,Is that plan or is that editor plan plan? So it will be
+479,23.45815,23.466833333333334,spk_0,got it.
+480,23.4715,23.50315,spk_0,So it would be coming over to the plan side.
+481,23.503316666666667,23.578483333333335,spk_0,"We have to, we have to cross borders present our case, explain why this is important."
+482,23.585316666666667,23.5905,spk_0,"And it's,"
+483,23.59065,23.625833333333333,spk_0,it's fascinating the guidelines that Paulina presented
+484,23.626,23.65115,spk_0,because a lot of the things is just
+485,23.66415,23.735500000000002,spk_0,helping the user realize that they're producing inaccessible content and
+486,23.735666666666667,23.7945,spk_0,it's pretty much just highly focused on the editor experience.
+487,23.801483333333334,23.858666666666668,spk_0,"Whereas other parts of the guidelines which I think makes more,"
+488,23.858833333333333,23.89131666666667,spk_0,much more sense for our effort here.
+489,23.90315,23.955483333333333,spk_0,Uh or at least that we can execute on is the navigation
+490,23.959983333333334,24.020833333333332,spk_0,like navigating complex application with a lot of data.
+491,24.023833333333332,24.067816666666666,spk_0,How can I make it easier for users with assistive technology
+492,24.067983333333334,24.1565,spk_0,to navigate those by establishing expectations and establishing these things.
+493,24.156666666666666,24.167333333333332,spk_0,Um
+494,24.192166666666665,24.214666666666666,spk_0,OK. Um
+495,24.22465,24.2985,spk_0,So just so I understand Paulina is the ball on your court there to produce?
+496,24.30615,24.319,spk_0,Yes.
+497,24.32665,24.331833333333332,spk_0,OK.
+498,24.340816666666665,24.405166666666666,spk_0,"And then once we have that, we can probably move that over to the documentation"
+499,24.4125,24.475666666666665,spk_0,together with the performance uh budgets that we're discussing above
+500,24.484333333333332,24.518316666666667,spk_0,"and they're dependent, we can make them"
+501,24.52316666666667,24.566833333333335,spk_0,committed or merge whenever they're ready. So
+502,24.577833333333334,24.606833333333334,spk_0,"yeah, it's exciting. Definitely."
+503,24.611,24.620316666666668,spk_0,Um
+504,24.6385,24.649483333333333,spk_0,All right
+505,24.663983333333334,24.680316666666666,spk_0,"with that,"
+506,24.682483333333334,24.713,spk_0,he gets to the bottom of the agenda.
+507,24.7155,24.73,spk_0,Um
+508,24.756333333333334,24.83515,spk_0,Anybody has anything else they want to discuss uh things that might have been clear
+509,24.854333333333333,24.869983333333334,spk_0,um
+510,24.884166666666665,24.923000000000002,spk_0,that you wanna discuss or should we uh
+511,24.926,24.955483333333333,spk_0,give some time back to people?
+512,25.015333333333334,25.023983333333334,spk_5,Um
+513,25.031666666666666,25.042,spk_5,"I,"
+514,25.058666666666667,25.077666666666666,spk_5,"having worked in,"
+515,25.079833333333333,25.098666666666666,spk_5,"yeah, having worked in the Diffs"
+516,25.101483333333334,25.111,spk_5,App for
+517,25.122483333333335,25.131666666666668,spk_5,um
+518,25.138816666666667,25.165333333333333,spk_5,four plus years now.
+519,25.173,25.275,spk_5,Um I'm not sure how complete that chart is that we added to the docs
+520,25.279333333333334,25.324483333333333,spk_5,"and when I say I'm not sure. I mean, I literally don't know."
+521,25.345483333333334,25.386333333333333,spk_5,It's not that I have concerns. I just don't know.
+522,25.38915,25.45765,spk_5,"Um So yeah, Phil, I don't know if it, do, you know if it's like, is this everything,"
+523,25.462666666666667,25.497483333333335,spk_5,"-- did we completely document this
+-- here?"
+524,25.513,25.5135,spk_6,That
+525,25.51615,25.52265,spk_6,from
+526,25.541483333333332,25.570483333333332,spk_6,"probably not. No,"
+527,25.58465,25.64666666666667,spk_0,"I think we, I think we documented the the component tree, right?"
+528,25.661816666666667,25.66283333333333,spk_0,But
+529,25.67015,25.707166666666666,spk_0,"-- like
+-- as close to"
+530,25.715983333333334,25.754833333333334,spk_6,"what a normal dick would use to render,"
+531,25.769166666666667,25.83416666666667,spk_6,but there's like loads of weird different views they get rendered as well
+532,25.840166666666665,25.874816666666668,spk_6,that might not be documented properly.
+533,25.88465,25.90748333333333,spk_6,And yet we haven't documented
+534,25.91015,25.93016666666667,spk_6,the data side of things.
+535,25.9945,26.011483333333334,spk_5,Is it worth
+536,26.032983333333334,26.061983333333334,spk_5,going back through it?
+537,26.116666666666667,26.1465,spk_5,"So, having, having converted the X"
+538,26.1485,26.14915,spk_5,Cora
+539,26.152666666666665,26.19098333333333,spk_5,"to this mermaid chart, like I didn't,"
+540,26.207316666666667,26.215,spk_5,"I mean,"
+541,26.232166666666668,26.276483333333335,spk_5,"it didn't have a red flag go off like, oh, I know it's missing this."
+542,26.27665,26.319166666666668,spk_5,"And so I don't know what, what I would do."
+543,26.323166666666665,26.34348333333333,spk_5,I guess it would just to step through the
+544,26.34365,26.396166666666666,spk_5,code and just see if there's any branches missing
+545,26.39915,26.428483333333332,spk_5,"as we go through this chart, which"
+546,26.4375,26.45115,spk_5,is doable.
+547,26.49,26.555,spk_6,"That's why I did at the time of create it. But that was like a year ago, a year or so. So"
+548,26.570483333333332,26.592166666666667,spk_6,there's probably a lot changed since then.
+549,26.632166666666667,26.6545,spk_5,"I mean, maybe it's just worth,"
+550,26.6695,26.72065,spk_5,maybe I should just go in and edit the stock and say like
+551,26.728816666666667,26.744666666666667,spk_5,this is
+552,26.760316666666668,26.783333333333335,spk_5,this could be incomplete.
+553,26.794816666666666,26.80365,spk_5,"Don't,"
+554,26.822316666666666,26.863333333333333,spk_5,don't like use this as the source of truth.
+555,26.874483333333334,26.942666666666668,spk_0,"So this is a really good point because we, when we talked about this,"
+556,26.942816666666666,27.007983333333332,spk_0,the whole goal of document the current state is to guide us
+557,27.011816666666668,27.03265,spk_0,uh in
+558,27.046,27.10365,spk_0,identifying an ideal architecture. OK? It's not
+559,27.108333333333334,27.125666666666667,spk_0,the architecture.
+560,27.129833333333334,27.193316666666668,spk_0,"But for example, what we can already see like when we look at these,"
+561,27.19965,27.251483333333333,spk_0,like there's a lot of stuff here that are um
+562,27.26815,27.30115,spk_0,also applicable in the repository.
+563,27.301316666666665,27.373,spk_0,So we can probably abstract this in a way that is generalized to all contexts.
+564,27.3795,27.3945,spk_0,Uh Like
+565,27.39915,27.420833333333334,spk_0,"when you're looking at a commit,"
+566,27.436983333333334,27.47615,spk_0,"we're looking at at a commit in a repository,"
+567,27.476316666666666,27.520833333333332,spk_0,"there will be renamed files in those commits, right?"
+568,27.52415,27.536166666666666,spk_0,Um
+569,27.55365,27.5875,spk_0,"And we're looking at comparing the branches,"
+570,27.59065,27.6085,spk_0,it will be there
+571,27.612316666666665,27.64131666666667,spk_0,that will be renamed too uh
+572,27.673983333333332,27.740166666666667,spk_0,"bearing branches. We always also catch, yeah, I think it it would."
+573,27.744983333333334,27.79565,spk_0,Um so we can start already starting to see that there's
+574,27.795833333333334,27.846983333333334,spk_0,a bunch of things here that are common for every case of
+575,27.855483333333332,27.89365,spk_0,the diff there's probably some areas here in this
+576,27.893833333333333,27.942333333333334,spk_0,"tree that don't make sense for the repository,"
+577,27.9425,27.988333333333333,spk_0,which we could take notes and then we can help
+578,27.997316666666666,28.038333333333334,spk_0,um that can help the conversation.
+579,28.041316666666667,28.051483333333334,spk_0,"In,"
+580,28.064666666666668,28.11365,spk_0,"for example, one of the things that we've talked already is the"
+581,28.12065,28.161816666666667,spk_0,that would be sort of part of the architecture is
+582,28.176,28.188816666666668,spk_0,um
+583,28.217666666666666,28.3025,spk_0,the viewers for the types of file um where we can have um
+584,28.318316666666668,28.373983333333335,spk_0,"like if it's an image, if it's a text, if it's a binary, all that stuff."
+585,28.38115,28.403983333333333,spk_0,"But more than that,"
+586,28.40615,28.415983333333333,spk_0,that
+587,28.43,28.52316666666667,spk_0,Eduardo rec uh suggested is to also include a way that we can have
+588,28.532,28.609,spk_0,a rendered version of the diff which would benefit some cases
+589,28.609166666666667,28.68265,spk_0,"like the uh Jupiter notebooks and potentially others uh mark down,"
+590,28.682816666666668,28.69633333333333,spk_0,for example.
+591,28.70381666666667,28.71565,spk_0,Um
+592,28.73915,28.771166666666666,spk_0,And that's the kind of decisions we need to support
+593,28.771333333333335,28.836816666666667,spk_0,here in that architecture is support different ways to render
+594,28.84115,28.84915,spk_0,"sorry,"
+595,28.854833333333332,28.887316666666667,spk_0,support different ways to display the D
+596,28.89065,28.9085,spk_0,to the user
+597,28.914833333333334,28.986166666666666,spk_0,um which will extract out of this diagram. And this um
+598,29.006833333333333,29.026816666666665,spk_0,"knowledge I would say,"
+599,29.09115,29.096833333333333,spk_0,"yeah,"
+600,29.126316666666668,29.13383333333333,spk_0,go ahead.
+601,29.148833333333332,29.167816666666667,spk_5,"Oh I just said, OK."
+602,29.17415,29.190166666666666,spk_0,OK. Cool.
+603,29.23465,29.259816666666666,spk_0,Um Cook.
+604,29.30815,29.3675,spk_0,What I would also say we don't have to have everything in one diagram.
+605,29.36766666666667,29.387833333333333,spk_0,If we have another way of
+606,29.389666666666667,29.405166666666666,spk_0,presenting
+607,29.414666666666665,29.467666666666666,spk_0,"other parts, I know that the back end did several"
+608,29.469666666666665,29.496333333333332,spk_0,charts when we go
+609,29.509333333333334,29.574483333333333,spk_0,the flow and then this like different ways of communicating things
+610,29.58465,29.643483333333332,spk_0,uh especially when we're talking about different components and different parts
+611,29.64715,29.672816666666666,spk_0,like Italy and all that stuff.
+612,29.6775,29.755,spk_0,Um So we can present parts of the application and data flows differently.
+613,29.755166666666668,29.82215,spk_0,We don't have to be restricted to one particular diagram. OK.
+614,29.83065,29.852666666666668,spk_0,"If it makes it harder,"
+615,29.865983333333332,29.9235,spk_0,"uh just split into multiple diagrams and we can have a different perspective,"
+616,29.923666666666666,29.973666666666666,spk_0,"a different view or different lens on the data flow, for example."
+617,30.002333333333333,30.014316666666666,spk_0,Cool.
+618,30.02015,30.02415,spk_0,Uh
+619,30.027333333333335,30.048333333333332,spk_0,So
+620,30.05516666666667,30.069816666666668,spk_0,anything
+621,30.09498333333333,30.117816666666666,spk_0,anything else
+622,30.152833333333334,30.196,spk_2,I just wanted to add that we probably need a
+623,30.196166666666667,30.265816666666666,spk_2,chart of all the these features that we have because
+624,30.275,30.365166666666667,spk_2,"the structure is one thing but also inside each of the components, it might contain"
+625,30.3695,30.419983333333334,spk_2,five different features for a particular view.
+626,30.42665,30.494816666666665,spk_2,And like an image preview can have a commenting functionality
+627,30.499483333333334,30.5465,spk_2,"that you can click anywhere on the image and leave a comment,"
+628,30.555983333333334,30.59115,spk_2,uh text files have
+629,30.602166666666665,30.658666666666665,spk_2,"side by side view in line view, no white space view."
+630,30.663166666666665,30.707316666666667,spk_2,So stuff like that. And since we are
+631,30.71165,30.7295,spk_2,moving to a new
+632,30.734,30.755816666666668,spk_2,"des architecture,"
+633,30.759,30.783833333333334,spk_2,we probably should
+634,30.79515,30.817816666666666,spk_2,uh satisfy
+635,30.82215,30.863816666666665,spk_2,this uh feature parity
+636,30.876,30.90315,spk_2,uh with what we have right now.
+637,30.903316666666665,30.954166666666666,spk_2,So I think it makes sense to document everything that we have.
+638,30.954333333333334,31.026316666666666,spk_2,"So once we move to a new architecture, we don't miss any of the features."
+639,31.092816666666668,31.101983333333333,spk_0,"All right,"
+640,31.109166666666667,31.17065,spk_0,"you wanna start an issue with that Stanislav because I feel like that's a, a separate"
+641,31.18065,31.19098333333333,spk_0,um
+642,31.194333333333333,31.235316666666666,spk_0,effort and it's not necessarily a
+643,31.23865,31.29715,spk_0,"front end thing. We might, we might involve product here as well"
+644,31.302333333333333,31.33315,spk_0,to ensure that we um
+645,31.342,31.3625,spk_0,that we're covered.
+646,31.373333333333335,31.417,spk_0,"Of course, we can look at the code and that's definitely a way to get that."
+647,31.4255,31.433666666666667,spk_0,But
+648,31.4485,31.493316666666665,spk_0,what I want us to have is
+649,31.507816666666667,31.52316666666667,spk_0,that definitely makes sense.
+650,31.523333333333333,31.550166666666666,spk_0,"Like feature parody makes sense,"
+651,31.550333333333334,31.605983333333334,spk_0,but maybe not every feature needs to be available everywhere.
+652,31.613333333333333,31.650166666666667,spk_0,Uh or there could be some
+653,31.655,31.6775,spk_0,tiered approach. So
+654,31.685833333333335,31.69965,spk_0,"-- I was just gonna
+-- imagine that our,"
+655,31.699816666666667,31.790816666666668,spk_5,our uh our order of priorities puts future coverage actually as
+656,31.797816666666666,31.856833333333334,spk_5,"-- a third on the list. So
+-- by design,"
+657,31.863333333333333,31.87698333333333,spk_5,"yeah, and,"
+658,31.88115,31.92665,spk_5,and the um all those things you mentioned are correct.
+659,31.926816666666667,31.98281666666667,spk_5,"They, they are sort of covered in that chart very abstractly like"
+660,31.988983333333334,32.0485,spk_5,dro I think is what's handling parallel versus in line and like
+661,32.04866666666667,32.10466666666667,spk_5,design pin is what's handling like being able to click anywhere.
+662,32.10531666666667,32.16683333333334,spk_5,"So like they're, they're in there, it's just not like explicitly mentioned."
+663,32.167,32.23231666666667,spk_5,So it probably is good to like list out the features that each component covers.
+664,32.26381666666666,32.2795,spk_0,"I hate to say it,"
+665,32.28281666666667,32.33931666666667,spk_0,"but it feels like this is a spreadsheet. It should be a spreadsheet or,"
+666,32.341833333333334,32.389316666666666,spk_0,or a marked on table. I don't care.
+667,32.39698333333333,32.402166666666666,spk_0,"But,"
+668,32.413983333333334,32.49531666666667,spk_0,but essentially it looks like we need to have like an array of like features and then
+669,32.500166666666665,32.57083333333333,spk_0,try to make a decision about whether they're applicable to all the contexts of des
+670,32.57465,32.63016666666667,spk_0,"or not. Like for now, we should definitely base it off"
+671,32.644816666666664,32.68515,spk_0,the domains we currently have.
+672,32.685316666666665,32.72431666666667,spk_0,I don't know if you have any features on
+673,32.72448333333333,32.774316666666664,spk_0,"the repository commit that are not an emerging quest,"
+674,32.786,32.79233333333333,spk_0,but
+675,32.805483333333335,32.86333333333333,spk_0,"maybe that's why we should go and take a look. So it feels like it's a, it's a"
+676,32.87015,32.88115,spk_0,um
+677,32.893316666666664,32.92698333333333,spk_0,"a feature, a feature table"
+678,32.950833333333335,32.982483333333334,spk_0,for all the different contexts.
+679,32.98265,33.07183333333333,spk_0,Uh and then just uh mark a cross or a check mark where they are available
+680,33.07698333333333,33.11266666666667,spk_0,and potentially can have a discussion about whether
+681,33.112833333333334,33.1465,spk_0,they should be available and everywhere or not.
+682,33.14715,33.186483333333335,spk_0,"Uh And potentially, yeah, but that,"
+683,33.18665,33.23915,spk_0,that feature table will be useful uh later on when we're
+684,33.23931666666667,33.29281666666667,spk_0,deciding exactly about where to cut and what are the implications.
+685,33.29298333333333,33.29915,spk_0,Because
+686,33.301,33.32983333333333,spk_0,"for example, um"
+687,33.38231666666667,33.403483333333334,spk_0,this could be controversial.
+688,33.4105,33.42333333333333,spk_0,"I warn you,"
+689,33.436483333333335,33.48265,spk_0,should we leave comments on a repository commit?
+690,33.523833333333336,33.58265,spk_0,"That's a product decision. It's not a technical decision, it's a product decision."
+691,33.582816666666666,33.592666666666666,spk_0,And
+692,33.59866666666667,33.611983333333335,spk_0,"to be honest,"
+693,33.6335,33.69515,spk_0,"there is arguments, I'm just saying there are arguments."
+694,33.69748333333333,33.70981666666667,spk_0,Uh
+695,33.71581666666667,33.73515,spk_0,Maybe I agree with them
+696,33.7385,33.759816666666666,spk_0,that um
+697,33.763983333333336,33.79,spk_0,"if you leave a comedy in a commit,"
+698,33.796166666666664,33.86516666666667,spk_0,"there's nobody looking at that commit, maybe the author will get a notification,"
+699,33.873,33.883833333333335,spk_0,I guess.
+700,33.89915,33.941316666666665,spk_0,But in emerging request is the moment that everybody is looking at that
+701,33.94148333333333,33.98898333333333,spk_0,code or at least people are looking at that code to be reviewed.
+702,33.98915,34.071983333333336,spk_0,"But when it's a repository, it's at, it's at rest. It's a, it's a it's a code at rest."
+703,34.07881666666667,34.094166666666666,spk_0,"So,"
+704,34.098333333333336,34.135,spk_0,should we allow discussions to happen there?
+705,34.147666666666666,34.18165,spk_0,That's a more of a product UX decision.
+706,34.1835,34.25398333333333,spk_0,And I think that table will help us make those conversations easier. So
+707,34.27633333333333,34.29848333333333,spk_0,ST has left an open an issue for that
+708,34.30298333333333,34.32065,spk_0,and get the ball rolling.
+709,34.335633333333334,34.35015,spk_0,"I already did it,"
+710,34.35565,34.377633333333335,spk_2,linking it right now in South.
+711,34.41048333333333,34.4335,spk_0,Amazing. Amazing.
+712,34.43581666666667,34.44798333333333,spk_0,Thank you.
+713,34.451166666666666,34.46033333333333,spk_0,Awesome.
+714,34.46596666666667,34.51266666666667,spk_0,I'll also take Kai on that to help us out. Uh
+715,34.52415,34.607816666666665,spk_0,"And uh and then we can make um there so Jacques from, from source code side,"
+716,34.60796666666667,34.643166666666666,spk_0,it would be great for us to um
+717,34.65313333333334,34.742666666666665,spk_0,pull in. Also if you uh wanna uh discover the product a little bit going on a journey
+718,34.75796666666667,34.81946666666666,spk_0,"to also add the source code perspective on these because again,"
+719,34.8225,34.876666666666665,spk_0,there might be features in source code that we would like to have
+720,34.88263333333333,34.9345,spk_0,on the merger quest. I can't remember anything but
+721,34.93698333333333,34.955666666666666,spk_0,maybe I'm missing something.
+722,34.967166666666664,34.976166666666664,spk_0,Um
+723,34.989983333333335,35.03766666666667,spk_0,"So yeah, basically what I'm saying is let's crowdsource that issue"
+724,35.04481666666667,35.12448333333333,spk_0,"uh and uh whatever way of doing it, the table a spreadsheet or, or something, just"
+725,35.12916666666667,35.170833333333334,spk_0,let's all collaborating and making that evolve. OK.
+726,35.2175,35.23615,spk_0,Sweet.
+727,35.24815,35.275166666666664,spk_0,Thanks. Standard Life. That's useful.
+728,35.301,35.30466666666667,spk_0,Mm
+729,35.334833333333336,35.34498333333333,spk_0,What else
+730,35.35698333333333,35.367333333333335,spk_0,are we good
+731,35.38315,35.39148333333333,spk_0,for now?
+732,35.491483333333335,35.49783333333333,spk_0,"All right,"
+733,35.49798333333333,35.52715,spk_0,we can use the rest of the time to go into
+734,35.527316666666664,35.5935,spk_0,the issues and uh share our thoughts and make those discussions.
+735,35.593666666666664,35.60183333333333,spk_0,Go ahead.
+736,35.61215,35.63581666666666,spk_0,Uh Thanks everybody
+737,35.64216666666667,35.7125,spk_0,and uh thanks for your time and I'll see you around and in another call perhaps
