@@ -32,7 +32,7 @@ def create_embedding(api_key):
     embed = OpenAIEmbeddings(
         model=model_name,
         
-        openai_api_key="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"
+        openai_api_key=api_key
     )
     embeddings=embed.embed_documents(text)
     savemat('Streamlit_App/data/embeddings/cluster-embedding.mat',{'meeting_uuid':id,'text':embeddings})
@@ -90,19 +90,19 @@ def predict_cluster(query):
     return predicted_label
 
 '''create embedding for query'''
-def query_embedding(query):
+def query_embedding(query,api_key):
     model_name = 'text-embedding-3-large'
     embed = OpenAIEmbeddings(
         model=model_name,
-        openai_api_key='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'
+        openai_api_key=api_key
     )
     embeddings=embed.embed_documents(query[0])
     return embeddings
 
 '''Extracting the uuids for query'''
-def uuid_for_query(query):
+def uuid_for_query(query,api_key):
     #get embedding for query
-    query_embed=query_embedding(query)
+    query_embed=query_embedding(query,api_key)
     #predict the cluster label for query
     query_cluster_label=predict_cluster(query_embed)
     print(f"label pred: {query_cluster_label[0]}")
