@@ -370,7 +370,9 @@ def combine_files(file_name: str, local_directory: str) -> pd.DataFrame:
     return transcript
 
 
-def aws_transcribe_parser(transcript_df: pd.DataFrame) -> pd.DataFrame:
+def aws_transcribe_parser(
+    transcript_df: pd.DataFrame, output_filename: str, local_directory: str
+) -> pd.DataFrame:
     """
     Parses the AWS Transcribe output by cleaning duplicate texts and merging consecutive rows with
     the same speaker.
@@ -425,6 +427,8 @@ def aws_transcribe_parser(transcript_df: pd.DataFrame) -> pd.DataFrame:
         {"start_time": "first", "end_time": "last", "text": " ".join}
     )
     result_df = result_df.drop(columns=["group"])
+    # result_df.to_csv(f"./local_directory/{output_filename}.csv", index=False)
+    # print(f"Transcript saved to {output_filename}.csv")
     return result_df
 
 
@@ -591,6 +595,7 @@ def runner(
     df_transcript_combined_parsed = aws_transcribe_parser(
         transcript_df=df_transcript_combined,
         output_filename=transcribe_job_name,
+        local_directory=local_directory,
     )
     print("Transcript parsed successfully")
 
