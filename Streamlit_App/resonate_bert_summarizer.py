@@ -27,42 +27,9 @@ def summarize_text(transcript):
     summary = summarizer(text)[0]["summary_text"]
     print("\n", summary, "\n")
 
-    keywords = kw_model.extract_keywords(
-        text,
-        keyphrase_ngram_range=(1, 1),
-        stop_words="english",
-        highlight=False,
-        top_n=5,
-    )
-    keywords_list_1 = list(dict(keywords).keys())
-    print("1 gram keywords: ", keywords_list_1)
-
-    keywords = kw_model.extract_keywords(
-        text,
-        keyphrase_ngram_range=(2, 2),
-        stop_words="english",
-        highlight=False,
-        top_n=5,
-    )
-    keywords_list_2 = list(dict(keywords).keys())
-    print("2 gram keywords: ", keywords_list_2)
-
-    keywords = kw_model.extract_keywords(
-        text,
-        keyphrase_ngram_range=(3, 3),
-        stop_words="english",
-        highlight=False,
-        top_n=5,
-    )
-    keywords_list_3 = list(dict(keywords).keys())
-    print("3 gram keywords: ", keywords_list_3)
-
     response = {
         "transcription": format_text,
         "summary": summary,
-        "keywords_list_1": keywords_list_1,
-        "keywords_list_2": keywords_list_2,
-        "keywords_list_3": keywords_list_3,
     }
     return response
 
@@ -100,4 +67,4 @@ def main(file_name):
 
 
 if __name__ == "__main__":
-    main(file_name="data/Shark_Tank_US_Top_3_Products_For_Office_1.csv")
+    main(file_name="data/Discussion_on_Illegal_Migration_and_Border_Crisis_Bill.csv")
