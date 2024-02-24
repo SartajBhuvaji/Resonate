@@ -5,7 +5,6 @@ import moviepy.editor as mp
 from datetime import timedelta
 from resonate_aws_functions import *
 from resonate_pinecone_functions import init_pinecone, upsert_pinecone
-# from Streamlit_App.test_bert_summarizer import summarizeText, summarizeSummary
 
 
 def initialize_session_state(aws_config, pinecone_config):
@@ -170,8 +169,8 @@ def add_meeting():
                         ss.df_transcript_speaker.to_csv(f"{file_name[:-4]}.csv")
 
                         st.success("File uploaded and transcribed successfully!")
-                    except Exception:
-                        st.warning("Please update valid AWS keys.")
+                    except Exception as e:
+                        st.warning(f"Error: {str(e)}")
 
 
 def transcript_speaker_editor():

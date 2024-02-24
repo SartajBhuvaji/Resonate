@@ -13,6 +13,7 @@ import dotenv
 import pandas as pd
 import webvtt
 from IPython.display import HTML, display
+from datetime import datetime
 
 
 def create_client(
@@ -158,7 +159,7 @@ def download_from_s3(
     s3: boto3.client,
     object_name: str,
     bucket_name: str = "resonate-output",
-    local_directory: str = ".",
+    local_directory: str = "./Streamlit_App/data",
 ) -> bool:
     """
     Download a file from an S3 bucket to a local directory.
@@ -276,7 +277,7 @@ def transcribe_audio(
     return response
 
 
-def combine_files(file_name: str) -> pd.DataFrame:
+def combine_files(file_name: str, local_directory: str) -> pd.DataFrame:
     """
     Combines information from a JSON file and a WebVTT file into a CSV file.
 
@@ -313,7 +314,8 @@ def combine_files(file_name: str) -> pd.DataFrame:
     - The returned DataFrame contains columns: 'start_time', 'end_time', 'speaker_label', and 'text'.
     """
     # Load the JSON file
-    json_file_path = f"./{file_name}.json"
+    # json_file_path = f"./{file_name}.json"
+    json_file_path = f"{local_directory}/{file_name}.json"
     with open(json_file_path, "r") as f:
         data = json.load(f)
 
@@ -331,7 +333,8 @@ def combine_files(file_name: str) -> pd.DataFrame:
     )
 
     # Load the WebVTT file
-    vtt_file_path = f"./{file_name}.vtt"
+    # vtt_file_path = f"./{file_name}.vtt"
+    vtt_file_path = f"{local_directory}/{file_name}.vtt"
     subtitles = webvtt.read(vtt_file_path)
 
     # Extract information from subtitles and create a DataFrame
@@ -367,9 +370,7 @@ def combine_files(file_name: str) -> pd.DataFrame:
     return transcript
 
 
-def aws_transcribe_parser(
-    transcript_df: pd.DataFrame, output_filename: str
-) -> pd.DataFrame:
+def aws_transcribe_parser(transcript_df: pd.DataFrame) -> pd.DataFrame:
     """
     Parses the AWS Transcribe output by cleaning duplicate texts and merging consecutive rows with
     the same speaker.
@@ -424,8 +425,6 @@ def aws_transcribe_parser(
         {"start_time": "first", "end_time": "last", "text": " ".join}
     )
     result_df = result_df.drop(columns=["group"])
-    # result_df.to_csv(f"./{output_filename}.csv", index=False)
-    # print(f"Transcript saved to {output_filename}.csv")
     return result_df
 
 
@@ -515,16 +514,14 @@ def runner(
         aws_region_name=aws_region_name,
     )
 
-    # print("transcribe_client : ", transcribe_client)
-    # print("s3_client : ", s3_client)
+    print("transcribe_client created: ", transcribe_client)
+    print("s3_client created: ", s3_client)
 
     # Delete old S3 buckets and transcribe job
-    try:
-        print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, input_bucket))
-        print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, output_bucket))
-    except Exception:
-
-        print("S3 bucket does not exist.")
+    print("Delete S3 Bucket Input Bucket : ", delete_s3_bucket(s3_client, input_bucket))
+    print(
+        "Delete S3 Bucket Output Bucket: ", delete_s3_bucket(s3_client, output_bucket)
+    )
 
     try:
         transcribe_client.delete_transcription_job(
@@ -557,20 +554,24 @@ def runner(
     ):
         time.sleep(3)
 
+    local_directory = "./Streamlit_App/data"
+
     # Download transcription job output
     print(
         "Download from S3 : ",
         download_from_s3(
-            s3_client, transcribe_job_name, output_bucket, local_directory="."
+            s3_client,
+            transcribe_job_name,
+            output_bucket,
+            local_directory=local_directory,
         ),
     )
 
     # Delete S3 buckets and transcribe job after use
-    try:
-        print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, input_bucket))
-        print("Delete S3 Bucket : ", delete_s3_bucket(s3_client, output_bucket))
-    except:
-        print("S3 bucket does not exist.")
+    print("Delete S3 Bucket Input Bucket : ", delete_s3_bucket(s3_client, input_bucket))
+    print(
+        "Delete S3 Bucket Output Bucket: ", delete_s3_bucket(s3_client, output_bucket)
+    )
 
     try:
         transcribe_client.delete_transcription_job(
@@ -585,10 +586,11 @@ def runner(
 
     # combine the json and vtt results to create a transcript
     df_transcript_combined = combine_files(
-        transcribe_job_name
+        transcribe_job_name, local_directory=local_directory
     )  # transcribe_job_name is the name of the file that contains the json and vtt results
     df_transcript_combined_parsed = aws_transcribe_parser(
-        transcript_df=df_transcript_combined, output_filename=transcribe_job_name
+        transcript_df=df_transcript_combined,
+        output_filename=transcribe_job_name,
     )
     print("Transcript parsed successfully")
 
@@ -601,14 +603,17 @@ def runner(
 
 if __name__ == "__main__":
     dotenv.load_dotenv()
+
+    current_timestamp = str.lower(datetime.now().strftime("%Y-%b-%d-%I-%M-%p"))
+
     aws_access_key = os.getenv("AWS_ACCESS_KEY")
     aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
     print(aws_access_key, aws_secret_access_key)
     aws_region_name = "us-east-2"
     file_name = "test.wav"
-    input_bucket = "resonate-input-jay"
-    output_bucket = "resonate-output-jay"
-    transcribe_job_name = "resonate-job-jay"
+    input_bucket = f"resonate-input-{str(current_timestamp)}"
+    output_bucket = f"resonate-output-{str(current_timestamp)}"
+    transcribe_job_name = f"resonate-job-{str(current_timestamp)}"
     df = runner(
         file_name=file_name,
         input_bucket=input_bucket,
