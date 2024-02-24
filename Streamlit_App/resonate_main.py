@@ -3,20 +3,23 @@
 # Pinecone Index        ==>==>==>==>==>     Team
 # Pinecone Namespace    ==>==>==>==>==>     Topic / Project
 
-import os
-import time
+# import os
+# import time
+from datetime import datetime
 
 from resonate_streamlit_functions import init_streamlit
 
 
 def main():
 
+    current_timestamp = str.lower(datetime.now().strftime("%Y-%b-%d-%I-%M-%p"))
+
     # Initializing Variables
     aws_config = {
         "aws_region_name": "us-east-2",
-        "aws_input_bucket": "resonate-input-jay",
-        "aws_output_bucket": "resonate-output-jay",
-        "aws_transcribe_job_name": "resonate-job-jay",
+        "aws_input_bucket": f"resonate-input-{str(current_timestamp)}",
+        "aws_output_bucket": f"resonate-output-{str(current_timestamp)}",
+        "aws_transcribe_job_name": f"resonate-job-{str(current_timestamp)}",
     }
 
     pinecone_config = {
@@ -26,7 +29,7 @@ def main():
         "pinecone_cloud_type": "aws",
         "pinecone_cloud_region": "us-west-2",
         "pinecone_namespace": "meeting_topic",
-        "pinecone_embedding_model_name": "text-embedding-3-small",
+        "pinecone_embedding_model_name": "text-embedding-3-large",
     }
 
     init_streamlit(aws_config, pinecone_config)
