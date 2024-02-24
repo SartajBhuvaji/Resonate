@@ -13,7 +13,7 @@ scikit-learn
 # Project Specific
 openai
 langchain-community
-# langchain-openai
+langchain-openai
 langchain
 pinecone-client
 streamlit
@@ -26,4 +26,3 @@ keybert
 #Testing
 gensim
 nltk
-python-docx
