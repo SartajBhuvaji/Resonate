@@ -371,7 +371,7 @@ def combine_files(file_name: str, local_directory: str) -> pd.DataFrame:
 
 
 def aws_transcribe_parser(
-    transcript_df: pd.DataFrame, output_filename: str, local_directory: str
+    transcript_df: pd.DataFrame, output_filename: str
 ) -> pd.DataFrame:
     """
     Parses the AWS Transcribe output by cleaning duplicate texts and merging consecutive rows with
@@ -593,9 +593,7 @@ def runner(
         transcribe_job_name, local_directory=local_directory
     )  # transcribe_job_name is the name of the file that contains the json and vtt results
     df_transcript_combined_parsed = aws_transcribe_parser(
-        transcript_df=df_transcript_combined,
-        output_filename=transcribe_job_name,
-        local_directory=local_directory,
+        transcript_df=df_transcript_combined, output_filename=transcribe_job_name
     )
     print("Transcript parsed successfully")
 
