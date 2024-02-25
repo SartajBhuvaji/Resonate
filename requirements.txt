@@ -13,7 +13,7 @@ scikit-learn
 # Project Specific
 openai
 langchain-community
-# langchain-openai
+langchain-openai
 langchain
 pinecone-client
 streamlit
@@ -21,7 +21,6 @@ tiktoken
 webvtt-py
 moviepy
 transformers
-keybert
 
 #Testing
 gensim

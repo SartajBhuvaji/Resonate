@@ -3,7 +3,11 @@ import json
 from datetime import datetime, timedelta
 from src.aws.resonate_aws_functions import resonate_aws_transcribe
 import os
-from src.pinecone.resonate_pinecone_functions import init_pinecone, upsert_pinecone
+
+from src.pinecone.resonate_pinecone_functions import PineconeServerless
+import time
+import uuid
+import pandas as pd
 
 
 def convert_video_to_audio(video_path, audio_path):
@@ -33,8 +37,8 @@ def aws_transcribe(file_name):
 
     current_timestamp = str.lower(datetime.now().strftime("%Y-%b-%d-%I-%M-%p"))
 
-    json_config["INPUT_BUCKET"] += f"{str(current_timestamp)}"
-    json_config["OUTPUT_BUCKET"] += f"{str(current_timestamp)}"
+    json_config["AWS_INPUT_BUCKET"] += f"{str(current_timestamp)}"
+    json_config["AWS_OUTPUT_BUCKET"] += f"{str(current_timestamp)}"
     json_config["AWS_TRANSCRIBE_JOB_NAME"] += f"{str(current_timestamp)}"
 
     print(json_config)
@@ -43,8 +47,8 @@ def aws_transcribe(file_name):
         rat = resonate_aws_transcribe()
         df = rat.runner(
             file_name=file_name,
-            input_bucket=json_config["INPUT_BUCKET"],
-            output_bucket=json_config["OUTPUT_BUCKET"],
+            input_bucket=json_config["AWS_INPUT_BUCKET"],
+            output_bucket=json_config["AWS_OUTPUT_BUCKET"],
             transcribe_job_name=json_config["AWS_TRANSCRIBE_JOB_NAME"],
             aws_access_key=os.getenv("AWS_ACCESS_KEY"),
             aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
@@ -56,31 +60,20 @@ def aws_transcribe(file_name):
         return e
 
 
-def pinecone_init_upsert(df_transcript):
-
-    json_config = load_json_config()
+def pinecone_init_upsert(
+    df_transcript: pd.DataFrame, meeting_title: str, meeting_summary: str
+):
     try:
 
-        # Initializing Pinecone
-        pinecone, pinecone_index = init_pinecone(
-            os.getenv("PINECONE_API_KEY"),
-            json_config["INDEX_NAME"],
-            json_config["METRIC"],
-            json_config["PINECONE_VECTOR_DIMENSION"],
-            json_config["CLOUD_PROVIDER"],
-            json_config["REGION"],
+        pinecone = PineconeServerless()
+        pinecone._create_index()
+        pinecone.pinecone_upsert(
+            df_transcript,
+            meeting_uuid=str(uuid.uuid4()),
+            meeting_video_file=False,
+            meeting_title=meeting_title,
+            meeting_summary=meeting_summary,
         )
-
+        time.sleep(5)
     except Exception as e:
-        print("Error initializing Pinecone: ", e)
-
-    try:
-        # Upserting transcript to Pinecone
-        upsert_pinecone(
-            pinecone_index,
-            transcript=df_transcript,
-            model_name=json_config["EMBEDDING_MODEL"],
-            pinecone_namespace=json_config["NAMESPACE"],
-        )
-    except Exception as e:
-        print("Error initializing Pinecone: ", e)
+        print("Error upserting transcript to Pinecone: ", e)
