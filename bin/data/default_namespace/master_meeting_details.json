@@ -1,85 +1,33 @@
 {
     "index": "langchain-retrieval-transcript",
     "namespace": "default_namespace",
-    "last_conversation_no": 259,
+    "last_conversation_no": 154,
+    "meeting_uuids": [
+        "70a98ffa-4221-4a51-99b0-299cd9f231be",
+        "9da09451-0efc-4473-a9e3-78a155da8e26",
+        "5f3929c1-3c7b-428d-8fc6-a1b586391437"
+    ],
     "meetings": [
         {
-            "meeting_uuid": "517b3aa9-9f98-410b-902f-28461b9b98b4",
-            "meeting_title": "Unnamed",
-            "meeting_date": "20240207094251",
-            "meeting_video_file": false,
-            "meeting_members": [
-                "spk_0",
-                "spk_1",
-                "spk_2",
-                "spk_3",
-                "spk_4",
-                "spk_5",
-                "spk_6"
-            ],
-            "meeting_summary": null
+            "meeting_uuid": "9da09451-0efc-4473-a9e3-78a155da8e26",
+            "meeting_cluster_id": "healthcare_1",
+            "meeting_title": "Healthcare Meeting 1",
+            "meeting_date": "20240218103408",
+            "meeting_video_file": false
         },
         {
-            "meeting_uuid": "526fda6d-9356-44f2-aec1-ccdbb3c8d794",
-            "meeting_title": "Unnamed",
-            "meeting_date": "20240207094258",
-            "meeting_video_file": false,
-            "meeting_members": [
-                "spk_0",
-                "spk_1",
-                "spk_2",
-                "spk_3",
-                "spk_4",
-                "spk_5"
-            ],
-            "meeting_summary": null
+            "meeting_uuid": "5f3929c1-3c7b-428d-8fc6-a1b586391437",
+            "meeting_cluster_id": "healthcare_2",
+            "meeting_title": "Healthcare Meeting 2",
+            "meeting_date": "20240218103424",
+            "meeting_video_file": false
         },
         {
-            "meeting_uuid": "28eaac84-14f8-4f37-876a-647fd483e58a",
-            "meeting_title": "Unnamed",
-            "meeting_date": "20240207094305",
-            "meeting_video_file": false,
-            "meeting_members": [
-                "spk_0",
-                "spk_1",
-                "spk_2",
-                "spk_3",
-                "spk_4",
-                "spk_5"
-            ],
-            "meeting_summary": null
-        },
-        {
-            "meeting_uuid": "a4454589-6c49-4d8d-a6f6-c2b5c99ef229",
-            "meeting_title": "Unnamed",
-            "meeting_date": "20240207094313",
-            "meeting_video_file": false,
-            "meeting_members": [
-                "spk_0",
-                "spk_1",
-                "spk_2",
-                "spk_3",
-                "spk_4",
-                "spk_5",
-                "spk_6"
-            ],
-            "meeting_summary": null
-        },
-        {
-            "meeting_uuid": "7c3c7ac7-94ee-4045-b94a-e9b1695c5b7e",
-            "meeting_title": "Unnamed",
-            "meeting_date": "20240207094320",
-            "meeting_video_file": false,
-            "meeting_members": [
-                "spk_0",
-                "spk_1",
-                "spk_2",
-                "spk_3",
-                "spk_4",
-                "spk_5",
-                "spk_6"
-            ],
-            "meeting_summary": null
+            "meeting_uuid": "70a98ffa-4221-4a51-99b0-299cd9f231be",
+            "meeting_cluster_id": "healthcare_3",
+            "meeting_title": "Healthcare Meeting 3",
+            "meeting_date": "20240218103437",
+            "meeting_video_file": false
         }
     ]
 }
