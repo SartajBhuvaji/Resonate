@@ -1,120 +1,428 @@
+import datetime
+
+# import dotenv
+import json
+import os
 import time
 
 import pandas as pd
-from IPython.display import HTML, display
-# from langchain_openai import OpenAIEmbeddings
-from openai import OpenAI
+from dotenv import load_dotenv
+from langchain_openai import OpenAIEmbeddings
+
+import uuid
 from pinecone import Pinecone, ServerlessSpec
-from tqdm.auto import tqdm
-
-display(HTML("<style>.container { width:100% !important; }</style>"))
-# pd.set_option("display.max_rows", None)
 
 
-# Loading Transcripts from CSV file
-def load_transcript(transcript):
-    # transcript = pd.read_csv(file_name)
-    transcript.drop(["end_time"], axis=1, inplace=True)
+def load_json_config(json_file_path="./config/config.json"):
+    # Use a context manager to ensure the file is properly closed after opening
+    with open(json_file_path, "r") as file:
+        # Load the JSON data
+        data = json.load(file)
 
-    # Iterate through rows and update the text column
-    for i in range(1, len(transcript)):
-        if transcript.loc[i, "speaker_label"] == transcript.loc[i - 1, "speaker_label"]:
-            transcript.loc[i - 1, "text"] += " " + transcript.loc[i, "text"]
-            transcript.drop(index=i, inplace=True)
-
-    # Resetting index after dropping rows
-    transcript.reset_index(drop=True, inplace=True)
-    # Display the updated dataframe
-    # print("Transcript")
-    # display(transcript)
-    return transcript
+    return data
 
 
-# Initializing Pinecone
-def init_pinecone(
-    pinecone_api_key,
-    pinecone_index_name,
-    pinecone_index_metric,
-    pinecone_index_dimension,
-    pinecone_cloud_type,
-    pinecone_cloud_region,
-):
-    pinecone = Pinecone(api_key=pinecone_api_key)
+class PineconeServerless:
+    def __init__(self) -> None:
+        json_config = load_json_config()
+        # Load environment variables from .env file
+        load_dotenv("./config/.env")
 
-    pinecone_indexes_list = [
-        index.get("name") for index in pinecone.list_indexes().get("indexes", [])
-    ]
+        self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
+        self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
-    # # Creating Index if it doesn't exist in Pinecone
-    if pinecone_index_name not in pinecone_indexes_list:
-        pinecone.create_index(
-            name=pinecone_index_name,
-            dimension=pinecone_index_dimension,
-            metric=pinecone_index_metric,
-            spec=ServerlessSpec(
-                cloud=pinecone_cloud_type, region=pinecone_cloud_region
-            ),
+        self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
+        self.pinecone_index_name = json_config["PINECONE_INDEX_NAME"]
+        self.pinecone_metric = json_config["PINECONE_METRIC"]
+        self.pinecone_vector_dimension = json_config["PINECONE_VECTOR_DIMENSION"]
+        self.pinecone_cloud_provider = json_config["PINECONE_CLOUD_PROVIDER"]
+        self.pinecone_region = json_config["PINECONE_REGION"]
+        self.pinecone_namespace = json_config["PINECONE_NAMESPACE"]
+        self.pinecone_upsert_batch_limit = json_config["PINECONE_UPSERT_BATCH_LIMIT"]
+        self.pinecone_top_k_results = json_config["PINECONE_TOP_K_RESULTS"]
+        self.pinecone_delta_window = json_config["PINECONE_DELTA_WINDOW"]
+
+        self.meeting_title = None
+
+        self.embedding = json_config["EMBEDDING_PROVIDER"]
+        self.embedding_model = json_config["EMBEDDING_MODEL_NAME"]
+
+        self.base_data_path = "./data/jsonMetaDataFiles/"
+        if not os.path.exists(self.base_data_path):
+            os.makedirs(self.base_data_path)
+
+        self.master_json_file = os.path.join(
+            self.base_data_path, json_config["MASTER_JSON_FILENAME"] + ".json"
         )
 
-        while not pinecone.describe_index(pinecone_index_name).status["ready"]:
-            time.sleep(1)
+        print("self.master_json_file", self.master_json_file)
 
-    pinecone_index = pinecone.Index(pinecone_index_name)
-    print("pinecone_index", pinecone_index)
+        self.response = None
 
-    print(
-        "pinecone_index.describe_index_stats()", pinecone_index.describe_index_stats()
-    )
-    return pinecone, pinecone_index
+    def check_index_already_exists(self) -> bool:
+        return self.pinecone_index_name in self.pinecone.list_indexes()
 
+    def _get_vector_embedder(self):
+        if self.embedding == "OpenAI":
+            return OpenAIEmbeddings(model=self.embedding_model)
+        else:
+            raise ValueError("Invalid Embedding Model")
 
-def upsert_pinecone(pinecone_index, transcript, model_name, pinecone_namespace=None):
-    # Initializing Embedding
-    embed = OpenAIEmbeddings(model=model_name)
+    def _get_index(self):
+        return self.pinecone.Index(self.pinecone_index_name)
 
-    batch_limit = 90
-    transcript_texts = []
-    metadata_records = []
-    meeting_id = 1
-    start_id = 0
+    def _create_index(self) -> None:
+        pinecone_indexes_list = [
+            index.get("name")
+            for index in self.pinecone.list_indexes().get("indexes", [])
+        ]
 
-    for i, record in tqdm(transcript.iterrows()):
-        # Extracting and Preparing metadata fields for each row of transcript
-        metadata = {
-            "speaker": record["speaker_label"],
-            "start_time": round(record["start_time"], 3),  # limit to 3 decimal places
-            "meeting_id": meeting_id,
-            "text": record["text"],
-        }  # Storing the text in the metadata for now, later we'd need to decode it from vectors
+        # # Creating Index if it doesn't exist in Pinecone
+        if self.pinecone_index_name not in pinecone_indexes_list:
 
-        record_texts = record["text"]
+            try:
 
-        transcript_texts.append(record_texts)
-        metadata_records.append(metadata)
+                self.pinecone.create_index(
+                    name=self.pinecone_index_name,
+                    metric=self.pinecone_metric,
+                    dimension=self.pinecone_vector_dimension,
+                    spec=ServerlessSpec(
+                        cloud=self.pinecone_cloud_provider,
+                        region=self.pinecone_region,
+                        # pod_type="p1.x1",
+                    ),
+                )
 
-        # if we've reached the batch limit, then index the batch
-        if len(transcript_texts) >= batch_limit:
-            ids = [
-                str(i + 1) for i in range(start_id, (start_id + len(transcript_texts)))
-            ]
-            start_id += len(transcript_texts)
-            embeds = embed.embed_documents(transcript_texts)
+                while not self.pinecone.describe_index(self.pinecone_index_name).status[
+                    "ready"
+                ]:
+                    time.sleep(5)
 
-            pinecone_index.upsert(
-                vectors=zip(ids, embeds, metadata_records), namespace=pinecone_namespace
+            except Exception as e:
+                print("Index creation failed: ", e)
+
+    def describe_index_stats(self) -> dict:
+        try:
+            index = self._get_index()
+            return index.describe_index_stats()
+        except Exception as e:
+            print("Index does not exist: ", e)
+            return {}
+
+    def _delete_index(self) -> None:
+        try:
+            self.pinecone.delete_index(self.pinecone_index_name)
+        except Exception as e:
+            print("Index does not exist: ", e)
+
+    def _create_master_json(self) -> dict:
+
+        data = {
+            "index": self.pinecone_index_name,
+            "namespace": self.pinecone_namespace,
+            "last_conversation_no": 0,
+            "meeting_uuids": [],
+            "meetings": [],
+        }
+
+        with open(self.master_json_file, "w") as f:
+            json.dump(data, f, indent=4)
+
+    def _update_master_json(
+        self,
+        meeting_uuid: str,
+        meeting_title: str,
+        last_conversation_no: int,
+        meeting_video_file: bool,
+        time_stamp: str,
+    ) -> dict:
+
+        with open(self.master_json_file, "r+") as f:
+            data = json.load(f)
+
+            data["meeting_uuids"] = list(set(data["meeting_uuids"] + [meeting_uuid]))
+
+            data["last_conversation_no"] = last_conversation_no
+            data["meetings"].append(
+                {
+                    "meeting_uuid": meeting_uuid,
+                    "meeting_title": meeting_title,
+                    "meeting_date": time_stamp,
+                    "meeting_video_file": meeting_video_file,
+                }
             )
-            transcript_texts = []
-            metadata_records = []
-            meeting_id += 1
 
-    # add any remaining texts to the index
-    if len(transcript_texts) > 0:
-        ids = [str(i + 1) for i in range(start_id, (start_id + len(transcript_texts)))]
+            return data
 
-        embeds = embed.embed_documents(transcript_texts)
-        pinecone_index.upsert(
-            vectors=zip(ids, embeds, metadata_records), namespace=pinecone_namespace
+    def _get_meeting_members(self, transcript: pd.DataFrame) -> list[str]:
+        return list(transcript["speaker_label"].unique())
+
+    def _create_new_meeting_json(
+        self,
+        meeting_uuid: str,
+        meeting_title: str,
+        last_conversation_no: int,
+        meeting_members: list[str],
+        meeting_video_file: bool,
+        time_stamp: str,
+        meeting_summary: str,
+    ) -> dict:
+        data = {
+            "index": self.pinecone_index_name,
+            "namespace": self.pinecone_namespace,
+            "meeting_title": meeting_title,
+            "meeting_uuid": meeting_uuid,
+            "meeting_date": time_stamp,
+            "last_conversation_no": last_conversation_no,
+            "meeting_video_file": meeting_video_file,
+            "meeting_members": meeting_members,
+            "meeting_summary": meeting_summary,
+        }
+
+        meeting_details_file = os.path.join(self.base_data_path, f"{meeting_uuid}.json")
+        with open(meeting_details_file, "w") as f:
+            json.dump(data, f, indent=4)
+
+    def _get_last_conversation_no(self) -> list[str]:
+
+        with open(self.master_json_file, "r") as f:
+            data = json.load(f)
+
+            return data["last_conversation_no"]
+
+    def _set_new_meeting_json(
+        self,
+        meeting_uuid: str,
+        meeting_title: str,
+        last_conversation_no: str,
+        meeting_members: list[str],
+        meeting_video_file: bool,
+        meeting_summary: str,
+    ) -> dict:
+
+        time_stamp = str(datetime.datetime.now().strftime("%Y%m%d%H%M%S"))
+
+        self._create_new_meeting_json(
+            meeting_uuid,
+            meeting_title,
+            last_conversation_no,
+            meeting_members,
+            meeting_video_file,
+            time_stamp,
+            meeting_summary,
+        )
+        data = self._update_master_json(
+            meeting_uuid,
+            meeting_title,
+            last_conversation_no,
+            meeting_video_file,
+            time_stamp,
         )
 
-    time.sleep(5)
-    # display(pinecone_index.describe_index_stats()) # Check index stats / data Freshness
+        with open(self.master_json_file, "w") as f:
+            json.dump(data, f, indent=4)
+
+    def _convert_to_hr_min_sec(self, time_in_minutes) -> str:
+        # Hr:Min:Sec
+        hours = int(time_in_minutes // 60)
+        minutes = int(time_in_minutes % 60)
+        seconds = int((time_in_minutes - int(time_in_minutes)) * 60)
+        return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+
+    def pinecone_upsert(
+        self,
+        transcript: pd.DataFrame,
+        meeting_uuid: str = "",
+        meeting_video_file: bool = False,
+        meeting_title: str = "Unnamed",
+        meeting_summary: str = "",
+    ) -> None:
+        """
+        Upserts the transcript into Pinecone
+        """
+        texts = []
+        metadatas = []
+
+        last_conversation_no = self._get_last_conversation_no()
+        # print('last_conversation_no: ', last_conversation_no)
+        last_conversation_no = int(last_conversation_no)  # + 1
+
+        embed = self._get_vector_embedder()
+        meeting_members = self._get_meeting_members(transcript)
+        # meeting_uuid = #str(uuid.uuid4())
+        index = self._get_index()
+
+        for _, record in transcript.iterrows():
+            start_time = self._convert_to_hr_min_sec(record["start_time"])
+
+            metadata = {
+                "speaker": record["speaker_label"],
+                "start_time": start_time,
+                "text": record["text"],
+                "meeting_uuid": meeting_uuid,
+            }
+            texts.append(record["text"])
+            metadatas.append(metadata)
+
+            if len(texts) >= self.pinecone_upsert_batch_limit:
+                ids = list(
+                    map(
+                        lambda i: str(i + 1),
+                        range(last_conversation_no, last_conversation_no + len(texts)),
+                    )
+                )
+                # print('ids: ', ids)
+                last_conversation_no += len(texts)
+                embeds = embed.embed_documents(texts)
+                try:
+                    index.upsert(
+                        vectors=zip(ids, embeds, metadatas),
+                        namespace=self.pinecone_namespace,
+                    )
+                except Exception as e:
+                    print("Error upserting into Pinecone: ", e)
+                texts = []
+                metadatas = []
+
+        if len(texts) > 0:
+            ids = list(
+                map(
+                    lambda i: str(i + 1),
+                    range(last_conversation_no, last_conversation_no + len(texts)),
+                )
+            )
+            last_conversation_no += len(texts)
+            # print('ids: ', ids)
+            embeds = embed.embed_documents(texts)
+            try:
+                index.upsert(
+                    vectors=zip(ids, embeds, metadatas),
+                    namespace=self.pinecone_namespace,
+                )
+            except Exception as e:
+                print("Error upserting into Pinecone: ", e)
+
+        self._set_new_meeting_json(
+            meeting_uuid,
+            meeting_title,
+            last_conversation_no,
+            meeting_members,
+            meeting_video_file,
+            meeting_summary,
+        )
+
+    def _extract_id_from_response(self, response: list) -> list[int]:
+        return list(int(match["id"]) for match in response["matches"])
+
+    def query_pinecone(
+        self, query: str, in_filter: list[str] = [], complete_db_flag: bool = False
+    ) -> list:
+        """
+        Queries Pinecone for the given query
+        """
+        try:
+            index = self._get_index()
+            embed = self._get_vector_embedder()
+
+            filter = None if complete_db_flag else {"meeting_uuid": {"$in": in_filter}}
+
+            self.response = index.query(
+                vector=embed.embed_documents([query])[0],
+                namespace=self.pinecone_namespace,
+                top_k=self.pinecone_top_k_results,
+                include_metadata=True,
+                filter=filter,
+            )
+            return self.response
+        except Exception as e:
+            print("Error querying Pinecone: ", e)
+        return []
+
+    def query_delta_conversations(self) -> pd.DataFrame:
+        """
+        Queries Pinecone for the given query and returns the delta conversations
+        """
+        ids = self._extract_id_from_response(self.response)
+        last_conversation_no = self._get_last_conversation_no()
+        index = self._get_index()
+        conversation = {}
+
+        for id in ids:
+            left = (
+                id - self.pinecone_delta_window
+                if id - self.pinecone_delta_window > 0
+                else 1
+            )
+            right = (
+                id + self.pinecone_delta_window
+                if id + self.pinecone_delta_window <= last_conversation_no
+                else last_conversation_no
+            )
+            window = [str(i) for i in range(left, right + 1)]
+            try:
+                print("Fetch window: ", window)
+                fetch_response = index.fetch(
+                    ids=window, namespace=self.pinecone_namespace
+                )
+                conversation[id] = fetch_response
+            except Exception as e:
+                print("Error fetching from Pinecone for id:", id, "Error:", e)
+                continue
+
+        # print('conversation length: ', len(conversation))
+        return self._parse_fetch_conversations(conversation)
+
+    def _parse_fetch_conversations(self, conversation) -> pd.DataFrame:
+        data_rows = []
+        for primary_hit_id, primary_hit_data in conversation.items():
+            for _, vector_data in primary_hit_data["vectors"].items():
+                id = vector_data["id"]
+                meeting_uuid = vector_data["metadata"]["meeting_uuid"]
+
+                speaker = vector_data["metadata"]["speaker"]
+                start_time = vector_data["metadata"]["start_time"]
+                text = vector_data["metadata"]["text"]
+
+                data_rows.append(
+                    (primary_hit_id, id, meeting_uuid, speaker, start_time, text)
+                )
+
+        columns = ["primary_id", "id", "meeting_uuid", "speaker", "start_time", "text"]
+        delta_conversation_df = pd.DataFrame(data_rows, columns=columns)
+        delta_conversation_df = delta_conversation_df.sort_values(by=["id"])
+
+        delta_conversation_df = delta_conversation_df.drop_duplicates(subset=["id"])
+
+        # creating separate df for rows with same meeting_cluster_id
+        grouped_dfs = {
+            group_name: group.reset_index(drop=True, inplace=False)
+            for group_name, group in delta_conversation_df.groupby("meeting_uuid")
+        }
+
+        # return delta_conversation_df
+        return grouped_dfs
+
+
+if __name__ == "__main__":
+    pinecone = PineconeServerless()
+    pinecone._create_index()
+    pinecone._create_master_json()
+    print(pinecone.describe_index_stats())
+
+    for i in range(1, 3):
+        print(i)
+        transcript = pd.read_csv(f"./data/transcriptFiles/healthcare_{i}.csv")
+        transcript.dropna(inplace=True)
+        pinecone.pinecone_upsert(
+            transcript,
+            meeting_uuid=str(uuid.uuid4()),
+            meeting_video_file=False,
+            meeting_title=f"Healthcare Meeting {i}",
+            meeting_summary=f"Healthcare Meeting Summary Meeting {i}",
+        )
+        time.sleep(5)
+    print(pinecone.describe_index_stats())
+
+    query = "I am one of the directors in Wappingers Central School District."
+    response1 = pinecone.query_pinecone(query, "", True)
+    print(response1)
