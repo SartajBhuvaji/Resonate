@@ -1,0 +1,20 @@
+{
+	"INDEX_NAME": "langchain-retrieval-transcript",
+	"PINECONE_VECTOR_DIMENSION": 1536,
+	"PINECONE_UPSERT_BATCH_LIMIT": 90,
+	"PINECONE_TOP_K_RESULTS": 10,
+	"DELTA": 2,
+	"CLOUD_PROVIDER": "aws",
+	"REGION": "us-west-2",
+	"METRIC": "cosine",
+
+	"EMBEDDING": "OpenAI",
+	"EMBEDDING_MODEL": "text-embedding-3-large",
+	"NAMESPACE": "default_namespace",
+	"master_json_file": "master_meeting_details",
+
+	"INPUT_BUCKET": "input-bucket",
+	"OUTPUT_BUCKET": "output-bucket",
+	"AWS_REGION": "us-east-2",
+	"AWS_TRANSCRIBE_JOB_NAME": "transcribe-job"
+}
