@@ -21,8 +21,10 @@ tiktoken
 webvtt-py
 moviepy
 transformers
+streamlit_chat==0.0.2.2
 
 #Testing
 gensim
 nltk
 python-docx
+tensorboard

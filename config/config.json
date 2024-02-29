@@ -17,5 +17,10 @@
 	"AWS_INPUT_BUCKET": "input-bucket",
 	"AWS_OUTPUT_BUCKET": "output-bucket",
 	"AWS_REGION": "us-east-2",
-	"AWS_TRANSCRIBE_JOB_NAME": "transcribe-job"
+	"AWS_TRANSCRIBE_JOB_NAME": "transcribe-job",
+
+	"LC_LLM_TEMPERATURE": 0.01,
+	"LC_CONV_BUFFER_MEMORY_WINDOW": 1,
+	"LC_LLM_SUMMARY_MAX_TOKEN_LIMIT": 650,
+	"LC_LLM_MODEL": "gpt-3.5-turbo"
 }

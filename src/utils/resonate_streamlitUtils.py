@@ -61,15 +61,17 @@ def aws_transcribe(file_name):
 
 
 def pinecone_init_upsert(
-    df_transcript: pd.DataFrame, meeting_title: str, meeting_summary: str
+    df_transcript: pd.DataFrame,
+    meeting_title: str,
+    meeting_summary: str,
+    meeting_uuid: str,
 ):
     try:
 
         pinecone = PineconeServerless()
-        pinecone._create_index()
         pinecone.pinecone_upsert(
             df_transcript,
-            meeting_uuid=str(uuid.uuid4()),
+            meeting_uuid=meeting_uuid,
             meeting_video_file=False,
             meeting_title=meeting_title,
             meeting_summary=meeting_summary,
