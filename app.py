@@ -1,15 +1,17 @@
 import os
 from datetime import timedelta, datetime
+from streamlit_chat import message  # streamlit_chat==0.0.2.2
 
-import moviepy.editor as mp
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
 from streamlit import session_state as ss
-from src.clustering.resonate_clustering import *
-from src.clustering.resonate_bert_summarizer import summarize_runner
 
-from src.utils.streamlitUtils import (
+from src.clustering.resonate_clustering import Clustering
+from src.clustering.resonate_bert_summarizer import summarize_runner
+from src.langchain.resonate_langchain_functions import LangChain
+
+from src.utils.resonate_streamlitUtils import (
     convert_video_to_audio,
     aws_transcribe,
     transcript_text_editor_minutes_to_hhmmss,
@@ -30,6 +32,11 @@ def initialize_session_state():
     if "add_meeting" not in ss:
         ss.add_meeting = False
 
+    if "Clustering_obj" not in ss:
+        ss.Clustering_obj = Clustering()
+        # ss.Clustering_obj.create_Cluster()
+        # print("Clusters created")
+
     # Initialize - Main Screen - Transcript Editor
     if "transcript_speaker_editor" not in ss:
         ss.transcript_speaker_editor = False
@@ -40,6 +47,9 @@ def initialize_session_state():
     # # Initialize - Main Screen - chat history
     if "chat_history" not in ss:
         ss.chat_history = []
+
+    if "meeting_name" not in ss:
+        ss.meeting_name = ""
 
     # Initialize - Main Screen - User input and Chatbox
     if "user_input" not in ss:
@@ -60,6 +70,51 @@ def initialize_session_state():
 # def get_bot_response(user_input):
 #     # Replace this with your actual chatbot logic
 #     return f"Chatbot: You said '{user_input}'"
+
+
+def view2(langchain_obj):
+    st.header("Chat")
+
+    if "responses" not in st.session_state:
+        st.session_state["responses"] = ["How can I assist you?"]
+
+    if "requests" not in st.session_state:
+        st.session_state["requests"] = []
+
+    response_container = st.container()
+    textcontainer = st.container()
+
+    with textcontainer:
+        query = st.text_input("", key="input", placeholder="Message Resonate ... ")
+
+        # clear button
+        if st.button("Clear"):
+            st.session_state.requests = []
+            st.session_state.responses = []
+            st.session_state["responses"] = ["How can I assist you?"]
+
+        if query:
+            with st.spinner("typing..."):
+                response = langchain_obj.chat(query)
+                cluster_labels = ss.Clustering_obj.uuid_for_query(query=query)
+                print(f"cluster labels: {cluster_labels}")  # print(cluster_labels)
+                response = response["response"]
+                # print(response)
+
+            st.session_state.requests.append(query)
+            st.session_state.responses.append(response)
+
+    with response_container:
+        if st.session_state["responses"]:
+
+            for i in range(len(st.session_state["responses"])):
+                message(st.session_state["responses"][i], key=str(i))
+                if i < len(st.session_state["requests"]):
+                    message(
+                        st.session_state["requests"][i],
+                        is_user=True,
+                        key=str(i) + "_user",
+                    )
 
 
 def api_keys_input():
@@ -142,6 +197,7 @@ def add_meeting():
                             f.close()
 
                     ss.df_transcript_speaker = aws_transcribe(file_name)
+                    ss.meeting_name = meeting_name
                     ss.transcript_speaker_editor = True
 
 
@@ -216,42 +272,31 @@ def transcript_text_editor():
         st.success("Text updated successfully!")
 
     # Display the updated dataframe
-    st.header("Updated Dataframe")
+    st.header("Updated Transcript")
     st.table(ss.updated_transcript_df_to_embed)
 
     update_text_button = st.button("Finish Transcript Editing")
     if update_text_button:
-        ss.df_transcript_text = pd.DataFrame()
-        summarize_runner(ss.updated_transcript_df_to_embed)
-        create_Cluster(os.environ.get("OPENAI_API_KEY"))
+        with st.spinner("Uploading..."):
+            ss.df_transcript_text = pd.DataFrame()
+            meeting_summary, meeting_uuid = summarize_runner(
+                ss.updated_transcript_df_to_embed
+            )
+            ss.Clustering_obj.create_Cluster()
 
-        pinecone_init_upsert(ss.updated_transcript_df_to_embed)
+            pinecone_init_upsert(
+                ss.updated_transcript_df_to_embed,
+                meeting_title=ss.meeting_name,
+                meeting_summary=meeting_summary,
+                meeting_uuid=meeting_uuid,
+            )
 
-        st.success("Pinecone upsert completed successfully!")
+            ss.meeting_name = ""
 
-        st.rerun()
-
-
-# def chat_resonate():
-#     # Input box for user to enter queries as text
-#     user_input = st.text_input("User Input:", value=ss.user_input)
-
-#     # Send button to simulate sending user input
-#     if st.button("Send") and user_input:
-#         # Adding user input to chat history
-#         ss.chat_history.append(f"User: {user_input}")
-
-#         # Getting response from LLM and adding it to chatbot response of chat history
-#         bot_response = get_bot_response(user_input)
-#         ss.chat_history.append(bot_response)
-
-#         # Clearing the user input field for next query
-#         ss.user_input = ""
-
-#     # Initializing chat history
-#     st.subheader("Chat History")
-#     for entry in ss.chat_history:
-#         st.write(entry)
+            st.success("Pinecone upsert completed successfully!")
+            ss.transcript_text_editor = False
+            ss.updated_transcript_df_to_embed = pd.DataFrame()
+            st.rerun()
 
 
 def init_streamlit():
@@ -277,8 +322,6 @@ def init_streamlit():
     with st.sidebar:
         api_keys_input()
 
-    # st.button("Add Meeting", on_click=add_meeting)
-
     if st.button("Add Meeting"):
         ss.add_meeting = not ss.add_meeting
         ss.transcript_speaker_editor = False
@@ -291,47 +334,16 @@ def init_streamlit():
     if ss.df_transcript_text is not None and ss.transcript_text_editor:
         transcript_text_editor()
 
-    # try:
+    langchain_obj = LangChain()
 
-    # Initializing Pinecone
-    # (
-    #     ss.pinecone,
-    #     ss.pinecone_index,
-    # ) = init_pinecone(
-    #     ss.pinecone_config["pinecone_api_key"],
-    #     ss.pinecone_config["pinecone_index_name"],
-    #     ss.pinecone_config["pinecone_index_metric"],
-    #     ss.pinecone_config["pinecone_index_dimension"],
-    #     ss.pinecone_config["pinecone_cloud_type"],
-    #     ss.pinecone_config["pinecone_cloud_region"],
-    # )
-
-    # except Exception as e:
-    #     print(e)
-
-    # if ss.api_keys["pinecone_api_key"] != "":
-    # if st.sidebar.button("Add Meeting"):
-    #     ss.add_meeting = not ss.add_meeting
-    #     if ss.api_keys_input == True:
-    #         ss.api_keys_input = False
-
-    # if ss.chat_resonate:
-    #     chat_resonate()
-
-    # if ss.api_keys["pinecone_api_key"] != "":
-    #     if not ss.df_transcript_speaker.empty:
-    #         ss.chat_resonate = False
-    #         ss.transcript_text_editor = False
-    #         transcript_speaker_editor()
-
-    #     if not ss.df_transcript_text.empty:
-    #         ss.chat_resonate = False
-    #         ss.transcript_speaker_editor = False
-    #         transcript_text_editor()
-
-    #     if ss.df_transcript_text.empty and ss.df_transcript_speaker.empty:
-    #         chat_resonate()
+    # Display the selected view
+    view2(langchain_obj)  # Chat view
 
 
 if __name__ == "__main__":
     init_streamlit()
+
+
+# How much is the compensation for the job?
+# Whats the minumim age for shadowing?
+# Why where the volunteer programs cancelled?

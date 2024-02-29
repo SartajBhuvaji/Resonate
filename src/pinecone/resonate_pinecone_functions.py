@@ -1,6 +1,5 @@
 import datetime
 
-# import dotenv
 import json
 import os
 import time
@@ -24,47 +23,34 @@ def load_json_config(json_file_path="./config/config.json"):
 
 class PineconeServerless:
     def __init__(self) -> None:
+        print("Pinecone Serverless Initializing")
         json_config = load_json_config()
         # Load environment variables from .env file
         load_dotenv("./config/.env")
 
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-
         self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
-        self.pinecone_index_name = json_config["PINECONE_INDEX_NAME"]
-        self.pinecone_metric = json_config["PINECONE_METRIC"]
-        self.pinecone_vector_dimension = json_config["PINECONE_VECTOR_DIMENSION"]
-        self.pinecone_cloud_provider = json_config["PINECONE_CLOUD_PROVIDER"]
-        self.pinecone_region = json_config["PINECONE_REGION"]
-        self.pinecone_namespace = json_config["PINECONE_NAMESPACE"]
-        self.pinecone_upsert_batch_limit = json_config["PINECONE_UPSERT_BATCH_LIMIT"]
-        self.pinecone_top_k_results = json_config["PINECONE_TOP_K_RESULTS"]
-        self.pinecone_delta_window = json_config["PINECONE_DELTA_WINDOW"]
-
+        self._init_config(json_config)
         self.meeting_title = None
-
-        self.embedding = json_config["EMBEDDING_PROVIDER"]
-        self.embedding_model = json_config["EMBEDDING_MODEL_NAME"]
-
         self.base_data_path = "./data/jsonMetaDataFiles/"
-        if not os.path.exists(self.base_data_path):
-            os.makedirs(self.base_data_path)
-
-        self.master_json_file = os.path.join(
-            self.base_data_path, json_config["MASTER_JSON_FILENAME"] + ".json"
-        )
-
-        print("self.master_json_file", self.master_json_file)
-
+        self.master_json_file = f"{self.base_data_path}{self.master_json_filename}.json"
+        self._create_master_json()
+        self._create_index()
         self.response = None
+
+        print("Pinecone Serverless Initialized")
+
+    def _init_config(self, json_config) -> None:
+        for key, value in json_config.items():
+            setattr(self, key.lower(), value)
 
     def check_index_already_exists(self) -> bool:
         return self.pinecone_index_name in self.pinecone.list_indexes()
 
     def _get_vector_embedder(self):
-        if self.embedding == "OpenAI":
-            return OpenAIEmbeddings(model=self.embedding_model)
+        if self.embedding_provider == "OpenAI":
+            return OpenAIEmbeddings(model=self.embedding_model_name)
         else:
             raise ValueError("Invalid Embedding Model")
 
@@ -115,18 +101,26 @@ class PineconeServerless:
         except Exception as e:
             print("Index does not exist: ", e)
 
-    def _create_master_json(self) -> dict:
+    def _create_master_json(self) -> None:
+        # Check if the directory exists, if not, create it
+        os.makedirs(os.path.dirname(self.base_data_path), exist_ok=True)
 
-        data = {
-            "index": self.pinecone_index_name,
-            "namespace": self.pinecone_namespace,
-            "last_conversation_no": 0,
-            "meeting_uuids": [],
-            "meetings": [],
-        }
+        # Check if the file exists
+        if not os.path.exists(self.master_json_file):
+            # If the file does not exist, create it and write an empty JSON object
+            with open(self.master_json_file, "w") as file:
+                data = {
+                    "index": self.pinecone_index_name,
+                    "namespace": self.pinecone_namespace,
+                    "last_conversation_no": 0,
+                    "meeting_uuids": [],
+                    "meetings": [],
+                }
 
-        with open(self.master_json_file, "w") as f:
-            json.dump(data, f, indent=4)
+                with open(self.master_json_file, "w") as f:
+                    json.dump(data, f, indent=4)
+
+                print(f"Created {self.master_json_file}")
 
     def _update_master_json(
         self,
@@ -240,6 +234,7 @@ class PineconeServerless:
         """
         Upserts the transcript into Pinecone
         """
+        print("Upserting transcript into Pinecone...")
         texts = []
         metadatas = []
 
@@ -310,6 +305,8 @@ class PineconeServerless:
             meeting_video_file,
             meeting_summary,
         )
+
+        print("Upserted transcript into Pinecone")
 
     def _extract_id_from_response(self, response: list) -> list[int]:
         return list(int(match["id"]) for match in response["matches"])
@@ -405,8 +402,6 @@ class PineconeServerless:
 
 if __name__ == "__main__":
     pinecone = PineconeServerless()
-    pinecone._create_index()
-    pinecone._create_master_json()
     print(pinecone.describe_index_stats())
 
     for i in range(1, 3):

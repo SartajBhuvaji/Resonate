@@ -77,15 +77,15 @@ def append_summary_to_csv(summary_text, cluster=""):
             df = pd.read_csv(csv_filename)
         else:
             # df = pd.DataFrame(columns=['File_id', 'Text', 'cluster'])
-            df = pd.DataFrame(columns=["meeting_uuid", "text"])
-        new_data = pd.DataFrame(
-            {"meeting_uuid": [meeting_uuid], "text": [summary_text]}
-        )
+            df = pd.DataFrame(columns=["uuid", "text"])
+        new_data = pd.DataFrame({"uuid": [meeting_uuid], "text": [summary_text]})
         df = pd.concat([df, new_data], ignore_index=True)
 
         df.to_csv(csv_filename, index=False)
+        return meeting_uuid
     except Exception as e:
         print(f"Error appending summary to CSV: {e}")
+        return False
 
 
 def summarize_runner(transcript):
@@ -94,10 +94,11 @@ def summarize_runner(transcript):
         summary_transcript = summarize_text(transcript)
         summarized_summary = summarize_summary(summary_transcript["summary"])
         final_summary = summarized_summary["summary"]
-        append_summary_to_csv(final_summary)
+        meeting_uuid = append_summary_to_csv(final_summary)
         print(final_summary)
     except Exception as e:
         print(f"Error in summarize_runner: {e}")
+    return final_summary, meeting_uuid
 
 
 if __name__ == "__main__":
