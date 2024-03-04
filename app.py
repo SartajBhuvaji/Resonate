@@ -34,8 +34,6 @@ def initialize_session_state():
 
     if "Clustering_obj" not in ss:
         ss.Clustering_obj = Clustering()
-        # ss.Clustering_obj.create_Cluster()
-        # print("Clusters created")
 
     # Initialize - Main Screen - Transcript Editor
     if "transcript_speaker_editor" not in ss:
@@ -95,11 +93,12 @@ def view2(langchain_obj):
 
         if query:
             with st.spinner("typing..."):
-                response = langchain_obj.chat(query)
-                cluster_labels = ss.Clustering_obj.uuid_for_query(query=query)
-                print(f"cluster labels: {cluster_labels}")  # print(cluster_labels)
+                uuid_list = ss.Clustering_obj.uuid_for_query(query=query)
+                print(f"cluster labels: {uuid_list}")
+                response = langchain_obj.chat(
+                    query=query, in_filter=uuid_list, complete_db_flag=False
+                )
                 response = response["response"]
-                # print(response)
 
             st.session_state.requests.append(query)
             st.session_state.responses.append(response)
