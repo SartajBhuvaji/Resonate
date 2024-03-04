@@ -28,3 +28,4 @@ gensim
 nltk
 python-docx
 tensorboard
+faiss-cpu

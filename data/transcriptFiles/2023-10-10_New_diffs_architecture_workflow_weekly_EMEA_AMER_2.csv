@@ -1,0 +1,156 @@
+,start_time,end_time,speaker_label,text
+0,21.14698333,21.2025,spk_0,"Cool. Thank you, Igor Enjoy the time off. Um"
+1,21.20565,21.2885,spk_0,"I had a last point here uh last minute because I wanted like last time we spoke,"
+2,21.28865,21.32716667,spk_0,um we were targeting to have
+3,21.338,21.35433333,spk_0,captured
+4,21.36066667,21.42366667,spk_0,uh the way that the gifts are rendered calculated
+5,21.43898333,21.45,spk_0,um
+6,21.47465,21.49183333,spk_0,um
+7,21.505,21.57133333,spk_0,"that we do today on, on all of the areas that we have this today."
+8,21.57516667,21.63498333,spk_0,I want to do a quick check on where we are about
+9,21.64731667,21.68616667,spk_0,that. So essentially
+10,21.721,21.76198333,spk_0,these are the four categories I think.
+11,21.77615,21.79315,spk_0,"I mean, there's still"
+12,21.79515,21.84915,spk_0,"giddily somewhere in there, but I all include that as back end"
+13,21.8655,21.873,spk_0,for now. So
+14,21.88665,21.9,spk_0,I can say
+15,21.90365,21.91165,spk_0,"I was,"
+16,21.919,21.97566667,spk_1,I was supposed to do that work to convert Phil's uh exra
+17,21.98966667,22.05731667,spk_1,thing to Mermaid and I completely forgot. So that's not done. Sorry.
+18,22.07516667,22.15748333,spk_0,"-- Uh All right. So today
+-- will be my is like a big catch up day. So I'm trying to,"
+19,22.16733333,22.18881667,spk_1,I'll probably get to that today.
+20,22.21933333,22.22648333,spk_0,Yes.
+21,22.22665,22.27831667,spk_0,"And I have to remind you like we don't have to ha we don't,"
+22,22.27848333,22.32048333,spk_0,we don't want it to be perfect.
+23,22.321,22.36716667,spk_0,You want it to be done essentially. So
+24,22.37398333,22.41981667,spk_0,it's college draw migration and started.
+25,22.44348333,22.44383333,spk_2,I
+26,22.4505,22.4875,spk_2,"-- think
+-- if I'm, if I'm recalling correct,"
+27,22.48766667,22.53648333,spk_1,"I think Amy had started converting this to Mermaid, hadn't she?"
+28,22.55433333,22.56365,spk_0,You wanted
+29,22.56766667,22.59915,spk_0,to have it converted? I saw
+30,22.60416667,22.61581667,spk_1,"a,"
+31,22.61981667,22.686,spk_1,"I don't know where it is, but I gotta find it. I saw a collapse like a details collapse."
+32,22.68616667,22.73931667,spk_1,And inside of that is a bunch of mermaid stuff. And
+33,22.74166667,22.77733333,spk_1,uh I think it's related to this.
+34,22.78366667,22.83133333,spk_1,"It's not done, but I I'm pretty sure it is this."
+35,22.83715,22.91398333,spk_0,"Well, if it is good, that's good luck for you. But if it's not, you have to do it anyway."
+36,22.91415,22.95866667,spk_0,"So, but yeah, please take a look at it soon. So we can"
+37,22.9605,23.00381667,spk_0,"because what I want, what I want is to have as soon as we have."
+38,23.00398333,23.04183333,spk_0,"I know uh we'll, we'll check the other sections"
+39,23.04683333,23.09565,spk_0,as soon as we have these. We should all get
+40,23.1045,23.115,spk_0,like
+41,23.12681667,23.13248333,spk_0,a P
+42,23.136,23.16781667,spk_0,"to say, listen, documentations is ready,"
+43,23.16798333,23.22248333,spk_0,go take a look and then we'll chat about it because
+44,23.22566667,23.28,spk_0,we'll have to have a sync discussion about or a sync or a sync
+45,23.282,23.2925,spk_0,discussion
+46,23.30531667,23.35516667,spk_0,about how we extract the patterns that match
+47,23.357,23.42716667,spk_0,"all, all things. But anyway, so that's the status of code view, front end Thomas."
+48,23.42733333,23.47166667,spk_0,Thank you so much. Let's hope to have it done in the next couple of days.
+49,23.48231667,23.51631667,spk_0,Uh Who else was to provide an update?
+50,23.53616667,23.54633333,spk_4,Uh
+51,23.5485,23.58166667,spk_4,"Yeah, I did start with the,"
+52,23.5905,23.65965,spk_4,the source code content. Um I added the um
+53,23.66398333,23.723,spk_4,the diagrams for compare branches and repository commit.
+54,23.742,23.75365,spk_4,Um
+55,23.76148333,23.81365,spk_4,They're pretty simple because they both Hamel based.
+56,23.81381667,23.90598333,spk_4,Um The only difference really is on the repository we requested um
+57,23.91083333,23.93566667,spk_4,The diffs asynchronously.
+58,23.95716667,24.00548333,spk_4,That's really the only notable difference uh
+59,24.00981667,24.02281667,spk_4,"between them,"
+60,24.038,24.07198333,spk_4,"but it's in the, it's in that issue."
+61,24.07865,24.09466667,spk_4,"If you wanted to,"
+62,24.10216667,24.12265,spk_4,anyone wants to take a look.
+63,24.134,24.17698333,spk_0,I'm guessing that this is what you're talking about. Jack.
+64,24.18231667,24.20115,spk_0,That's the one. Yeah.
+65,24.22133333,24.23966667,spk_0,"All right, cool."
+66,24.24748333,24.27898333,spk_0,"We'll definitely take a look at it and,"
+67,24.27916667,24.33766667,spk_0,"and if you have any questions or clarifications that we need,"
+68,24.34033333,24.40165,spk_0,feel free to ping Jack on this thread and um
+69,24.40765,24.44233333,spk_0,we'll take it from there. Right? More updates.
+70,24.58216667,24.67166667,spk_2,"Yeah, I saw that um uh Jack did it to them. Um Front end architecture."
+71,24.6815,24.71381667,spk_2,"Uh And yeah, it looked"
+72,24.71683333,24.71916667,spk_2,to uh
+73,24.72265,24.77533333,spk_2,"um it seemed to me that uh it's, it's enough,"
+74,24.7755,24.85548333,spk_2,but probably I should add more details here if we're interested about um uh
+75,24.85933333,24.86598333,spk_2,gli
+76,24.87183333,24.92631667,spk_2,"involvement into this. Then uh Yeah,"
+77,24.93065,25.00598333,spk_2,I'll add details or maybe um either me
+78,25.00815,25.02166667,spk_2,"or Sean,"
+79,25.02591667,25.06525,spk_2,we'll ask someone from the team to
+80,25.06741667,25.10425,spk_2,read the diagram. Yeah. And
+81,25.10756667,25.11558333,spk_2,so
+82,25.12006667,25.18923333,spk_2,"-- I'll have the update yet today or
+-- tomorrow. I think, I think it would still be useful,"
+83,25.19441667,25.25658333,spk_0,"especially as we're like, especially when we're talking about"
+84,25.26141667,25.29156667,spk_0,front and architecture changes.
+85,25.29175,25.35823333,spk_0,We're not really clear about what that means for you all in the back end for
+86,25.3619,25.3679,spk_0,"gy,"
+87,25.37308333,25.40891667,spk_0,"like for example, this partial things,"
+88,25.41823333,25.49273333,spk_0,would that speed things up significantly or would still not make um
+89,25.50331667,25.55115,spk_0,"that much of a difference. So we, we just want to"
+90,25.55866667,25.59748333,spk_0,uh um understand and I'll just
+91,25.61615,25.63881667,spk_0,to um
+92,25.64331667,25.66865,spk_0,make that a little bit more specific
+93,25.678,25.707,spk_0,"when we're requesting the DS,"
+94,25.7135,25.767,spk_0,we could distinguish between the gifts that are visible now to the
+95,25.76716667,25.80083333,spk_0,user and the ones that are not visible to the user.
+96,25.801,25.87733333,spk_0,"So we could cut some corners and render those much quicker because then later on,"
+97,25.8775,25.90016667,spk_0,we'll refresh them
+98,25.90266667,25.93133333,spk_0,for the real thing later on.
+99,25.93766667,25.99866667,spk_0,"Uh which means that the request to get, it could be much lighter"
+100,26.00516667,26.03898333,spk_0,if we don't need all the information that we
+101,26.04331667,26.06781667,spk_0,might need later. So
+102,26.07248333,26.12648333,spk_0,"a lot of these decisions are like full stack, they go from the beginning to the end."
+103,26.12665,26.146,spk_0,"So yeah, we're very useful."
+104,26.1505,26.16398333,spk_0,Um
+105,26.20615,26.26148333,spk_0,Thanks and uh the code review back. And
+106,26.26333333,26.33416667,spk_0,um as far as I understand they have been being there's a couple of meg
+107,26.33648333,26.35516667,spk_0,requests being merged
+108,26.38481667,26.44148333,spk_0,"and there's the one in flight uh again, Patrick absence,"
+109,26.484,26.50965,spk_0,but from what I can see
+110,26.54148333,26.6045,spk_0,several MRMRS are being
+111,26.60683333,26.63783333,spk_0,merged slash reviewed
+112,26.6485,26.67415,spk_0,into this page.
+113,26.6885,26.69616667,spk_0,"Sorry,"
+114,26.7175,26.74981667,spk_0,I shouldn't put the hash there.
+115,26.76431667,26.86398333,spk_0,Um And that's what I think is the latest update from the back end for code review.
+116,26.86415,26.93333333,spk_0,"Um In this particular sense, the diagrams are the ones that are really tiny,"
+117,26.94583333,27.019,spk_0,"but we probably want to take a look at that, try to understand everything that, that"
+118,27.03098333,27.11766667,spk_0,that is over there so we could potentially um understand that better. And um
+119,27.14531667,27.18433333,spk_0,"yeah, I guess it was the flow section but"
+120,27.19115,27.20965,spk_0,I put it to the whole page.
+121,27.23915,27.24816667,spk_0,Cool.
+122,27.24833333,27.33115,spk_0,Uh So let's uh it feels like we're getting to once we have Thomas's uh
+123,27.33133333,27.41581667,spk_0,"migration of Bill's diagram and once we have the back end from source code,"
+124,27.41598333,27.47083333,spk_0,it feels like we have a good spot to just overview everything together
+125,27.47481667,27.54065,spk_0,first synchronous and then have a synchronous discussion about it. So um
+126,27.555,27.62933333,spk_0,"thanks everybody for, for that um update anybody has any other points."
+127,27.77465,27.78498333,spk_0,Cool.
+128,27.79131667,27.80433333,spk_0,Um
+129,27.825,27.884,spk_0,"So I'll, I'm just taking a look about what we need. We need to get done."
+130,27.88416667,27.95266667,spk_0,"I'll update the Thursday call, broadcast the change on Slack"
+131,27.96283333,28.00916667,spk_0,"Thomas will fish off,"
+132,28.03281667,28.11831667,spk_0,"I'll, I'll start an Mr to document the priorities in the Mr uh in the markdown file"
+133,28.1355,28.1505,spk_0,and
+134,28.15883333,28.21533333,spk_0,Igor will com complete or find someone to complete the back end
+135,28.22415,28.30916667,spk_0,"of um details. And yeah, Thomas will update the migration of that."
+136,28.30933333,28.32848333,spk_0,So I feel like we have
+137,28.33048333,28.33065,spk_0,a
+138,28.346,28.369,spk_0,"cool list of things to,"
+139,28.36916667,28.4105,spk_0,to get done on and let's participate in the
+140,28.41066667,28.45483333,spk_0,discussion of the definition of done everybody so we can
+141,28.471,28.50598333,spk_0,get it in a place to get merged to.
+142,28.52566667,28.53416667,spk_0,"All right,"
+143,28.536,28.53616667,spk_0,a
+144,28.54081667,28.57431667,spk_0,"bit chaotic, but uh we got it through."
+145,28.57448333,28.65331667,spk_0,"Thank, thank you so much for, for, for everybody's input and um"
+146,28.65731667,28.69298333,spk_0,"yeah, I'll see you either Thursday or"
+147,28.70466667,28.717,spk_0,"Tuesday,"
+148,28.72031667,28.73098333,spk_0,I guess.
+149,28.76415,28.786,spk_0,All right. Take care everybody
+150,28.7905,28.80365,spk_0,too. Thanks everybody.
+151,28.8125,28.82248333,spk_0,Thank you.

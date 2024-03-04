@@ -4,13 +4,18 @@ import os
 import joblib
 import numpy as np
 import pandas as pd
-import scipy.io
+
 import scipy.sparse as sp
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 from scipy.io import loadmat, savemat
 from sklearn.cluster import MeanShift, estimate_bandwidth
 from sklearn.neighbors import kneighbors_graph
+
+import src.clustering.resonate_semantic_search as SemanticSearch
+
+# import SemanticEmbedding, FaissForQuerySearch
+# from resonate_semantic_search import SemanticEmbedding, FaissForQuerySearch
 
 
 def normalize_adj(adj, lmbda=1):
@@ -79,6 +84,11 @@ class Clustering:
         self.api_key = os.environ.get("OPENAI_API_KEY")
         self.method = "dgc"
 
+        if not os.path.exists("./data/clusteringFiles/cluster_data.csv"):
+            self.create_Cluster()
+
+        self.index = self.initialize_FAISS()
+
     def create_embedding(self):
         data = pd.read_csv("./data/summaryFiles/abstract_summary_data.csv")
 
@@ -122,57 +132,32 @@ class Clustering:
         df.to_csv("./data/clusteringFiles/cluster_data.csv")
         print("Cluster data saved")
 
-    # Query
-    """loading the store model"""
-
-    def load_model(self):
-        model_path = f"./data/clusteringFiles/{self.method}_model.joblib"
-        if os.path.exists(model_path):
-            # Load the existing model
-            return joblib.load(model_path)
-        else:
-            print("Unable to load the model")
-            return None
-
-    """Make prediction using saved model"""
-
-    def predict_cluster(self, query):
-        # load existing model
-        cluster_model = self.load_model()
-        # predict the label
-        predicted_label = cluster_model.predict(query)
-        return predicted_label
-
-    """create embedding for query"""
-
-    def query_embedding(self, query):
-
-        json_config = load_json_config()
-
-        embed = OpenAIEmbeddings(
-            model=json_config["EMBEDDING_MODEL_NAME"], openai_api_key=self.api_key
-        )
-        embeddings = embed.embed_documents(query[0])
-        return embeddings
-
-    """Extracting the uuids for query"""
+        self.index = self.initialize_FAISS()
 
     def uuid_for_query(self, query):
-        # get embedding for query
-        query_embed = self.query_embedding(query)
         # predict the cluster label for query
-        query_cluster_label = self.predict_cluster(query_embed)
+        query_cluster_label = self.index.search_query(query)
         print(f"label pred: {query_cluster_label[0]}")
         df = pd.read_csv("./data/clusteringFiles/cluster_data.csv")
         # match all uuid from predicted label
         filtered_uuids = df[df["cluster"] == query_cluster_label[0]]["uuid"].tolist()
         return filtered_uuids
 
+    def initialize_FAISS(self):
+        model = SemanticSearch.SemanticEmbedding()
+        index = SemanticSearch.FaissForQuerySearch(model)
+        data = pd.read_csv("./data/clusteringFiles/cluster_data.csv")
+        features1 = data["text"]
+        uuids = data["uuid"]
+        labels = data["cluster"]
+        for text, uuid, label in zip(features1, uuids, labels):
+            index.add_summary(text, uuid, label)
+        return index
+
 
 if __name__ == "__main__":
     load_dotenv("./config/.env")
     Clustering_obj = Clustering()
-    Clustering_obj.create_Cluster()
     print(
         Clustering_obj.uuid_for_query(
             "What is the goal of defining maintainability for the new diffs architecture?"
