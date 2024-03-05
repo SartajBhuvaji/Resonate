@@ -49,12 +49,6 @@ def initialize_session_state():
     if "meeting_name" not in ss:
         ss.meeting_name = ""
 
-    # Initialize - Main Screen - User input and Chatbox
-    if "user_input" not in ss:
-        ss.user_input = ""
-    if "chat_resonate" not in ss:
-        ss.chat_resonate = False
-
     if "df_transcript_speaker" not in ss:
         ss.df_transcript_speaker = pd.DataFrame()
 
@@ -63,11 +57,6 @@ def initialize_session_state():
 
     if "updated_df" not in ss:
         ss.updated_transcript_df_to_embed = pd.DataFrame()
-
-
-# def get_bot_response(user_input):
-#     # Replace this with your actual chatbot logic
-#     return f"Chatbot: You said '{user_input}'"
 
 
 def view2(langchain_obj):
@@ -83,7 +72,7 @@ def view2(langchain_obj):
     textcontainer = st.container()
 
     with textcontainer:
-        query = st.text_input("", key="input", placeholder="Message Resonate ... ")
+        query = st.text_input("", placeholder="Message Resonate ... ")
 
         # clear button
         if st.button("Clear"):
@@ -178,6 +167,7 @@ def add_meeting():
                     file_name = uploaded_file.name.replace(" ", "_")
 
                     if file_name.endswith(".mp4") or file_name.endswith(".mpeg4"):
+                        print("in video")
                         with open("data/videoFiles/" + file_name, "wb") as f:
                             f.write(uploaded_file.getbuffer())
                             f.close()
@@ -191,6 +181,7 @@ def add_meeting():
                         file_name = file_name[:-4] + ".wav"
 
                     elif file_name.endswith(".wav"):
+                        print("in audio")
                         with open("data/audioFiles/" + file_name, "wb") as f:
                             f.write(uploaded_file.getbuffer())
                             f.close()
