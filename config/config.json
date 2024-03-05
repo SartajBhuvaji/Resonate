@@ -1,0 +1,26 @@
+{
+	"PINECONE_INDEX_NAME": "langchain-retrieval-transcript",
+	"PINECONE_VECTOR_DIMENSION": 3072,
+	"PINECONE_UPSERT_BATCH_LIMIT": 90,
+	"PINECONE_TOP_K_RESULTS": 10,
+	"PINECONE_DELTA_WINDOW": 2,
+	"PINECONE_CLOUD_PROVIDER": "aws",
+	"PINECONE_REGION": "us-west-2",
+	"PINECONE_METRIC": "cosine",
+	"PINECONE_NAMESPACE": "default_namespace",
+
+	"EMBEDDING_PROVIDER": "OpenAI",
+	"EMBEDDING_MODEL_NAME": "text-embedding-3-large",
+
+	"MASTER_JSON_FILENAME": "master_meeting_details",
+
+	"AWS_INPUT_BUCKET": "input-bucket",
+	"AWS_OUTPUT_BUCKET": "output-bucket",
+	"AWS_REGION": "us-east-2",
+	"AWS_TRANSCRIBE_JOB_NAME": "transcribe-job",
+
+	"LC_LLM_TEMPERATURE": 0.01,
+	"LC_CONV_BUFFER_MEMORY_WINDOW": 1,
+	"LC_LLM_SUMMARY_MAX_TOKEN_LIMIT": 650,
+	"LC_LLM_MODEL": "gpt-3.5-turbo"
+}

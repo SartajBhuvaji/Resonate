@@ -1,0 +1,241 @@
+,start_time,end_time,speaker_label,text
+0,41.03131666666667,41.048316666666665,spk_0,that's
+1,41.0505,41.06565,spk_0,"accessible,"
+2,41.092333333333336,41.10966666666667,spk_1,users
+3,41.1225,41.14216666666667,spk_0,uh improved
+4,41.16283333333333,41.21515,spk_0,can probably find better words for this later and maintain the ability.
+5,41.24965,41.28731666666667,spk_0,"Uh What we talked about. Oh, we skipped one."
+6,41.31316666666667,41.32683333333333,spk_0,Um
+7,41.372166666666665,41.39148333333333,spk_0,How should we call your point?
+8,41.391666666666666,41.439166666666665,spk_0,Thomas to find boundaries and user first promises early?
+9,41.46565,41.542,spk_0,"Is that part of the relevant metrics, meaningful metrics? Can we keep it in there?"
+10,41.55833333333333,41.59865,spk_2,"Yeah, it's part of it for sure."
+11,41.61366666666667,41.6645,spk_2,"There are also, I think it's also just like define um"
+12,41.680166666666665,41.70583333333333,spk_2,"it's like defining deliverables, right?"
+13,41.706,41.78181666666666,spk_2,"Like like uh like something is not complete if we, if it's not accessible,"
+14,41.78565,41.84048333333333,spk_2,um it's not complete if it's um
+15,41.85715,41.86716666666667,spk_2,if it
+16,41.89915,41.91148333333334,spk_2,takes
+17,41.91333333333333,42.0055,spk_2,a full second to get the code for it across the network or whatever. Um So it's like
+18,42.017833333333336,42.03,spk_2,um
+19,42.0395,42.088,spk_2,what are acceptable deliverable sort of
+20,42.115316666666665,42.14098333333333,spk_2,"boundary. Yeah, I'm not sure."
+21,42.15616666666666,42.189166666666665,spk_0,"Yeah, I think that's if we, if we frame it,"
+22,42.18933333333333,42.21881666666667,spk_0,"I think that's part of the meaningful metrics,"
+23,42.21898333333333,42.26181666666667,spk_0,we define the meaningful metrics and in there will
+24,42.26198333333333,42.3125,spk_0,be compliance with the budget in there would be
+25,42.316833333333335,42.37916666666667,spk_0,"time to get the data from Gidley or time to get the data from the rail side or,"
+26,42.379333333333335,42.39716666666666,spk_0,or anything like that.
+27,42.409,42.45066666666666,spk_0,I think we can keep it for now covered with the meaningful metric.
+28,42.450833333333335,42.492,spk_0,So we have so covers of all these scenarios
+29,42.49733333333333,42.524816666666666,spk_0,"uh which, which goes"
+30,42.52966666666666,42.57933333333333,spk_0,"we, we can put it at odds with some particular scenarios that don't make sense,"
+31,42.589,42.6475,spk_0,"performance regardless of this size, which is part of meaningful metrics."
+32,42.647666666666666,42.66733333333333,spk_0,Should we erase that?
+33,42.78766666666667,42.7975,spk_0,"Yeah, I"
+34,42.802,42.81783333333333,spk_2,think so.
+35,42.82715,42.83148333333333,spk_2,So we
+36,42.833333333333336,42.8675,spk_2,have our performance budget should work no matter what
+37,42.87715,42.93066666666667,spk_0,"coverage of these scenarios accessible improvement in ability,"
+38,42.93083333333333,42.94981666666666,spk_0,"meaningful metrics,"
+39,42.96366666666667,43.00866666666667,spk_0,"which is per performance, I guess as a whole."
+40,43.0225,43.03715,spk_0,Um
+41,43.0635,43.1185,spk_0,"Oh, we missed one. Can we create a shared documents followed with some organization"
+42,43.13516666666666,43.15133333333333,spk_0,to start keeping artic
+43,43.155166666666666,43.15983333333333,spk_0,one? But
+44,43.17133333333334,43.18248333333333,spk_2,"this wasn't,"
+45,43.18516666666667,43.2435,spk_2,"I didn't, I didn't vocalize it because we, we this is very,"
+46,43.256483333333335,43.27865,spk_2,but like uh
+47,43.28981666666667,43.32748333333333,spk_2,"we can't work exclusively in issues, right?"
+48,43.32765,43.42881666666667,spk_2,"Because an issue is like something that eventually is closed um or resolved where,"
+49,43.428983333333335,43.45398333333333,spk_2,where are we going to keep things?
+50,43.454166666666666,43.508833333333335,spk_2,"Should we, should we create a wiki? Should we use our wiki feature?"
+51,43.5125,43.55815,spk_2,#NAME?
+52,43.58766666666666,43.638,spk_0,"Uh I don't, I've never been involved in architecture design workflow."
+53,43.63816666666666,43.695483333333335,spk_0,"If anybody has, please, maybe Patrick or Carry you were"
+54,43.70133333333333,43.71181666666666,spk_0,um
+55,43.7225,43.74465,spk_0,"I was thinking about just using the,"
+56,43.744816666666665,43.78366666666667,spk_0,we're gonna start to put things in
+57,43.78383333333333,43.82266666666666,spk_0,the documentation itself of the architecture design.
+58,43.82516666666667,43.8925,spk_0,"There's already a status for like proposed, accepted that sort of thing."
+59,43.899816666666666,43.930166666666665,spk_0,So we should not re invent the wheel and just
+60,43.93033333333333,43.98181666666667,spk_0,"use the documentation as a living spec as we go,"
+61,43.98198333333333,43.99798333333333,spk_0,we take it through the
+62,44.005,44.04031666666667,spk_0,the stages. I think that's what makes more sense.
+63,44.04583333333333,44.06465,spk_0,Anybody disagrees.
+64,44.08833333333333,44.1,spk_0,Does that make sense?
+65,44.138333333333335,44.13883333333333,spk_7,OK.
+66,44.153983333333336,44.20715,spk_7,Uh How about the things that would not go into documents?
+67,44.20731666666666,44.26833333333333,spk_7,"Like if I'm doing the audit, it's not gonna end up all there."
+68,44.28181666666666,44.30033333333333,spk_7,Um
+69,44.30433333333333,44.330333333333336,spk_7,So should I just keep that
+70,44.34333333333333,44.36033333333334,spk_7,#NAME?
+71,44.39448333333333,44.42881666666667,spk_0,"Um I mean, we definitely can find a"
+72,44.43165,44.485816666666665,spk_0,Google Drive boulder to keep things organized.
+73,44.48783333333333,44.51931666666667,spk_0,I think that's OK. Like a
+74,44.5305,44.57666666666667,spk_0,artifact of investigations. Sure.
+75,44.584,44.61783333333333,spk_0,Uh Maybe that can cover what Thomas was saying.
+76,44.618,44.63131666666666,spk_0,"But in terms of like,"
+77,44.631483333333335,44.66048333333333,spk_0,we should keep in mind that the effort should
+78,44.66065,44.69415,spk_0,be to update the documentation that we're putting out.
+79,44.70483333333333,44.75033333333333,spk_0,"And if like for example, if it makes sense to"
+80,44.75331666666666,44.78248333333333,spk_0,"reference the artist that you did,"
+81,44.78783333333333,44.7975,spk_0,you can keep it in the
+82,44.799483333333335,44.84481666666667,spk_0,doc but link it on the living spec living on the
+83,44.84881666666666,44.88248333333333,spk_0,link it on the documentation that we're merging.
+84,44.89431666666667,44.899483333333336,spk_0,Mhm
+85,44.90231666666666,44.90983333333333,spk_0,OK.
+86,44.91165,44.95798333333333,spk_0,"Still let's build a Google Drive just for,"
+87,44.97398333333334,45.03366666666667,spk_2,"yeah, I think we should have a Google Drive maybe for like drafts or like, hey,"
+88,45.03383333333333,45.064166666666665,spk_2,I'm doing this audit and here's a bunch of stuff.
+89,45.06433333333333,45.122166666666665,spk_2,"But if we're gonna be linking like data or like report results,"
+90,45.13315,45.16481666666667,spk_2,we should probably be using kit lab.
+91,45.177816666666665,45.1895,spk_2,So like
+92,45.19415,45.20883333333333,spk_2,uh
+93,45.21683333333333,45.24815,spk_2,"that's why I suggested wiki like that,"
+94,45.24831666666667,45.28866666666666,spk_2,that can maybe we can store larger artifacts over
+95,45.288833333333336,45.32116666666667,spk_2,in wiki and then link it from the documentation.
+96,45.321333333333335,45.33165,spk_2,I'm not sure.
+97,45.33383333333333,45.342333333333336,spk_2,But
+98,45.34583333333333,45.39481666666666,spk_2,#NAME?
+99,45.39881666666667,45.434666666666665,spk_2,that Google Drive necessarily means it's like
+100,45.44166666666667,45.47881666666667,spk_2,private and we're keeping it a secret.
+101,45.481316666666665,45.53148333333333,spk_2,Um And maybe we should default to something more public.
+102,45.54266666666667,45.589,spk_0,"Not necessarily, you can have Google Docs that are public"
+103,45.59498333333333,45.6125,spk_0,#NAME?
+104,45.61783333333333,45.62533333333333,spk_1,Yeah.
+105,45.631166666666665,45.63681666666667,spk_1,Yeah.
+106,45.649483333333336,45.652,spk_8,Yeah.
+107,45.6645,45.6675,spk_8,The
+108,45.66931666666667,45.73433333333333,spk_8,"it's the pattern of, of use though. It really is like Google Docs is like,"
+109,45.75265,45.78715,spk_8,"yeah, it's kind of hidden enough to decide."
+110,45.81098333333333,45.8255,spk_1,"-- Shouldn't
+-- we use skip?"
+111,45.8345,45.8505,spk_2,"We, we should use"
+112,45.85416666666666,45.86181666666667,spk_2,"Gab, right?"
+113,45.87533333333333,45.89216666666667,spk_1,"Hey, I have an idea."
+114,45.89398333333333,45.90116666666667,spk_1,Let's use
+115,45.90416666666667,45.90466666666666,spk_1,GI
+116,45.9085,45.91048333333333,spk_1,lab.
+117,45.9175,45.927816666666665,spk_1,OK.
+118,45.94733333333333,46.00533333333333,spk_0,"All right. Let's talk about it on Slack. I mean, whatever people are agreeing."
+119,46.0055,46.040816666666665,spk_0,II I would have a problem with. Um
+120,46.06433333333333,46.11416666666667,spk_0,"All right. So let's not take any actions, let's discuss, let's discuss this thing."
+121,46.17183333333333,46.207483333333336,spk_0,Almost you start the discussion on Slack
+122,46.212833333333336,46.25116666666667,spk_0,"um or on the Gila issue. Sorry,"
+123,46.25566666666667,46.27283333333333,spk_0,because we need to talk for.
+124,46.27666666666666,46.28333333333333,spk_0,Um
+125,46.29716666666667,46.34798333333333,spk_0,"OK. So looking at the immediate task at hand,"
+126,46.35265,46.36283333333333,spk_0,uh
+127,46.369483333333335,46.427483333333335,spk_0,"I'm sorry, looking at the other priorities which we need to move to an issue."
+128,46.44166666666667,46.4555,spk_0,Um
+129,46.50781666666666,46.5675,spk_0,"So what I think would, would do is like ordered."
+130,46.57083333333333,46.614,spk_0,An example example would be
+131,46.61931666666667,46.64481666666666,spk_0,"like meaningful metrics,"
+132,46.692166666666665,46.701,spk_0,"comes,"
+133,46.71181666666666,46.72166666666666,spk_0,comes
+134,46.726333333333336,46.760333333333335,spk_0,"before then maintain,"
+135,46.76565,46.81498333333333,spk_0,maintain ability. That would be the first choice.
+136,46.82065,46.8475,spk_0,Uh accessibility
+137,46.87116666666667,46.909666666666666,spk_0,should also come before maintainability.
+138,46.91498333333333,46.926833333333335,spk_0,Um
+139,46.97048333333333,47.022666666666666,spk_0,coverage for all these scenarios. That's a tricky one.
+140,47.024483333333336,47.03766666666667,spk_0,But I
+141,47.04098333333334,47.088166666666666,spk_0,I'm just giving an example like you don't have to agree with that. Um
+142,47.10265,47.1515,spk_0,I I would say uh so we can
+143,47.15631666666667,47.16833333333334,spk_0,keep it
+144,47.17381666666667,47.18631666666667,spk_1,coverage
+145,47.20381666666667,47.23766666666667,spk_0,because it needs to be accessible.
+146,47.23783333333333,47.284666666666666,spk_0,"But he thought some things might not cover all scenarios,"
+147,47.28816666666667,47.309666666666665,spk_0,maintainability. What's missing?
+148,47.313,47.327,spk_0,"234,"
+149,47.34981666666667,47.41033333333333,spk_0,"that's it. 1234. Yeah, so that, that this would be an example of uh"
+150,47.4265,47.43998333333333,spk_0,to start off with.
+151,47.44015,47.471833333333336,spk_0,"We might have different things that we add in the as we go,"
+152,47.472,47.50298333333333,spk_0,but at least we'll have a place to document it
+153,47.50698333333333,47.53598333333333,spk_0,and this will be part of the documentation.
+154,47.540816666666665,47.5845,spk_0,Just an example. Let's move the discussion to an issue. OK.
+155,47.69031666666667,47.69048333333333,spk_0,Uh
+156,47.698483333333336,47.73866666666667,spk_0,And that takes me over time.
+157,47.74048333333333,47.80583333333333,spk_0,Uh So I need people to claim these immediate tasks at hand.
+158,47.814,47.82765,spk_0,Um
+159,47.83715,47.895833333333336,spk_0,We need some people to start opening the MRS for the documentation
+160,47.89915,47.96683333333333,spk_0,just to get it started as a draft or whatever the status is. Um
+161,47.9755,48.0345,spk_0,And I need someone to claim that task. I need someone um
+162,48.046,48.115316666666665,spk_0,"to create the issue to gather all the existing issues and that's the point is OK,"
+163,48.11548333333333,48.125,spk_0,"the issue,"
+164,48.13033333333333,48.16433333333333,spk_0,but then you broadcast it to everybody to
+165,48.177483333333335,48.22715,spk_0,uh add comments to that issue or something or add to the description
+166,48.255833333333335,48.28548333333333,spk_0,"um and, and ask"
+167,48.301833333333335,48.31215,spk_0,"what happened,"
+168,48.323483333333336,48.339,spk_0,something changed.
+169,48.34481666666667,48.35731666666667,spk_0,"Oh yeah, I did a comment."
+170,48.36266666666667,48.37381666666667,spk_0,Um
+171,48.392833333333336,48.43248333333333,spk_0,"the document current approach for multiple gifts,"
+172,48.43265,48.45381666666667,spk_0,I'm probably gonna need multiple
+173,48.47865,48.4875,spk_0,my
+174,48.49065,48.50748333333333,spk_0,Google doc crashed.
+175,48.52966666666666,48.602,spk_0,Uh So the documents current approach for multiple dis implementations is that like
+176,48.60215,48.664,spk_0,we don't have a lot of visibility on how things happen between Gidley.
+177,48.66416666666667,48.70681666666667,spk_0,"Like we on the front end between Gidley and rails,"
+178,48.713166666666666,48.738166666666665,spk_0,we don't have a lot of visibility on how things
+179,48.73833333333333,48.77848333333333,spk_0,on source code happen uh on back end and stuff.
+180,48.77865,48.84081666666667,spk_0,So it would be nice to get some sort of like Quick Sons shott
+181,48.8465,48.90315,spk_0,of how the dips are being generated and handled today.
+182,48.91033333333333,48.963166666666666,spk_0,Um I would keep it light ish
+183,48.96515,49.02583333333333,spk_0,because this is just to understand where we are. It's not the outcome.
+184,49.026,49.085816666666666,spk_0,"It's just a, a good effort of capturing what we have today."
+185,49.092333333333336,49.10681666666667,spk_0,"And for this,"
+186,49.10698333333333,49.18248333333333,spk_0,what I would leverage is potentially grab all the dris and assign an issue to them.
+187,49.2,49.22031666666667,spk_0,Why is my Google doc
+188,49.24166666666667,49.263333333333335,spk_0,do look just crashed.
+189,49.27015,49.27966666666666,spk_0,Um
+190,49.29431666666667,49.313833333333335,spk_0,Which is why we should just get love.
+191,49.32781666666666,49.360166666666665,spk_0,So I'll take action on that. I'll create an issue
+192,49.37365,49.42015,spk_0,and I'll sign every Dr I uh there and
+193,49.420316666666665,49.45966666666666,spk_0,potentially I'll ping you to Patrick because of giddily.
+194,49.4675,49.56465,spk_0,"Um And the idea is just to share some notes or some diagrams of how,"
+195,49.57031666666666,49.62331666666667,spk_0,how we're doing the DS today in your part of the organization.
+196,49.631166666666665,49.6935,spk_0,"Uh If that makes sense, is that sensible for everybody or am I missing something."
+197,49.77715,49.822,spk_0,OK. Sometimes I'm afraid that I'm making
+198,49.826166666666666,49.85681666666667,spk_0,no sense at all. It just too
+199,49.86165,49.888666666666666,spk_0,respectful to call me out.
+200,49.90433333333333,49.95183333333333,spk_0,Uh Let's assume it's not that uh right. I'll take that one
+201,49.95365,49.97133333333333,spk_0,document.
+202,49.97431666666667,50.0,spk_0,I think that is for me.
+203,50.00248333333333,50.06816666666667,spk_0,And then we need one. We already have one for uh the define maintainability.
+204,50.07315,50.13615,spk_0,Um This is then we need one to create issue for meaningful metrics
+205,50.14098333333333,50.18698333333333,spk_0,and then one to an issue to discuss order of priorities.
+206,50.191316666666665,50.21683333333333,spk_0,Um I can take that one too
+207,50.22448333333333,50.2675,spk_0,"so please take them on, um"
+208,50.2755,50.32731666666667,spk_0,assign yourself here like we're doing like me and Thomas.
+209,50.33916666666666,50.36915,spk_0,Uh And then we know exactly who's going to take
+210,50.36931666666667,50.41833333333334,spk_0,them and then broadcast them on the Slack channel.
+211,50.4185,50.4645,spk_0,I think that's the best way at the moment to
+212,50.46465,50.50765,spk_0,get everybody that it's involved or wants to be involved
+213,50.51148333333333,50.5225,spk_0,aware.
+214,50.53383333333333,50.546,spk_0,Um
+215,50.5555,50.59548333333333,spk_0,"That's it. Anybody has any other questions before we go,"
+216,50.6385,50.68033333333333,spk_0,we'll talk about the thing called scheduling
+217,50.6805,50.72298333333333,spk_0,"on Slack or something because like it's,"
+218,50.73165,50.74881666666667,spk_0,we don't have any time now.
+219,50.756816666666666,50.803983333333335,spk_2,"Do we have uh what, what's the, is there a specific Slack show"
+220,50.80631666666667,50.832816666666666,spk_2,for this? Am I in it? I don't know.
+221,50.84216666666666,50.85083333333333,spk_2,Uh
+222,50.857816666666665,50.89465,spk_0,"F New Ds, right. Phil."
+223,50.93383333333333,50.9375,spk_1,Yep.
+224,50.967333333333336,51.011316666666666,spk_0,"-- Please join. If you're not there.
+-- Look at that, I'm not a member."
+225,51.01148333333333,51.02865,spk_2,#NAME?
+226,51.03548333333333,51.056,spk_0,"You are now. All right,"
+227,51.075,51.09166666666667,spk_0,thanks everybody.
+228,51.09183333333333,51.16148333333334,spk_0,"There's gonna be a lot of discovery and a lot of crazy chaos through here, but I think"
+229,51.1635,51.20066666666666,spk_0,it's great that we're having this conversation that we see so
+230,51.200833333333335,51.264,spk_0,many different scopes represented so really appreciative all of your time.
+231,51.27398333333333,51.33565,spk_0,And if you by any chance uh need um
+232,51.335816666666666,51.38016666666667,spk_0,"some help prioritizing work to this with your managers,"
+233,51.38033333333333,51.43131666666667,spk_0,feel free to reach out to me and I can try to put in a good word.
+234,51.459,51.46615,spk_0,OK.
+235,51.47298333333333,51.48198333333333,spk_0,That's it.
+236,51.48383333333334,51.55331666666667,spk_0,We'll uh discuss the synchronously and we see you on the ether or something.
+237,51.58648333333333,51.60748333333333,spk_0,Bye. Have a good week.
