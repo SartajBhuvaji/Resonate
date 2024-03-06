@@ -42,23 +42,30 @@ class LangChain:
 
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+        if self.PINECONE_API_KEY is not None or self.OPENAI_API_KEY is not None:
+            self.pinecone = PineconeServerless()
 
-        self.pinecone = PineconeServerless()
-        self.llm_temperature = json_config["LC_LLM_TEMPERATURE"]
-        self.llm_model = json_config["LC_LLM_MODEL"]
-        self.llm_summary_max_token_limit = json_config["LC_LLM_SUMMARY_MAX_TOKEN_LIMIT"]
-        self.llm_conv_buffer_memory_window = json_config["LC_CONV_BUFFER_MEMORY_WINDOW"]
+            self.llm_temperature = json_config["LC_LLM_TEMPERATURE"]
+            self.llm_model = json_config["LC_LLM_MODEL"]
+            self.llm_summary_max_token_limit = json_config[
+                "LC_LLM_SUMMARY_MAX_TOKEN_LIMIT"
+            ]
+            self.llm_conv_buffer_memory_window = json_config[
+                "LC_CONV_BUFFER_MEMORY_WINDOW"
+            ]
 
-        self.llm = ChatOpenAI(
-            temperature=self.llm_temperature, model_name=self.llm_model, streaming=False
-        )
+            self.llm = ChatOpenAI(
+                temperature=self.llm_temperature,
+                model_name=self.llm_model,
+                streaming=False,
+            )
 
-        self.conversation_bufw = ConversationChain(
-            llm=self.llm,
-            memory=ConversationSummaryBufferMemory(
-                llm=self.llm, max_token_limit=self.llm_summary_max_token_limit
-            ),
-        )
+            self.conversation_bufw = ConversationChain(
+                llm=self.llm,
+                memory=ConversationSummaryBufferMemory(
+                    llm=self.llm, max_token_limit=self.llm_summary_max_token_limit
+                ),
+            )
 
     def prompt(self, query, context):
         system_template = SystemMessagePromptTemplate.from_template(

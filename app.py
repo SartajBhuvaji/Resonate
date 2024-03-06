@@ -42,10 +42,6 @@ def initialize_session_state():
     if "transcript_text_editor" not in ss:
         ss.transcript_text_editor = False
 
-    # # Initialize - Main Screen - chat history
-    if "chat_history" not in ss:
-        ss.chat_history = []
-
     if "meeting_name" not in ss:
         ss.meeting_name = ""
 
@@ -58,8 +54,14 @@ def initialize_session_state():
     if "updated_df" not in ss:
         ss.updated_transcript_df_to_embed = pd.DataFrame()
 
+    if "chat_view" not in ss:
+        ss.chat_view = True
 
-def view2(langchain_obj):
+    if "langchain_obj" not in ss:
+        ss.langchain_obj = LangChain()
+
+
+def chat_view():
     st.header("Chat")
 
     if "responses" not in st.session_state:
@@ -84,7 +86,7 @@ def view2(langchain_obj):
             with st.spinner("typing..."):
                 uuid_list = ss.Clustering_obj.uuid_for_query(query=query)
                 print(f"cluster labels: {uuid_list}")
-                response = langchain_obj.chat(
+                response = ss.langchain_obj.chat(
                     query=query, in_filter=uuid_list, complete_db_flag=False
                 )
                 response = response["response"]
@@ -112,37 +114,53 @@ def api_keys_input():
         openai_api_key = st.text_input(
             "OpenAPI Key:",
             type="password",
-            value=ss.api_keys["openai_api_key"],
+            value=ss.api_keys.get(
+                "openai_api_key", ""
+            ),  # Use default value if key is not present
         )
         pinecone_api_key = st.text_input(
             "Pinecone Key:",
             type="password",
-            value=ss.api_keys["pinecone_api_key"],
+            value=ss.api_keys.get(
+                "pinecone_api_key", ""
+            ),  # Use default value if key is not present
         )
         aws_access_key = st.text_input(
             "AWS Access Key:",
             type="password",
-            value=ss.api_keys["aws_access_key"],
+            value=ss.api_keys.get(
+                "aws_access_key", ""
+            ),  # Use default value if key is not present
         )
         aws_secret_access_key = st.text_input(
             "AWS Secret Access Key:",
             type="password",
-            value=ss.api_keys["aws_secret_access_key"],
+            value=ss.api_keys.get(
+                "aws_secret_access_key", ""
+            ),  # Use default value if key is not present
         )
 
         # Add a button to save the keys
         save_button = st.form_submit_button("Save API Keys")
 
         if save_button:
+            # Update session state with provided keys
             ss.api_keys["openai_api_key"] = openai_api_key
             ss.api_keys["pinecone_api_key"] = pinecone_api_key
             ss.api_keys["aws_access_key"] = aws_access_key
             ss.api_keys["aws_secret_access_key"] = aws_secret_access_key
 
-            os.environ["OPENAI_API_KEY"] = ss.api_keys["openai_api_key"]
-            os.environ["PINECONE_API_KEY"] = ss.api_keys["pinecone_api_key"]
-            os.environ["AWS_ACCESS_KEY"] = ss.api_keys["aws_access_key"]
-            os.environ["AWS_SECRET_ACCESS_KEY"] = ss.api_keys["aws_secret_access_key"]
+            # Set environment variables only if the keys are not None
+            if openai_api_key:
+                os.environ["OPENAI_API_KEY"] = ss.api_keys["openai_api_key"]
+            if pinecone_api_key:
+                os.environ["PINECONE_API_KEY"] = ss.api_keys["pinecone_api_key"]
+            if aws_access_key:
+                os.environ["AWS_ACCESS_KEY"] = ss.api_keys["aws_access_key"]
+            if aws_secret_access_key:
+                os.environ["AWS_SECRET_ACCESS_KEY"] = ss.api_keys[
+                    "aws_secret_access_key"
+                ]
 
             st.rerun()
 
@@ -293,27 +311,24 @@ def init_streamlit():
 
     # Load environment variables from .env file
     load_dotenv("./config/.env")
-
-    # Now you can access your environment variables using os.environ
-    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-    PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
-    AWS_ACCESS_KEY = os.environ.get("AWS_ACCESS_KEY")
-    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-
     # Initializing session state for all Streamlit components
     initialize_session_state()
 
     # Set initial state of the sidebar
-    if ss.api_keys["pinecone_api_key"] != "":
-        st.set_page_config(initial_sidebar_state="collapsed")
-    st.title("Resonate - Meeting Chatter")
+    if ss.api_keys["pinecone_api_key"] is not None:
+        st.set_page_config(
+            initial_sidebar_state="collapsed",
+            layout="wide",
+            page_title="Resonate - Meeting Chatter",
+        )
 
     # Initializing sidebar and its components
     with st.sidebar:
         api_keys_input()
 
-    if st.button("Add Meeting"):
+    if st.button("Toggle Add Meeting / Chat"):
         ss.add_meeting = not ss.add_meeting
+        ss.chat_view = not ss.chat_view
         ss.transcript_speaker_editor = False
         ss.transcript_text_editor = False
 
@@ -323,11 +338,8 @@ def init_streamlit():
         transcript_speaker_editor()
     if ss.df_transcript_text is not None and ss.transcript_text_editor:
         transcript_text_editor()
-
-    langchain_obj = LangChain()
-
-    # Display the selected view
-    view2(langchain_obj)  # Chat view
+    if ss.chat_view:
+        chat_view()  # Chat view
 
 
 if __name__ == "__main__":

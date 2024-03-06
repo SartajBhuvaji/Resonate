@@ -30,7 +30,8 @@ class PineconeServerless:
 
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-        self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
+        if self.PINECONE_API_KEY is not None:
+            self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
         self._init_config(json_config)
         self.meeting_title = None
         self.base_data_path = "./data/jsonMetaDataFiles/"
