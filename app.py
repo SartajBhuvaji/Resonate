@@ -319,8 +319,9 @@ def init_streamlit():
         st.set_page_config(
             initial_sidebar_state="collapsed",
             layout="wide",
-            page_title="Resonate - Meeting Chatter",
         )
+
+    st.title("Resonate - Meeting Chatter")
 
     # Initializing sidebar and its components
     with st.sidebar:

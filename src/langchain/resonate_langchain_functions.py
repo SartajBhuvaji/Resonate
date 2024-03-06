@@ -127,7 +127,8 @@ class LangChain:
     def chat(self, query, in_filter: list[str] = [], complete_db_flag: bool = True):
         if "summary" in query:
             pass
-        self.pinecone.query_pinecone(query, in_filter, complete_db_flag)
+        self.pinecone.query_pinecone(query, [], complete_db_flag)
+        # self.pinecone.query_pinecone(query, in_filter, complete_db_flag)
         conversation = self.pinecone.query_delta_conversations()
         context = self.parse_conversations(conversation)
         # print(context)

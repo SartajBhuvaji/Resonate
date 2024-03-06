@@ -12,10 +12,9 @@ from scipy.io import loadmat, savemat
 from sklearn.cluster import MeanShift, estimate_bandwidth
 from sklearn.neighbors import kneighbors_graph
 
-import src.clustering.resonate_semantic_search as SemanticSearch
+# import resonate_semantic_search as SemanticSearch
 
-# import SemanticEmbedding, FaissForQuerySearch
-# from resonate_semantic_search import SemanticEmbedding, FaissForQuerySearch
+import src.clustering.resonate_semantic_search as SemanticSearch
 
 
 def normalize_adj(adj, lmbda=1):

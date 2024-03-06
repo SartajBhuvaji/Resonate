@@ -57,7 +57,6 @@ class FaissForQuerySearch:
         return [
             self.labels[idx] for idx, score in zip(I[0], D[0]) if idx in self.doc_map
         ]
-        # return [{self.doc_map[idx]:self.uuid[idx]} for idx, score in zip(I[0], D[0]) if idx in self.doc_map]
 
     def add_summary(self, document_text, id, predicted_label):
         self.index.add((self.model.get_embedding(document_text)))  # index
