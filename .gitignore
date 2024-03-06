@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 .venv
 .env
+.dnu.*
 *.wav
 *.mp4
 __pycache__/
