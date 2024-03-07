@@ -9,6 +9,7 @@ jupyter
 ipywidgets
 python-dotenv
 scikit-learn
+torch
 
 # Project Specific
 openai
@@ -22,10 +23,10 @@ webvtt-py
 moviepy
 transformers
 streamlit_chat==0.0.2.2
+faiss-cpu
 
 #Testing
 gensim
 nltk
 python-docx
 tensorboard
-faiss-cpu
