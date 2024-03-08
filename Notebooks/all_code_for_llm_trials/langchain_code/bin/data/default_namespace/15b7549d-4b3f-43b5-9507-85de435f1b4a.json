@@ -1,0 +1,21 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_1",
+    "meeting_uuid": "15b7549d-4b3f-43b5-9507-85de435f1b4a",
+    "meeting_date": "20240307113933",
+    "last_conversation_no": 16885,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4",
+        "spk_5",
+        "spk_6",
+        "spk_7",
+        "spk_8"
+    ],
+    "meeting_summary": "The meeting was about the architecture design of the GIT lab's new DSS project. The group first discussed the design of an architecture design document that would cover the future of the DSS. They discussed how they could further improve the current architecture. The meeting ended with a general discussion about future work on the project, including future directions for the project and future work in general. The final meeting was focused on future work, including a new project manager's role and the future direction of the project."
+}

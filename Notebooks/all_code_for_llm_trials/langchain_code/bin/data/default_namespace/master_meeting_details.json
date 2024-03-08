@@ -1,0 +1,345 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "last_conversation_no": 20207,
+    "meeting_uuids": [
+        "61d453f1-2852-48d9-a25a-b6e04c3c4908",
+        "906c7694-0e33-4c8e-8f51-0365155fbb81",
+        "876e67fa-314d-40e4-b942-21ca63e81995",
+        "9ed1fefa-db53-41fc-a21b-479b67e30073",
+        "85430eae-d466-4d63-9015-5835bbe71b90",
+        "d7c8e3b8-c6e0-4845-8669-f2f4ed1b8549",
+        "72858a28-248d-4bef-af03-c62a3c285fbb",
+        "9c5aa3e4-b047-4f08-a838-9b665e251e4d",
+        "1be8e439-45b3-4c97-9e4a-5c78c1a15e78",
+        "a4b7b490-7b28-4744-85e5-d216f40ff52c",
+        "9f845b2f-fae9-4179-90e1-18e757888716",
+        "4cbd0d4e-6cf9-4db4-bf15-f4f4e4d3d8d8",
+        "52d105f8-1c80-4056-8253-732b9e2bec63",
+        "b3821662-03f1-4349-8781-ba5f64439693",
+        "52d2dfe4-748b-4ecf-84fb-64be6ebcaeef",
+        "ba94585e-b0df-4633-bef2-a4f94f644c11",
+        "7817cc11-6cb5-46b6-88e4-8bfa340aec97",
+        "4badb5ba-ca92-4c3c-a7e9-0d49fc7a8137",
+        "e993da88-0e17-4a35-ba9a-c03decca607b",
+        "875564dc-9954-41da-9084-ccf04ebffdb0",
+        "da390244-0d69-4a1b-9e2c-dbc88041a6e9",
+        "15b7549d-4b3f-43b5-9507-85de435f1b4a",
+        "95efa3c5-9770-4160-9f28-35350efb9f73",
+        "55d8afa8-a1bf-413c-a75c-b8c14da88d87"
+    ],
+    "meetings": [
+        {
+            "meeting_uuid": "ba94585e-b0df-4633-bef2-a4f94f644c11",
+            "meeting_title": "Social_Media_-_Harmed_Teens",
+            "meeting_date": "20240303210447",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "906c7694-0e33-4c8e-8f51-0365155fbb81",
+            "meeting_title": "Social_Media_-_Ruins_your_life",
+            "meeting_date": "20240303210500",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "52d105f8-1c80-4056-8253-732b9e2bec63",
+            "meeting_title": "office_relocation_1",
+            "meeting_date": "20240303210538",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "9ed1fefa-db53-41fc-a21b-479b67e30073",
+            "meeting_title": "office_relocation_2",
+            "meeting_date": "20240303210641",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "e993da88-0e17-4a35-ba9a-c03decca607b",
+            "meeting_title": "office_relocation_3",
+            "meeting_date": "20240303210720",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "61d453f1-2852-48d9-a25a-b6e04c3c4908",
+            "meeting_title": "office_relocation_4",
+            "meeting_date": "20240303210732",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "52d2dfe4-748b-4ecf-84fb-64be6ebcaeef",
+            "meeting_title": "ES2014a.Mix-Headset",
+            "meeting_date": "20240303210902",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "1be8e439-45b3-4c97-9e4a-5c78c1a15e78",
+            "meeting_title": "ES2014b.Mix-Headset_1",
+            "meeting_date": "20240303211228",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "a4b7b490-7b28-4744-85e5-d216f40ff52c",
+            "meeting_title": "ES2014b.Mix-Headset_2",
+            "meeting_date": "20240303211406",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "b3821662-03f1-4349-8781-ba5f64439693",
+            "meeting_title": "ES2014c.Mix-Headset",
+            "meeting_date": "20240303211725",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "95efa3c5-9770-4160-9f28-35350efb9f73",
+            "meeting_title": "Gitlab_Monthly_Release_Kickoff_1",
+            "meeting_date": "20240303211931",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "85430eae-d466-4d63-9015-5835bbe71b90",
+            "meeting_title": "product_marketing_meeting",
+            "meeting_date": "20240303212309",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "55d8afa8-a1bf-413c-a75c-b8c14da88d87",
+            "meeting_title": "Gitlab_Monthly_Release_Kickoff_2",
+            "meeting_date": "20240303212514",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "15b7549d-4b3f-43b5-9507-85de435f1b4a",
+            "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_1",
+            "meeting_date": "20240303212942",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "875564dc-9954-41da-9084-ccf04ebffdb0",
+            "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_2",
+            "meeting_date": "20240303213120",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "72858a28-248d-4bef-af03-c62a3c285fbb",
+            "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_3",
+            "meeting_date": "20240303213204",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "4cbd0d4e-6cf9-4db4-bf15-f4f4e4d3d8d8",
+            "meeting_title": "2023-10-03-New_diffs_Architecture_Workflow",
+            "meeting_date": "20240303213532",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "4badb5ba-ca92-4c3c-a7e9-0d49fc7a8137",
+            "meeting_title": "2023-10-10_New_diffs_architecture_workflow_weekly_EMEA_AMER_1",
+            "meeting_date": "20240303213800",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "9c5aa3e4-b047-4f08-a838-9b665e251e4d",
+            "meeting_title": "2023-10-10_New_diffs_architecture_workflow_weekly_EMEA_AMER_2",
+            "meeting_date": "20240303213838",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "d7c8e3b8-c6e0-4845-8669-f2f4ed1b8549",
+            "meeting_title": "2023-10-17_New_diffs_architecture_blueprint_1",
+            "meeting_date": "20240303214122",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "876e67fa-314d-40e4-b942-21ca63e81995",
+            "meeting_title": "2023-10-17_New_diffs_architecture_blueprint_2",
+            "meeting_date": "20240303214251",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "7817cc11-6cb5-46b6-88e4-8bfa340aec97",
+            "meeting_title": "Climate Change meeting cop 26",
+            "meeting_date": "20240304165314",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "9f845b2f-fae9-4179-90e1-18e757888716",
+            "meeting_title": "Health Care meeting",
+            "meeting_date": "20240305093837",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "da390244-0d69-4a1b-9e2c-dbc88041a6e9",
+            "meeting_title": "Health Care Meeting",
+            "meeting_date": "20240306145911",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "ba94585e-b0df-4633-bef2-a4f94f644c11",
+            "meeting_title": "Social_Media_-_Harmed_Teens",
+            "meeting_date": "20240307112024",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "906c7694-0e33-4c8e-8f51-0365155fbb81",
+            "meeting_title": "Social_Media_-_Ruins_your_life",
+            "meeting_date": "20240307112034",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "52d105f8-1c80-4056-8253-732b9e2bec63",
+            "meeting_title": "office_relocation_1",
+            "meeting_date": "20240307112048",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "9ed1fefa-db53-41fc-a21b-479b67e30073",
+            "meeting_title": "office_relocation_2",
+            "meeting_date": "20240307112109",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "e993da88-0e17-4a35-ba9a-c03decca607b",
+            "meeting_title": "office_relocation_3",
+            "meeting_date": "20240307112124",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "ba94585e-b0df-4633-bef2-a4f94f644c11",
+            "meeting_title": "Social_Media_-_Harmed_Teens",
+            "meeting_date": "20240307112703",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "906c7694-0e33-4c8e-8f51-0365155fbb81",
+            "meeting_title": "Social_Media_-_Ruins_your_life",
+            "meeting_date": "20240307112712",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "ba94585e-b0df-4633-bef2-a4f94f644c11",
+            "meeting_title": "Social_Media_-_Harmed_Teens",
+            "meeting_date": "20240307113131",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "906c7694-0e33-4c8e-8f51-0365155fbb81",
+            "meeting_title": "Social_Media_-_Ruins_your_life",
+            "meeting_date": "20240307113141",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "52d105f8-1c80-4056-8253-732b9e2bec63",
+            "meeting_title": "office_relocation_1",
+            "meeting_date": "20240307113201",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "9ed1fefa-db53-41fc-a21b-479b67e30073",
+            "meeting_title": "office_relocation_2",
+            "meeting_date": "20240307113225",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "e993da88-0e17-4a35-ba9a-c03decca607b",
+            "meeting_title": "office_relocation_3",
+            "meeting_date": "20240307113241",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "61d453f1-2852-48d9-a25a-b6e04c3c4908",
+            "meeting_title": "office_relocation_4",
+            "meeting_date": "20240307113253",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "52d2dfe4-748b-4ecf-84fb-64be6ebcaeef",
+            "meeting_title": "ES2014a.Mix-Headset",
+            "meeting_date": "20240307113322",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "1be8e439-45b3-4c97-9e4a-5c78c1a15e78",
+            "meeting_title": "ES2014b.Mix-Headset_1",
+            "meeting_date": "20240307113416",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "a4b7b490-7b28-4744-85e5-d216f40ff52c",
+            "meeting_title": "ES2014b.Mix-Headset_2",
+            "meeting_date": "20240307113448",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "b3821662-03f1-4349-8781-ba5f64439693",
+            "meeting_title": "ES2014c.Mix-Headset",
+            "meeting_date": "20240307113541",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "95efa3c5-9770-4160-9f28-35350efb9f73",
+            "meeting_title": "Gitlab_Monthly_Release_Kickoff_1",
+            "meeting_date": "20240307113614",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "85430eae-d466-4d63-9015-5835bbe71b90",
+            "meeting_title": "product_marketing_meeting",
+            "meeting_date": "20240307113716",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "55d8afa8-a1bf-413c-a75c-b8c14da88d87",
+            "meeting_title": "Gitlab_Monthly_Release_Kickoff_2",
+            "meeting_date": "20240307113801",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "15b7549d-4b3f-43b5-9507-85de435f1b4a",
+            "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_1",
+            "meeting_date": "20240307113933",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "875564dc-9954-41da-9084-ccf04ebffdb0",
+            "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_2",
+            "meeting_date": "20240307114014",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "72858a28-248d-4bef-af03-c62a3c285fbb",
+            "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_3",
+            "meeting_date": "20240307114039",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "4cbd0d4e-6cf9-4db4-bf15-f4f4e4d3d8d8",
+            "meeting_title": "2023-10-03-New_diffs_Architecture_Workflow",
+            "meeting_date": "20240307114155",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "4badb5ba-ca92-4c3c-a7e9-0d49fc7a8137",
+            "meeting_title": "2023-10-10_New_diffs_architecture_workflow_weekly_EMEA_AMER_1",
+            "meeting_date": "20240307114243",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "9c5aa3e4-b047-4f08-a838-9b665e251e4d",
+            "meeting_title": "2023-10-10_New_diffs_architecture_workflow_weekly_EMEA_AMER_2",
+            "meeting_date": "20240307114301",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "d7c8e3b8-c6e0-4845-8669-f2f4ed1b8549",
+            "meeting_title": "2023-10-17_New_diffs_architecture_blueprint_1",
+            "meeting_date": "20240307114400",
+            "meeting_video_file": false
+        },
+        {
+            "meeting_uuid": "876e67fa-314d-40e4-b942-21ca63e81995",
+            "meeting_title": "2023-10-17_New_diffs_architecture_blueprint_2",
+            "meeting_date": "20240307114428",
+            "meeting_video_file": false
+        }
+    ]
+}

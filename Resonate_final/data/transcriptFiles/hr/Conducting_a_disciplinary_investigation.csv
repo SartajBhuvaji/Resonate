@@ -1,0 +1,1100 @@
+,start_time,end_time,speaker_label,text
+0,0.06348333333333334,0.07916666666666666,spk_0,"Well, good afternoon,"
+1,0.07933333333333333,0.16715,spk_0,everyone and welcome to our webinar on conducting a disciplinary investigation.
+2,0.17215,0.22116666666666665,spk_0,Uh We were delighted at the response to this actually.
+3,0.22131666666666666,0.2791666666666667,spk_0,Um And it's interesting because so many people undertake training
+4,0.2793333333333334,0.35965,spk_0,on disciplinary meetings and disciplinary hearings and the investigation.
+5,0.3623166666666667,0.4125,spk_0,The first stage in the procedure is very often overlooked.
+6,0.4126666666666667,0.44398333333333334,spk_0,So uh it was heartwarming to see how many
+7,0.44415,0.4983166666666667,spk_0,people were interested in learning more about this topic.
+8,0.4998166666666667,0.5063166666666666,spk_0,Um
+9,0.5141666666666667,0.6018333333333333,spk_0,My name is Alison Blackhurst and I'm the HR Knowledge Manager
+10,0.6019833333333333,0.6628333333333334,spk_0,at HR Solutions and I will be leading the seminar this afternoon
+11,0.67015,0.756,spk_0,"and I'm joined by my colleague, Sue Watson, who is our hr operations manager."
+12,0.7596666666666666,0.8188333333333334,spk_0,"-- Good afternoon,
+-- Sue, good afternoon, Alison and"
+13,0.8207333333333333,0.8397333333333333,spk_1,hello to everybody there.
+14,0.8440833333333334,0.9297333333333333,spk_1,Um I'm here to make sure things keep running smoothly. Hopefully.
+15,0.9299,1.0104166666666667,spk_1,"Um if you do have any technical problems or any questions relating to the webinar,"
+16,1.0132333333333334,1.0410833333333334,spk_1,then do send them through.
+17,1.0412333333333332,1.09925,spk_1,Um You can use your side panel where there is a questions and a chat box
+18,1.1009166666666668,1.1284166666666666,spk_1,and I will try and respond to them.
+19,1.1321666666666665,1.17365,spk_1,"If we do have any time at the end of the webinar,"
+20,1.1738333333333333,1.2131666666666667,spk_1,we will try and answer one or two questions.
+21,1.218,1.2631666666666668,spk_1,"Um But if we don't get a chance to answer yours,"
+22,1.2633333333333334,1.3441666666666667,spk_1,then please do send them through and we will respond to you directly afterwards.
+23,1.349,1.40565,spk_1,"Um, and if you would like a copy of the slides,"
+24,1.4058166666666667,1.4638333333333333,spk_1,then just let us know and we can send them through to you as well.
+25,1.4716666666666667,1.4995,spk_1,"Thank you ever to you, Alison."
+26,1.5093166666666666,1.55115,spk_0,"Oh, Grace. Ok, fine. So,"
+27,1.5531666666666666,1.6016499999999998,spk_0,"conducting disciplinary investigations, what's it all"
+28,1.6118166666666667,1.6268333333333334,spk_0,all about?
+29,1.627,1.6404999999999998,spk_0,"Well, um,"
+30,1.6406666666666667,1.6648166666666668,spk_0,we normally start by looking at the legal
+31,1.665,1.7121666666666666,spk_0,"background to the topics that we're dealing with,"
+32,1.7123166666666667,1.7906666666666666,spk_0,but there is no actual law that deals with disciplinary investigations.
+33,1.7965,1.8254833333333333,spk_0,So what we turn to is the
+34,1.8281666666666667,1.8528166666666666,spk_0,ACAS code of practice.
+35,1.8548333333333333,1.88565,spk_0,"Um, this isn't law, as I said,"
+36,1.8858333333333333,1.9406666666666665,spk_0,but it is a useful benchmark for tribunals and employers and it
+37,1.9408166666666666,2.0134833333333333,spk_0,does actually set out what is considered to be a fair procedure.
+38,2.0245,2.0768333333333335,spk_0,"Now, the code itself is short, there are only 10 pages of it."
+39,2.0803166666666666,2.08865,spk_0,"Um,"
+40,2.0908166666666665,2.1588166666666666,spk_0,"and what it says, um, in terms of investigations are just three,"
+41,2.1589666666666667,2.19915,spk_0,these three bullets that you can see on the slide.
+42,2.2024833333333333,2.2648166666666665,spk_0,So first of all issues should be dealt with promptly.
+43,2.2663166666666665,2.2891666666666666,spk_0,"Now notice it says promptly,"
+44,2.2893333333333334,2.351983333333333,spk_0,it doesn't say any deadlines or time scales or anything like that.
+45,2.3521666666666667,2.4061500000000002,spk_0,"It just effectively says get on with it. Yeah,"
+46,2.4156666666666666,2.4714833333333335,spk_0,it also says that employers should act consistently.
+47,2.4754833333333335,2.558666666666667,spk_0,"Um, so you do need to consider previous cases as well as the one in hand"
+48,2.573,2.6305,spk_0,and it says that appropriate investigations should be made.
+49,2.63065,2.6829833333333335,spk_0,"Well, what is appropriate, um,"
+50,2.6853166666666666,2.741,spk_0,"and effectively what they're meaning there is really, you know,"
+51,2.7411666666666665,2.782983333333333,spk_0,an investigation that is proportionate to the
+52,2.783166666666667,2.836,spk_0,issue and the seriousness of the case.
+53,2.8425,2.89965,spk_0,"Now, the code of practice is supplemented by guidance."
+54,2.9038166666666667,2.9098166666666665,spk_0,And
+55,2.91315,2.9603166666666665,spk_0,"what the guidance actually also says is that ideally,"
+56,2.9605,3.00565,spk_0,"you are looking at three people in this process,"
+57,3.0286666666666666,3.05,spk_0,the neutral person
+58,3.0535,3.0949833333333334,spk_0,to undertake the investigations.
+59,3.09865,3.15565,spk_0,"Um so somebody who will not be in charge of the disciplinary hearing,"
+60,3.1558333333333333,3.1826666666666665,spk_0,somebody else altogether.
+61,3.1853166666666666,3.2266666666666666,spk_0,"So you have your disciplinary investigator,"
+62,3.2293166666666666,3.2836666666666665,spk_0,you have the person who will hold the disciplinary hearing.
+63,3.2891666666666666,3.3663166666666666,spk_0,And then ideally appeals will be heard by a further different person
+64,3.3685,3.387,spk_0,where possible.
+65,3.392,3.413666666666667,spk_0,And I think we have to bear in mind that
+66,3.4138333333333333,3.46765,spk_0,this is not always practical in a small organization.
+67,3.470483333333333,3.4901666666666666,spk_0,"Um but for example,"
+68,3.4903166666666667,3.5443333333333333,spk_0,that's when people like us may well be invited to come in and actually
+69,3.5444833333333334,3.5856500000000002,spk_0,do the investigations for you before handing
+70,3.5858166666666667,3.6269833333333334,spk_0,the information over to your disciplining manager.
+71,3.6519833333333334,3.7004833333333336,spk_0,"So disciplinary investigations,"
+72,3.703316666666667,3.79315,spk_0,"well, key things for this, first of all speed, um for misconduct offenses,"
+73,3.7933333333333334,3.8324833333333332,spk_0,an investigation should be done promptly.
+74,3.8435,3.8533166666666667,spk_0,"First of all, be"
+75,3.856,3.904166666666667,spk_0,before memories fade or get distorted.
+76,3.90465,3.96265,spk_0,And also we don't want any witnesses or managers or staff
+77,3.962833333333333,4.03215,spk_0,discussing the matter and being influenced or colluding with one another.
+78,4.034666666666666,4.067316666666667,spk_0,"And then when you actually come to talk to them,"
+79,4.0675,4.121166666666666,spk_0,you find that their memory is actually very different from the version of
+80,4.121316666666667,4.167833333333333,spk_0,events that they would have actually given to you at the time.
+81,4.193333333333333,4.256983333333333,spk_0,We're also looking for comprehensive and professional notes.
+82,4.25715,4.3453333333333335,spk_0,"And it is amazing how we still get um handed over pieces of paper torn from a,"
+83,4.3455,4.405833333333334,spk_0,a pad which are all rough with um handwrit notes where
+84,4.405983333333333,4.47015,spk_0,first names are no known but no surnames or job titles.
+85,4.4703333333333335,4.504983333333334,spk_0,And we don't have the dates on it and things like this.
+86,4.509816666666667,4.574816666666667,spk_0,Um Notes of all meetings should be comprehensive and professional
+87,4.578833333333334,4.618483333333334,spk_0,and they should clearly establish what's based on
+88,4.61865,4.6725,spk_0,fact and what are the opinions of witnesses?
+89,4.675316666666666,4.738816666666667,spk_0,Um Note that these notes may be used in the disciplinary hearing.
+90,4.751666666666667,4.800483333333333,spk_0,"So again, they could be given to the employee as part of that,"
+91,4.803833333333333,4.8375,spk_0,they may be used at any appeal.
+92,4.837666666666666,4.858,spk_0,"And certainly,"
+93,4.85815,4.9394833333333334,spk_0,"if an issue is so serious that you end up with a dismissal and it goes to tribunal,"
+94,4.939666666666667,5.0115,spk_0,"then if it goes that far, your notes actually may well be brought out in tribunals."
+95,5.011666666666667,5.08415,spk_0,So they do need to be appropriately written and presented even at this stage.
+96,5.089483333333333,5.1429833333333335,spk_0,So we're looking for no doodles and scribbled comments and
+97,5.14315,5.177483333333333,spk_0,remarks that you wouldn't actually want the rest of the.
+98,5.18115,5.19615,spk_0,See.
+99,5.2085,5.21915,spk_0,Now
+100,5.22265,5.2695,spk_0,the process also should be confidential.
+101,5.26965,5.3053333333333335,spk_0,Um And I think we have to stress that the aim of
+102,5.305483333333333,5.38215,spk_0,this is really to reduce the negative impact at a very early stage
+103,5.386816666666666,5.438816666666667,spk_0,"because of course, once you start doing the investigation,"
+104,5.438983333333334,5.482,spk_0,it may turn out that your employees are totally
+105,5.48215,5.51865,spk_0,innocent of what they are alleged to have done and
+106,5.518833333333333,5.578333333333333,spk_0,that there's a completely plausible story for um as to
+107,5.578483333333334,5.612666666666667,spk_0,why they didn't do what you thought they had done
+108,5.6238166666666665,5.665666666666667,spk_0,or it could be that they're very naive and that actually
+109,5.6658333333333335,5.735,spk_0,"the reason for any misconduct might not be deliberate wrongdoing,"
+110,5.73515,5.762666666666666,spk_0,but just that they actually weren't aware of
+111,5.762816666666667,5.79565,spk_0,the rules or that they did things wrongly.
+112,5.807833333333333,5.873666666666667,spk_0,So we don't want the rest of the world knowing about all of this because we
+113,5.8738166666666665,5.9475,spk_0,want to keep the working relationships um sound and good for as long as possible.
+114,5.95965,6.0075,spk_0,And we also want to minimize the risk of witnesses altering
+115,6.00765,6.063816666666667,spk_0,their evidence on the basis of discussions with other colleagues.
+116,6.065483333333333,6.12215,spk_0,Um So the existence or the nature of the complaint shouldn't
+117,6.122316666666666,6.18415,spk_0,be communicated to anybody other than those who need to know.
+118,6.209,6.28065,spk_0,"And finally, the investigator should always bear in mind what this is all about."
+119,6.280833333333334,6.300316666666666,spk_0,What is the aim
+120,6.3021666666666665,6.3533333333333335,spk_0,and the aim of the disciplinary procedure fundamentally
+121,6.353483333333333,6.3985,spk_0,is to correct it's to put things right.
+122,6.398666666666666,6.429983333333333,spk_0,It's not to punish people.
+123,6.4355,6.49765,spk_0,So the idea is to get everyone working to acceptable standards.
+124,6.50865,6.588666666666667,spk_0,So are the rules known? Are they applied fairly to everybody?
+125,6.588816666666666,6.6195,spk_0,Does staff know about them?
+126,6.6206499999999995,6.651166666666667,spk_0,Those are the sort of questions that you may
+127,6.651316666666666,6.709816666666667,spk_0,well be asking as part of a disciplinary investigation.
+128,6.75815,6.776166666666667,spk_0,"So step one,"
+129,6.778666666666666,6.8205,spk_0,first of all is to appoint an investigator.
+130,6.825,6.8355,spk_0,And
+131,6.841166666666666,6.912316666666666,spk_0,I really can't emphasize how important this role is. It's absolutely crucial.
+132,6.9125,6.96715,spk_0,So it isn't something that you just give out to a junior member of
+133,6.967333333333333,7.030833333333334,spk_0,staff who is thinking about possibly having a career in hr long term.
+134,7.030983333333333,7.03515,spk_0,"Yeah,"
+135,7.042833333333333,7.053166666666667,spk_0,because
+136,7.05565,7.105833333333333,spk_0,this person will actually lay the foundation for
+137,7.1059833333333335,7.139166666666666,spk_0,the whole of what goes on after that.
+138,7.143833333333333,7.212983333333334,spk_0,And also they will set the tone for the entire process.
+139,7.2134833333333335,7.276666666666666,spk_0,So if they don't take it seriously or if they're not going to appear to have
+140,7.276816666666667,7.357833333333334,spk_0,"the appropriate authority or if they do a bad job or if they destroy evidence,"
+141,7.36015,7.430483333333333,spk_0,then they're going to make it so much harder for the disciplining manager
+142,7.43065,7.4825,spk_0,to deal with things properly and to get things back on track.
+143,7.49365,7.548666666666667,spk_0,"Now, the role of the investigator is actually quite a simple one really."
+144,7.548816666666667,7.583,spk_0,"Um, it's easier to say than do, of course,"
+145,7.586316666666667,7.6284833333333335,spk_0,but the role is just to establish the facts
+146,7.63215,7.714666666666667,spk_0,prior to the employee attending a disciplinary hearing if there is a case to answer.
+147,7.7309833333333335,7.793333333333333,spk_0,So somebody who is impartial and somebody who will be
+148,7.7934833333333335,7.86765,spk_0,fair and who will ensure that the investigation is entirely neutral
+149,7.87,7.89215,spk_0,"and the job is,"
+150,7.897316666666667,7.976666666666667,spk_0,"it's not a Sherlock Holmes job to look for, um, to, to find the criminal. Yeah,"
+151,7.98215,8.06865,spk_0,it's to look for evidence that either supports or contradicts the allegation.
+152,8.068833333333334,8.1125,spk_0,"So it's both things. It's equally weighted. Yeah,"
+153,8.12015,8.201983333333333,spk_0,you're trying to establish the facts and to decide what did or did not happen
+154,8.211166666666667,8.293483333333333,spk_0,and the investigator is not expected to prove that an employee was guilty.
+155,8.294,8.384816666666667,spk_0,"All the person has to do is to determine whether or not there appears to be a case,"
+156,8.391166666666667,8.400166666666667,spk_0,"sir,"
+157,8.416333333333334,8.455333333333334,spk_0,"as I said, easier said, than done."
+158,8.48015,8.5085,spk_0,So who should do this?
+159,8.50865,8.580333333333334,spk_0,"Um Well, you're going to see this is a paradigm of virtue by the time we finish. But"
+160,8.583983333333334,8.639316666666666,spk_0,um it has to be somebody who is mature
+161,8.639483333333333,8.693166666666666,spk_0,enough and senior enough to set an appropriate tone
+162,8.703333333333333,8.7515,spk_0,and who will make it clear that this is an important part
+163,8.75165,8.815833333333334,spk_0,of the process and that the employee will actually be listened to
+164,8.82865,8.882983333333334,spk_0,somebody who will stress the fairness of the process
+165,8.8875,8.947,spk_0,and who will not allow a disciplinary investigation to
+166,8.949333333333334,8.988483333333333,spk_0,turn into a disciplinary hearing
+167,8.99265,9.03915,spk_0,"because the two should be kept entirely,"
+168,9.066666666666666,9.123,spk_0,we're looking for somebody who's going to be fair and objective
+169,9.125166666666667,9.207666666666666,spk_0,and also who will handle the meetings in a reasonable and calm manner.
+170,9.211983333333333,9.304983333333332,spk_0,"Um But who will have the confidence to stand their own ground and to, to ask questions"
+171,9.31015,9.32565,spk_0,and to listen
+172,9.337316666666666,9.37465,spk_0,and to wait to see if any more evidence
+173,9.374816666666666,9.442,spk_0,appears and to probe and to be persistent and keep
+174,9.442166666666667,9.505666666666666,spk_0,on asking questions until they're satisfied that they've actually
+175,9.505816666666666,9.54765,spk_0,got as much information as they're likely to get.
+176,9.561666666666667,9.572333333333333,spk_0,"Now,"
+177,9.579333333333333,9.659316666666667,spk_0,"the more complex the case, the more detailed the investigation will need to be."
+178,9.667166666666667,9.743833333333333,spk_0,"So, um there's a whole range of investigations and we can't cover everything here."
+179,9.744,9.775983333333333,spk_0,"But um at one end of the spectrum,"
+180,9.776166666666667,9.819316666666667,spk_0,you will have straightforward cases such as
+181,9.819483333333332,9.877333333333333,spk_0,repeated lateness or high levels of absence.
+182,9.8775,9.95365,spk_0,"Where to be honest, the investigation is going to be a very, very straightforward,"
+183,9.953816666666667,10.003816666666667,spk_0,simple job which will just involve collating and examining
+184,10.0085,10.031983333333333,spk_0,"records or time sheets,"
+185,10.03215,10.100816666666667,spk_0,"particularly if everything is done electronically and therefore, you know,"
+186,10.10615,10.149483333333333,spk_0,the facts are likely to be accurate. Yeah.
+187,10.157666666666668,10.179816666666667,spk_0,"Um in other cases,"
+188,10.179983333333332,10.225333333333333,spk_0,an investigation may require prior technical
+189,10.2255,10.272166666666667,spk_0,knowledge of equipment or processes or
+190,10.272333333333334,10.342833333333333,spk_0,procedures particularly where these are alleged not to have been followed.
+191,10.355983333333333,10.37765,spk_0,We need somebody
+192,10.381983333333334,10.425816666666666,spk_0,that will understand that and that will make good
+193,10.430816666666667,10.496816666666668,spk_0,and accurate records because we want the records to be comprehensive
+194,10.498,10.553816666666666,spk_0,"so that nothing comes out at a later stage that was,"
+195,10.553983333333333,10.614483333333334,spk_0,"um, said during the investigation, but not included in the reports."
+196,10.618833333333333,10.653166666666667,spk_0,And we also want them to be accurate.
+197,10.667316666666666,10.67765,spk_0,So
+198,10.679816666666667,10.754816666666667,spk_0,somebody who's quite diligent and thorough and who won't just do half
+199,10.754983333333334,10.791,spk_0,a job and hope that they can get away with that.
+200,10.793833333333334,10.86965,spk_0,"Um, very often you'll find in these situations that your gut feeling is saying."
+201,10.869833333333334,10.945916666666667,spk_0,"Hm, something's not quite right here. Um, I wonder if everybody does this"
+202,10.949083333333334,11.008583333333334,spk_0,"now, the person that fails to follow up on things like that."
+203,11.00875,11.043916666666666,spk_0,"Um, that's when things go wrong actually."
+204,11.044083333333333,11.082583333333334,spk_0,So we don't want someone that will do half a job.
+205,11.085066666666666,11.126566666666667,spk_0,We want someone that will listen to those warning
+206,11.126733333333334,11.1559,spk_0,"bells in their head and that will think,"
+207,11.156066666666666,11.19375,spk_0,"yeah, maybe I ought to check this up as well."
+208,11.219483333333333,11.25915,spk_0,We want to make sure that they will keep things
+209,11.259316666666667,11.322816666666666,spk_0,confidential themselves and that they can be trusted to do so
+210,11.3275,11.392483333333333,spk_0,because what they are tasked with investigating may
+211,11.396,11.4855,spk_0,"turn out just to be a storm in a teacup, in which case, the fewer people know the better"
+212,11.487316666666667,11.547166666666667,spk_0,because the employee may turn out to be entirely innocent of any wrongdoing.
+213,11.552333333333333,11.619316666666666,spk_0,"Um Or it may well be that there are health or personal issues or,"
+214,11.619483333333333,11.690666666666667,spk_0,or other things that actually explain why they behaved the way they did.
+215,11.69565,11.73315,spk_0,And we don't want the rest of the world to know about that.
+216,11.742483333333332,11.762666666666666,spk_0,"And as I said earlier,"
+217,11.762833333333333,11.8365,spk_0,we also want to minimize the risk of witnesses altering their evidence because
+218,11.836666666666666,11.873166666666666,spk_0,they've been discussing things with other colleagues
+219,11.873333333333333,11.894316666666667,spk_0,"who have told them other things,"
+220,11.894483333333334,11.95265,spk_0,which puts a different slant on it and therefore changes their opinions.
+221,11.979166666666666,11.996166666666667,spk_0,"And finally,"
+222,11.996333333333334,12.035833333333333,spk_0,we need someone who's going to keep the investigation to a
+223,12.035983333333334,12.0875,spk_0,tight times scale and who will keep to a deadline.
+224,12.089833333333333,12.094833333333334,spk_0,"Now,"
+225,12.095,12.157333333333334,spk_0,it is no good choosing somebody who's just about to go on holiday to do
+226,12.1575,12.198483333333334,spk_0,a disciplinary investigation because be because the
+227,12.19865,12.238,spk_0,idea is that it should be done promptly
+228,12.244483333333333,12.309666666666667,spk_0,and it's also no good giving it to somebody who is so overworked already
+229,12.309833333333334,12.376166666666666,spk_0,that they're going to start the job and then get diverted onto other tasks.
+230,12.39465,12.450983333333333,spk_0,"So as I said, we're looking for the perfect person here."
+231,12.45265,12.460316666666667,spk_0,Um
+232,12.46315,12.472,spk_0,but
+233,12.47565,12.524166666666666,spk_0,"this is an important job. It's just it, it"
+234,12.525983333333333,12.564833333333333,spk_0,"is one that is so often overlooked,"
+235,12.565,12.610983333333333,spk_0,but actually it is key to the disciplinary hearing.
+236,12.61115,12.662833333333333,spk_0,"And if an investigator does their job really well,"
+237,12.663,12.745833333333334,spk_0,then they are making the the job of the disciplining manager so much easier.
+238,12.77065,12.80165,spk_0,Now who shouldn't do it
+239,12.81615,12.829983333333333,spk_0,in that case?
+240,12.834316666666666,12.870316666666668,spk_0,"Um Well, first of all, let's,"
+241,12.874166666666667,12.935316666666667,spk_0,"let's remember that the investigator should be fair and objective,"
+242,12.941483333333334,12.993833333333333,spk_0,"not only in reality and in the eyes of the managers,"
+243,12.994,13.035316666666667,spk_0,but also in the eyes of the employee
+244,13.039483333333333,13.086666666666666,spk_0,and also in the eyes of other staff.
+245,13.086833333333333,13.169316666666667,spk_0,"So if you are given the job of undertaking a disciplinary investigation,"
+246,13.169483333333334,13.246483333333334,spk_0,then could we suggest that you withdraw if any of the following bullets apply?
+247,13.2615,13.276166666666667,spk_0,"Firstly,"
+248,13.278333333333332,13.337316666666666,spk_0,"if the employee has made a complaint against you personally,"
+249,13.337833333333334,13.387316666666667,spk_0,then it's going to be tantamount to be an impossible
+250,13.3875,13.4265,spk_0,"for you to be fair and objective because of course,"
+251,13.42665,13.467316666666667,spk_0,you already feel defensive against that person.
+252,13.48115,13.562666666666667,spk_0,If you're involved yourself with the allegation as a witness or somebody
+253,13.562833333333334,13.63215,spk_0,"who's complained about the behavior or who has reported the behavior,"
+254,13.6365,13.672483333333334,spk_0,then you shouldn't be doing the investigation.
+255,13.688316666666667,13.7325,spk_0,You also shouldn't be investigating if you are
+256,13.732666666666667,13.763833333333332,spk_0,involved with the employee in any way.
+257,13.764,13.81315,spk_0,Um Are you a close friend of theirs or you're a relative
+258,13.825983333333333,13.88015,spk_0,and you shouldn't do it if you're going to get emotionally involved because
+259,13.880333333333333,13.93215,spk_0,you're going to mess everything up for everybody that comes after you.
+260,13.933833333333334,13.9875,spk_0,If you are too angry to be objective
+261,13.989666666666666,14.026983333333334,spk_0,"or you're too emotionally involved,"
+262,14.027166666666666,14.10615,spk_0,"either in defending the employee or you get so upset about the nature of the,"
+263,14.106333333333334,14.149483333333333,spk_0,the misconduct that has happened.
+264,14.14965,14.154816666666667,spk_0,Um
+265,14.157666666666668,14.195833333333333,spk_0,"You may have particularly strong views,"
+266,14.196,14.243,spk_0,for example about um abuse of Children or
+267,14.243166666666667,14.3095,spk_0,vulnerable adults or drug taking or whatever.
+268,14.309666666666667,14.35715,spk_0,"Now, if you're going to get emotionally involved, then really,"
+269,14.357333333333333,14.382816666666667,spk_0,you shouldn't be doing the investigation.
+270,14.398816666666667,14.417166666666667,spk_0,"And finally,"
+271,14.420316666666666,14.490666666666666,spk_0,you need to understand the investigate the issues being investigated.
+272,14.491666666666667,14.543316666666666,spk_0,"Now, if it's a simple one, like timekeeping, then pretty well,"
+273,14.543483333333333,14.571333333333333,spk_0,anyone is going to be able to do that
+274,14.571483333333333,14.609316666666667,spk_0,"because we all understand what late is providing,"
+275,14.6095,14.6585,spk_0,"we know what the starting time is and when the person turned up,"
+276,14.662666666666667,14.67065,spk_0,but
+277,14.672333333333333,14.740316666666667,spk_0,"an investigation into allegations of fraudulent accounting procedures,"
+278,14.740483333333334,14.754666666666667,spk_0,"for example,"
+279,14.754816666666667,14.81965,spk_0,may require some prior technical knowledge of what should
+280,14.819833333333333,14.84865,spk_0,be done and how it should be done.
+281,14.863,14.9365,spk_0,So it's horses for courses effectively when you're appointing an investigator.
+282,14.98215,15.0555,spk_0,"Now, step two really is to properly scope out the investigation."
+283,15.055666666666667,15.094316666666666,spk_0,"So first of all, are we looking at performance,"
+284,15.094483333333333,15.13815,spk_0,poor performance or are we looking at misconduct?
+285,15.138316666666666,15.147483333333334,spk_0,"Now,"
+286,15.153166666666667,15.222,spk_0,"the distinction will not necessarily alter what's investigated,"
+287,15.223816666666666,15.279816666666667,spk_0,but the label given to to those allegations will set the
+288,15.279983333333334,15.329166666666667,spk_0,tone and inform the whole of the rest of the process.
+289,15.329333333333333,15.3785,spk_0,So let's be clear what we are talking about here.
+290,15.398816666666667,15.443833333333334,spk_0,"Secondly, how complex is the issue?"
+291,15.44665,15.480333333333334,spk_0,"Um because the more complex the case,"
+292,15.4805,15.53215,spk_0,the more detailed the investigation will need to be um
+293,15.536666666666667,15.594,spk_0,"as I said earlier, in cases like repeated lateness,"
+294,15.594166666666666,15.632983333333334,spk_0,it might just be a case of getting time sheets.
+295,15.6335,15.6365,spk_0,Yeah.
+296,15.643316666666667,15.673483333333333,spk_0,"Um when you get the time sheets,"
+297,15.67365,15.741833333333334,spk_0,it may well be that you want to have a brief discussion with the employee to establish
+298,15.742,15.776816666666667,spk_0,the facts and to check out that actually
+299,15.776983333333334,15.828816666666667,spk_0,those records are correct and they are accurate.
+300,15.831333333333333,15.838483333333333,spk_0,Um
+301,15.840666666666667,15.877166666666668,spk_0,But a more detailed investigation
+302,15.879333333333333,15.89365,spk_0,could well in
+303,15.899416666666667,15.9624,spk_0,"of talking to witnesses, getting lots and lots of different documents,"
+304,15.962583333333333,15.990566666666666,spk_0,possibly checking things out.
+305,15.99075,16.058583333333335,spk_0,Um the involvement of external bodies such as the police.
+306,16.0599,16.11175,spk_0,Um so a totally different ball game altogether and something
+307,16.111916666666666,16.146566666666665,spk_0,that's going to take a lot more time to do
+308,16.159666666666666,16.226166666666668,spk_0,and the objective in all of these is to establish the
+309,16.226333333333333,16.308666666666667,spk_0,facts and to provide sound evidence for any subsequent disciplinary action.
+310,16.318483333333333,16.368316666666665,spk_0,So how serious is this?
+311,16.374816666666668,16.46215,spk_0,And if dismissal is likely to result or if the allegations
+312,16.462316666666666,16.5335,spk_0,may prevent an employee from working in their role in the future
+313,16.53915,16.578166666666668,spk_0,"or may relate to a criminal offense,"
+314,16.578333333333333,16.6375,spk_0,then you are going to be far more detailed and thorough.
+315,16.6505,16.715483333333335,spk_0,"Now there's a case um Salford NHS Trust versus Rold,"
+316,16.7275,16.820316666666667,spk_0,"which gave us guidance that the more serious the consequences of a dismissal,"
+317,16.821,16.87698333333333,spk_0,the more careful the investigation should be.
+318,16.877983333333333,16.905666666666665,spk_0,"Um And in that particular case,"
+319,16.905816666666666,16.959983333333334,spk_0,dismissal would have actually meant that the employee would be deported.
+320,16.96015,16.9835,spk_0,So pretty serious
+321,17.00883333333333,17.0285,spk_0,timescale.
+322,17.02865,17.108333333333334,spk_0,"Well, that's going to depend on the seriousness and complexity, sorry,"
+323,17.1085,17.148666666666667,spk_0,complexity of the investigation.
+324,17.151,17.1925,spk_0,But clearly it is a case of getting on with these.
+325,17.208833333333335,17.241666666666667,spk_0,You can't just let them drift. Yeah.
+326,17.248983333333335,17.348333333333333,spk_0,"Um So to whom, how and by when should the investigation report be delivered?"
+327,17.35033333333333,17.3853,spk_0,"Um If you clarify all of that upfront,"
+328,17.3855,17.457,spk_0,then at least the parameters are set as to what the job is actually going to involve
+329,17.514483333333335,17.540166666666668,spk_0,"now if we're looking at misconduct,"
+330,17.540333333333333,17.606833333333334,spk_0,"which tends to be the case for most disciplinary investigations, to be honest."
+331,17.607,17.609483333333333,spk_0,Yeah.
+332,17.614483333333332,17.692333333333334,spk_0,"Um, you have a whole spectrum here so it could range from lateness,"
+333,17.6925,17.75348333333333,spk_0,failure to follow a reasonable management instruction
+334,17.756833333333333,17.803,spk_0,through to more complicated things like
+335,17.80315,17.845316666666665,spk_0,abusing computer systems or internet access where
+336,17.845483333333334,17.906333333333333,spk_0,you're having to do far more digging around what has actually been done
+337,17.923000000000002,18.000833333333333,spk_0,through to really difficult cases like bullying and harassment where it may
+338,18.001,18.050166666666666,spk_0,"well be one person's word against another and it is very,"
+339,18.050333333333334,18.092816666666668,spk_0,very difficult to work out what really happened
+340,18.09715,18.10565,spk_0,um
+341,18.109,18.195483333333332,spk_0,through to um issues such as theft fighting or criminal offenses.
+342,18.20916666666667,18.244666666666667,spk_0,So we have a range of misconduct and
+343,18.244816666666665,18.309166666666666,spk_0,the level of the investigation should actually reflect that
+344,18.321166666666667,18.388983333333332,spk_0,it should cover the precise allegations and establish the details.
+345,18.38915,18.466316666666668,spk_0,"First of all, what happened, where did it happen? And when did it happen?"
+346,18.470483333333334,18.554833333333335,spk_0,Trying to get a full picture of that? Now who was involved in this incident?
+347,18.555,18.62265,spk_0,Uh Was it just internal staff who you have easy access to
+348,18.627333333333333,18.707,spk_0,"or also were clients there or customers, suppliers residents?"
+349,18.707166666666666,18.754166666666666,spk_0,Was anybody else involved in this in any way?
+350,18.767333333333333,18.857166666666668,spk_0,"Now, what are the rules were the correct procedures or rules followed here? Um"
+351,18.863333333333333,18.896983333333335,spk_0,"And if not, why not,"
+352,18.91133333333333,18.940333333333335,spk_0,why did this happen?
+353,18.946833333333334,19.01631666666667,spk_0,Were there any witnesses to what happened? And if so who were they
+354,19.030816666666666,19.120316666666668,spk_0,were other employees doing the same thing or was it just this one? Individual
+355,19.1315,19.180483333333335,spk_0,"because bear in mind, we will need consistency of treatment."
+356,19.18065,19.252666666666666,spk_0,You can't treat two employees who did exactly the same misdemeanor in
+357,19.252833333333335,19.319816666666668,spk_0,a different way unless you can justify why you should do that
+358,19.338166666666666,19.409,spk_0,has anything similar happened in the past. If so what happened and why
+359,19.41415,19.44115,spk_0,and what was done about it
+360,19.45115,19.507166666666667,spk_0,and what was the risk to the business? What were the consequences?
+361,19.507316666666668,19.595483333333334,spk_0,"Now, you don't have to have a serious accident, Um, before you take a health,"
+362,19.59565,19.6425,spk_0,a breach of your health and safety rules very seriously.
+363,19.644333333333332,19.724483333333332,spk_0,"Um It is enough to say this could have led to something really, really serious."
+364,19.73865,19.745483333333333,spk_0,Um
+365,19.750333333333334,19.820483333333332,spk_0,"And finally, are there any personal issues that may have a bearing on this issue?"
+366,19.833333333333332,19.905816666666666,spk_0,"And what we mean by that are things like health conditions or a disability, stress,"
+367,19.90598333333333,19.98315,spk_0,"personal problems, immaturity in very many cases."
+368,19.983333333333334,20.067816666666666,spk_0,Um has the employee received any previous warnings for the same type of issue?
+369,20.077166666666667,20.121166666666667,spk_0,"So generally speaking for misconduct,"
+370,20.121333333333332,20.175833333333333,spk_0,that's the sort of starting point for all of this
+371,20.20815,20.23265,spk_0,poor performance.
+372,20.2355,20.305983333333334,spk_0,Um is actually quite a difficult one to deal with because it can be very subjective.
+373,20.311333333333334,20.328,spk_0,But um
+374,20.33065,20.3815,spk_0,the timing might not be so much of an issue here because very
+375,20.381666666666668,20.444,spk_0,often you're talking about poor performance that has built up over some time.
+376,20.444166666666668,20.499316666666665,spk_0,So it's not crucial to deal with it immediately.
+377,20.500666666666667,20.544983333333334,spk_0,Um It's just a case of you need to take action
+378,20.54515,20.592666666666666,spk_0,before it gets worse in order to rectify the situation.
+379,20.60565,20.655166666666666,spk_0,So an investigation into poor performance is
+380,20.655316666666668,20.69565,spk_0,going to concentrate much more on establishing the
+381,20.695833333333333,20.73865,spk_0,nature of the shortfalls in performance and to
+382,20.738816666666665,20.781833333333335,spk_0,be looking for possible reasons for these.
+383,20.782,20.789316666666668,spk_0,So
+384,20.796166666666668,20.85,spk_0,does the employee know what is required and expected?
+385,20.850166666666667,20.90565,spk_0,Do they have a clear job description? Do they have clear tasks?
+386,20.90615,20.977333333333334,spk_0,Have they had proper training and instruction to do those roles?
+387,20.985500000000002,21.05165,spk_0,Do they have the appropriate tools and equipment and do these work properly?
+388,21.053983333333335,21.123333333333335,spk_0,Um And do other employees have problems with the tools and equipment?
+389,21.1235,21.129166666666666,spk_0,"Is there,"
+390,21.129333333333335,21.17815,spk_0,is there a particular distinction between this employee
+391,21.178316666666667,21.213166666666666,spk_0,and other people doing the same job?
+392,21.2255,21.27065,spk_0,Are there any personal issues which might have led
+393,21.270833333333332,21.342983333333333,spk_0,to um somebody who was performing perfectly adequately before um
+394,21.357483333333334,21.39915,spk_0,their performance deteriorating in any way
+395,21.413333333333334,21.421983333333333,spk_0,and
+396,21.428816666666666,21.4445,spk_0,in terms of short
+397,21.448833333333333,21.477166666666665,spk_0,"shortfall in performance,"
+398,21.477333333333334,21.54,spk_0,um it may well be that the employee is very aware of this or it
+399,21.540166666666668,21.573666666666668,spk_0,might be performance that had actually gone
+400,21.573833333333333,21.615816666666667,spk_0,downhill over quite some period of time.
+401,21.617333333333335,21.62848333333333,spk_0,"And in which case,"
+402,21.62865,21.684483333333333,spk_0,you're going to have to persuade the employee that they are not
+403,21.68465,21.73656666666667,spk_0,or no longer performing to the standards that they once were.
+404,21.737916666666667,21.738416666666666,spk_0,In
+405,21.7429,21.828233333333333,spk_0,which case examples of poor work or missed deadlines of errors?
+406,21.8284,21.895566666666667,spk_0,"Um, customer complaints, lower productivity,"
+407,21.895733333333332,21.966233333333335,spk_0,um that sort of thing that that is going to be important evidence for that.
+408,22.017,22.048983333333332,spk_0,"Now, before we go any further,"
+409,22.04915,22.096983333333334,spk_0,we need to consider very carefully whether
+410,22.09715,22.158666666666665,spk_0,an employee should be suspended during an investigation
+411,22.1695,22.247816666666665,spk_0,and where we are looking at potential gross misconduct
+412,22.248,22.291316666666667,spk_0,"and where summary dismissal may be an outcome,"
+413,22.291483333333332,22.327833333333334,spk_0,then that's normally going to be appropriate.
+414,22.330816666666667,22.342666666666666,spk_0,And
+415,22.348666666666666,22.405166666666666,spk_0,employers who have insurance policies which cover them
+416,22.405316666666668,22.43915,spk_0,against tribunal claims and things like that.
+417,22.439316666666667,22.457816666666666,spk_0,You may well find that
+418,22.46015,22.503566666666668,spk_0,it's absolutely essential that you suspend
+419,22.503733333333333,22.539233333333332,spk_0,"in this particular instance because otherwise,"
+420,22.539916666666667,22.579416666666667,spk_0,"how can you possibly defend your stance,"
+421,22.579583333333332,22.649066666666666,spk_0,"that the person did something that was so bad that you absolutely couldn't,"
+422,22.649233333333335,22.699066666666667,spk_0,couldn't even conceive of carrying on with their employment.
+423,22.703233333333333,22.71875,spk_0,"If in reality,"
+424,22.718916666666665,22.7804,spk_0,you've let it go for a few months and they've carried on working perfectly normally.
+425,22.787233333333333,22.791066666666666,spk_0,"Um,"
+426,22.791233333333334,22.8514,spk_0,so do consider whether we're looking at suspension but do
+427,22.851566666666667,22.904416666666666,spk_0,bear in mind that suspension does not imply guilt.
+428,22.921166666666668,22.944,spk_0,"Now, if you're going to suspend"
+429,22.94765,22.984816666666667,spk_0,the suspension should happen without delay
+430,22.9875,23.053483333333332,spk_0,and the period of suspension should be kept as short as possible
+431,23.059483333333333,23.097483333333333,spk_0,and the employee should be told that the outcome
+432,23.09765,23.157983333333334,spk_0,of a disciplinary hearing is not a foregone conclusion.
+433,23.1625,23.167666666666666,spk_0,Yeah. So
+434,23.18,23.230316666666667,spk_0,suspension may well be appropriate if there's a
+435,23.230483333333332,23.28633333333333,spk_0,threat to your business or to other employees
+436,23.2965,23.359983333333332,spk_0,"or if the very fact of the employee being at work, um,"
+437,23.36015,23.437316666666668,spk_0,means that that could hinder your fair and impartial investigation.
+438,23.442166666666665,23.45115,spk_0,So
+439,23.45315,23.494666666666667,spk_0,the employee may well tamper with the evidence or
+440,23.494816666666665,23.54,spk_0,may well try to destroy things and remove things off
+441,23.540166666666668,23.610316666666666,spk_0,computers or may collude with witnesses and suggest that
+442,23.610500000000002,23.64666666666667,spk_0,things didn't happen the way the witness thought it did
+443,23.655483333333333,23.735833333333332,spk_0,or influence them or worse might even actually threaten your witnesses.
+444,23.736,23.797816666666666,spk_0,"Um, so, you know, if you think that any of those things could happen,"
+445,23.798000000000002,23.851,spk_0,then suspension for a short period may be appropriate.
+446,23.859,23.873833333333334,spk_0,"And finally,"
+447,23.873983333333335,23.95815,spk_0,"if you are concerned about the employee repeating the misconduct in question,"
+448,23.958333333333332,24.001816666666667,spk_0,then you may well feel that it's better to keep them out of the
+449,24.00198333333333,24.078483333333335,spk_0,workforce and unable to do that until you've actually dealt with this instance.
+450,24.130816666666668,24.167816666666667,spk_0,"So suspension should happen quickly,"
+451,24.167983333333332,24.22533333333333,spk_0,but it is a last resort and it shouldn't be a knee jerk reaction.
+452,24.2255,24.289666666666665,spk_0,It's not an automatic thing that you do immediately or faced with a problem.
+453,24.306333333333335,24.349816666666666,spk_0,"The question is, can you remove the risk?"
+454,24.35,24.37015,spk_0,"Um for example,"
+455,24.370316666666668,24.43315,spk_0,by temporarily moving the employee onto other duties or
+456,24.433333333333334,24.4925,spk_0,to other work or a different department or supervisor
+457,24.500666666666667,24.576483333333332,spk_0,or by removing some of the key tasks until the outcome of the hearing is decided
+458,24.58416666666667,24.653483333333334,spk_0,or even just increasing the amount of direct supervision may do the trick.
+459,24.65365,24.70815,spk_0,"Now, any of these may be sufficient and"
+460,24.71015,24.780483333333333,spk_0,"may 1st of all be more cost effective for you because of course,"
+461,24.78065,24.86215,spk_0,suspension is on full pay and benefits because it's not a disciplinary sanction.
+462,24.870833333333334,24.89765,spk_0,"But more importantly,"
+463,24.897816666666667,24.995833333333334,spk_0,"um these may make it easier for the employee to return to work afterwards if in fact,"
+464,24.996,25.055,spk_0,the outcome is um no disciplinary hearing or
+465,25.05516666666667,25.113983333333334,spk_0,a disciplinary warning um short of dismissal.
+466,25.1255,25.174483333333335,spk_0,So do think very carefully before suspension.
+467,25.184333333333335,25.207983333333335,spk_0,"If you do suspend,"
+468,25.20815,25.2835,spk_0,"then you would write to the employee to confirm that this isn't a prejudgment,"
+469,25.286166666666666,25.336816666666667,spk_0,um and to ensure that they do understand this
+470,25.339483333333334,25.392666666666667,spk_0,and to give them the reasons for the suspension and
+471,25.39281666666667,25.43265,spk_0,"an idea of how long this is likely to,"
+472,25.432816666666668,25.450666666666667,spk_0,to last for.
+473,25.457166666666666,25.465166666666665,spk_0,Um
+474,25.475,25.488816666666665,spk_0,And also
+475,25.495483333333333,25.526816666666665,spk_0,it's a good idea to give the name of
+476,25.526983333333334,25.582816666666666,spk_0,a specified contact person in case of any queries because
+477,25.588816666666666,25.632816666666667,spk_0,"somebody who is sitting ok on full pay,"
+478,25.632983333333332,25.704833333333333,spk_0,but still sitting at home worrying about whether a potential disciplinary hearing
+479,25.705,25.75815,spk_0,"is going to happen and whether they are likely to dismiss,"
+480,25.758333333333333,25.82215,spk_0,be dismissed is also likely to start doing a little bit themselves or
+481,25.822316666666666,25.872816666666665,spk_0,to want to do a little bit themselves to prepare their defense.
+482,25.88115,25.921166666666668,spk_0,So it may well be that they're also asking I need
+483,25.921333333333333,25.966483333333333,spk_0,to talk to X to find out their stance on this.
+484,25.968316666666666,26.0215,spk_0,Um I need to check whether employees do follow this procedure.
+485,26.02166666666667,26.057983333333333,spk_0,I would need a copy of some of these policies.
+486,26.05815,26.092166666666667,spk_0,"I would like a copy of my contract, please."
+487,26.09498333333333,26.1255,spk_0,Um Those sort of questions. So
+488,26.1315,26.185316666666665,spk_0,normally a nominated person such as an hr representative
+489,26.1855,26.227333333333334,spk_0,or a line manager will be the contact point.
+490,26.241833333333332,26.252833333333335,spk_0,"Now,"
+491,26.262833333333333,26.313333333333333,spk_0,an employee who is suspended on full pay um
+492,26.3135,26.366316666666666,spk_0,"should be available to attend meetings during working hours,"
+493,26.366483333333335,26.413983333333334,spk_0,"obviously, because they should be at your disposal still."
+494,26.42031666666667,26.4275,spk_0,Um
+495,26.430483333333335,26.484816666666667,spk_0,But the period of suspension should be kept short. Um
+496,26.48865,26.528316666666665,spk_0,And if the reason for it was simply to
+497,26.528483333333334,26.57615,spk_0,"prevent the employee from tampering with any evidence,"
+498,26.577666666666666,26.60965,spk_0,"then once you have that evidence,"
+499,26.609816666666667,26.671,spk_0,you will have some view as to how serious the situation may be.
+500,26.677666666666667,26.732316666666666,spk_0,And it may be appropriate to ask the employee
+501,26.732483333333334,26.781333333333333,spk_0,"to return to work prior to any disciplinary hearing,"
+502,26.782166666666665,26.80565,spk_0,"particularly if you,"
+503,26.809816666666666,26.842666666666666,spk_0,"if you think it could well be, that"
+504,26.855166666666666,26.917166666666667,spk_0,is not necessarily going to take place and that might be better
+505,26.917333333333332,26.988,spk_0,than retaining the employee on suspension until you actually make a decision.
+506,26.992983333333335,27.052666666666667,spk_0,Needs to be a balanced decision. Think very carefully about it.
+507,27.127833333333335,27.152166666666666,spk_0,"So we,"
+508,27.1545,27.21165,spk_0,we have scoped out the investigation and what needs to be
+509,27.211816666666667,27.263816666666667,spk_0,"looked at and we've decided whether to suspend or not,"
+510,27.268833333333333,27.297816666666666,spk_0,the next step normally
+511,27.29981666666667,27.33265,spk_0,will be to start with the employee.
+512,27.332816666666666,27.371833333333335,spk_0,"Um Because if you bear in mind from the employee's point of view,"
+513,27.371983333333333,27.427666666666667,spk_0,the last thing that they want to do is to hear from their colleagues that um
+514,27.427833333333332,27.48115,spk_0,an investigation has been taken in place into
+515,27.481333333333332,27.50965,spk_0,something that they are alleged to have done.
+516,27.521333333333335,27.529333333333334,spk_0,So
+517,27.53265,27.574483333333333,spk_0,tell the employee of the investigation and give
+518,27.57465,27.620316666666668,spk_0,them a summary of the allegations against them and
+519,27.62465,27.70531666666667,spk_0,it's usually to talk to them first unless the case is so complex that you really
+520,27.705483333333333,27.778983333333333,spk_0,need to do a bit more digging beforehand in order to understand what it's all about.
+521,27.799816666666665,27.826983333333335,spk_0,"Now, this is a formal meeting,"
+522,27.8295,27.8875,spk_0,but there are no rules in the sense of um
+523,27.891666666666666,27.940816666666667,spk_0,right to be accompanied or a certain amount of
+524,27.94098333333333,27.996666666666666,spk_0,time given um to prepare or anything like that.
+525,27.996833333333335,28.000166666666665,spk_0,Yeah.
+526,28.006666666666668,28.014833333333332,spk_0,Um
+527,28.023666666666667,28.090166666666665,spk_0,So the first thing would be normally to ask for no interruptions.
+528,28.091666666666665,28.1405,spk_0,And to actually outline what the meeting is about and
+529,28.14065,28.18665,spk_0,to ask that mobiles are turned off during the meeting.
+530,28.193833333333334,28.252833333333335,spk_0,Uh You might want to put a sign on your door which actually says no interruptions.
+531,28.253,28.2565,spk_0,"Yeah,"
+532,28.271983333333335,28.332483333333332,spk_0,people sometimes will ask if they can record the meeting
+533,28.33265,28.41015,spk_0,or sometimes the disciplinary investigator will actually want to allow a
+534,28.410316666666667,28.467166666666667,spk_0,recording because it enables them then to concentrate on what
+535,28.467333333333332,28.51215,spk_0,the person is saying and the questions that they're asking.
+536,28.51781666666667,28.58115,spk_0,So this is very much personal choice at this stage. Um
+537,28.58515,28.664316666666668,spk_0,"But clearly, if you are going to record a disciplinary investigation,"
+538,28.664483333333333,28.717166666666667,spk_0,then it should be with the permission of everyone concerned.
+539,28.737316666666665,28.769,spk_0,"Now, this is a confidential meeting."
+540,28.77465,28.78515,spk_0,So
+541,28.78865,28.852333333333334,spk_0,it's sensible to stress this to the employee and to suggest
+542,28.8525,28.892983333333333,spk_0,that it really isn't a good idea for them to go
+543,28.89315,28.930983333333334,spk_0,and tell all and sundry about this as soon as they
+544,28.93115,28.991666666666667,spk_0,"leave the room because it may well be um that,"
+545,28.99515,29.077666666666666,spk_0,"that, that the whole thing um is actually resolved fairly quickly,"
+546,29.083666666666666,29.150666666666666,spk_0,hold it in a private venue normally during working hours.
+547,29.150833333333335,29.20815,spk_0,Um But if the employee prefers to hold it outside
+548,29.208333333333332,29.247316666666666,spk_0,"of normal working hours or away from the workplace,"
+549,29.247483333333335,29.28465,spk_0,then do think about that because that's all about
+550,29.284816666666668,29.348,spk_0,maintaining respect and dignity and saving face effectively.
+551,29.361983333333335,29.371833333333335,spk_0,So
+552,29.381833333333333,29.448,spk_0,"the employee needs to know that at this stage, it is purely an investigation."
+553,29.448166666666665,29.48915,spk_0,It is not a disciplinary hearing and the
+554,29.489316666666667,29.53715,spk_0,meeting is not part of your disciplinary procedure
+555,29.559,29.61466666666667,spk_0,So do you allow that person to be accompanied
+556,29.614833333333333,29.67065,spk_0,by a fellow worker or a trade union representative?
+557,29.6715,29.698666666666668,spk_0,"Now, this is best practice,"
+558,29.698833333333333,29.742983333333335,spk_0,but actually the statutory right to be accompanied doesn't
+559,29.74315,29.79515,spk_0,come into effect until the disciplinary hearing itself.
+560,29.79531666666667,29.845316666666665,spk_0,So the employee is not entitled to bring somebody with them.
+561,29.859166666666667,29.867,spk_0,So
+562,29.869166666666665,29.9295,spk_0,it's a case of actually just stepping back again and being reasonable and thinking.
+563,29.929666666666666,29.959983333333334,spk_0,"Well, is that sensible?"
+564,29.962833333333332,29.972816666666667,spk_0,And
+565,29.976316666666666,30.067166666666665,spk_0,"it might be if the employee is disabled and needs assistance, or for example,"
+566,30.067333333333334,30.107983333333333,spk_0,if you have foreign workers where English is not
+567,30.10815,30.165166666666668,spk_0,their first language and um having somebody there who
+568,30.165333333333333,30.231333333333332,spk_0,can help to interpret and to resolve any areas
+569,30.2315,30.26781666666667,spk_0,"of confusion in the dialogue may well be very,"
+570,30.267983333333333,30.286,spk_0,very sensible.
+571,30.286983333333332,30.36466666666667,spk_0,"So it's worth thinking about that if someone asks to be accompanied or you,"
+572,30.364833333333333,30.42465,spk_0,"of course, you can suggest it to them if you think that that's a sensible step to take."
+573,30.48065,30.484333333333332,spk_0,"Now,"
+574,30.484483333333333,30.55365,spk_0,the first stage in the meeting would be to inform the employee of the allegations.
+575,30.557983333333333,30.568316666666668,spk_0,And
+576,30.57265,30.636,spk_0,it's usually a good idea simply to start by asking for the
+577,30.636166666666668,30.696983333333332,spk_0,person's version of events and not leading them in any way.
+578,30.705983333333332,30.714316666666665,spk_0,Uh That
+579,30.722816666666667,30.739833333333333,spk_0,"gives you an opportunity,"
+580,30.74,30.780483333333333,spk_0,it gives them an opportunity to be open and honest
+581,30.78065,30.8635,spk_0,and it doesn't indicate any prior knowledge on your part.
+582,30.86365,30.942,spk_0,And it also prevents the employee from only describing aspects
+583,30.942166666666665,30.98065,spk_0,of the event that you've already been told about.
+584,30.980816666666666,31.018483333333332,spk_0,So you may well learn far more if you actually
+585,31.01865,31.075,spk_0,just ask them to talk through what they think happened.
+586,31.088816666666666,31.175166666666666,spk_0,"Now, this can also help to establish what is agreed and what's disputed,"
+587,31.186333333333334,31.219,spk_0,which then enables the disciplinary
+588,31.221,31.28515,spk_0,investigator to actually concentrate on those areas.
+589,31.2855,31.30365,spk_0,"So if for example,"
+590,31.303816666666666,31.362666666666666,spk_0,"the employee agrees that the allegations are all correct and that, yeah,"
+591,31.362833333333334,31.399816666666666,spk_0,"all of that did happen in this way,"
+592,31.400166666666667,31.44915,spk_0,then that may well assist in confidentiality
+593,31.449316666666668,31.48865,spk_0,as the scope of the investigation can be
+594,31.488816666666665,31.551983333333332,spk_0,reduced because you may not need to talk to witnesses if they're accepting that.
+595,31.55216666666667,31.577166666666667,spk_0,That's actually correct. Yeah.
+596,31.582983333333335,31.598,spk_0,Um and
+597,31.601483333333334,31.651316666666666,spk_0,"the less people are involved at this stage, the better"
+598,31.665983333333333,31.705816666666667,spk_0,"once you've heard what the employee has to say,"
+599,31.70815,31.775666666666666,spk_0,then it's sensible to go through a prepared list of questions
+600,31.775833333333335,31.8155,spk_0,and I will say a little bit more about that shortly.
+601,31.8175,31.825666666666667,spk_0,Um
+602,31.828483333333335,31.860316666666666,spk_0,have your list of questions but don't hand them
+603,31.860500000000002,31.904833333333332,spk_0,out in advance because that only gives the employee time
+604,31.905,32.00365,spk_0,to prepare an answer um in line with what he or she thinks you actually want to hear.
+605,32.0065,32.01165,spk_0,Yeah.
+606,32.02316666666667,32.02831666666667,spk_0,"Um,"
+607,32.03183333333333,32.05531666666667,spk_0,probe were necessary
+608,32.05948333333333,32.116483333333335,spk_0,particularly where there's likely to be any inconsistency
+609,32.11666666666667,32.17048333333334,spk_0,between the witness statements and the employees version.
+610,32.1875,32.26365,spk_0,"And if the employee denies the allegations either altogether or in part,"
+611,32.26381666666666,32.31666666666667,spk_0,then ask how the information could have been misconstrued.
+612,32.32983333333333,32.401316666666666,spk_0,Um what actions or statements might have caused a misunderstanding. Um
+613,32.4125,32.48298333333334,spk_0,And also is there any reason for anybody to make false accusations?
+614,32.49,32.53531666666667,spk_0,Now it is easy to become flustered if
+615,32.5355,32.583666666666666,spk_0,the employee doesn't reply quickly to these questions.
+616,32.58515,32.63665,spk_0,Um But experience shows that it is normally best to sit
+617,32.63681666666667,32.710316666666664,spk_0,out silence and wait for a response to see if one comes
+618,32.74065,32.813,spk_0,"really listen at this point to the employee's side and show,"
+619,32.81316666666667,32.865,spk_0,demonstrate to the employee that you're doing this.
+620,32.86516666666667,32.89565,spk_0,"Um Now a lot of people will,"
+621,32.895833333333336,32.961166666666664,spk_0,"will do this by repeating back some of what they're saying and saying,"
+622,32.96333333333333,33.026316666666666,spk_0,"so I understand that this is what you say, is that right?"
+623,33.02648333333333,33.082166666666666,spk_0,"And then you are actually repeating back, showing your understanding,"
+624,33.082316666666664,33.13366666666667,spk_0,showing that you're listening and showing that you are hearing correctly.
+625,33.16598333333334,33.17133333333334,spk_0,"Now,"
+626,33.1715,33.217983333333336,spk_0,the employee could be shown any documentary evidence
+627,33.21815,33.251,spk_0,that you have available at this stage.
+628,33.254333333333335,33.3155,spk_0,"And for example, things like sickness records or timekeeping records,"
+629,33.31565,33.38281666666666,spk_0,it is well worth showing them that documentary evidence at this point.
+630,33.38531666666667,33.462833333333336,spk_0,"Um because it could be that your records actually aren't accurate and therefore,"
+631,33.46415,33.48383333333334,spk_0,um somebody may be
+632,33.49041666666667,33.512233333333334,spk_0,"in a review, for example,"
+633,33.5124,33.556066666666666,spk_0,under a Bradford factor score which is based on
+634,33.55625,33.59506666666667,spk_0,the wrong amount of illness or the wrong dates.
+635,33.59523333333333,33.59706666666666,spk_0,Yeah.
+636,33.6039,33.67223333333333,spk_0,Um or the timekeeping record may be wrong or they may not have done
+637,33.6724,33.75625,spk_0,"and what they may not have signed things or completed documents in the,"
+638,33.75641666666667,33.77473333333333,spk_0,in the way that they should have done.
+639,33.7749,33.809733333333334,spk_0,But there may be a reason for this
+640,33.822316666666666,33.86598333333333,spk_0,"and above all, stay calm."
+641,33.86615,33.913333333333334,spk_0,"Um These situations are quite stressful,"
+642,33.9135,33.96431666666667,spk_0,but the investigating officer should appear
+643,33.964483333333334,34.01266666666667,spk_0,calm and neutral and reasonable throughout
+644,34.029666666666664,34.092983333333336,spk_0,that person isn't required to make any prejudgment about behavior
+645,34.09466666666667,34.18148333333333,spk_0,and no implied criticism of the employee. They are simply there to get the facts.
+646,34.24981666666667,34.292,spk_0,Have a look at non verbal behavior.
+647,34.29233333333333,34.39366666666667,spk_0,"If the interview is done face to face and if the employee becomes emotional or cries,"
+648,34.393816666666666,34.47415,spk_0,"shouts, walks out of the room, then the note should document this."
+649,34.47666666666667,34.552483333333335,spk_0,Um And there is nothing to stop an investigating officer.
+650,34.55265,34.613166666666665,spk_0,Um calling for an adjournment if an employee becomes angry or
+651,34.61333333333333,34.67916666666667,spk_0,"distressed and giving everybody a few moments to just settle down,"
+652,34.67933333333333,34.73083333333334,spk_0,"calm down before then continuing with the interview,"
+653,34.75416666666667,34.79915,spk_0,"check with the employee, whether there were any witnesses,"
+654,34.7993,34.84166666666667,spk_0,"if we're talking about misconduct offense, um"
+655,34.847166666666666,34.88981666666667,spk_0,and note any details and then you
+656,34.88998333333333,34.93248333333333,spk_0,can make arrangements to interview these people later
+657,34.94446666666666,34.98748333333333,spk_0,and ask the employee if he or she
+658,34.98765,35.02696666666667,spk_0,feels that there's anyone else who should be interviewed
+659,35.03113333333334,35.0988,spk_0,"and whether there is any other information which should be considered,"
+660,35.11998333333333,35.175,spk_0,don't give personal views or opinions.
+661,35.17516666666667,35.25698333333333,spk_0,Um The role is to investigate and to gather facts. It's not to judge.
+662,35.26115,35.279666666666664,spk_0,"And also,"
+663,35.281983333333336,35.33965,spk_0,"whilst there is a huge temptation to do so,"
+664,35.34115,35.38231666666667,spk_0,um the officers should not make promises or
+665,35.38248333333333,35.42431666666667,spk_0,"hints about the outcome of the investigation,"
+666,35.43083333333333,35.50533333333333,spk_0,even if you feel desperately sorry for the individual and you want to reassure them.
+667,35.5055,35.58,spk_0,"Um that isn't your role, the role is to actually get the facts."
+668,35.584,35.61333333333333,spk_0,"Um, employers will very,"
+669,35.6135,35.68333333333333,spk_0,very commonly ask whether they're going to be disciplined or what will happen next.
+670,35.68598333333333,35.75066666666667,spk_0,And really the answer is to confirm that the role is one of investigations
+671,35.75298333333333,35.77348333333333,spk_0,after which a decision
+672,35.784166666666664,35.82533333333333,spk_0,will be taken and you can tell them by whom
+673,35.83665,35.88165,spk_0,as to what the next stage if any will be.
+674,35.88366666666667,35.94565,spk_0,"And that as soon as the employee, as soon as the decision is made,"
+675,35.94583333333333,35.98598333333333,spk_0,that will be communicated to the employee.
+676,35.990316666666665,36.05798333333333,spk_0,But an investigation meeting must never turn into a disciplinary hearing
+677,36.06065,36.11165,spk_0,or a promise that there will not be a disciplinary hearing.
+678,36.171166666666664,36.2505,spk_0,So I said earlier about making a list of prep prepared questions. And
+679,36.25281666666667,36.28648333333334,spk_0,I do think that that's always a very sensible
+680,36.28665,36.347166666666666,spk_0,"thing to do because these meetings are stressful,"
+681,36.34733333333333,36.378483333333335,spk_0,"not only for the employee usually,"
+682,36.37865,36.41915,spk_0,but also for the person who's asking the questions
+683,36.42365,36.478316666666665,spk_0,and the better prepared you are the easier it's going to be.
+684,36.482816666666665,36.564816666666665,spk_0,"So list your questions, um areas of particular concern gap,"
+685,36.57481666666666,36.6045,spk_0,"uh any inconsistencies,"
+686,36.60698333333333,36.64915,spk_0,things that don't appear quite right to you
+687,36.66165,36.692,spk_0,and then look at your questions and ensure
+688,36.692166666666665,36.74381666666667,spk_0,that they're actually couched in a neutral way.
+689,36.744816666666665,36.7845,spk_0,Um so that they can be asked in a calm
+690,36.784666666666666,36.85365,spk_0,way without showing any criticism or condemnation or or leading.
+691,36.85381666666667,36.94381666666666,spk_0,"So you know, what did you do rather than why on earth? Did you do such a stupid thing?"
+692,36.943983333333335,36.9465,spk_0,Yeah.
+693,36.94965,36.97731666666667,spk_0,So neutral questions.
+694,36.989983333333335,37.05166666666667,spk_0,Very few closed questions and people who are involved
+695,37.051833333333335,37.10516666666667,spk_0,"in recruitment interviewing will be so um aware of,"
+696,37.105333333333334,37.1225,spk_0,"of this terminology,"
+697,37.12266666666667,37.177483333333335,spk_0,but closed questions are ones which would normally be answered yes or no.
+698,37.1845,37.265816666666666,spk_0,Um So they should be used sparingly and just to clarify factual information.
+699,37.26598333333333,37.32315,spk_0,"So, were you absent on the 16th of January?"
+700,37.327983333333336,37.38998333333333,spk_0,Had you been advised of the no smoking rule?
+701,37.39666666666667,37.4645,spk_0,"Open questions? However, will give you far more information"
+702,37.46981666666667,37.528816666666664,spk_0,"and, and they require more detailed answers and their questions."
+703,37.528983333333336,37.6095,spk_0,"How, what where why talk me through, tell me about, tell me what happened."
+704,37.62533333333333,37.63516666666666,spk_0,"So really,"
+705,37.635333333333335,37.68833333333333,spk_0,you want to be having a lot of open questions and closed
+706,37.6885,37.75116666666667,spk_0,questions for the absolute facts that you want to check out.
+707,37.751333333333335,37.75516666666667,spk_0,"Yeah,"
+708,37.76965,37.79015,spk_0,hypothetical questions.
+709,37.79031666666667,37.811483333333335,spk_0,"Now, those are the things you know,"
+710,37.81165,37.860166666666665,spk_0,"if this situation happened again or with hindsight,"
+711,37.86033333333334,37.901833333333336,spk_0,what would you do or have done differently?
+712,37.906,37.99048333333333,spk_0,"Now, they are generally regarded as not very useful in a misconduct situation,"
+713,37.99065,38.05748333333333,spk_0,but they may actually indicate remorse or learning.
+714,38.062666666666665,38.11131666666667,spk_0,"And if someone says, um oh yes, I did that."
+715,38.11148333333333,38.1725,spk_0,But I realize now what a stupid thing to do and I should never
+716,38.172666666666665,38.24965,spk_0,have done that because now I know that the the repercussions of that are this
+717,38.252316666666665,38.31581666666667,spk_0,and I now know that this is what I should do instead then
+718,38.31766666666667,38.36898333333333,spk_0,um that may well affect your thinking long term
+719,38.36915,38.41283333333333,spk_0,as to whether disciplinary action is really warranted.
+720,38.43066666666667,38.467166666666664,spk_0,"So if you have remorse or learning,"
+721,38.46965,38.51316666666666,spk_0,um they can be taken into consideration.
+722,38.584833333333336,38.61215,spk_0,"Now, silence may be golden"
+723,38.615316666666665,38.674483333333335,spk_0,and it's always worth waiting and seeing um
+724,38.67465,38.71515,spk_0,whether the employee gives you more information.
+725,38.715316666666666,38.75566666666667,spk_0,"Um If you just sit it out for a little while,"
+726,38.76833333333333,38.833333333333336,spk_0,it's also worth looking to see whether the verbal and
+727,38.8335,38.90731666666667,spk_0,the written information and the behavior appears all consistent.
+728,38.922983333333335,38.931983333333335,spk_0,"Now again,"
+729,38.93215,38.971,spk_0,recruiters are very aware of the halo effect or the
+730,38.97116666666667,39.02133333333333,spk_0,horns effect and that applies in this instance as well.
+731,39.02616666666667,39.079166666666666,spk_0,The halo effect is where you see somebody and you really like them.
+732,39.07933333333333,39.12133333333333,spk_0,And therefore you actually listen to all of their answers
+733,39.1215,39.17465,spk_0,and try and see them in the most positive glowing light
+734,39.1765,39.205,spk_0,and the horns effect is the absolute
+735,39.21098333333333,39.22865,spk_0,opposite where you
+736,39.23258333333333,39.28158333333333,spk_0,like somebody and therefore you construe everything
+737,39.28175,39.31158333333333,spk_0,they say in the worst possible way.
+738,39.31175,39.384233333333334,spk_0,"Now, a disciplinary investigation should not have either of those. So"
+739,39.39706666666667,39.456066666666665,spk_0,you shouldn't be attempting to make the information fit to your view.
+740,39.45625,39.5014,spk_0,You should just be taking it at face value and trying
+741,39.50156666666667,39.54173333333333,spk_0,to work out why they're saying what they are saying.
+742,39.551233333333336,39.55825,spk_0,So
+743,39.56316666666667,39.63681666666667,spk_0,are they afraid of retribution? Are they saying what they think you want to hear?
+744,39.63698333333333,39.68631666666667,spk_0,Are they covering some for somebody or are
+745,39.686483333333335,39.72481666666667,spk_0,they frightened of getting someone else into trouble?
+746,39.72566666666667,39.777,spk_0,Um Are there any personality clashes here or are
+747,39.77715,39.82898333333333,spk_0,the personality relationships that are being covered up?
+748,39.829166666666666,39.89683333333333,spk_0,Um Why are they saying what they're saying? And why did they do what they did?
+749,39.94316666666667,40.01215,spk_0,"Now, if your questions really don't give you an accurate view of what happened,"
+750,40.01231666666666,40.050333333333334,spk_0,then it's worth thinking about in
+751,40.0595,40.13315,spk_0,"the person to show you what happened and even act out or demonstrate,"
+752,40.135983333333336,40.212833333333336,spk_0,"take a look at the location where an incident occurred, you know, how large was it?"
+753,40.213,40.256816666666666,spk_0,"Um, how close were people to each other"
+754,40.260983333333336,40.31948333333333,spk_0,"if it's a case of somebody and we often see this in statements, you know,"
+755,40.31965,40.34465,spk_0,he swore at me.
+756,40.346833333333336,40.38516666666666,spk_0,"Well, in that case, what was said"
+757,40.38715,40.48148333333334,spk_0,in what tone? How loud was his voice? What was the effect on you when they said that?
+758,40.48165,40.527316666666664,spk_0,"Um, what was the implication of it? Um,"
+759,40.5295,40.57933333333333,spk_0,"again, we have things like she called me names."
+760,40.58148333333333,40.58715,spk_0,"Well,"
+761,40.587316666666666,40.64158333333334,spk_0,that mean anything um and what some people
+762,40.641733333333335,40.68975,spk_0,find offensive may well not be offensive to others
+763,40.69541666666667,40.768233333333335,spk_0,and also the context in which the name calling happens. So what was the name?
+764,40.7684,40.79575,spk_0,Why did they call you names?
+765,40.79991666666667,40.8634,spk_0,What was the intention behind it now? That might not make it right?
+766,40.864066666666666,40.92025,spk_0,But it is relevant if you understand why they did what they did.
+767,40.93333333333333,40.943,spk_0,"Again,"
+768,40.946666666666665,40.968333333333334,spk_0,he hit me
+769,40.971,41.01898333333333,spk_0,"where, how hard um"
+770,41.0225,41.073816666666666,spk_0,"what, what are the relative sizes between these two people?"
+771,41.07398333333333,41.093333333333334,spk_0,"Are we talking about one,"
+772,41.0965,41.17831666666667,spk_0,"very large, strong person and one much smaller, weak individual."
+773,41.181983333333335,41.218333333333334,spk_0,How close were they together?
+774,41.2185,41.28231666666667,spk_0,"Is there any evidence of being hit um, such as bruising?"
+775,41.28816666666667,41.34498333333333,spk_0,"And if so, it may well be worth taking photographs, for example."
+776,41.34515,41.415483333333334,spk_0,So it's not just a case of following a checklist when you're asking questions here.
+777,41.41733333333333,41.462833333333336,spk_0,"Um We're not trying to turn you into police officers,"
+778,41.467333333333336,41.51081666666666,spk_0,but what we are trying to turn you into is
+779,41.51465,41.5255,spk_0,"um,"
+780,41.52583333333333,41.57748333333333,spk_0,our investigators who will be thorough and who will really
+781,41.57765,41.62315,spk_0,try to get a good picture of what happened.
+782,41.624316666666665,41.67166666666667,spk_0,So ask whatever you you think is relevant to
+783,41.67183333333333,41.72116666666667,spk_0,the situation in order to get a true picture.
+784,41.74965,41.8045,spk_0,"Then at that point, it is a case of preparing the employees statement."
+785,41.80466666666667,41.85315,spk_0,"Now, full notes should be written up as soon as possible after the interview."
+786,41.853316666666665,41.89366666666667,spk_0,And if practical get them signed to confirm their
+787,41.893816666666666,41.93,spk_0,an aurate and full record of what was said
+788,41.93866666666667,41.983333333333334,spk_0,and always include start and finishing times who is
+789,41.9835,42.046,spk_0,present what was said and how any refusals to
+790,42.046166666666664,42.0885,spk_0,answer a question and any comments or views that
+791,42.08866666666667,42.13198333333333,spk_0,are made by the employee in their defense.
+792,42.13215,42.138666666666666,spk_0,So
+793,42.14266666666666,42.19865,spk_0,cover the key points of the discussion and document the facts.
+794,42.260983333333336,42.316316666666665,spk_0,"Once you've done that, the next stage is to think about interviewing any witnesses."
+795,42.31648333333333,42.38215,spk_0,"So who else if anyone should be interviewed? And in what order,"
+796,42.38565,42.44981666666666,spk_0,now witnesses should be met with as soon as possible after the event.
+797,42.45,42.499316666666665,spk_0,While they're still fresh in the minds of those involved.
+798,42.49948333333333,42.57398333333333,spk_0,"And it is always sensible to talk to witnesses individually, not in groups."
+799,42.587316666666666,42.63165,spk_0,"If there are a large number of witnesses,"
+800,42.631816666666666,42.66965,spk_0,then very often there's not going to be any
+801,42.66981666666667,42.70665,spk_0,need to take statements from every single one.
+802,42.71115,42.77616666666667,spk_0,and it will be enough just to speak to those who are most closely involved. So
+803,42.778483333333334,42.82666666666667,spk_0,it's only if their statements are inconsistent that
+804,42.82683333333333,42.85315,spk_0,there will be a need to interview other
+805,42.853316666666665,42.901833333333336,spk_0,witnesses unless you genuinely believe that the other
+806,42.902,42.955666666666666,spk_0,witnesses may have further or more relevant information
+807,43.0095,43.07983333333333,spk_0,"with your witnesses, decide on the topics to cover and the order of these."
+808,43.08083333333333,43.15665,spk_0,"Um but again, uh similar to when you're talking to the employee,"
+809,43.156816666666664,43.19898333333333,spk_0,it's always worth starting by asking them to recall
+810,43.19915,43.2425,spk_0,their version of events in their own words.
+811,43.246,43.28066666666667,spk_0,"So have your list of questions,"
+812,43.280833333333334,43.35066666666667,spk_0,"um Use your open ended questions and more probing ones if necessary,"
+813,43.35658333333333,43.440916666666666,spk_0,avoid leading questions or suggesting answers and ask the witnesses to describe
+814,43.44108333333333,43.50523333333334,spk_0,how things were done or said and how they reacted to that.
+815,43.513733333333334,43.52256666666667,spk_0,"Now,"
+816,43.52673333333333,43.61475,spk_0,the witnesses should not see statements made by the employee or by other witnesses
+817,43.614916666666666,43.66023333333333,spk_0,unless absolutely necessary because that could well
+818,43.66041666666667,43.69306666666667,spk_0,alter their recall of the situation.
+819,43.70248333333333,43.73833333333333,spk_0,"But if facts do seem contradictory,"
+820,43.7385,43.802816666666665,spk_0,then it's worth challenging the witness on the points that seem to contradict each
+821,43.80298333333333,43.878816666666665,spk_0,the uh somebody else's statement and making every effort to recheck these again.
+822,43.89398333333333,43.93215,spk_0,"If a direct quote is noted as to what's said,"
+823,43.932316666666665,43.968333333333334,spk_0,"then that should be written down exactly as stated,"
+824,43.9685,44.0175,spk_0,repeat it back to the witness and confirmed to be correct
+825,44.025166666666664,44.06033333333333,spk_0,and it's always worth asking witnesses.
+826,44.06048333333333,44.11631666666667,spk_0,Do they have anything else to add at the end of the meeting?
+827,44.116483333333335,44.149483333333336,spk_0,Because it could well be that they come out
+828,44.14965,44.181,spk_0,with all sorts of things that you weren't expecting.
+829,44.2,44.229166666666664,spk_0,"Finally with witnesses,"
+830,44.23148333333334,44.296166666666664,spk_0,we would suggest that you stress the need for confidentiality with them
+831,44.29716666666667,44.358666666666664,spk_0,and ask them not to discuss their statement with any other witnesses.
+832,44.35883333333334,44.414,spk_0,"Now, that could be a disciplinary offense if they are employees."
+833,44.41416666666667,44.464333333333336,spk_0,"But if they're external people such as customers or clients,"
+834,44.4645,44.49633333333333,spk_0,then obviously you don't have any recourse over them.
+835,44.4965,44.52831666666667,spk_0,"Other than to say, please, can you not discuss it?"
+836,44.528483333333334,44.56948333333333,spk_0,We're aiming to do with this in a professional way
+837,44.56965,44.61565,spk_0,and we will take whatever appropriate action is necessary.
+838,44.62748333333333,44.63565,spk_0,Um
+839,44.640483333333336,44.69733333333333,spk_0,And that also brings me on to another point which is that the witnesses don't
+840,44.6975,44.76498333333333,spk_0,have the right to be told of the outcome of any subsequent disciplinary meeting.
+841,44.76515,44.821333333333335,spk_0,"They may well think they've got a right to know, but in fact, they haven't,"
+842,44.8215,44.86333333333333,spk_0,that is confidential between you and the employee
+843,44.92133333333334,44.95265,spk_0,when you're doing your witness statements.
+844,44.95281666666666,44.961983333333336,spk_0,"Um again,"
+845,44.96215,45.0015,spk_0,full notes of all interviews with simple and
+846,45.001666666666665,45.0545,spk_0,"clear language exactly as spoken by the witness,"
+847,45.05983333333333,45.1045,spk_0,um include the full names and job titles.
+848,45.10466666666667,45.15298333333333,spk_0,If it's an employee of anybody who's referred to try
+849,45.15315,45.20466666666667,spk_0,to avoid jargon or acronyms because the idea is that
+850,45.20483333333333,45.24398333333333,spk_0,an outsider should be able to read and understand the
+851,45.24415,45.285983333333334,spk_0,"statement and get a clear picture of what happened,"
+852,45.29716666666667,45.345483333333334,spk_0,invite the witnesses to read through the notes and
+853,45.34565,45.38215,spk_0,agree and sign each page of the statement.
+854,45.38231666666667,45.4435,spk_0,"Um Alternatively, you can send typed up notes for signature in return,"
+855,45.443666666666665,45.49548333333333,spk_0,but clearly that often will delay the process
+856,45.504666666666665,45.5635,spk_0,"and you need to include the witnesses, full name and address or job title."
+857,45.56366666666667,45.58083333333333,spk_0,If it's a colleague.
+858,45.5935,45.62116666666667,spk_0,"Now the pages and paragraphs,"
+859,45.62133333333333,45.679833333333335,spk_0,um it's sensible to number those because then it's easier for the
+860,45.68,45.721833333333336,spk_0,disciplinary manager to refer to particular
+861,45.722,45.759166666666665,spk_0,paragraphs at any subsequent hearing.
+862,45.76115,45.76565,spk_0,Yeah.
+863,45.78,45.80231666666667,spk_0,"Um, but"
+864,45.80916666666667,45.87683333333333,spk_0,"the other thing with witnesses very often is that they will, uh,"
+865,45.877,45.92048333333334,spk_0,"they will be quite happy to tell you things possibly,"
+866,45.92365,45.98648333333333,spk_0,but they do want to know that everything is going to be kept anonymous and
+867,45.98665,46.048316666666665,spk_0,that the employee is not going to know who has given the witness statement.
+868,46.05215,46.06033333333333,spk_0,"Now,"
+869,46.06048333333333,46.085483333333336,spk_0,this might be because they're frightened
+870,46.08565,46.12898333333333,spk_0,about future intimidation or recriminations.
+871,46.13315,46.143166666666666,spk_0,But
+872,46.145833333333336,46.20381666666667,spk_0,the problem is that you can't guarantee this. Um So
+873,46.221,46.26016666666666,spk_0,the best thing to do is to advise the witness that if
+874,46.260333333333335,46.32233333333333,spk_0,"a case results in a disciplinary hearing or a tribunal hearing,"
+875,46.32266666666666,46.37266666666667,spk_0,then they may be asked to come and give evidence in person
+876,46.37798333333333,46.426,spk_0,and their anonymity can't be guaranteed unless there's
+877,46.42616666666667,46.475833333333334,spk_0,a genuine and reasonable fear of Reprisal.
+878,46.47815,46.53265,spk_0,So don't give promises which you can't keep but
+879,46.53281666666667,46.591316666666664,spk_0,do take whatever steps you can to protect the witness
+880,46.593333333333334,46.63315,spk_0,and I'll talk a little bit more about that as well. Later on.
+881,46.65631666666667,46.66565,spk_0,"Now,"
+882,46.66948333333333,46.76115,spk_0,"you may well think about recording the meeting with the employee,"
+883,46.763,46.827983333333336,spk_0,"but you may think differently about recording the, the meeting with the witnesses."
+884,46.835816666666666,46.84531666666667,spk_0,"First of all,"
+885,46.845483333333334,46.90866666666667,spk_0,this can be intimidating for some witnesses and it can be time consuming because you
+886,46.908833333333334,46.97533333333333,spk_0,end up having to type everything up in order to then highlight the key points.
+887,46.9795,47.01165,spk_0,But a recording might be useful.
+888,47.01181666666667,47.075,spk_0,Um If you have particularly complex issues or the the witness is
+889,47.07516666666667,47.126666666666665,spk_0,"an external person that you can't speak to on a frequent basis,"
+890,47.12983333333333,47.16766666666667,spk_0,"um or they're geographically distanced,"
+891,47.17731666666667,47.184333333333335,spk_0,but
+892,47.18833333333333,47.243,spk_0,you would only make a recording with person's permission. Yeah.
+893,47.25665,47.26383333333333,spk_0,"Um,"
+894,47.27065,47.32633333333333,spk_0,witnesses may ask to record the meeting themselves.
+895,47.3265,47.36816666666667,spk_0,"And if so, I would think very, very,"
+896,47.36833333333333,47.417833333333334,spk_0,"very carefully about that before agreeing to such a request,"
+897,47.418,47.46383333333333,spk_0,especially if the witness is an external person
+898,47.470483333333334,47.517833333333336,spk_0,because it is important to take a consistent and fair approach.
+899,47.518,47.5395,spk_0,"And at the end of the day,"
+900,47.53965,47.6015,spk_0,you don't want to find that your confidential issues are posted on to social
+901,47.60166666666667,47.682316666666665,spk_0,media by the witness because you don't have any control over the external people.
+902,47.68248333333333,47.68816666666667,spk_0,So
+903,47.69115,47.73016666666667,spk_0,"do think carefully before you agree to that,"
+904,47.73533333333334,47.78483333333333,spk_0,there's no real reason why a witness should need to have
+905,47.785,47.838,spk_0,an electronic copy of the statement that they're giving you.
+906,47.87798333333333,47.91565,spk_0,So note your statements may be produced in court.
+907,47.915816666666665,47.956316666666666,spk_0,So do ensure that they are professional.
+908,47.99666666666667,48.00566666666667,spk_0,"No,"
+909,48.01683333333333,48.04881666666667,spk_0,the final step in terms of gathering evidence
+910,48.04898333333333,48.091316666666664,spk_0,is to gather any other evidence or documentation
+911,48.09465,48.149816666666666,spk_0,that might be relevant and to take any steps that um that
+912,48.15,48.1965,spk_0,you need to take to prevent it being destroyed or removed.
+913,48.196666666666665,48.277816666666666,spk_0,So particularly in things like um texts or emails or that sort of thing. So
+914,48.28366666666667,48.29148333333333,spk_0,um
+915,48.302816666666665,48.3645,spk_0,"any relevant policies, any emails, time sheets, time records,"
+916,48.36465,48.39448333333333,spk_0,"um photographic evidence,"
+917,48.39465,48.44381666666666,spk_0,including of any injury or of any damage that's been
+918,48.443983333333335,48.491483333333335,spk_0,done to your property or to people or anything else.
+919,48.49166666666667,48.497,spk_0,Um
+920,48.50416666666667,48.51615,spk_0,"testing,"
+921,48.51631666666667,48.61465,spk_0,it might well be that you um want to do drugs or alcohol or substance misuse testing.
+922,48.61481666666667,48.672666666666665,spk_0,"In which case, you should comply with your own policies on that."
+923,48.677483333333335,48.754666666666665,spk_0,"And it may well be that you feel the need to search lockers or desks, for example,"
+924,48.76481666666667,48.8185,spk_0,"in which case always aim to have the employee present,"
+925,48.82266666666666,48.896166666666666,spk_0,"um, at the very least have an independent witness with you when you do that."
+926,48.90133333333333,48.973816666666664,spk_0,"And also bear in mind if you're looking on to computers and computer usage,"
+927,48.97398333333334,49.01915,spk_0,then you do need to comply with the Data Protection Act.
+928,49.02283333333333,49.07183333333333,spk_0,So you shouldn't be opening emails that are marked private or
+929,49.072,49.1505,spk_0,personal unless this is actually required as relevant to the investigation.
+930,49.21215,49.26733333333333,spk_0,"Now, I'm going to have to speed up a bit because I am a little aware, aware of the time,"
+931,49.2675,49.29683333333333,spk_0,"um, criminal offenses."
+932,49.30298333333333,49.38816666666666,spk_0,"If it seems that you're investigating a criminal offense such as theft or arson,"
+933,49.388333333333335,49.41266666666667,spk_0,"drink, driving abuse,"
+934,49.41283333333333,49.46,spk_0,then you do have to ask whether the police or the health
+935,49.460166666666666,49.52865,spk_0,and safety executive or any other regulatory body needs to be notified.
+936,49.534333333333336,49.5885,spk_0,"And if so any statements or evidence that you may have used, um,"
+937,49.58866666666667,49.634,spk_0,could be used in a parallel criminal investigation.
+938,49.64633333333333,49.6555,spk_0,If an
+939,49.65765,49.696333333333335,spk_0,employee admits to a criminal offense during
+940,49.6965,49.72715,spk_0,"the course of an internal investigation,"
+941,49.72731666666667,49.75698333333333,spk_0,"then make a note of it, um,"
+942,49.7595,49.834666666666664,spk_0,"and sign and date the, um, the statement by, uh, get"
+943,49.836483333333334,49.88916666666667,spk_0,"it dated and signed by both yourself and the employee,"
+944,49.89666666666667,49.937666666666665,spk_0,any refusal to sign should be recorded.
+945,49.93783333333333,49.968983333333334,spk_0,And if the employee disagrees with anything in
+946,49.96915,49.99865,spk_0,the note that should be signed and noted.
+947,50.01016666666667,50.06333333333333,spk_0,And at that point adjourn whilst you take advice
+948,50.0635,50.136316666666666,spk_0,and consider whether to involve any appropriate investigatory body.
+949,50.13816666666666,50.147166666666664,spk_0,"Now,"
+950,50.147333333333336,50.226,spk_0,employers are often really worried about um undertaking disciplinary hearings
+951,50.226166666666664,50.296166666666664,spk_0,"or dismissals before the judicial system has run its course,"
+952,50.29633333333334,50.360483333333335,spk_0,but it could take a long time for criminal proceedings to finish.
+953,50.364333333333335,50.369816666666665,spk_0,Um
+954,50.37831666666667,50.42381666666667,spk_0,"during which time your employee sits there on full paid suspension,"
+955,50.42398333333333,50.47116666666667,spk_0,accruing annual leave and other service related benefits.
+956,50.47933333333334,50.52381666666667,spk_0,So I won't go into that in detail here.
+957,50.523983333333334,50.566316666666665,spk_0,"But if you believe it reasonable to do so,"
+958,50.56648333333333,50.60466666666667,spk_0,then an employer may decide to carry
+959,50.60483333333333,50.660983333333334,spk_0,on with the disciplinary investigation and hearing independently
+960,50.663,50.7295,spk_0,and make a decision before the outcome of a criminal investigation.
+961,50.76766666666666,50.84381666666667,spk_0,"And at the end of the day, the decision will be based on reasonable belief. Yeah,"
+962,50.856316666666665,50.873983333333335,spk_0,we don't have to.
+963,50.87415,50.90815,spk_0,"Unlike a excuse me, a criminal court,"
+964,50.90833333333333,50.965983333333334,spk_0,you don't have to prove beyond reasonable doubt that the employee is guilty.
+965,51.03933333333333,51.0805,spk_0,Now step eight involves finally bringing all your
+966,51.080666666666666,51.14148333333333,spk_0,evidence together into a report with notes and evidence
+967,51.14666666666667,51.2045,spk_0,"with a fair and comprehensive summary at the front. Yeah, um"
+968,51.20681666666667,51.272333333333336,spk_0,"showing very clearly what is factually agreed,"
+969,51.27465,51.353316666666665,spk_0,what you haven't been able to check out or prove either way and what is disputed.
+970,51.3585,51.38715,spk_0,"And at the end of the day,"
+971,51.390483333333336,51.462316666666666,spk_0,a statement as to whether formal action or informal action seems merited.
+972,51.47765,51.52365,spk_0,So um sometimes a matrix is quite useful
+973,51.52381666666667,51.58265,spk_0,for stating what's agreed unsubstantiated and disputed.
+974,51.582816666666666,51.588,spk_0,"Yeah,"
+975,51.591316666666664,51.62748333333333,spk_0,but you need to decide as the investigating
+976,51.6305,51.64131666666667,spk_0,"officer,"
+977,51.64148333333333,51.717,spk_0,which version of events you believe and also why and include your reasoning.
+978,51.718983333333334,51.782983333333334,spk_0,"Now, when you read your own report, are you asking questions as you read it?"
+979,51.78315,51.81465,spk_0,Do there appear to be gaps?
+980,51.81733333333333,51.86131666666667,spk_0,"Um are there, is it ringing any warning bells?"
+981,51.86148333333333,51.905833333333334,spk_0,Um If so you might need to do a little bit more work.
+982,51.9125,51.969483333333336,spk_0,"And also when you look at your report, does it appear neutral?"
+983,51.96965,52.02348333333333,spk_0,And does disciplinary action seem merited or not?
+984,52.04931666666667,52.084833333333336,spk_0,"Now, what not to include in your report?"
+985,52.085,52.13033333333333,spk_0,And this is very important is that your report should not
+986,52.1305,52.20433333333333,spk_0,include any recommendation for disciplinary action or a level of penalties.
+987,52.207316666666664,52.294983333333334,spk_0,"It should just be a recommendation for formal action, informal action or no action."
+988,52.299816666666665,52.305,spk_0,Yeah.
+989,52.316833333333335,52.42048333333334,spk_0,So and it also should not include recommendations for improvement for the future.
+990,52.42065,52.4755,spk_0,Um Most people when they're investigating a misconduct
+991,52.47566666666667,52.52765,spk_0,issue will find some flaws in the employer's
+992,52.527816666666666,52.58433333333333,spk_0,procedures or rules or policies and things that
+993,52.5845,52.6135,spk_0,could be tightened up for the future.
+994,52.61565,52.68315,spk_0,"Now, they are very, very important and yet it is important to take action on those,"
+995,52.68483333333333,52.718,spk_0,but they should be sent as a separate report
+996,52.71816666666667,52.77048333333333,spk_0,to the appropriate people because otherwise you are highlighting the
+997,52.77065,52.816833333333335,spk_0,weaknesses in your case straight away to any lawyer
+998,52.817,52.895833333333336,spk_0,or advisor that actually reads the disciplinary investigation report.
+999,52.896,52.94481666666667,spk_0,Um and who is advising the employee. So
+1000,52.946666666666665,52.9885,spk_0,"yes, there may well be things that need to be done for the future,"
+1001,52.98866666666667,53.051,spk_0,but you don't include that in an a disciplinary investigation report.
+1002,53.07898333333333,53.12616666666667,spk_0,Now things can go wrong due to illness or absence if
+1003,53.126333333333335,53.17865,spk_0,they do keep the manager and employee informed of what's happening.
+1004,53.1795,53.22731666666667,spk_0,"Um For example, witnesses may, may not be available."
+1005,53.2295,53.29398333333334,spk_0,Um explain the reason for any delay and a revised timescale.
+1006,53.3265,53.402,spk_0,"And your final stage before handing the case over is to do is to say,"
+1007,53.40215,53.427483333333335,spk_0,is there a case to answer?
+1008,53.42765,53.432316666666665,spk_0,"Yeah,"
+1009,53.44015,53.49065,spk_0,if your evidence is so conflicting that it's
+1010,53.49081666666667,53.54065,spk_0,"absolutely impossible to prove what really really happened,"
+1011,53.540816666666665,53.58806666666667,spk_0,then it's going to be very hard to take disciplinary action on that.
+1012,53.59158333333333,53.68175,spk_0,So it may well be that if there's no case to answer or if you absolutely can't um get
+1013,53.681916666666666,53.72408333333333,spk_0,to the bottom of things that no further action
+1014,53.72425,53.76108333333333,spk_0,"should be taken against the employee in which case,"
+1015,53.76125,53.82308333333334,spk_0,discuss with the disciplinary manager who is going to notify the employee.
+1016,53.835,53.89115,spk_0,"If there is a case to answer, then you hand it all over."
+1017,53.89131666666667,53.904833333333336,spk_0,"At that point,"
+1018,53.906483333333334,53.94798333333333,spk_0,the disciplining manager will then take over and
+1019,53.94815,53.99398333333333,spk_0,invite the employee to a formal disciplinary hearing
+1020,53.99798333333333,54.086816666666664,spk_0,and will send the employee all statements and documentary evidence that you
+1021,54.086983333333336,54.159333333333336,spk_0,have supplied unless there are real reasons for withholding any of this.
+1022,54.1595,54.16866666666667,spk_0,"Now,"
+1023,54.168816666666665,54.203316666666666,spk_0,the employee has the right to see all of the
+1024,54.20348333333333,54.25298333333333,spk_0,evidence that will be relied on in the disciplinary hearing.
+1025,54.25781666666666,54.32116666666667,spk_0,"But for example, if you did have witnesses who asked to be anonymous,"
+1026,54.3225,54.369483333333335,spk_0,"and if you then unearth other evidence,"
+1027,54.36965,54.409166666666664,spk_0,which is actually far more persuasive and far more
+1028,54.409333333333336,54.457483333333336,spk_0,definite as to what happened than the witness statement.
+1029,54.46033333333333,54.533833333333334,spk_0,It might well be a case that you actually don't need to use that witness statement. So
+1030,54.53783333333333,54.577,spk_0,if your statement showed that somebody
+1031,54.58658333333333,54.623916666666666,spk_0,"said they were at work when they weren't and they were somewhere else,"
+1032,54.62408333333333,54.6669,spk_0,but then you actually have CCTV footage proving
+1033,54.66706666666666,54.7059,spk_0,that you actually don't need your witness statement.
+1034,54.706066666666665,54.75573333333333,spk_0,That might have been a method for discovering what went on.
+1035,54.75808333333333,54.82123333333333,spk_0,"But the further digging that you did actually gave you evidence,"
+1036,54.8214,54.905566666666665,spk_0,which is far more definitive and which actually is of no risk to the witness.
+1037,54.90606666666667,54.915083333333335,spk_0,So
+1038,54.92041666666667,54.98625,spk_0,"consider whether some of it needs to be excluded or not,"
+1039,55.01683333333333,55.043166666666664,spk_0,"keep your reports, keep your notes,"
+1040,55.04333333333334,55.076166666666666,spk_0,keep your records in a secure place and keep
+1041,55.07633333333333,55.11716666666667,spk_0,your handwrit notes also in case they're needed.
+1042,55.117333333333335,55.169983333333334,spk_0,And we're looking at at least three but preferably six months
+1043,55.17015,55.22715,spk_0,following the date of a dismissal if it comes to that.
+1044,55.22765,55.232483333333334,spk_0,Yeah.
+1045,55.302816666666665,55.35798333333334,spk_0,"So in summary, key points, we're looking at proper planning,"
+1046,55.35815,55.395316666666666,spk_0,proper structuring of an investigation
+1047,55.3975,55.43265,spk_0,"done by an independent person,"
+1048,55.43816666666667,55.48533333333334,spk_0,"possibly suspending the employee on full pay,"
+1049,55.485483333333335,55.54666666666667,spk_0,particularly if you're looking at potential gross misconduct and dismissal
+1050,55.554833333333335,55.59733333333333,spk_0,an open mind when doing the investigation.
+1051,55.60281666666667,55.61165,spk_0,And
+1052,55.6135,55.68265,spk_0,"if the employee um is interviewed, then they shouldn't,"
+1053,55.68281666666667,55.70933333333333,spk_0,it should be made very clear to them
+1054,55.7095,55.756,spk_0,that the investigation is not a disciplinary hearing.
+1055,55.76181666666667,55.781816666666664,spk_0,"And finally,"
+1056,55.7835,55.860816666666665,spk_0,the investigating officer does not have to prove things beyond reasonable doubt.
+1057,55.910333333333334,55.950833333333335,spk_0,So a final thought because I am aware of the time
+1058,55.960483333333336,56.03615,spk_0,tribunals are often lost because of inadequate investigation.
+1059,56.0425,56.106,spk_0,"So do ensure that yours are thorough, fair and properly documented"
+1060,56.10916666666667,56.18816666666667,spk_0,and they'll then form the basis for a fair dismissal. Should it come to that?
+1061,56.2265,56.30533333333333,spk_0,"So, sue, do we have any questions at all that I can answer in the next few minutes?"
+1062,56.3055,56.30765,spk_0,"Um,"
+1063,56.30781666666667,56.35231666666667,spk_0,or is everybody stunned into silence by
+1064,56.35248333333333,56.38433333333333,spk_0,the amount of information we've gone through?
+1065,56.400333333333336,56.41498333333333,spk_1,"Um, there's a couple,"
+1066,56.41515,56.46131666666667,spk_1,I've already agreed we will deal with offline um because they
+1067,56.461483333333334,56.504666666666665,spk_1,need a bit more information that we can probably give now.
+1068,56.50866666666667,56.593333333333334,spk_1,"Um But just one other short, quick one I think is, um"
+1069,56.60066666666667,56.635983333333336,spk_1,"perhaps to just reemphasize,"
+1070,56.63615,56.69448333333333,spk_1,does the employee have the right to be accompanied as an investigation meeting?
+1071,56.69465,56.75731666666667,spk_1,"Because it's a question we're asked a lot, isn't it through our helpline? And um"
+1072,56.765816666666666,56.812666666666665,spk_1,and clients are often not quite sure.
+1073,56.82683333333333,56.922983333333335,spk_0,"Yes. No, they don't have the right to be accompanied unless, um and this is very rare."
+1074,56.92315,56.97781666666667,spk_0,Uh But unless you have a disciplinary procedure which actually allows for
+1075,56.977983333333334,57.02715,spk_0,this and it's a contractual procedure that you would have to follow.
+1076,57.03033333333333,57.08315,spk_0,"Um But other than that, there is no right to be accompanied."
+1077,57.083333333333336,57.145316666666666,spk_0,"Um Although you may decide it's sensible to do so as I, as I said before,"
+1078,57.147,57.18631666666667,spk_0,"um and also there's no right to be given a particular,"
+1079,57.187416666666664,57.2339,spk_0,particular amount of time or anything like that.
+1080,57.23406666666666,57.23975,spk_0,"I mean,"
+1081,57.2419,57.2804,spk_0,"employers, um sometimes ring us up and say,"
+1082,57.280566666666665,57.348416666666665,spk_0,can we have letters inviting people to um an investigation meeting.
+1083,57.34858333333333,57.38106666666667,spk_0,"Well, you don't actually have to do that."
+1084,57.38125,57.433083333333336,spk_0,"All you actually have to do is say, um, could I have a word with you, please?"
+1085,57.43325,57.45375,spk_0,"Um, can we meet in an R"
+1086,57.45556666666667,57.46706666666667,spk_0,A time?
+1087,57.46925,57.54575,spk_0,"Um And you, you don't need to give them time to, to prepare for that meeting?"
+1088,57.57031666666666,57.58,spk_1,Ok.
+1089,57.5925,57.608666666666664,spk_1,Sounds good.
+1090,57.61115,57.63,spk_1,I think that's all we have.
+1091,57.659666666666666,57.72398333333334,spk_0,"Well, we've had more people at this webinar than any of our other webinars."
+1092,57.72415,57.770316666666666,spk_0,So obviously it's um it's a subject that um
+1093,57.772166666666664,57.791666666666664,spk_0,that you're all interested in.
+1094,57.79183333333334,57.846833333333336,spk_0,We hope we've given you some useful tips um and useful information.
+1095,57.85016666666667,57.88965,spk_0,Thank you very much for joining us and we hope
+1096,57.88981666666667,57.943666666666665,spk_0,you'll join us in the future at future webinars and um
+1097,57.9475,57.99548333333333,spk_0,hope you enjoy the rest of your afternoon. Thanks a lot. Bye bye.

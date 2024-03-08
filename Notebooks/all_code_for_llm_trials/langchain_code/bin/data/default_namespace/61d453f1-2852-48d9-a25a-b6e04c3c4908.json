@@ -1,0 +1,16 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "office_relocation_4",
+    "meeting_uuid": "61d453f1-2852-48d9-a25a-b6e04c3c4908",
+    "meeting_date": "20240307113253",
+    "last_conversation_no": 11302,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": "This meeting was about the design of the new rooms in new building. First, the group discussed the logistics of putting four people in one of the 23 person rooms: one person, two person and three person rooms. Next, they discussed how to deal with the storage of the equipment. They agreed that they should keep the cost under twelve and a half Euros per room, but they would have to pay attention to the cost control. Lastly, they agreed that the room should be well-lit and that it should be easy to use."
+}

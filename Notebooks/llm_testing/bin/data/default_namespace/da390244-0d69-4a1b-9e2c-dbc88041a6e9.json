@@ -1,0 +1,15 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Health Care Meeting",
+    "meeting_uuid": "da390244-0d69-4a1b-9e2c-dbc88041a6e9",
+    "meeting_date": "20240306145911",
+    "last_conversation_no": 9712,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "Jay",
+        "Prachitee",
+        "Sartaj"
+    ],
+    "meeting_summary": "This is the third meeting of the group. The group first discussed the current trend in the market place and future directions of the market. Then, the group discussed the status of the project and its progress. The meeting ended with a general overview of the New York State and the future direction of the health care field. The final point of the meeting was that the group was very satisfied with the progress of their project and the team was looking forward to the next meeting. The team also discussed the future of the team and the project."
+}

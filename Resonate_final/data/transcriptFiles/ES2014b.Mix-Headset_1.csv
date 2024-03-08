@@ -1,0 +1,841 @@
+,start_time,end_time,speaker_label,text
+0,0.954,0.9683166666666666,spk_0,Right.
+1,1.04215,1.068,spk_0,"So, um,"
+2,1.1645,1.2004833333333331,spk_0,so where's the powerpoint
+3,1.2023166666666667,1.2221666666666666,spk_0,"presentation,"
+4,1.277,1.284166666666667,spk_0,Sony
+5,1.36065,1.3814833333333334,spk_0,Microsoft per point? Right.
+6,1.4768333333333334,1.5044833333333334,spk_0,Right. OK.
+7,1.5308166666666667,1.5384833333333332,spk_0,So.
+8,1.6273166666666667,1.637,spk_0,Right.
+9,1.69,1.7199833333333334,spk_0,"Okay. So we've got, uh,"
+10,1.8088166666666667,1.8469833333333332,spk_0,so we've got new project requirements.
+11,1.8544833333333333,1.8655,spk_0,Um
+12,1.9346666666666668,1.9594833333333332,spk_0,So basically we've got three things.
+13,1.959666666666667,2.0323333333333333,spk_0,"We've got 40 minutes in which to uh for this meeting to uh, to discuss"
+14,2.044666666666666,2.0713166666666667,spk_0,the various options.
+15,2.078666666666667,2.088833333333333,spk_0,"Um,"
+16,2.11765,2.1454833333333334,spk_0,three presentations.
+17,2.180833333333333,2.2288166666666664,spk_1,"We have a, I guess we have a presentation each cause I've got one."
+18,2.2456666666666667,2.2935,spk_0,"I see. Right. That's nice to know one from each of you,"
+19,2.297816666666667,2.3074833333333333,spk_0,"um,"
+20,2.31165,2.336316666666667,spk_0,new project requirements.
+21,2.3383333333333334,2.413483333333333,spk_0,"Um So do we want to do the presentation first or do we want to, um,"
+22,2.45665,2.4908166666666665,spk_0,wi I got um a
+23,2.499,2.54465,spk_0,"few or, or three things basically, um"
+24,2.5629833333333334,2.58065,spk_0,relating to
+25,2.5826666666666664,2.6438333333333333,spk_0,"the remote being only for TV, we discussed that last time"
+26,2.6536666666666666,2.70465,spk_0,"and in actual fact, that was pretty, pretty well"
+27,2.708333333333333,2.7535,spk_0,"what we ca me up with anyway. So in fact, it actually f"
+28,2.764666666666667,2.7896666666666667,spk_0,we may be forestalled
+29,2.7976666666666667,2.8156666666666665,spk_0,in a sense.
+30,2.8198333333333334,2.828666666666667,spk_0,Um
+31,2.831983333333333,2.8706666666666667,spk_0,We've got uh teletext outdated.
+32,2.873,2.88615,spk_0,Um
+33,2.891166666666667,2.9286666666666665,spk_0,Did you get any information on that?
+34,2.9605,2.9709833333333333,spk_0,Right.
+35,2.973316666666667,3.02565,spk_0,And the corporate image was the uh final thing.
+36,3.0345,3.0588166666666665,spk_0,So I
+37,3.0853166666666665,3.118983333333333,spk_0,uh I got that in email form.
+38,3.121166666666667,3.130333333333333,spk_0,Um
+39,3.1598166666666665,3.183333333333333,spk_0,Right. OK. So
+40,3.20515,3.248,spk_0,"I guess if we go ahead with the, uh,"
+41,3.26215,3.287983333333333,spk_0,with the three presentations.
+42,3.294483333333333,3.3105,spk_0,So
+43,3.313833333333333,3.3785,spk_0,"we'll start with yourself on the basis that, uh,"
+44,3.4043166666666664,3.4338166666666665,spk_1,"I'll just, um, I'll grab the,"
+45,3.4738166666666666,3.4908166666666665,spk_0,sorry. Yep.
+46,3.741816666666667,3.74215,spk_1,Yeah.
+47,3.835166666666667,3.84365,spk_0,"Oh,"
+48,3.921666666666667,3.93,spk_0,what the
+49,3.9318333333333335,3.93215,spk_0,"f,"
+50,3.964816666666666,3.9661666666666666,spk_1,"is it,"
+51,4.013483333333333,4.016,spk_2,"um,"
+52,4.0245,4.0248333333333335,spk_2,you
+53,4.028316666666667,4.029,spk_2,gotta
+54,4.030833333333334,4.03115,spk_2,"do,"
+55,4.03565,4.05615,spk_2,"um, control F eight"
+56,4.183166666666667,4.211833333333334,spk_1,doesn't seem to be quite working a t the moment.
+57,4.2428333333333335,4.252483333333333,spk_1,Give that a go
+58,4.2739666666666665,4.286466666666667,spk_1,whole function
+59,4.34815,4.377316666666666,spk_1,again. Not doing anything.
+60,4.38265,4.426633333333333,spk_3,"This, this is usually a little thing in the top, right? For the,"
+61,4.479333333333333,4.504833333333333,spk_1,if I passed about five times now.
+62,4.6335,4.647316666666667,spk_1,Okay. That's me.
+63,5.0965,5.115483333333334,spk_1,Okay. And
+64,5.118483333333334,5.11865,spk_1,I
+65,5.12065,5.1335,spk_1,have to go on again.
+66,5.25515,5.264833333333334,spk_1,How's it going?
+67,5.324316666666666,5.344,spk_1,Hope that should be a T this time?
+68,5.484,5.4991666666666665,spk_1,Okay. I think we're that
+69,5.650316666666667,5.68465,spk_1,okay. I'm gonna be looking a t the working design
+70,5.700166666666666,5.707333333333334,spk_1,um
+71,5.70915,5.714833333333333,spk_1,"of the,"
+72,5.7445,5.824316666666666,spk_1,of the remote control. Um I've just got three sections. First is the research I
+73,5.8375,5.886316666666667,spk_1,"made on the, on the remote control itself. Um"
+74,5.8918333333333335,5.937166666666666,spk_1,And then that involves the components required I
+75,5.937316666666667,5.979166666666667,spk_1,"and the systems that design of the actual,"
+76,5.98465,5.9985,spk_1,the actual remote.
+77,6.0183333333333335,6.029166666666667,spk_1,Um
+78,6.03165,6.086666666666667,spk_1,"So having researched the existing models within the market,"
+79,6.093483333333333,6.121,spk_1,um I found my research off the internet.
+80,6.13315,6.1745,spk_1,Um I've established what the components required
+81,6.174666666666667,6.200983333333333,spk_1,for the remote control to function.
+82,6.2011666666666665,6.213983333333333,spk_1,Actually a re
+83,6.216333333333333,6.2705,spk_1,and then also the methods in which these components interact together
+84,6.276666666666666,6.341833333333334,spk_1,for the remote to actually do what you want to do and how it
+85,6.352666666666667,6.375,spk_1,connects with the television.
+86,6.378333333333333,6.406333333333333,spk_1,"Um The basic components,"
+87,6.411316666666667,6.438316666666666,spk_1,"a re an energy source,"
+88,6.44215,6.512816666666667,spk_1,"which I guess um in most existing models will be a battery supply,"
+89,6.5183333333333335,6.578333333333333,spk_1,"whether that'll be sort of two batteries, four batteries. Um It may vary,"
+90,6.600666666666667,6.650316666666667,spk_1,we then have the user interface which is basically
+91,6.650483333333334,6.689666666666667,spk_1,the like the the buttons on the actual remote.
+92,6.6898333333333335,6.699166666666667,spk_1,Um
+93,6.713316666666667,6.773666666666667,spk_1,"the various function do sort of changing channel, uh channel up and down volume,"
+94,6.773816666666667,6.783,spk_1,things like that.
+95,6.798,6.8445,spk_1,Um There's also a chip inside the remote
+96,6.849,6.886166666666667,spk_1,which does all the computer type things
+97,6.896816666666666,6.926816666666666,spk_1,and then a sender which
+98,6.9355,6.945833333333333,spk_1,um
+99,6.978483333333333,7.034816666666667,spk_1,is usually I found an infrared
+100,7.0375,7.0514833333333335,spk_1,device
+101,7.060666666666667,7.108816666666667,spk_1,which sends a signal to the actual television.
+102,7.113166666666666,7.15915,spk_1,"Um And the last part is receiver, which is important in the system,"
+103,7.159316666666666,7.178833333333333,spk_1,but it's not actually part of the remote
+104,7.178983333333333,7.210816666666666,spk_1,itself cause that's obviously found in the television.
+105,7.265833333333333,7.275816666666667,spk_1,Um
+106,7.278666666666667,7.316333333333334,spk_1,I'm gonna have to actually draw on the board because it
+107,7.316483333333333,7.351666666666667,spk_1,was a little tricky on powerpoint to get it working.
+108,7.351816666666667,7.355983333333333,spk_1,So
+109,7.37015,7.387816666666667,spk_1,"we'll just go through the,"
+110,7.436816666666667,7.475816666666667,spk_1,do we have a cloth to wipe this down with or
+111,7.482833333333334,7.527166666666667,spk_1,"-- uh
+-- there's the rubber on the right,"
+112,7.53065,7.541483333333334,spk_0,"I think,"
+113,7.567483333333334,7.57115,spk_0,"well,"
+114,7.574166666666667,7.596,spk_0,get rid of my magic.
+115,7.76865,7.80515,spk_1,"Okay. So we start off with a,"
+116,7.818833333333333,7.877166666666667,spk_1,"um, battery suppl uh no, a power supply which we've probably go,"
+117,7.877333333333333,7.897816666666666,spk_1,it's probably gonna be the battery.
+118,7.905483333333334,7.914483333333333,spk_1,"Um,"
+119,7.939483333333333,7.954483333333333,spk_1,we then have
+120,7.978666666666666,8.016166666666667,spk_1,"a particular button which may be,"
+121,8.01965,8.0625,spk_1,"you know, that's obviously there's lots and lots of different buttons."
+122,8.0695,8.09315,spk_1,"Um, but this is how the basic"
+123,8.09565,8.112983333333334,spk_1,system works.
+124,8.118483333333334,8.177666666666667,spk_1,"Um, that sends if, after you press that it sends a message to"
+125,8.185316666666667,8.215666666666667,spk_1,"the chip which um,"
+126,8.23265,8.254333333333333,spk_1,then sends
+127,8.277333333333333,8.300316666666667,spk_1,it sort of interprets which button you're
+128,8.300483333333334,8.338316666666667,spk_1,best and then sends the appropriate message to
+129,8.352983333333333,8.371316666666667,spk_1,the sender.
+130,8.382833333333334,8.383333333333333,spk_1,Mhm.
+131,8.57,8.580816666666667,spk_1,Um
+132,8.598483333333334,8.612316666666667,spk_1,So that's so
+133,8.614833333333333,8.63715,spk_1,"that's the remote in itself,"
+134,8.637316666666667,8.671,spk_1,that's the components of the remote and how they work together.
+135,8.673483333333333,8.6875,spk_1,So this is the
+136,8.698816666666668,8.714966666666667,spk_1,uh user
+137,8.733333333333333,8.749483333333334,spk_1,interface.
+138,8.806666666666667,8.821333333333333,spk_1,Um
+139,8.825,8.850816666666667,spk_1,this is the chip itself which
+140,8.864,8.909666666666666,spk_1,then sends the and that's the that's the infrared
+141,8.937316666666666,8.946166666666667,spk_1,send that.
+142,8.959833333333334,8.996,spk_1,And then on the separate thing we have on the
+143,9.018483333333334,9.038833333333333,spk_1,"on the television,"
+144,9.074816666666669,9.088316666666667,spk_1,we have a
+145,9.111316666666667,9.12365,spk_1,a receiver
+146,9.157983333333334,9.199,spk_1,and the sender sends a message to the receiver.
+147,9.2115,9.217166666666667,spk_1,Okay.
+148,9.304983333333332,9.340316666666666,spk_0,"So the the top is the power source. Yes,"
+149,9.3505,9.3515,spk_0,the
+150,9.35365,9.354166666666666,spk_0,power
+151,9.359983333333334,9.361833333333331,spk_0,source.
+152,9.371816666666668,9.375816666666667,spk_0,Okay.
+153,9.392,9.40365,spk_1,Um
+154,9.423,9.458333333333334,spk_1,"Just going on to personal preference, as I've said,"
+155,9.4585,9.52665,spk_1,the battery seems the best option for the actual remote just because of the size.
+156,9.526816666666669,9.536983333333334,spk_1,"You want a, a"
+157,9.544166666666667,9.6045,spk_1,"cable attached to the remote. Always it's not, it's not really remote."
+158,9.615666666666666,9.679333333333334,spk_1,Um And then the sender and infra red um has been used quite successfully.
+159,9.692,9.746,spk_1,"If the battery on reasonable power, they always seem to work fairly well."
+160,9.746166666666667,9.782666666666668,spk_1,You have to be pointing directly a t the television itself.
+161,9.78915,9.8275,spk_1,So the battery is the in the sender.
+162,9.863483333333331,9.893833333333331,spk_1,Okay. And that's it for the moment.
+163,9.897,9.9055,spk_3,Okay.
+164,9.942166666666669,9.95815,spk_0,Okay.
+165,9.966316666666666,9.977166666666667,spk_0,So
+166,9.996166666666667,10.013833333333332,spk_0,no more design.
+167,10.071166666666668,10.081333333333331,spk_2,Thank you.
+168,10.150983333333333,10.188316666666667,spk_2,Mine's not quite as complicated as all that.
+169,10.213,10.2305,spk_0,That's what we like to hear
+170,10.333833333333333,10.35,spk_2,the press function.
+171,10.5015,10.529666666666667,spk_0,What is it? Control function? 80.
+172,10.54365,10.553166666666666,spk_2,Um
+173,10.569833333333332,10.629983333333334,spk_2,Okay. So I'm gonna talk a bit about the technical functions design.
+174,10.636983333333331,10.6795,spk_2,"Um Louisa, the user interface designer as you know."
+175,10.702166666666669,10.717,spk_2,Um So
+176,10.719483333333333,10.801983333333334,spk_2,the basic method of this is to send a signal from the remote to the television set
+177,10.8055,10.84865,spk_2,so that a desired function is performed.
+178,10.863,10.936316666666666,spk_2,Um An exa mples of the function could be to change the volume up or down.
+179,10.941316666666667,10.981816666666669,spk_2,Uh So obviously you need two different buttons for that
+180,10.98915,11.01515,spk_2,um to change the channel
+181,11.017833333333334,11.045166666666669,spk_2,either by pressing the
+182,11.051816666666667,11.090483333333331,spk_2,"number that you want or by channel up or down,"
+183,11.09965,11.15515,spk_2,"um to switch the television on or off, maybe a stand by button."
+184,11.161316666666666,11.205666666666666,spk_2,Um Here a re two exa Mples remotes
+185,11.220166666666668,11.31115,spk_2,"um by the look of it, they both have um kind of play and fast forward rewind functions."
+186,11.314,11.364316666666667,spk_2,So I think they incorporate a kind of video function
+187,11.366483333333331,11.39565,spk_2,which we won't have to worry about.
+188,11.418,11.47365,spk_2,"Uh But as you can see, the left remote is quite um"
+189,11.478816666666669,11.516833333333333,spk_2,"quite busy looking, quite complicated."
+190,11.522,11.532333333333334,spk_2,Um
+191,11.53615,11.567166666666669,spk_2,Whereas the right remote is
+192,11.569833333333332,11.618316666666669,spk_2,"much simpler, it looks much more user friendly."
+193,11.646483333333334,11.689666666666668,spk_2,Um So my personal preference would be
+194,11.691666666666666,11.707983333333331,spk_2,the right remote.
+195,11.710833333333332,11.772816666666667,spk_2,So it's got nice big buttons. It's got a very limited number of buttons.
+196,11.7765,11.785983333333334,spk_2,Um
+197,11.789666666666667,11.823816666666668,spk_2,"The nice, kinda clearly labeled."
+198,11.831333333333331,11.842,spk_2,Um
+199,11.847333333333331,11.875816666666667,spk_2,I like the use of the kind of um
+200,11.888666666666667,11.945,spk_2,symbols like the triangles and the squares and the arrows
+201,11.94765,12.00615,spk_2,as well as the words on the um kind of play functions and all that.
+202,12.01415,12.04865,spk_2,"So it's very, very user friendly."
+203,12.0505,12.074816666666669,spk_2,"Um It's got a little splashy colour,"
+204,12.076983333333333,12.102816666666667,spk_2,could maybe do a small colour.
+205,12.11015,12.122816666666669,spk_2,Um
+206,12.130333333333333,12.186833333333333,spk_2,"Well, there's a couple of things there. Um"
+207,12.19765,12.281983333333333,spk_0,We have to remember that we have our own um logo
+208,12.2845,12.304666666666666,spk_0,and colour scheme.
+209,12.309666666666669,12.34965,spk_0,So basically we'd have to uh
+210,12.356666666666667,12.393483333333334,spk_0,we'd have to be putting that on
+211,12.410666666666666,12.4275,spk_0,"um the,"
+212,12.440833333333334,12.454816666666666,spk_0,the product
+213,12.47565,12.475983333333334,spk_2,we
+214,12.47765,12.492316666666667,spk_2,get to see that
+215,12.507983333333334,12.5325,spk_0,"I haven't as yet,"
+216,12.567833333333333,12.642316666666666,spk_0,but uh I got uh I got an email uh that basically said to uh
+217,12.644833333333333,12.694,spk_0,make sure that uh whatever device we come up with
+218,12.694166666666666,12.733983333333333,spk_0,a t the end of the day had to incorporate
+219,12.737666666666666,12.774483333333333,spk_0,um the corporate colour and slogan.
+220,12.785833333333333,12.804816666666667,spk_0,So uh
+221,12.808833333333334,12.83015,spk_0,I'm guessing that
+222,12.842833333333331,12.853166666666668,spk_0,uh
+223,12.871816666666666,12.915,spk_0,"I, I noticed on the bottom there it's got uh"
+224,12.933983333333334,13.01765,spk_0,what's that? A pogee that might be
+225,13.032816666666667,13.048483333333332,spk_0,the
+226,13.05265,13.066,spk_0,corporate
+227,13.067833333333333,13.1005,spk_0,colour scheme. Although
+228,13.1055,13.14865,spk_0,"the only, the only colour I can see in that is the red."
+229,13.172483333333334,13.20715,spk_1,"Would you be able to get rid of the, the X? But"
+230,13.20915,13.268166666666666,spk_1,"here the, the sort of circular section cause that seems to be for a video as well."
+231,13.273,13.316833333333332,spk_1,So we could dispense with that a little bit as well
+232,13.31865,13.3515,spk_1,and just get it down to just the numbers and the volume.
+233,13.362833333333333,13.374,spk_2,What do you mean by the
+234,13.375983333333334,13.37765,spk_2,circular
+235,13.380666666666666,13.38815,spk_2,section? Like
+236,13.402816666666666,13.41115,spk_1,just a bit
+237,13.413483333333334,13.448,spk_1,is that I think that's still um a video remote.
+238,13.467833333333331,13.489316666666667,spk_1,So maybe we should get rid of that as well.
+239,13.5025,13.510833333333334,spk_2,And I don't really
+240,13.513316666666666,13.515483333333334,spk_2,think
+241,13.527166666666666,13.58315,spk_2,"nine numbers. I mean, how often do you use? 78 and nine?"
+242,13.585833333333332,13.645833333333334,spk_2,I think just 1 to 6 and then channel up and down should be enough.
+243,13.656983333333333,13.681666666666668,spk_0,"Well, the, the o the,"
+244,13.686983333333334,13.742166666666666,spk_0,"well, for, for general television purposes,"
+245,13.742316666666667,13.790316666666667,spk_0,obviously you have channels 1 to 5 A t this
+246,13.790483333333333,13.837316666666666,spk_0,point in time and we'd have to have some room for
+247,13.853983333333334,13.893166666666668,spk_0,uh future such channels
+248,13.903983333333333,13.905816666666666,spk_0,to see.
+249,13.9625,14.020316666666666,spk_0,"Well, possibly. But the, the other thing is that with um,"
+250,14.023816666666669,14.102983333333333,spk_0,"the current expansion of uh channels, uh and the process of taking place,"
+251,14.125983333333334,14.222333333333331,spk_0,"turn the button up and down. But, uh, I mean, how many channels do we have to um"
+252,14.224483333333334,14.277983333333331,spk_0,actual television channels? Do we have to uh
+253,14.280816666666666,14.316666666666666,spk_0,"prepare for? I would have thought that, uh,"
+254,14.341316666666666,14.345483333333334,spk_0,I think
+255,14.3515,14.406666666666666,spk_0,"it's forever expanding. And yat, the moment we've got,"
+256,14.40915,14.440483333333331,spk_0,"although you've, uh, you've got the five standard,"
+257,14.440666666666669,14.475,spk_0,you've got the BBC have come up with a further six.
+258,14.475166666666668,14.499,spk_0,"And, uh, there's, um,"
+259,14.509983333333333,14.561666666666667,spk_0,"I don't know exactly how many channels there a re on, uh,"
+260,14.57665,14.639,spk_0,"when you take into account, uh, sky and various other,"
+261,14.65165,14.664,spk_0,"um,"
+262,14.668316666666666,14.685983333333333,spk_0,various others.
+263,14.689666666666668,14.7305,spk_0,"So I would have thought that we wouldn't, you know,"
+264,14.735316666666666,14.74665,spk_0,rather than
+265,14.7565,14.796483333333333,spk_0,"okay if the time a flicking from one to other,"
+266,14.79665,14.849166666666669,spk_0,but presumably it'll take a second cause you have to be able to stop it.
+267,14.85,14.88515,spk_0,"Maybe you could have a fast forward on the,"
+268,14.89,14.944166666666666,spk_0,on the channels that w and then you could dispense with more. Otherwise
+269,14.959983333333334,15.01765,spk_0,"y you want, you want to get fairly quickly to the channel that you wanted."
+270,15.04565,15.089833333333331,spk_2,"Um, some remotes have kind of favourite options"
+271,15.094166666666666,15.138483333333332,spk_2,"where if you always flick from channel one to channel six,"
+272,15.151333333333334,15.170833333333333,spk_2,"if that's your favourite, you just"
+273,15.1755,15.196483333333331,spk_2,like bypass
+274,15.204666666666666,15.218833333333333,spk_2,2 to 5.
+275,15.229816666666666,15.275166666666667,spk_0,"Yeah, I, I suppose in a sense you could have, um,"
+276,15.2775,15.299816666666668,spk_0,"if you've got 100 channels,"
+277,15.315833333333334,15.352816666666667,spk_0,"then if you had sort of an easy way of getting,"
+278,15.352983333333333,15.395316666666666,spk_0,rather than having go 1 to 100 you could go one to
+279,15.406816666666666,15.43515,spk_0,1 to 1010 to 20
+280,15.438833333333331,15.446483333333331,spk_0,then
+281,15.45,15.465833333333332,spk_0,have a certain
+282,15.469833333333334,15.525983333333333,spk_0,button to get you to the actual channel you want. Then that would
+283,15.528983333333333,15.54965,spk_0,cut down your time.
+284,15.5855,15.605333333333334,spk_2,"But I think a lot of, um,"
+285,15.6055,15.634666666666666,spk_2,like cable and sky and stuff that would be
+286,15.634833333333331,15.66965,spk_2,tuned to one channel and then you'd have another remote
+287,15.673816666666667,15.683666666666667,spk_2,for
+288,15.687833333333334,15.708983333333334,spk_2,all of those channels
+289,15.713,15.740316666666669,spk_2,like to get to 55 and
+290,15.744166666666668,15.756816666666667,spk_2,"-- the higher
+-- numbers."
+291,15.791316666666669,15.799816666666668,spk_0,Ok.
+292,15.817166666666669,15.866,spk_0,Okay. Limit the number of buttons user friendly.
+293,15.87665,15.90065,spk_0,But I suppose nine's not really
+294,15.910666666666666,15.912833333333332,spk_1,accessible. So
+295,15.919483333333334,15.97865,spk_1,"you've got the, the like the last one which makes the 10th means you, it's like a"
+296,15.980666666666666,16.01615,spk_1,multiple. So you put them together so you can make any number.
+297,16.02065,16.0355,spk_1,So with that we can buy
+298,16.04115,16.057333333333332,spk_1,any problems with.
+299,16.066483333333334,16.116483333333335,spk_0,"Well, that's true. Yeah, you could get 50 by five and a zero or whatever."
+300,16.116666666666667,16.131816666666666,spk_0,"That, that makes sense."
+301,16.132666666666665,16.173483333333333,spk_0,"-- So
+-- that facilitates having all the numbers you could ever need."
+302,16.19465,16.19765,spk_1,Um
+303,16.235983333333333,16.27665,spk_0,"So, so what was the circular thing that you were?"
+304,16.283333333333335,16.313666666666666,spk_2,Um I think that's just for our video.
+305,16.31765,16.347166666666666,spk_2,So we wouldn't need any of that A T all.
+306,16.357666666666667,16.35815,spk_0,So
+307,16.36466666666667,16.431983333333335,spk_0,"if it's just for TV, which is what it is. A t the moment"
+308,16.455983333333332,16.544316666666667,spk_1,"should we get the honey? Buts that we got, we've got 1011, 12, we got 14 that we need"
+309,16.54865,16.55815,spk_1,"I guess,"
+310,16.576983333333335,16.628816666666665,spk_1,"um, which isn't really too many. That'd be quite easy to make a user guide for a"
+311,16.631666666666668,16.651816666666665,spk_1,14 but remote.
+312,16.669483333333332,16.70381666666667,spk_0,"Well, we've, we've got, um,"
+313,16.71115,16.75815,spk_0,it's remote for TV. Only otherwise project
+314,16.77465,16.861316666666667,spk_0,"would become too complex with, uh, which would endanger the time to market"
+315,16.874333333333333,16.913483333333332,spk_0,"was one of the considerations. I'm, I don't know."
+316,16.913666666666668,16.916150000000002,spk_0,"Did,"
+317,16.916316666666667,16.9535,spk_0,did you have that information being in the marketing
+318,16.95515,16.9875,spk_0,or was I meant to give you that information?
+319,17.0065,17.026983333333334,spk_3,"I had, I've had some"
+320,17.03098333333333,17.04365,spk_3,information
+321,17.055666666666667,17.071983333333332,spk_3,from the company.
+322,17.080483333333333,17.146833333333333,spk_0,"Right. Okay. So basically times I market seems to be important, therefore,"
+323,17.1525,17.218833333333333,spk_0,"speed of delivery, we've only got about another four hours left."
+324,17.276633333333333,17.294966666666667,spk_2,"Okay. So, is everyone"
+325,17.2993,17.31298333333333,spk_2,happy with that?
+326,17.353816666666667,17.39816666666667,spk_2,"Right. Well, that's the end of my presentation."
+327,17.523833333333332,17.534166666666668,spk_2,"Pull this,"
+328,18.08915,18.11615,spk_1,I think you just give it a second to.
+329,18.12465,18.1675,spk_0,"Yeah, I think she said 20 seconds to, um,"
+330,18.194983333333333,18.22065,spk_1,okay. I'm sure we'll have our ends today.
+331,18.306666666666665,18.316666666666663,spk_3,Get another card.
+332,18.48915,18.504166666666663,spk_3,Yeah. There we go.
+333,18.599316666666667,18.6635,spk_3,Right. We've done some research into the functional requirements
+334,18.669,18.702166666666667,spk_3,that people want out of their remote control.
+335,18.71333333333333,18.727833333333333,spk_3,And
+336,18.7315,18.75565,spk_3,"first off, we should state that"
+337,18.763816666666667,18.803,spk_3,"the, the remote controls for control on the TV."
+338,18.81865,18.85765,spk_3,"And, um, how do people use it?"
+339,18.86198333333333,18.905,spk_3,We asked them sort of which buttons were useful for them.
+340,18.911,18.965,spk_3,"Um, how d how does a remote control look and feel for them?"
+341,18.965166666666665,19.035666666666668,spk_3,"And what improvements would, would they like to a remote control?"
+342,19.042166666666667,19.08098333333333,spk_3,And we did that by sort of giving them a questionnaire
+343,19.082816666666663,19.101,spk_3,that we prepared
+344,19.104333333333333,19.13833333333333,spk_3,and asking them to fill in the answers.
+345,19.170483333333333,19.228483333333333,spk_3,And three quarters of them found that remote controls a re ugly
+346,19.233666666666668,19.246666666666663,spk_3,and that a
+347,19.248666666666665,19.30815,spk_3,sort of even higher proportion would spend more for
+348,19.31448333333333,19.314666666666668,spk_3,a
+349,19.319,19.35398333333333,spk_3,sort of sa a fancier remote control.
+350,19.38048333333333,19.401816666666665,spk_3,And that
+351,19.40765,19.440816666666667,spk_3,"of all the buttons on the remote control,"
+352,19.44548333333333,19.4985,spk_3,"the sort of setting buttons for sort of the picture,"
+353,19.504166666666663,19.53698333333333,spk_3,picture and brightness
+354,19.53983333333333,19.60548333333333,spk_3,"and the audio settings. Um, they weren't used very often a t all"
+355,19.613333333333333,19.65233333333333,spk_3,people concentrated on the channel buttons
+356,19.654666666666667,19.696166666666667,spk_3,and the volume buttons and the power buttons.
+357,19.70748333333333,19.75315,spk_3,"Uh, we also asked them about speech recognition,"
+358,19.767,19.790333333333333,spk_3,"uh, for remote control"
+359,19.792816666666667,19.83416666666667,spk_3,and young people were quite receptive to this.
+360,19.83865,19.86883333333333,spk_3,But as soon as we got sort of over about
+361,19.87415,19.949316666666668,spk_3,"into a 35 to 40 age, 45 age group and, and older"
+362,19.95565,19.96283333333333,spk_3,people
+363,19.96865,20.005816666666668,spk_3,wasn't quite so keen on speech recognition.
+364,20.015,20.064666666666668,spk_3,"There was a lot more, there was a lot, lot more older people who didn't know"
+365,20.069333333333333,20.1,spk_3,whether they wanted it or not as well.
+366,20.113166666666668,20.17215,spk_3,"Um, we also asked what frustrated people about remote controls"
+367,20.17815,20.212666666666667,spk_3,and the number one frustration was that
+368,20.216666666666665,20.251,spk_3,the remote was lost somewhere else in the room.
+369,20.27083333333333,20.29883333333333,spk_3,"Um, but they couldn't find it."
+370,20.3085,20.321166666666667,spk_3,"And the second,"
+371,20.32133333333333,20.371166666666667,spk_3,"the second biggest frustration was that if they got a new remote control,"
+372,20.385666666666665,20.42265,spk_3,"it was difficult to learn. Um,"
+373,20.42481666666667,20.47665,spk_3,all the buttons and all the functions and to find your way around it.
+374,20.509,20.520316666666663,spk_3,Okay.
+375,20.52733333333333,20.541316666666667,spk_3,"So,"
+376,20.555983333333334,20.59965,spk_3,my personal preferences from the marketing
+377,20.604666666666667,20.64365,spk_3,is that we need to come up with some sort of sleek
+378,20.65083333333333,20.686333333333334,spk_3,"sort of good looking high, high tech"
+379,20.69033333333333,20.71565,spk_3,a design which looks high tech
+380,20.71933333333333,20.73098333333333,spk_3,basically.
+381,20.74365,20.755166666666668,spk_3,Um
+382,20.760666666666665,20.82183333333333,spk_3,And that we should come up with fewer buttons than most of the controls on the market.
+383,20.826816666666662,20.911816666666667,spk_3,And we should sort of concentrate on the channels and sort of power and also
+384,20.915816666666668,20.965,spk_3,"volume and that sort of thing as, as Louis has said,"
+385,20.97648333333333,20.986,spk_3,um
+386,21.001316666666668,21.04,spk_3,"we could maybe come up with a menu, a sort of a,"
+387,21.042166666666667,21.080166666666667,spk_3,an L CD menu for other functions
+388,21.09098333333333,21.132483333333333,spk_3,on the remote control that's worth thinking about.
+389,21.13915,21.159333333333333,spk_3,Um And
+390,21.165166666666668,21.21066666666667,spk_3,maybe we could think about speech recognition as well because
+391,21.215816666666665,21.22465,spk_3,um
+392,21.236816666666662,21.253816666666665,spk_3,so young people are
+393,21.2695,21.33248333333333,spk_3,"perhaps the ones that a re gonna buy, buy our new product if we aim a tat sort of,"
+394,21.3335,21.363816666666665,spk_3,"you know, sort of a high tech design"
+395,21.38515,21.426816666666667,spk_3,"that, that might be the market that we're, we're looking for."
+396,21.45198333333333,21.50348333333333,spk_3,And we could maybe think about using speech recognition recognition as
+397,21.50365,21.546333333333333,spk_3,a way to find remote control if it's lost in a room
+398,21.557983333333333,21.585316666666667,spk_3,rather than sort of um
+399,21.59098333333333,21.601983333333333,spk_3,having it
+400,21.61615,21.6465,spk_3,speech recognition to change the channels.
+401,21.659,21.699316666666668,spk_3,Cause there's a problem with that in that the television makes noise
+402,21.699483333333333,21.753816666666665,spk_3,so it could end up talking to itself and changing its channels.
+403,21.77198333333333,21.791833333333333,spk_3,Okay. Um
+404,21.79383333333333,21.817166666666665,spk_3,And that's the end of the slide show.
+405,21.82065,21.828983333333333,spk_3,That's it
+406,21.83248333333333,21.840816666666665,spk_3,cool.
+407,21.85748333333333,21.880166666666668,spk_0,And was that last wee bit there
+408,21.89,21.899816666666663,spk_0,um
+409,21.90965,21.933666666666667,spk_0,about speech recognition?
+410,21.939666666666668,21.950666666666667,spk_0,Okay. But
+411,21.952666666666666,22.0135,spk_0,"-- that was only for young people that prefer that older people did young
+-- people pref"
+412,22.01615,22.062666666666665,spk_3,"yeah, they s they said that they'd be interested in a remote control,"
+413,22.062833333333334,22.084983333333334,spk_3,which offered that possibility.
+414,22.08515,22.14515,spk_3,"And as you go up through the age groups, people who got less and less interested"
+415,22.150166666666667,22.18048333333333,spk_3,"in sort of a, a remote control that you can"
+416,22.18315,22.1965,spk_3,"talk to. So,"
+417,22.224316666666667,22.224816666666666,spk_1,um
+418,22.24765,22.27665,spk_1,it seems the technology would be quite advanced for that and
+419,22.276816666666665,22.330166666666667,spk_1,they might end up costing more than a 1250 budget for
+420,22.34315,22.343833333333333,spk_1,speech
+421,22.35483333333333,22.359816666666667,spk_1,recognition.
+422,22.379666666666665,22.38265,spk_1,Um
+423,22.4005,22.45615,spk_1,"And possibly the thing about the by the remote being lost, we could have,"
+424,22.462666666666667,22.494816666666665,spk_1,"you know, with your mobile phone, you lose that, you can ring it."
+425,22.494983333333334,22.536816666666667,spk_1,Maybe we can have some kind of sensor which is kept somewhere where you can
+426,22.54115,22.56815,spk_1,just kind of buzzer system between the two.
+427,22.568316666666668,22.6175,spk_1,"Yeah, so you can press a button which is always kept in one place and then it uh"
+428,22.62015,22.622816666666665,spk_1,huh.
+429,22.6255,22.640816666666662,spk_1,Maybe it buzzes to
+430,22.646,22.682166666666667,spk_1,"Yeah, somewhere else, wherever the remote actually is."
+431,22.685666666666663,22.744166666666665,spk_1,"Yeah, we'd have that, that would mean we'd have to put two products together as well,"
+432,22.744333333333334,22.748166666666663,spk_3,"which,"
+433,22.753816666666665,22.81615,spk_3,"-- which again would probably be a bit expensive but there's
+-- key rings"
+434,22.816316666666665,22.85233333333333,spk_2,um that you kind of whistle a T or clap a T.
+435,22.85998333333333,22.864833333333333,spk_2,Yeah.
+436,22.866666666666667,22.896,spk_2,"And then the whistle back or something like that,"
+437,22.921,22.930983333333334,spk_2,they're cheap.
+438,22.933666666666667,22.93433333333333,spk_2,Mmhm
+439,23.009,23.01015,spk_1,The
+440,23.012666666666668,23.014666666666667,spk_1,sa me
+441,23.024316666666667,23.0275,spk_1,technology
+442,23.03,23.051,spk_1,"could be put inside the,"
+443,23.06015,23.06683333333333,spk_0,"well, if"
+444,23.074483333333333,23.10965,spk_0,you're trying to avoid having a second product cause
+445,23.109816666666667,23.13715,spk_0,obviously you could have a second product that gave
+446,23.137316666666667,23.196166666666667,spk_0,"you the right pitch which would set the remote off to say here I am sort of thing,"
+447,23.205,23.219666666666665,spk_0,"you know, without"
+448,23.228483333333333,23.252333333333333,spk_0,sound recognition. But
+449,23.2565,23.272316666666665,spk_0,"if you,"
+450,23.303,23.325666666666667,spk_0,I know um
+451,23.33,23.35148333333333,spk_0,"I was gonna say a sharp noise,"
+452,23.36415,23.389316666666662,spk_0,clapping of hand or whatever
+453,23.435316666666665,23.48183333333333,spk_0,you'd want to try and just have the one product that
+454,23.484,23.4965,spk_0,"if,"
+455,23.53715,23.603483333333333,spk_1,"yeah, if you, if we could have it in the actual remote, everything in 11."
+456,23.620833333333334,23.65315,spk_0,Um I dunno um
+457,23.66733333333333,23.723166666666668,spk_0,"talking about vo I mean, obviously if you've got voice recognition,"
+458,23.723333333333333,23.73915,spk_0,then you can do it
+459,23.7545,23.810666666666663,spk_0,"in that way because it will recognise the voice and you can give it a command,"
+460,23.81083333333333,23.84583333333333,spk_0,"a set command, whatever that happened to be."
+461,23.85833333333333,23.877666666666663,spk_0,But you've then got the point.
+462,23.87783333333333,23.931666666666665,spk_0,"If you, if you're not going with the voice recognition, then"
+463,23.995483333333333,24.00398333333333,spk_1,"perhaps,"
+464,24.01015,24.021166666666662,spk_1,"um,"
+465,24.03833333333333,24.06415,spk_1,"so that would solve the problems with the TV,"
+466,24.064316666666667,24.093316666666663,spk_1,kinda speaking to the remote and changing itself.
+467,24.119983333333334,24.13865,spk_0,"So, uh"
+468,24.17065,24.19098333333333,spk_0,"any su suggest, well,"
+469,24.19383333333333,24.238333333333333,spk_0,"-- any conclusions,
+-- um would it take"
+470,24.24148333333333,24.27615,spk_3,quite a while to sort of develop this
+471,24.276316666666663,24.32733333333333,spk_3,speech recognition software in the remote control?
+472,24.33715,24.369983333333334,spk_0,"So if it does, then we can't,"
+473,24.37415,24.430316666666663,spk_0,"it's that simple because we've got uh the, the three"
+474,24.443483333333333,24.491666666666667,spk_0,primary um uh requisites
+475,24.50115,24.518833333333333,spk_0,from uh
+476,24.540166666666668,24.579833333333333,spk_0,"from an email, ah, that was sent to me"
+477,24.596166666666665,24.6585,spk_0,whereby we had the design logo was one which we've already mentioned.
+478,24.665333333333333,24.6885,spk_0,"We've got um,"
+479,24.69548333333333,24.735666666666667,spk_0,"the remote was only for the television and not for,"
+480,24.73583333333333,24.786816666666667,spk_0,because that would make it too complex and we have to get a market quickly.
+481,24.79315,24.86215,spk_0,"And the uh third thing was that, um teletext,"
+482,24.86466666666667,24.94715,spk_0,"uh as far as uh the management is concerned, um, has become outdated"
+483,24.951816666666662,24.98648333333333,spk_0,uh due to the popularity of the internet.
+484,24.999816666666668,25.01083333333333,spk_0,So
+485,25.0135,25.088816666666663,spk_0,that means that uh so these a re the sort of three
+486,25.1045,25.161166666666663,spk_0,extra para meters that have been put on this uh project.
+487,25.1775,25.1855,spk_0,So
+488,25.19065,25.22015,spk_0,we're being focused effectively
+489,25.238,25.2655,spk_0,directly A T A television.
+490,25.267,25.342816666666668,spk_0,And it seems to me that the management is uh wanting us to go down a narrow path
+491,25.354333333333333,25.37133333333333,spk_0,and not
+492,25.373,25.410666666666668,spk_0,opening out. So anything that uh
+493,25.41848333333333,25.47665,spk_0,"is to be added such as voice recognition, et cetera"
+494,25.488166666666668,25.55198333333333,spk_0,has to be very simple and has to be very quick
+495,25.559,25.591316666666668,spk_0,"because time to market is,"
+496,25.601316666666666,25.61533333333333,spk_0,is critical.
+497,25.64131666666667,25.6835,spk_1,"If we could get something in which was quite quick and simple,"
+498,25.683666666666667,25.71598333333333,spk_1,"that would give us an advantage of o other remotes,"
+499,25.744166666666665,25.819816666666668,spk_0,but probably quick and simple is primary rather than
+500,25.842816666666668,25.8905,spk_0,"added extras, added extras would be nice. But"
+501,25.898333333333333,25.93498333333333,spk_0,the primary consideration is to get the project
+502,25.93515,25.98966666666667,spk_0,"finished within uh a s short time window,"
+503,25.989833333333333,26.0,spk_0,which effectively
+504,26.005983333333333,26.01448333333333,spk_0,now is
+505,26.02648333333333,26.05348333333333,spk_0,"sort of four hours. So,"
+506,26.07698333333333,26.15148333333333,spk_0,"and if, and we gotta get to the end, I th I think, I think first and foremost,"
+507,26.15165,26.21733333333333,spk_0,"we gotta get to the end, then get to the end with some added extras if possible."
+508,26.246666666666663,26.267166666666668,spk_0,Okay. Uh
+509,26.272316666666665,26.295483333333333,spk_0,My screen just
+510,26.325,26.353,spk_0,"bunker me, right? Okay."
+511,26.36148333333333,26.3925,spk_0,"Uh So I need to,"
+512,26.44915,26.45798333333333,spk_0,right.
+513,26.461166666666667,26.469,spk_0,So
+514,26.47533333333333,26.52083333333333,spk_0,"I don't know how long we have left of uh time,"
+515,26.546,26.573833333333333,spk_0,but we have to make the decisions
+516,26.577166666666667,26.595316666666665,spk_0,on uh
+517,26.6175,26.64115,spk_0,the remote control functions
+518,26.66798333333333,26.74033333333333,spk_0,and how we're planning to proceed so that A T the next uh
+519,26.743483333333334,26.751,spk_0,meeting
+520,26.78298333333333,26.89033333333333,spk_0,"each person that's got AAA task to do is clear from this meeting, what that task is."
+521,26.928316666666667,26.99233333333333,spk_0,We'll also know when the next meeting is. I. Um
+522,27.00798333333333,27.051,spk_0,So we'll know how long we've got to complete that task
+523,27.056833333333334,27.1,spk_0,"and then we can report back A T the next meeting and say, right, okay."
+524,27.100166666666667,27.13115,spk_0,"Yes, we've achieved this or we haven't achieved this."
+525,27.13133333333333,27.16398333333333,spk_0,This is how far we've progressed.
+526,27.17031666666667,27.198666666666668,spk_0,Does that make
+527,27.20283333333333,27.223983333333333,spk_0,reasonable sense?
+528,27.251,27.25998333333333,spk_0,So
+529,27.28333333333333,27.29965,spk_0,we have to come
+530,27.30516666666667,27.349316666666667,spk_0,effectively to the decision on the remote functions so
+531,27.34948333333333,27.38298333333333,spk_0,that you can decide what you're gonna be doing?
+532,27.396833333333333,27.451316666666667,spk_0,"And if due between the time of this meeting,"
+533,27.45148333333333,27.485666666666667,spk_0,"finishing and the next meeting starting,"
+534,27.48583333333333,27.54065,spk_0,if you get any additional information that uh
+535,27.55633333333333,27.590166666666665,spk_0,"only you have at that point in time,"
+536,27.60115,27.63648333333333,spk_0,you think would be relevant to other people in
+537,27.63665,27.683666666666667,spk_0,"terms of their de decision making um process,"
+538,27.68383333333333,27.7385,spk_0,then we should communicate that as quickly as possible and not
+539,27.74148333333333,27.78448333333333,spk_0,"wait until the next meeting, do it via"
+540,27.78783333333333,27.80283333333333,spk_0,the email.
+541,27.811,27.8485,spk_0,"So that rather than coming, you know,"
+542,27.85483333333333,27.90083333333333,spk_0,"if you get the information just before the next meeting, that's fine."
+543,27.901,27.93915,spk_0,"Come along with the next meeting, we can discuss it then and"
+544,27.94233333333333,28.001483333333333,spk_0,"take whatever actions appropriate. But if you get it well, before the next meeting,"
+545,28.005166666666668,28.070833333333333,spk_0,let everybody else know cause that might have an impact on their uh
+546,28.104166666666668,28.137316666666667,spk_0,what they come up with effectively
+547,28.141666666666666,28.17265,spk_0,A t the next meeting. Okay.
+548,28.199483333333333,28.21598333333333,spk_0,"All right. Is there,"
+549,28.23115,28.267666666666667,spk_3,"so do we need to decide on the functions? Now,"
+550,28.280816666666663,28.30033333333333,spk_0,I would
+551,28.30483333333333,28.32048333333333,spk_0,guess so.
+552,28.336983333333333,28.34065,spk_2,"Well,"
+553,28.340816666666665,28.371983333333333,spk_2,I think it would be really easy and it would be
+554,28.37215,28.409,spk_2,"a big advantage if we did have some sort of,"
+555,28.409166666666668,28.414666666666665,spk_2,"um,"
+556,28.42383333333333,28.467983333333333,spk_2,kind of whistle back kind of function
+557,28.4795,28.52465,spk_2,"-- cause that'll solve kind of the frustration of losing
+-- it."
+558,28.530316666666668,28.585316666666667,spk_3,"And that was, that was the number one sort of frustration that people said. So"
+559,28.602833333333333,28.6485,spk_3,I don't think there's anything else on the market that does that. So
+560,28.68133333333333,28.727666666666668,spk_2,I don't really know about the voice recognition thing.
+561,28.75765,28.760316666666668,spk_0,W
+562,28.76565,28.79148333333333,spk_0,"well, uh maybe"
+563,28.804166666666667,28.826,spk_1,we should concentrate just on the
+564,28.827666666666666,28.829166666666666,spk_1,whistle.
+565,28.83898333333333,28.855816666666662,spk_0,Something simple.
+566,28.85833333333333,28.915983333333333,spk_0,"If our primary consideration is to get it there in time,"
+567,28.919666666666668,28.935666666666663,spk_0,"time short,"
+568,28.942166666666665,28.99715,spk_0,you want something to meet the major concerns of the consumer
+569,29.004666666666665,29.02083333333333,spk_0,so that we can
+570,29.02648333333333,29.05216666666667,spk_0,have it as a selling point for the product.
+571,29.0655,29.101983333333333,spk_0,Something that's quick and simple.
+572,29.113166666666668,29.12465,spk_2,"So, and that"
+573,29.13,29.180316666666663,spk_2,cut off the kind of older generation either cause everyone can whistle a
+574,29.18048333333333,29.23115,spk_2,clap and they wouldn't have to be kinda scared of this new technology.
+575,29.236816666666662,29.284,spk_0,"So maybe a clap rather than a whistle would be a,"
+576,29.297316666666667,29.335833333333333,spk_0,on the basis that
+577,29.33983333333333,29.39515,spk_0,"if we've got, if we're catering to the whole age range,"
+578,29.40033333333333,29.4525,spk_0,"you want something that's easy to do now, something that like"
+579,29.45683333333333,29.459,spk_0,wh uh
+580,29.464316666666665,29.48915,spk_0,"Well, II, I don't know."
+581,29.489316666666667,29.539316666666668,spk_0,"Well, if you think that more people can whistle than clap, then that's fine,"
+582,29.539483333333333,29.555316666666663,spk_0,then go for that option.
+583,29.55548333333333,29.62848333333333,spk_0,But if I would have thought that more people could clap rather than whistle. So uh
+584,29.632483333333333,29.65115,spk_0,so clap option.
+585,29.664316666666668,29.669166666666666,spk_0,Yeah.
+586,29.8275,29.8885,spk_2,"Okay. Okay. We've already decided that we don't need a Teletext button, haven't we?"
+587,29.90148333333333,29.915333333333333,spk_0,"Uh, eff"
+588,29.921333333333333,29.937316666666668,spk_0,effectively.
+589,29.9375,29.97583333333333,spk_0,"That's what the, that's what they're saying that, uh, if,"
+590,29.976,30.02015,spk_0,if people a re now using the internet then you don't need teletext.
+591,30.020316666666663,30.02415,spk_0,"So, so"
+592,30.04148333333333,30.065166666666663,spk_0,"take out Teletext,"
+593,30.07583333333333,30.14633333333333,spk_1,"do we decide on having the 10, um, the 10 numbers"
+594,30.148666666666667,30.16215,spk_1,and then the
+595,30.188333333333333,30.224816666666666,spk_1,"next to it, which can enabled you to put them together?"
+596,30.22648333333333,30.26148333333333,spk_3,"Well, I think nowadays you can just get ones where"
+597,30.26333333333333,30.31883333333333,spk_3,it gives you a sort of a second or two to press another number
+598,30.325166666666668,30.34883333333333,spk_3,so you can press any two
+599,30.355816666666662,30.38448333333333,spk_3,and it will sort of put them together.
+600,30.3885,30.43948333333333,spk_3,"-- Okay.
+-- 10 numbers and then some kind of device to allow. Uh,"
+601,30.44548333333333,30.451316666666667,spk_1,"yeah,"
+602,30.46398333333333,30.484483333333333,spk_1,I put delay to a lab.
+603,30.496,30.50283333333333,spk_1,"Yeah,"
+604,30.50948333333333,30.524816666666663,spk_1,multiple numbers
+605,30.54683333333333,30.55565,spk_1,or multiple
+606,30.55765,30.564666666666668,spk_1,teachers.
+607,30.571,30.576316666666667,spk_1,Yeah.
+608,30.628316666666667,30.64915,spk_1,Did we decide anything about
+609,30.67398333333333,30.716316666666668,spk_1,the other functions as in setting the
+610,30.71865,30.736166666666666,spk_1,audio and
+611,30.744166666666665,30.803,spk_1,"s tuning it and stuff like that? You had an, an idea about the menu."
+612,30.81165,30.85,spk_3,Uh We could possibly put an L A sort of
+613,30.855316666666667,30.90765,spk_3,uh L CD menu in. But that again is probably
+614,30.910316666666667,30.926316666666665,spk_3,"an expense that,"
+615,30.937316666666668,30.973983333333333,spk_1,"but just thinking, um, people probably, I mean,"
+616,30.97415,31.00348333333333,spk_1,"you don't ha you only have to probably tune the TV,"
+617,31.00365,31.04,spk_1,once but you have to be able to tune it that once.
+618,31.0465,31.10365,spk_1,"So, and the, and the TV breaks to get a new one, you're gonna have to be able to tune it."
+619,31.10565,31.12415,spk_1,You can't really avoid that
+620,31.13048333333333,31.175,spk_1,except the new digital market. We should do it by themselves.
+621,31.196,31.277833333333334,spk_1,"-- But th
+-- but that's relying on the television market changing"
+622,31.278,31.318483333333333,spk_0,"to an automatic and if it is a t,"
+623,31.31865,31.365,spk_0,"the moment, that's fine, but a t the moment it's not."
+624,31.365166666666667,31.394666666666662,spk_0,So it seems to me that you have to have
+625,31.394816666666667,31.439833333333333,spk_0,"a device that caters cause otherwise it would make it,"
+626,31.452666666666666,31.488333333333333,spk_0,uh your device would become
+627,31.49115,31.529666666666667,spk_0,inoperable or only operable in certain
+628,31.532316666666667,31.5565,spk_0,circumstances. And
+629,31.561816666666665,31.602666666666668,spk_0,"the idea is to have an international market which is,"
+630,31.62183333333333,31.694983333333333,spk_0,"and it's also, it's the, the product we've got is something that's a t the,"
+631,31.69515,31.74683333333333,spk_0,I would have said the lower end of the s of the cost scale.
+632,31.746983333333333,31.792166666666667,spk_0,So we're not really going for something that's uh
+633,31.8085,31.832,spk_0,I si suppose high
+634,31.83783333333333,31.841833333333334,spk_0,"tech,"
+635,31.85315,31.874816666666668,spk_0,"if people a re buying remotes,"
+636,31.875,31.9235,spk_3,"then they're probably buying it to replace another remote,"
+637,31.929666666666662,31.97265,spk_3,possibly most tellies come with remotes. So
+638,31.978816666666667,31.980166666666666,spk_3,"I mean,"
+639,31.980316666666667,32.04233333333333,spk_3,we're maybe talking about replacing remotes for slightly older televisions.
+640,32.0425,32.05083333333334,spk_3,So
+641,32.0585,32.10581666666667,spk_3,"we maybe need to keep the, the tuning function in."
+642,32.10933333333333,32.14281666666667,spk_1,Yeah. Okay. So how would this menu function work?
+643,32.14298333333333,32.201,spk_1,"Would you maybe have like one menu button, then you'd use the other buttons,"
+644,32.20115,32.24765,spk_1,maybe the number buttons to actually do the separate functions?
+645,32.249316666666665,32.274316666666664,spk_1,"-- Yeah, that would
+-- be a good idea. Yeah."
+646,32.305816666666665,32.36181666666667,spk_2,"Yeah, cause you do need um kind of brightness and contrast and everything as well."
+647,32.363166666666665,32.409,spk_2,My dad was watching a film the other week and it was too dark.
+648,32.409166666666664,32.45398333333333,spk_2,So I had to go through it and turn the brightness up.
+649,32.45666666666666,32.48,spk_2,"So you just think we're gonna have the,"
+650,32.48016666666667,32.55283333333333,spk_1,the individual numbers and then a menu function and maybe sort of a slightly more
+651,32.55765,32.612833333333334,spk_1,"advanced, um, instruction booklets come with it to guide."
+652,32.613,32.63881666666666,spk_1,"Cause you, uh I think it'd be quite hard"
+653,32.651,32.68315,spk_1,"just for people to grasp, um,"
+654,32.68665,32.721983333333334,spk_1,"just off like the menu but that you don't use different buttons,"
+655,32.72215,32.73931666666667,spk_1,maybe have to have like
+656,32.74433333333333,32.763333333333335,spk_1,some better instructions
+657,32.76716666666667,32.782983333333334,spk_1,of how that actually work.
+658,32.78766666666667,32.815333333333335,spk_3,I'm not sure whether sort of having
+659,32.82248333333333,32.85731666666667,spk_3,"people have a booklet cause one,"
+660,32.857483333333334,32.91466666666667,spk_3,the second most annoying thing that people found was having to learn the new one.
+661,32.92415,32.942,spk_3,So maybe
+662,32.94683333333333,32.976816666666664,spk_3,"next to each of the buttons, you know,"
+663,32.97698333333334,33.03665,spk_3,each of them could have a number and then also a function written next to it.
+664,33.04065,33.057,spk_3,So you're basically
+665,33.05916666666667,33.07183333333333,spk_3,pressing.
+666,33.07898333333333,33.111333333333334,spk_1,But that also goes back to the original design
+667,33.11148333333333,33.13498333333333,spk_1,when we saw those two and there was the one
+668,33.13515,33.15866666666667,spk_1,on the left hand side which had all like the
+669,33.158833333333334,33.201483333333336,spk_1,double functions and stuff which kinda looked too busy and
+670,33.209,33.228,spk_1,"had too much on it. So,"
+671,33.24515,33.248983333333335,spk_1,okay.
+672,33.29666666666667,33.298833333333334,spk_2,"Well,"
+673,33.325833333333335,33.32783333333333,spk_2,kind of
+674,33.332483333333336,33.341483333333336,spk_2,the bottom bit
+675,33.34481666666667,33.35381666666667,spk_2,down.
+676,33.42516666666667,33.43731666666667,spk_0,That's a very good
+677,33.441833333333335,33.4425,spk_1,idea.
+678,33.50216666666667,33.5355,spk_1,"-- So
+-- you keep um"
+679,33.538,33.592166666666664,spk_0,"right, we've got five minutes before we wind up those meetings."
+680,33.592333333333336,33.635666666666665,spk_0,"So I've been told, I don't know if you've got the sa me."
+681,33.65365,33.66116666666667,spk_0,Okay.
+682,33.66865,33.67698333333333,spk_0,"So,"
+683,33.6795,33.7025,spk_0,so keep um
+684,33.73231666666667,33.75365,spk_0,keep detailed
+685,33.773,33.790166666666664,spk_0,functions
+686,33.80833333333333,33.81933333333333,spk_0,um
+687,33.836,33.86148333333333,spk_0,hidden A T the back.
+688,33.86815,33.87566666666667,spk_2,Hm.
+689,33.878,33.92015,spk_2,"And that would be better for the older generation as well cause,"
+690,33.93281666666667,33.960316666666664,spk_2,"well, my dad doesn't like"
+691,33.96666666666667,33.992,spk_2,that. You've gotta kind of flick through a menu
+692,34.00033333333333,34.025333333333336,spk_2,but he can pretty much read a button.
+693,34.03816666666667,34.040166666666664,spk_2,"So,"
+694,34.045316666666665,34.0605,spk_2,display it properly.
+695,34.09515,34.151833333333336,spk_1,We're gonna have to have to work out what's gonna be on these other functions as well.
+696,34.1595,34.18366666666667,spk_1,"So, we're gonna have like two separate,"
+697,34.18833333333333,34.206966666666666,spk_1,two separate lists. I guess
+698,34.233333333333334,34.298316666666665,spk_0,your data functions hidden A T back can bring out when needed.
+699,34.30916666666667,34.3375,spk_3,The detailed ones will be sort of
+700,34.35466666666667,34.37031666666667,spk_3,brightness.
+701,34.3975,34.40833333333333,spk_0,"Oh, that's right."
+702,34.4085,34.42315,spk_0,"So, we're just,"
+703,34.423316666666665,34.45516666666666,spk_0,so you've got which ones a re gonna be on the front
+704,34.455333333333336,34.479166666666664,spk_0,and which ones a re gonna be a in the back?
+705,34.48916666666667,34.505833333333335,spk_0,We have to decide
+706,34.523316666666666,34.52415,spk_1,next
+707,34.5295,34.53215,spk_1,couple of
+708,34.534,34.535333333333334,spk_1,minutes
+709,34.53731666666667,34.540816666666665,spk_1,and then
+710,34.54333333333334,34.5435,spk_1,I
+711,34.5538,34.56465,spk_1,guess so.
+712,34.577466666666666,34.592483333333334,spk_1,"So on the,"
+713,34.6073,34.618316666666665,spk_0,so
+714,34.62565,34.64281666666667,spk_0,on front.
+715,34.66963333333333,34.67013333333333,spk_0,Yes.
+716,34.68613333333333,34.696983333333336,spk_0,Numbers
+717,34.73883333333333,34.739333333333335,spk_2,and
+718,34.74183333333333,34.74915,spk_2,the volume
+719,34.7685,34.776666666666664,spk_1,volume.
+720,34.79415,34.81998333333333,spk_1,"If you have a mute button as well,"
+721,34.83598333333333,34.85398333333333,spk_1,a mute button as well.
+722,34.870466666666665,34.87831666666666,spk_1,Hm.
+723,34.89183333333333,34.9028,spk_1,Oh.
+724,34.91165,34.917833333333334,spk_2,Mm-hmm.
+725,34.92166666666667,34.9505,spk_3,And it's probably a power one as well.
+726,34.96816666666667,34.97431666666667,spk_3,I know.
+727,35.04548333333334,35.06648333333333,spk_2,"I know. It's probably like, um,"
+728,35.093333333333334,35.119483333333335,spk_2,not an issue to raise. Yeah.
+729,35.12315,35.16766666666667,spk_2,"But, um, the whole thing about not using a stand by,"
+730,35.173316666666665,35.197,spk_2,"uh, because of the,"
+731,35.20365,35.242333333333335,spk_2,like waste of electricity on that. Have you seen the adverts?
+732,35.24831666666667,35.280166666666666,spk_2,Like if you boil the kettle that's full. It's a weird
+733,35.282983333333334,35.331,spk_2,leave your telly on standby. It powers black people for a certain a mount of time.
+734,35.34381666666667,35.38281666666666,spk_2,"-- We should maybe try to discourage people from stand
+-- by,"
+735,35.385983333333336,35.414,spk_1,but then they might not buy it if they haven't got one.
+736,35.498983333333335,35.5395,spk_0,"So, so a re you having the stand by on the front then"
+737,35.55765,35.55781666666667,spk_1,a
+738,35.57083333333333,35.584666666666664,spk_2,little bit smaller.
+739,35.62815,35.639,spk_0,"Well,"
+740,35.656483333333334,35.697,spk_1,a re we gonna have the channel up and down as well as the number buttons.
+741,35.7045,35.717,spk_3,Um
+742,35.72031666666667,35.72731666666667,spk_3,cause
+743,35.732816666666665,35.7625,spk_3,"yeah, the market research said there was"
+744,35.76515,35.804833333333335,spk_3,quite a lot of people do just zap around
+745,35.809333333333335,35.821,spk_3,"-- flick.
+-- So,"
+746,35.87365,35.89233333333333,spk_1,so we've got 1000
+747,35.91716666666667,35.93033333333333,spk_1,and 60
+748,35.96131666666667,35.996,spk_0,channel I'm doing. What else have we got?
+749,35.99881666666667,36.025666666666666,spk_0,"-- What was that?
+-- 1610"
+750,36.027483333333336,36.03215,spk_3,volume
+751,36.03533333333333,36.0385,spk_3,is
+752,36.068666666666665,36.07481666666666,spk_0,so
+753,36.08598333333333,36.118,spk_0,volume button. How many volumes?
+754,36.130833333333335,36.13131666666666,spk_3,One?
+755,36.15133333333333,36.16316666666667,spk_0,Okay
+756,36.1925,36.2,spk_2,on me
+757,36.217,36.26465,spk_3,"and am. Yeah, that's 16, isn't it? Yeah. So anything else?"
+758,36.31048333333333,36.32683333333333,spk_3,I don't think so. No
+759,36.338,36.3425,spk_0,Parbo
+760,36.34831666666667,36.36165,spk_0,and stand by
+761,36.37415,36.397,spk_0,channel up and down.
+762,36.40883333333333,36.42516666666667,spk_0,"So, is that it"
+763,36.44565,36.45715,spk_0,okay?
+764,36.461983333333336,36.49166666666667,spk_0,That's 16 buttons. You reckon
+765,36.49915,36.52048333333333,spk_0,and then A t the back
+766,36.54783333333334,36.55583333333333,spk_3,you've got
+767,36.57266666666666,36.6015,spk_3,brightness and contrast.
+768,36.63698333333333,36.659666666666666,spk_1,"Maybe if we're gonna run out of time,"
+769,36.65983333333333,36.72031666666667,spk_1,one of us should come up with a list of these and then get back a t the next meeting.
+770,36.72048333333333,36.73433333333333,spk_1,Just a t the start and
+771,36.74616666666667,36.75248333333333,spk_0,see. Ok.
+772,36.76148333333333,36.77798333333333,spk_0,So on the back
+773,36.79815,36.82865,spk_0,it'll have brightness contrast.
+774,36.841483333333336,36.8545,spk_0,Anything else
+775,36.8685,36.9,spk_0,you're also gonna have the channel tuna in
+776,36.901833333333336,36.92015,spk_0,or as it were
+777,36.99333333333333,37.022666666666666,spk_0,"tuner, would that have up and down?"
+778,37.06981666666667,37.08315,spk_1,Okay. Yeah.
+779,37.11165,37.11931666666667,spk_3,Ok.
+780,37.14515,37.17616666666667,spk_3,And then maybe sort of an enter button for
+781,37.2085,37.27283333333333,spk_3,"sort of s you know, saying that you want that particular"
+782,37.27815,37.29481666666667,spk_3,thing tuned in
+783,37.302483333333335,37.32398333333333,spk_3,so you go up and down and then it
+784,37.3375,37.33916666666666,spk_3,finds
+785,37.34366666666666,37.35166666666667,spk_3,it and then you wanna
+786,37.36833333333333,37.37233333333333,spk_3,to
+787,37.379666666666665,37.393,spk_3,"select it. Yeah,"
+788,37.47616666666666,37.521,spk_1,I guess we're keeping s it simple. We don't really need any other audio fun
+789,37.52315,37.5465,spk_1,uh functions because it's just
+790,37.55365,37.56065,spk_1,"-- volume,
+-- volume,"
+791,37.5635,37.56465,spk_0,volume.
+792,37.57848333333333,37.58665,spk_0,"Yeah, I would have thought"
+793,37.58981666666666,37.5925,spk_0,so.
+794,37.60083333333333,37.60566666666666,spk_2,Yeah.
+795,37.62116666666667,37.64015,spk_2,"So, I think, um,"
+796,37.66766666666667,37.70433333333333,spk_2,"there's quite a lot of, like Dolby Surround, pseudo"
+797,37.706316666666666,37.73483333333333,spk_2,surround sort of things.
+798,37.77315,37.81081666666667,spk_1,Do they have their own controls on their actual products there
+799,37.8125,37.84815,spk_1,or do you have to do it via the remote?
+800,37.86065,37.86881666666667,spk_2,"Um,"
+801,37.874316666666665,37.927,spk_2,I think they've got their own controls in this kind of like hidden panel as
+802,37.931983333333335,37.96816666666667,spk_1,"soon as we got the, if they've got their own controls then we can avoid it"
+803,37.97398333333334,37.9875,spk_1,to keep it simple.
+804,37.99381666666667,37.99415,spk_2,Yeah.
+805,38.00715,38.05348333333333,spk_2,"Oh, no. I mean, um, like there's kind of individual buttons for them,"
+806,38.06648333333333,38.0935,spk_2,"like, on the TV, remote."
+807,38.109,38.13715,spk_2,But I don't really know what they thought. I've never used them
+808,38.15781666666667,38.16115,spk_2,something
+809,38.16333333333333,38.16366666666666,spk_2,to
+810,38.16548333333333,38.165816666666665,spk_2,do
+811,38.1675,38.178983333333335,spk_2,"-- with maybe
+-- unless"
+812,38.1845,38.18565,spk_1,something
+813,38.19148333333333,38.19448333333333,spk_1,"-- comes
+-- up."
+814,38.2045,38.23148333333334,spk_0,"Well, you might get some research on,"
+815,38.27666666666666,38.314166666666665,spk_1,"we, should we look into that and then just get back together."
+816,38.32315,38.335,spk_0,Okay.
+817,38.33916666666666,38.39098333333333,spk_0,"Right. So, I'll do the minutes of, uh, this meeting"
+818,38.409333333333336,38.43833333333333,spk_0,and we'll meet back.
+819,38.4465,38.46098333333333,spk_0,"Uh,"
+820,38.47065,38.547666666666665,spk_0,"I'm not sure. Um, 40 minutes I believe is the time."
+821,38.581,38.59065,spk_0,Okay.
+822,38.61215,38.61816666666667,spk_0,Come on.

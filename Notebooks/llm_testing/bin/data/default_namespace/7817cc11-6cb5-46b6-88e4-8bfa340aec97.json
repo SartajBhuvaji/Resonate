@@ -1,0 +1,22 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Climate Change meeting cop 26",
+    "meeting_uuid": "7817cc11-6cb5-46b6-88e4-8bfa340aec97",
+    "meeting_date": "20240304165314",
+    "last_conversation_no": 9666,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4",
+        "spk_5",
+        "spk_6",
+        "spk_7",
+        "spk_8",
+        "spk_9"
+    ],
+    "meeting_summary": "This is the last day of the Cop 26 meeting. Firstly, the group discussed the current climate crisis, the environmental crisis, and the ecological crisis. Next, they talked about how to make sure that young people would not only have the energy source they wanted, but that they would also be able to feed their young children. Lastly, they discussed the future of the project and how they could make it better for the whole world. The meeting ended with a group discussion about the future project and future ideas."
+}

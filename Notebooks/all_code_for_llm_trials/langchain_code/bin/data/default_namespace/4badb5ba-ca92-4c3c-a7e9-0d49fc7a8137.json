@@ -1,0 +1,17 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "2023-10-10_New_diffs_architecture_workflow_weekly_EMEA_AMER_1",
+    "meeting_uuid": "4badb5ba-ca92-4c3c-a7e9-0d49fc7a8137",
+    "meeting_date": "20240307114243",
+    "last_conversation_no": 19006,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4"
+    ],
+    "meeting_summary": "This is the second meeting of the group. First, the group discussed the logistics of the new time zone. They discussed how to deal with the different time zones of the time zones. Then, they discussed how they could make their work better by making it easier for people to share their work with the world. Lastly, they talked about how to make the new diffs architecture better for the group and how they would make it easier to share ideas about their work and future work with other groups."
+}
