@@ -42,12 +42,12 @@ This function will performed tasks:
 2. form clusters using cluste_datar-embedding.mat file
 3. Save predicted labels in cluster_data.csv
 '''
-def create_Cluster(new_data):
+def create_cluster(new_data):
     create_embedding()
     data = loadmat('data/embeddings/cluster_data-embedding.mat')
     features1 = data['text']
-    id = data['uuid'].reshape(-1)
     method='dgc'
+    _= new_data
     features = graph_filtering(features1, method='dgc')
     ibandwidth = estimate_bandwidth(features, quantile=0.30,random_state=42)
     msclustering= MeanShift(bandwidth=ibandwidth,max_iter=900)
@@ -75,7 +75,7 @@ def uuid_for_query(query,index):
     filtered_uuids = df[df['PredictedLabel'] == query_cluster_label[0]]['uuid'].tolist()
     return filtered_uuids
 
-def initialize_FAISS():
+def initialize_faiss():
     model =SemanticSearch.SemanticEmbedding()
     index= SemanticSearch.FaissForQuerySearch(model) 
     data = pd.read_csv('data/text/cluster_data.csv')
