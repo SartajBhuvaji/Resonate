@@ -12,10 +12,9 @@ from scipy.io import loadmat, savemat
 from sklearn.cluster import MeanShift, estimate_bandwidth
 from sklearn.neighbors import kneighbors_graph
 
-import src.clustering.resonate_semantic_search as SemanticSearch
+# import resonate_semantic_search as SemanticSearch
 
-# import SemanticEmbedding, FaissForQuerySearch
-# from resonate_semantic_search import SemanticEmbedding, FaissForQuerySearch
+import src.clustering.resonate_semantic_search as SemanticSearch
 
 
 def normalize_adj(adj, lmbda=1):
@@ -137,7 +136,7 @@ class Clustering:
     def uuid_for_query(self, query):
         # predict the cluster label for query
         query_cluster_label = self.index.search_query(query)
-        print(f"label pred: {query_cluster_label[0]}")
+        print(f"Predicted Label : {query_cluster_label[0]}")
         df = pd.read_csv("./data/clusteringFiles/cluster_data.csv")
         # match all uuid from predicted label
         filtered_uuids = df[df["cluster"] == query_cluster_label[0]]["uuid"].tolist()

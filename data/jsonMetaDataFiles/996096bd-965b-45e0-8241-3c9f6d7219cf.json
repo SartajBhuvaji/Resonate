@@ -1,0 +1,17 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Architecture Weekly EMEA",
+    "meeting_uuid": "996096bd-965b-45e0-8241-3c9f6d7219cf",
+    "meeting_date": "20240308165216",
+    "last_conversation_no": 18430,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "Jay",
+        "Sartaj",
+        "spk_2",
+        "spk_3",
+        "spk_4"
+    ],
+    "meeting_summary": "The meeting was about the new DS architecture design. The group first discussed the current status of the team's work on the LSF files. The final decision on LSF was made by the group, but they were not sure what kind of features they should include in their work. Finally, the meeting ended with a brief discussion on the future of the project, including the design of the DS architecture and future work on other computer systems.  The group was reminded that they had to make some changes to their work to meet the new requirements."
+}

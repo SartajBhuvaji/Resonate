@@ -30,7 +30,8 @@ class PineconeServerless:
 
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-        self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
+        if self.PINECONE_API_KEY is not None:
+            self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
         self._init_config(json_config)
         self.meeting_title = None
         self.base_data_path = "./data/jsonMetaDataFiles/"
@@ -239,7 +240,7 @@ class PineconeServerless:
         metadatas = []
 
         last_conversation_no = self._get_last_conversation_no()
-        # print('last_conversation_no: ', last_conversation_no)
+
         last_conversation_no = int(last_conversation_no)  # + 1
 
         embed = self._get_vector_embedder()
@@ -266,7 +267,7 @@ class PineconeServerless:
                         range(last_conversation_no, last_conversation_no + len(texts)),
                     )
                 )
-                # print('ids: ', ids)
+
                 last_conversation_no += len(texts)
                 embeds = embed.embed_documents(texts)
                 try:
@@ -287,7 +288,7 @@ class PineconeServerless:
                 )
             )
             last_conversation_no += len(texts)
-            # print('ids: ', ids)
+
             embeds = embed.embed_documents(texts)
             try:
                 index.upsert(
@@ -357,7 +358,8 @@ class PineconeServerless:
             )
             window = [str(i) for i in range(left, right + 1)]
             try:
-                print("Fetch window: ", window)
+                # print("Fetch window: ", window)
+                print("Contextual Window Conversation IDs: ", window)
                 fetch_response = index.fetch(
                     ids=window, namespace=self.pinecone_namespace
                 )

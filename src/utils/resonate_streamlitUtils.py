@@ -71,6 +71,7 @@ def pinecone_init_upsert(
         pinecone = PineconeServerless()
         pinecone.pinecone_upsert(
             df_transcript,
+            # meeting_uuid=NULL,
             meeting_uuid=meeting_uuid,
             meeting_video_file=False,
             meeting_title=meeting_title,
