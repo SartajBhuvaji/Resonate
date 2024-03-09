@@ -1,0 +1,19 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Healthcare Meeting 5",
+    "meeting_uuid": "7b1f34e8-5fa3-4da8-ab16-4dcbde90d6e1",
+    "meeting_date": "20240307103317",
+    "last_conversation_no": 259,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4",
+        "spk_5",
+        "spk_6"
+    ],
+    "meeting_summary": "Healthcare Meeting Summary Meeting 5"
+}

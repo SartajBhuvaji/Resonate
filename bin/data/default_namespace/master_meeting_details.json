@@ -1,32 +1,15 @@
 {
     "index": "langchain-retrieval-transcript",
     "namespace": "default_namespace",
-    "last_conversation_no": 154,
+    "last_conversation_no": 94,
     "meeting_uuids": [
-        "70a98ffa-4221-4a51-99b0-299cd9f231be",
-        "9da09451-0efc-4473-a9e3-78a155da8e26",
-        "5f3929c1-3c7b-428d-8fc6-a1b586391437"
+        "d52aa825-4b14-429a-97d7-bed4d49bcba5"
     ],
     "meetings": [
         {
-            "meeting_uuid": "9da09451-0efc-4473-a9e3-78a155da8e26",
-            "meeting_cluster_id": "healthcare_1",
+            "meeting_uuid": "d52aa825-4b14-429a-97d7-bed4d49bcba5",
             "meeting_title": "Healthcare Meeting 1",
-            "meeting_date": "20240218103408",
-            "meeting_video_file": false
-        },
-        {
-            "meeting_uuid": "5f3929c1-3c7b-428d-8fc6-a1b586391437",
-            "meeting_cluster_id": "healthcare_2",
-            "meeting_title": "Healthcare Meeting 2",
-            "meeting_date": "20240218103424",
-            "meeting_video_file": false
-        },
-        {
-            "meeting_uuid": "70a98ffa-4221-4a51-99b0-299cd9f231be",
-            "meeting_cluster_id": "healthcare_3",
-            "meeting_title": "Healthcare Meeting 3",
-            "meeting_date": "20240218103437",
+            "meeting_date": "20240226085957",
             "meeting_video_file": false
         }
     ]

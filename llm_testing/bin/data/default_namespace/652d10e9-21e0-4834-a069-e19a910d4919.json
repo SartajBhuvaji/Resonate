@@ -2,9 +2,8 @@
     "index": "langchain-retrieval-transcript",
     "namespace": "default_namespace",
     "meeting_title": "Healthcare Meeting 1",
-    "meeting_uuid": "9da09451-0efc-4473-a9e3-78a155da8e26",
-    "meeting_cluster_id": "healthcare_1",
-    "meeting_date": "20240218103408",
+    "meeting_uuid": "652d10e9-21e0-4834-a069-e19a910d4919",
+    "meeting_date": "20240307103249",
     "last_conversation_no": 94,
     "meeting_video_file": false,
     "meeting_members": [
