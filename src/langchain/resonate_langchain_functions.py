@@ -100,13 +100,13 @@ class LangChain:
         )
 
         chat_prompt_value = chat_prompt.format_prompt(context=context, input=query)
-        print(chat_prompt_value)
+        # print(chat_prompt_value)
         return chat_prompt_value.to_messages()
 
     def query_chatbot(self, query, context):
         self.messages = self.prompt(query, context)
         resp = self.conversation_bufw(self.messages)
-        print(resp)
+        # print(resp)
         return resp
 
     def parse_conversations(self, conversations) -> str:
@@ -127,11 +127,12 @@ class LangChain:
     def chat(self, query, in_filter: list[str] = [], complete_db_flag: bool = True):
         if "summary" in query:
             pass
-        self.pinecone.query_pinecone(query, [], complete_db_flag)
-        # self.pinecone.query_pinecone(query, in_filter, complete_db_flag)
+        # self.pinecone.query_pinecone(query, [], True)
+        self.pinecone.query_pinecone(query, in_filter, complete_db_flag)
         conversation = self.pinecone.query_delta_conversations()
+        # print("Conversation: ", conversation)
         context = self.parse_conversations(conversation)
-        # print(context)
+        # print("Context: ", context)
         response = self.query_chatbot(query, context)
         return response
 

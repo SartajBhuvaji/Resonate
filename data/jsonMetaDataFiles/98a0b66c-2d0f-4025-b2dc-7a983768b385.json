@@ -1,0 +1,17 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "EMEA Architecture meeting ",
+    "meeting_uuid": "98a0b66c-2d0f-4025-b2dc-7a983768b385",
+    "meeting_date": "20240308121728",
+    "last_conversation_no": 18397,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "Prachitee",
+        "Madhu",
+        "Wan Bae",
+        "Steve",
+        "Sartaj"
+    ],
+    "meeting_summary": "The meeting was about the new DS architecture design. The group first discussed the current status of the project. They then moved onto a general discussion about their work on the LSF files. They discussed the future direction of their work. The final meeting ended with a general update on the current progress of their project, including the progress of the current project.    The group then discussed the design of the new LSF file. They agreed that it was time to make some improvements to the current design."
+}

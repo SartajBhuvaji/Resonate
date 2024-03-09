@@ -34,7 +34,7 @@ def summarize_text(transcript):
 
         print("\n\nSummarizing Text...")
         summary = summarizer(text)[0]["summary_text"]
-        print("\n", summary, "\n")
+        # print("\n", summary, "\n")
         response = {"transcription": format_text, "summary": summary}
         return response
     except Exception as e:
@@ -47,19 +47,19 @@ def summarize_summary(summary_input):
     try:
         word_count = 1024  # post_data.get('word_count-summ')
 
-        print(
-            "min: ",
-            math.ceil(int(word_count) * 0.1),
-            "max: ",
-            math.ceil(int(word_count) * 0.25),
-        )
-        print("\n\nSummarizing again...")
+        # print(
+        #     "min: ",
+        #     math.ceil(int(word_count) * 0.1),
+        #     "max: ",
+        #     math.ceil(int(word_count) * 0.25),
+        # )
+        # print("\n\nSummarizing again...")
         summary = summarizer(
             summary_input,
             min_length=math.ceil(int(word_count) * 0.1),
             max_length=math.ceil(int(word_count) * 0.25),
         )[0]["summary_text"]
-        print("\n", summary, "\n")
+        # print("\n", summary, "\n")
 
         response = {"summary": summary}
         return response
@@ -95,7 +95,7 @@ def summarize_runner(transcript):
         summarized_summary = summarize_summary(summary_transcript["summary"])
         final_summary = summarized_summary["summary"]
         meeting_uuid = append_summary_to_csv(final_summary)
-        print(final_summary)
+        # print(final_summary)
     except Exception as e:
         print(f"Error in summarize_runner: {e}")
     return final_summary, meeting_uuid
