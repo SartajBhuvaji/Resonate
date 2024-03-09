@@ -57,7 +57,7 @@ def create_cluster(new_data):
     print("Clustering:Done")
     
     #add_abstractFile(new_data)
-    df = pd.read_csv(f'data/text/abstract_summary_data.csv')
+    df = pd.read_csv('data/text/abstract_summary_data.csv')
     df['cluster']=Z
     #new_data=pd.DataFrame({'uuid':df['uuid'],'text':df['text'],'PredictedLabel':Z})
     df.to_csv("data/text/cluster_data.csv")
