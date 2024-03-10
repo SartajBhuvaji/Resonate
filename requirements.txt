@@ -24,9 +24,3 @@ moviepy
 transformers
 streamlit_chat==0.0.2.2
 faiss-cpu
-
-#Testing
-gensim
-nltk
-python-docx
-tensorboard
