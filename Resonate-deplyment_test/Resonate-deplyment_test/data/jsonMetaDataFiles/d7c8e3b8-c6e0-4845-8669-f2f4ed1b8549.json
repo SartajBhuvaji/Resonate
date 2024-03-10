@@ -1,0 +1,19 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "2023-10-17_New_diffs_architecture_blueprint_1",
+    "meeting_uuid": "d7c8e3b8-c6e0-4845-8669-f2f4ed1b8549",
+    "meeting_date": "20240303214122",
+    "last_conversation_no": 9344,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4",
+        "spk_5",
+        "spk_6"
+    ],
+    "meeting_summary": "This was the second meeting of the new D-goal group. The meeting was about the architecture of the database. First, the group discussed the scroll issues that the team had to deal with. Next, they discussed the logistics of adding the blueprint to the documentation. The group also discussed how they could make their database more robust. Lastly, the meeting ended with a general discussion about the future of the project, including future work on the database and future thoughts about the team's work in general."
+}

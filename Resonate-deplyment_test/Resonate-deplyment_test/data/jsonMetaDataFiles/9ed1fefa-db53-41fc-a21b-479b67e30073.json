@@ -1,0 +1,16 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "office_relocation_2",
+    "meeting_uuid": "9ed1fefa-db53-41fc-a21b-479b67e30073",
+    "meeting_date": "20240307104047",
+    "last_conversation_no": 10260,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": "This meeting was about the design of the new building. First, the group decided to put two people room in the middle with only one window, so they would have to pay attention to the colour of the building. Next, they decided to place the first para meter, the first one was a para meter to choose people to put in their offices. Then, they agreed to put the second one as well as the third one. Lastly, they discussed how they would make the building more comfortable for all of them."
+}

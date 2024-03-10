@@ -1,0 +1,16 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "ES2014c.Mix-Headset",
+    "meeting_uuid": "b3821662-03f1-4349-8781-ba5f64439693",
+    "meeting_date": "20240307105146",
+    "last_conversation_no": 12942,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": "This meeting was about the conceptual design of the remote control. First, the group discussed the components design. They decided to have the, the logo, the company logo in its colour scheme in its own colour scheme. Next, they discussed the technical requirements. The group agreed that the product should be simple to use, but they wanted it to be more expensive. Lastly, they made some decisions about the product design, like the colour scheme, the material, the battery, and the buttons."
+}

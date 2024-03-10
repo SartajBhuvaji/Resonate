@@ -1,0 +1,16 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "ES2014a.Mix-Headset",
+    "meeting_uuid": "52d2dfe4-748b-4ecf-84fb-64be6ebcaeef",
+    "meeting_date": "20240307104317",
+    "last_conversation_no": 10845,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": "This is the first meeting of the new remote control project. Project Manager introduced the team members to the project and asked them to come up with a new design for the remote control. The team agreed to make the new product more user-friendly and to make it a remote control for all age groups. The meeting ended with a group discussion about the working design of the product. The group agreed that the product should be a working design with a wide range of functions and should be suitable for all ages groups."
+}

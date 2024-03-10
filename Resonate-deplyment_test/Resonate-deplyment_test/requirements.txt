@@ -1,0 +1,29 @@
+# Core
+numpy
+pandas
+tqdm
+ipykernel
+boto3
+botocore
+jupyter
+ipywidgets
+python-dotenv
+scikit-learn
+torch
+
+# Project Specific
+openai
+langchain-community
+langchain-openai
+langchain
+pinecone-client
+streamlit
+tiktoken
+webvtt-py
+moviepy
+transformers
+streamlit_chat==0.0.2.2
+faiss-cpu
+
+# LLM Eval
+# trulens

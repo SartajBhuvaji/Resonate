@@ -1,0 +1,16 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "office_relocation_3",
+    "meeting_uuid": "e993da88-0e17-4a35-ba9a-c03decca607b",
+    "meeting_date": "20240307104123",
+    "last_conversation_no": 10406,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": "The meeting was about the new office space in the university building. The team first discussed how they would use the space they had been waiting for. The professor thought that they should make it better for the team to work on their next projects. The group also discussed how to make sure that the team would have enough room for all their work. The meeting ended with a group discussion about how they could make their new office better. The professor suggested that the group should make their next project better."
+}

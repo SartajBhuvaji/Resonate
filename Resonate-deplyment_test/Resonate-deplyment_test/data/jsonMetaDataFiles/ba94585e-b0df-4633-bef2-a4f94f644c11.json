@@ -1,0 +1,20 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Social_Media_-_Harmed_Teens",
+    "meeting_uuid": "ba94585e-b0df-4633-bef2-a4f94f644c11",
+    "meeting_date": "20240307103901",
+    "last_conversation_no": 9814,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4",
+        "spk_5",
+        "spk_6",
+        "spk_7"
+    ],
+    "meeting_summary": "This meeting was about the future of social media. Firstly, the group discussed the current trends in the social media market, including the rise in the use of the internet and the trend-watching. Secondly, they talked about the current trend in the market for the internet, which was largely focused on the young and old people's different tastes. Thirdly, they discussed the role of the Internet in the current political climate, and the future directions of the society. Lastly, they agreed that the market should be more focused on young people and less on old people."
+}

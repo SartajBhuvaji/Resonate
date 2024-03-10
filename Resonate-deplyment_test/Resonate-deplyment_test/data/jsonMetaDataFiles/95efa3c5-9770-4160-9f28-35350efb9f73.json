@@ -1,0 +1,18 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Gitlab_Monthly_Release_Kickoff_1",
+    "meeting_uuid": "95efa3c5-9770-4160-9f28-35350efb9f73",
+    "meeting_date": "20240307105338",
+    "last_conversation_no": 13405,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4",
+        "spk_5"
+    ],
+    "meeting_summary": "This is the first time that the team has hosted a release kickoff at Git Lab. The meeting was about the Glab 16.7 monthly release kickoff for November. First the team discussed the current status of the core platforms group. Next the group discussed the future direction of the project including future directions and future work on data science. Lastly the meeting ended with a group discussion about the Deaf section of the web which was mainly about the improvements in the interface design."
+}

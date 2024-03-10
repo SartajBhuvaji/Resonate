@@ -1,0 +1,17 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "2023-09-26_Architecture_Design_Workflow_New_Diffs_kickoff_call_3",
+    "meeting_uuid": "72858a28-248d-4bef-af03-c62a3c285fbb",
+    "meeting_date": "20240307110626",
+    "last_conversation_no": 16718,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_7",
+        "spk_8"
+    ],
+    "meeting_summary": "The meeting was about the progress of their work on the Aurora project. The group discussed Aurora's progress and future directions. The professor thought that Aurora should create a shared document with some organization to share the work they had done. The team agreed that Aurora's performance should be measured against the criteria they had set for Aurora, but they were not sure how they could make their work better. The meeting ended with a general discussion about Aurora's future directions and future work on Aurora's project."
+}

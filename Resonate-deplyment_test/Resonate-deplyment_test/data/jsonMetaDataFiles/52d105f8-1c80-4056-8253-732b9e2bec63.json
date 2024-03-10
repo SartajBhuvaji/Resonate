@@ -1,0 +1,16 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "office_relocation_1",
+    "meeting_uuid": "52d105f8-1c80-4056-8253-732b9e2bec63",
+    "meeting_date": "20240307103947",
+    "last_conversation_no": 10020,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3"
+    ],
+    "meeting_summary": "The group was moving to a new building across the street and were moving in three weeks. The group discussed the logistics of the new building. First, the group decided to organise their group into three groups: the phd students, the professor, and the graduate student. Next, they decided what kind of equipment they should have in their new building and how they should design it. Lastly, they discussed how they could make their group more efficient by making sure they had enough money for the cost control."
+}
