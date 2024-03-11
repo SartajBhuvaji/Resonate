@@ -105,6 +105,7 @@ By utilizing the Pinecone vector store database, we retrieve pertinent conversat
 
 ## Demo
 
+https://github.com/SartajBhuvaji/Resonate/assets/31826483/b7f9ef2c-3839-47d5-94cf-c1d632c70f57
 
 ## Framework
-![Data Store](docs/architecture_diagram.png)
+![architecture_diagram](https://github.com/SartajBhuvaji/Resonate/assets/31826483/20140140-8c94-4952-9900-334bfe8b335a)
