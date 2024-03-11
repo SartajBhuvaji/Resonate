@@ -1,0 +1,5 @@
+## Create a .env file and fill in the values for the following keys
+OPENAI_API_KEY = ""
+PINECONE_API_KEY = ""
+AWS_ACCESS_KEY = ""
+AWS_SECRET_ACCESS_KEY = ""

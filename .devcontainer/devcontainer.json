@@ -1,0 +1,7 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "version": "1.12.1",
+    "installTools": "false"
+  }
+}

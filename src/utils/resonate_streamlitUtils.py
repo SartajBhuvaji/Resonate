@@ -27,14 +27,12 @@ def load_json_config(json_file_path="./config/config.json"):
     with open(json_file_path, "r") as file:
         # Load the JSON data
         data = json.load(file)
-
     return data
 
 
 def aws_transcribe(file_name):
 
     json_config = load_json_config()
-
     current_timestamp = str.lower(datetime.now().strftime("%Y-%b-%d-%I-%M-%p"))
 
     json_config["AWS_INPUT_BUCKET"] += f"{str(current_timestamp)}"
@@ -71,6 +69,7 @@ def pinecone_init_upsert(
         pinecone = PineconeServerless()
         pinecone.pinecone_upsert(
             df_transcript,
+            # meeting_uuid=NULL,
             meeting_uuid=meeting_uuid,
             meeting_video_file=False,
             meeting_title=meeting_title,

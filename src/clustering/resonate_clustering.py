@@ -1,24 +1,30 @@
+# Description:Creates clusters based on the uploaded transcripts and returns the uuid of the documents that are similar to the query.
+# Reference Code: https://github.com/chakib401/smoothing_sentence_embeddings/blob/master/utils.py
+
+'''
+Paper Citation for def normalize_adj(): 
+Fettal, Chakib, Lazhar Labiod, and Mohamed Nadif. 
+"More Discriminative Sentence Embeddings via Semantic Graph Smoothing." 
+arXiv preprint arXiv:2402.12890 (2024).
+'''
+
 import json
 import os
-
 import joblib
 import numpy as np
 import pandas as pd
-
 import scipy.sparse as sp
+import src.clustering.resonate_semantic_search as SemanticSearch
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 from scipy.io import loadmat, savemat
 from sklearn.cluster import MeanShift, estimate_bandwidth
 from sklearn.neighbors import kneighbors_graph
 
-import src.clustering.resonate_semantic_search as SemanticSearch
-
-# import SemanticEmbedding, FaissForQuerySearch
-# from resonate_semantic_search import SemanticEmbedding, FaissForQuerySearch
-
-
 def normalize_adj(adj, lmbda=1):
+    '''
+    Normalize adjacency matrix of semantic graph
+    '''
     adj = adj + lmbda * sp.eye(adj.shape[0])
     rowsum = np.array(adj.sum(1))
     r_inv = np.power(rowsum, -1).flatten()
@@ -36,6 +42,14 @@ def normalize_adj(adj, lmbda=1):
 
 
 def graph_filtering(features, degree=2, lmbda=1, nn=10, alpha=0.5, t=5, method="sgc"):
+    """
+    This function will perform graph filtering based on four polynomial filters
+    We keep n=10, as per paper. And is used to calculate the graph (adjacency matrix)
+    between 10 vectors/features.
+
+    **That is why we have 10 pre-existing transcripts placed in pinecone (through the ont_time_script)
+    **If you want to change the number of transcripts, you will have to change the number of neighbors
+    """
     adj = kneighbors_graph(features, n_neighbors=nn, metric="cosine")
     adj = (adj + adj.T) / 2
 
@@ -64,19 +78,9 @@ def graph_filtering(features, degree=2, lmbda=1, nn=10, alpha=0.5, t=5, method="
 
 
 def load_json_config(json_file_path="./config/config.json"):
-    # Use a context manager to ensure the file is properly closed after opening
     with open(json_file_path, "r") as file:
-        # Load the JSON data
         data = json.load(file)
-
     return data
-
-
-# Adding new document/transcript
-"""This function will perform two task:
-1. embedding on entire data, abstract_data.csv (appending on mat file was causing failure)
-2. save embeddings in cluster-embedding.mat in format uuid,text
-"""
 
 
 class Clustering:
@@ -90,8 +94,11 @@ class Clustering:
         self.index = self.initialize_FAISS()
 
     def create_embedding(self):
+        '''This function will perform two task:
+        1. embedding on entire data, abstract_data.csv
+        2. save embeddings in cluster_data-embedding.mat in format uuid, text
+        '''
         data = pd.read_csv("./data/summaryFiles/abstract_summary_data.csv")
-
         json_config = load_json_config()
 
         text, id = data["text"], data["uuid"]
@@ -105,14 +112,14 @@ class Clustering:
             {"uuid": id, "text": embeddings},
         )
 
-    """Form clusters
-    This function will performed tasks:
-    1. call embedding function
-    2. form clusters using cluster-embedding.mat file
-    3. Save predicted labels in cluster_data.csv
-    """
 
     def create_Cluster(self):
+        '''
+        This function will perform following tasks:
+        1. call embedding function
+        2. form clusters using cluste_data-embedding.mat file
+        3. Save predicted labels in cluster_data.csv
+        '''
         self.create_embedding()
 
         data = loadmat("./data/embeddingFiles/cluster-embedding.mat")
@@ -131,15 +138,17 @@ class Clustering:
         df["cluster"] = msclustering.predict(features)
         df.to_csv("./data/clusteringFiles/cluster_data.csv")
         print("Cluster data saved")
-
         self.index = self.initialize_FAISS()
 
+
+
     def uuid_for_query(self, query):
-        # predict the cluster label for query
+        '''
+        Returns the uuids of the documents that are similar to the query, based on the clustering
+        '''
         query_cluster_label = self.index.search_query(query)
-        print(f"label pred: {query_cluster_label[0]}")
+        print(f"Predicted Label : {query_cluster_label[0]}")
         df = pd.read_csv("./data/clusteringFiles/cluster_data.csv")
-        # match all uuid from predicted label
         filtered_uuids = df[df["cluster"] == query_cluster_label[0]]["uuid"].tolist()
         return filtered_uuids
 

@@ -1,23 +1,19 @@
-import datetime
+# Description: Pinecone Serverless Class for Resonate
+# Reference: https://www.pinecone.io/docs/
 
+import datetime
+import uuid
 import json
 import os
 import time
-
 import pandas as pd
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
-
-import uuid
 from pinecone import Pinecone, ServerlessSpec
 
-
 def load_json_config(json_file_path="./config/config.json"):
-    # Use a context manager to ensure the file is properly closed after opening
     with open(json_file_path, "r") as file:
-        # Load the JSON data
         data = json.load(file)
-
     return data
 
 
@@ -25,12 +21,12 @@ class PineconeServerless:
     def __init__(self) -> None:
         print("Pinecone Serverless Initializing")
         json_config = load_json_config()
-        # Load environment variables from .env file
         load_dotenv("./config/.env")
 
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-        self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
+        if self.PINECONE_API_KEY is not None:
+            self.pinecone = Pinecone(api_key=self.PINECONE_API_KEY)
         self._init_config(json_config)
         self.meeting_title = None
         self.base_data_path = "./data/jsonMetaDataFiles/"
@@ -38,7 +34,6 @@ class PineconeServerless:
         self._create_master_json()
         self._create_index()
         self.response = None
-
         print("Pinecone Serverless Initialized")
 
     def _init_config(self, json_config) -> None:
@@ -58,16 +53,15 @@ class PineconeServerless:
         return self.pinecone.Index(self.pinecone_index_name)
 
     def _create_index(self) -> None:
+        '''
+        Creates a new index in Pinecone if it does not exist
+        '''
         pinecone_indexes_list = [
             index.get("name")
-            for index in self.pinecone.list_indexes().get("indexes", [])
-        ]
+            for index in self.pinecone.list_indexes().get("indexes", [])]
 
-        # # Creating Index if it doesn't exist in Pinecone
         if self.pinecone_index_name not in pinecone_indexes_list:
-
             try:
-
                 self.pinecone.create_index(
                     name=self.pinecone_index_name,
                     metric=self.pinecone_metric,
@@ -75,13 +69,11 @@ class PineconeServerless:
                     spec=ServerlessSpec(
                         cloud=self.pinecone_cloud_provider,
                         region=self.pinecone_region,
-                        # pod_type="p1.x1",
+                        # pod_type="p1.x1", # Future use
                     ),
                 )
 
-                while not self.pinecone.describe_index(self.pinecone_index_name).status[
-                    "ready"
-                ]:
+                while not self.pinecone.describe_index(self.pinecone_index_name).status["ready"]:
                     time.sleep(5)
 
             except Exception as e:
@@ -102,12 +94,11 @@ class PineconeServerless:
             print("Index does not exist: ", e)
 
     def _create_master_json(self) -> None:
-        # Check if the directory exists, if not, create it
+        '''
+        Check if the master json file exists, if not, create it
+        '''
         os.makedirs(os.path.dirname(self.base_data_path), exist_ok=True)
-
-        # Check if the file exists
         if not os.path.exists(self.master_json_file):
-            # If the file does not exist, create it and write an empty JSON object
             with open(self.master_json_file, "w") as file:
                 data = {
                     "index": self.pinecone_index_name,
@@ -130,12 +121,12 @@ class PineconeServerless:
         meeting_video_file: bool,
         time_stamp: str,
     ) -> dict:
-
+        '''
+        Updates the master json file with the new meeting details
+        '''
         with open(self.master_json_file, "r+") as f:
             data = json.load(f)
-
             data["meeting_uuids"] = list(set(data["meeting_uuids"] + [meeting_uuid]))
-
             data["last_conversation_no"] = last_conversation_no
             data["meetings"].append(
                 {
@@ -145,7 +136,6 @@ class PineconeServerless:
                     "meeting_video_file": meeting_video_file,
                 }
             )
-
             return data
 
     def _get_meeting_members(self, transcript: pd.DataFrame) -> list[str]:
@@ -161,6 +151,9 @@ class PineconeServerless:
         time_stamp: str,
         meeting_summary: str,
     ) -> dict:
+        '''
+        Creates a new json file for the meeting details
+        '''
         data = {
             "index": self.pinecone_index_name,
             "namespace": self.pinecone_namespace,
@@ -193,9 +186,10 @@ class PineconeServerless:
         meeting_video_file: bool,
         meeting_summary: str,
     ) -> dict:
-
+        '''
+        Updates the master json file with the new meeting details
+        '''
         time_stamp = str(datetime.datetime.now().strftime("%Y%m%d%H%M%S"))
-
         self._create_new_meeting_json(
             meeting_uuid,
             meeting_title,
@@ -239,12 +233,10 @@ class PineconeServerless:
         metadatas = []
 
         last_conversation_no = self._get_last_conversation_no()
-        # print('last_conversation_no: ', last_conversation_no)
-        last_conversation_no = int(last_conversation_no)  # + 1
+        last_conversation_no = int(last_conversation_no) 
 
         embed = self._get_vector_embedder()
         meeting_members = self._get_meeting_members(transcript)
-        # meeting_uuid = #str(uuid.uuid4())
         index = self._get_index()
 
         for _, record in transcript.iterrows():
@@ -266,9 +258,9 @@ class PineconeServerless:
                         range(last_conversation_no, last_conversation_no + len(texts)),
                     )
                 )
-                # print('ids: ', ids)
                 last_conversation_no += len(texts)
                 embeds = embed.embed_documents(texts)
+
                 try:
                     index.upsert(
                         vectors=zip(ids, embeds, metadatas),
@@ -279,6 +271,7 @@ class PineconeServerless:
                 texts = []
                 metadatas = []
 
+        # Upsert the remaining texts
         if len(texts) > 0:
             ids = list(
                 map(
@@ -287,8 +280,8 @@ class PineconeServerless:
                 )
             )
             last_conversation_no += len(texts)
-            # print('ids: ', ids)
             embeds = embed.embed_documents(texts)
+
             try:
                 index.upsert(
                     vectors=zip(ids, embeds, metadatas),
@@ -309,14 +302,18 @@ class PineconeServerless:
         print("Upserted transcript into Pinecone")
 
     def _extract_id_from_response(self, response: list) -> list[int]:
-        return list(int(match["id"]) for match in response["matches"])
+        if response:
+            return list(int(match["id"]) for match in response["matches"])
+        return []
 
     def query_pinecone(
         self, query: str, in_filter: list[str] = [], complete_db_flag: bool = False
     ) -> list:
         """
-        Queries Pinecone for the given query
+        Queries Pinecone for the given query, where in_filter is the list of meeting_uuids to filter the query 
+        and if complete_db_flag is True, the entire database is queried
         """
+        # for using without clustering, complete_db_flag to True
         try:
             index = self._get_index()
             embed = self._get_vector_embedder()
@@ -335,9 +332,10 @@ class PineconeServerless:
             print("Error querying Pinecone: ", e)
         return []
 
+
     def query_delta_conversations(self) -> pd.DataFrame:
         """
-        Queries Pinecone for the given query and returns the delta conversations
+        Queries Pinecone for the given query and returns the delta conversations (conversation window around the query result)
         """
         ids = self._extract_id_from_response(self.response)
         last_conversation_no = self._get_last_conversation_no()
@@ -357,7 +355,8 @@ class PineconeServerless:
             )
             window = [str(i) for i in range(left, right + 1)]
             try:
-                print("Fetch window: ", window)
+                # print("Fetch window: ", window)
+                print("Contextual Window Conversation IDs: ", window)
                 fetch_response = index.fetch(
                     ids=window, namespace=self.pinecone_namespace
                 )
@@ -365,17 +364,19 @@ class PineconeServerless:
             except Exception as e:
                 print("Error fetching from Pinecone for id:", id, "Error:", e)
                 continue
-
         # print('conversation length: ', len(conversation))
         return self._parse_fetch_conversations(conversation)
 
-    def _parse_fetch_conversations(self, conversation) -> pd.DataFrame:
+
+    def _parse_fetch_conversations(self, conversation)-> dict:
+        '''
+        Parses the conversation dictionary and returns a grouped_dfs
+        '''
         data_rows = []
         for primary_hit_id, primary_hit_data in conversation.items():
             for _, vector_data in primary_hit_data["vectors"].items():
                 id = vector_data["id"]
                 meeting_uuid = vector_data["metadata"]["meeting_uuid"]
-
                 speaker = vector_data["metadata"]["speaker"]
                 start_time = vector_data["metadata"]["start_time"]
                 text = vector_data["metadata"]["text"]
@@ -387,7 +388,6 @@ class PineconeServerless:
         columns = ["primary_id", "id", "meeting_uuid", "speaker", "start_time", "text"]
         delta_conversation_df = pd.DataFrame(data_rows, columns=columns)
         delta_conversation_df = delta_conversation_df.sort_values(by=["id"])
-
         delta_conversation_df = delta_conversation_df.drop_duplicates(subset=["id"])
 
         # creating separate df for rows with same meeting_cluster_id
@@ -395,7 +395,6 @@ class PineconeServerless:
             group_name: group.reset_index(drop=True, inplace=False)
             for group_name, group in delta_conversation_df.groupby("meeting_uuid")
         }
-
         # return delta_conversation_df
         return grouped_dfs
 
