@@ -44,3 +44,5 @@ This JSON file holds crucial configuration values for the entire application. Pl
 - **LC_LLM_SUMMARY_MAX_TOKEN_LIMIT**: Maximum tokens allowed for summary in the memory buffer.
 - **LC_LLM_MODEL**: Large Language Model used for inference.
 
+
+<i>The config/requirements.txt file was generated using pip freeze, if the primary ./requirements.txt fails, please use config/requirements.txt </i>
