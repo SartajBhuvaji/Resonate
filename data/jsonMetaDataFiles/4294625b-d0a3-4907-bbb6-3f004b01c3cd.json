@@ -1,0 +1,17 @@
+{
+    "index": "langchain-retrieval-transcript",
+    "namespace": "default_namespace",
+    "meeting_title": "Huma Resource disciplinary",
+    "meeting_uuid": "4294625b-d0a3-4907-bbb6-3f004b01c3cd",
+    "meeting_date": "20240311111642",
+    "last_conversation_no": 27833,
+    "meeting_video_file": false,
+    "meeting_members": [
+        "spk_0",
+        "spk_1",
+        "spk_2",
+        "spk_3",
+        "spk_4"
+    ],
+    "meeting_summary": "This is the last meeting at the Nebraska Country Club. The group discussed the D OS and the disciplinary meeting. First, the manager introduced the group members to each other and their roles in the project. Next, the group discussed management techniques, including how to make sure that the team was on the right track. Lastly, they discussed the management style of the project, like how they could make the team more efficient and how they would make their team better.   The meeting ended with a group discussion about the future direction of the team."
+}
