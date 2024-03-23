@@ -18,6 +18,7 @@
   </p>
 </div>
 
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-lg-dark.svg)](https://huggingface.co/spaces/sartajbhuvaji/Resonate)
 
 # Resonate: A Retrieval Augmented Framework For Meeting Insight Extraction
 In the fast-paced professional realm, meetings serve as vital platforms for collaboration and decision-making. Yet, among the vast exchange of information, recollecting essential details often proves challenging, hindering overall productivity. Imagine a scenario where past discussions on User Interface design are essential but cumbersome to retrieve.
