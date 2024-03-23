@@ -5,6 +5,7 @@
   </a>
 
 <h3 align="center">Resonate</h3>
+
     Data Science Capstone
   <p align="center">
     <br />
