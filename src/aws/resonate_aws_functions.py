@@ -343,7 +343,7 @@ class resonate_aws_transcribe:
 
 
 if __name__ == "__main__":
-    dotenv.load_dotenv("./config/.env")
+   #dotenv.load_dotenv("./config/.env")
 
     current_timestamp = str.lower(datetime.now().strftime("%Y-%b-%d-%I-%M-%p"))
 

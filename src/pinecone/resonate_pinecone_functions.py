@@ -21,7 +21,7 @@ class PineconeServerless:
     def __init__(self) -> None:
         print("Pinecone Serverless Initializing")
         json_config = load_json_config()
-        load_dotenv("./config/.env")
+        #load_dotenv("./config/.env")
 
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")

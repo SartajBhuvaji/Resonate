@@ -165,7 +165,7 @@ class Clustering:
 
 
 if __name__ == "__main__":
-    load_dotenv("./config/.env")
+    #load_dotenv("./config/.env")
     Clustering_obj = Clustering()
     print(
         Clustering_obj.uuid_for_query(

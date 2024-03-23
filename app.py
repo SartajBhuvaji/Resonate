@@ -21,10 +21,13 @@ def initialize_session_state():
     # Initialize API keys in session state if not present
     if "api_keys" not in ss:
         ss.api_keys = {}
-        ss.api_keys["openai_api_key"] = os.environ.get("OPENAI_API_KEY")
-        ss.api_keys["pinecone_api_key"] = os.environ.get("PINECONE_API_KEY")
-        ss.api_keys["aws_access_key"] = os.environ.get("AWS_ACCESS_KEY")
-        ss.api_keys["aws_secret_access_key"] = os.environ.get("AWS_SECRET_ACCESS_KEY")
+        ss.api_keys["openai_api_key"] = None
+        ss.api_keys["pinecone_api_key"] = None
+        ss.api_keys["aws_access_key"] = None
+        ss.api_keys["aws_secret_access_key"] = None
+
+    if "api_key_set" not in ss:
+        ss.api_key_set = False 
     if "add_meeting" not in ss:
         ss.add_meeting = False
     if "Clustering_obj" not in ss:
@@ -36,7 +39,7 @@ def initialize_session_state():
         ss.transcript_text_editor = False
     if "meeting_name" not in ss:
         ss.meeting_name = ""
-    if "df_transcript_speaker" not in ss:
+    if "df_transcript_speaker" not in ss: 
         ss.df_transcript_speaker = pd.DataFrame()
     if "df_transcript_text" not in ss:
         ss.df_transcript_text = pd.DataFrame()
@@ -44,7 +47,7 @@ def initialize_session_state():
         ss.updated_transcript_df_to_embed = pd.DataFrame()
     if "chat_view" not in ss:
         ss.chat_view = True
-    if "langchain_obj" not in ss:
+    if "langchain_obj" not in ss and ss.api_key_set:
         ss.langchain_obj = LangChain()
     if "query" not in ss:
         ss.query = ""
@@ -147,6 +150,9 @@ def api_keys_input():
                 os.environ["AWS_SECRET_ACCESS_KEY"] = ss.api_keys[
                     "aws_secret_access_key"
                 ]
+
+            ss.api_key_set = True
+            print("API KEYS ARE: ", ss.api_keys)    
             st.rerun()
 
 
@@ -266,15 +272,20 @@ def transcript_text_editor():
 
 
 def init_streamlit():
-    load_dotenv("./config/.env")
     initialize_session_state()
+    if os.path.exists("./config/.env"):
+        load_dotenv("./config/.env")
+
+    else:
+        print(".env file does not exist, API keys must be set manually.")
+
     # Set initial state of the sidebar
-    if ss.api_keys["pinecone_api_key"] is not None:
-        st.set_page_config(
-            initial_sidebar_state="collapsed",
-            layout="wide",
+    st.set_page_config(
+        initial_sidebar_state="collapsed",
+        layout="wide",
         )
     st.title("RESONATE")
+
     # Initializing sidebar and its components
     with st.sidebar:
         api_keys_input()
@@ -283,17 +294,26 @@ def init_streamlit():
         ss.chat_view = not ss.chat_view
         ss.transcript_speaker_editor = False
         ss.transcript_text_editor = False
-    if ss.add_meeting:
+
+    if not ss.api_key_set:
+        st.header("Pre-requisites:")
+        st.write("Please set the API keys to enable the chat view.")
+        st.write("Please ensure that you have already run the 'pinecone_sample_dataloader.py'")
+
+    if ss.add_meeting and ss.api_key_set:
         add_meeting()
     if ss.transcript_speaker_editor:
         transcript_speaker_editor()
     if ss.df_transcript_text is not None and ss.transcript_text_editor:
         transcript_text_editor()
-    if ss.chat_view:
+    if ss.chat_view and ss.api_key_set:
         chat_view()  # Chat view
 
 
+
 if __name__ == "__main__":
+    # Please ensure you have data loaded in Pinecone before running the Streamlit app
+    # Please refer https://github.com/SartajBhuvaji/Resonate/blob/master/init_one_time_utils/PREREQUISITE.md
     init_streamlit()
 
 # Test questions:
