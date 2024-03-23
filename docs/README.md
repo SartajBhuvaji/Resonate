@@ -31,3 +31,6 @@
 - [Anthropic AI Docs](https://docs.anthropic.com/claude/docs/intro-to-claude)
 - [FAISS](https://deepnote.com/blog/semantic-search-using-faiss-and-mpnet)
 - [Sentence Transformer](https://www.sbert.net/)
+
+
+- [University Linkedin Post](https://www.linkedin.com/posts/seattle-university_last-week-students-enrolled-in-our-ms-in-ugcPost-7175530662689411073-L-f8?utm_source=share&utm_medium=member_desktop)
