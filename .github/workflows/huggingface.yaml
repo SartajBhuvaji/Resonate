@@ -1,7 +1,7 @@
 name: Hugging Face hub deployment
 on:
   push:
-    branches: [huggingface]
+    branches: huggingface
 
   # to run this workflow manually from the Actions tab
   workflow_dispatch:
