@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://sartajbhuvaji:$HF_TOKEN@huggingface.co/spaces/sartajbhuvaji/Resonate master
+        run: git push --force https://sartajbhuvaji:$HF_TOKEN@huggingface.co/spaces/sartajbhuvaji/Resonate main
