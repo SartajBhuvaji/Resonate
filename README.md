@@ -1,3 +1,14 @@
+---
+title: Resonate
+emoji: ❤️
+colorFrom: pink
+colorTo: green
+sdk: streamlit
+sdk_version: 1.32.2
+app_file: app.py
+pinned: false
+---
+
 <br />
 <div align="center">
   <a href="https://github.com/SartajBhuvaji/Data-Science-Project/tree/main/">
