@@ -12,21 +12,7 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - name: Install Git LFS
-        run: |
-          git lfs install
-          
-      - name: Track large files with Git LFS
-        run: |
-          git lfs track "src/aws/IB4005.wav"
-          git lfs track "Notebooks/Clustering/data/embeddings/abstract-embedding.mat"
-          git lfs track "Notebooks/Clustering/data/text/abstract.csv"
-      
-      # Remove large files from Git history
-      - name: Remove large files from Git history
-        run: |
-          git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "src/aws/IB4005.wav" "Notebooks/Clustering/data/embeddings/abstract-embedding.mat" "Notebooks/Clustering/data/text/abstract.csv"' --prune-empty --tag-name-filter cat -- --all
-          
-      # Force push the updated history
-      - name: Force push to origin
-        run: git push origin --force --all
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push https://sartajbhuvaji:$HF_TOKEN@huggingface.co/spaces/sartajbhuvaji/Resonate
