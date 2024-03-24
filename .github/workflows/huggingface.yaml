@@ -13,8 +13,8 @@ jobs:
           lfs: true
 
       - name: Github reset commands
-        run: git filter-branch --index-filter --f "git rm -rf --cached --ignore-unmatch src/aws/IB4005.wav HEAD
-        
+        run: git filter-branch --index-filter --f "git rm -rf --cached --ignore-unmatch 'src/aws/IB4005.wav' HEAD
+
       - name: Git test 2   
         run: git push origin --force --all
 
