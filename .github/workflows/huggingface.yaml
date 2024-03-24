@@ -31,4 +31,4 @@ jobs:
       - name: Force push to origin
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push origin --force https://sartajbhuvaji:$HF_TOKEN@huggingface.co/spaces/sartajbhuvaji/Resonate main
+        run: git push --force https://sartajbhuvaji:$HF_TOKEN@huggingface.co/spaces/sartajbhuvaji/Resonate main
