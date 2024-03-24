@@ -25,7 +25,7 @@ jobs:
       # Remove large files from Git history
       - name: Remove large files from Git history
         run: |
-          git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "src/aws/IB4005.wav" "Notebooks/Clustering/data/embeddings/abstract-embedding.mat" "Notebooks/Clustering/data/text/abstract.csv"' --prune-empty --tag-name-filter cat -- --all
+          git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "src/aws/IB4005.wav" "Notebooks/Clustering/data/embeddings/abstract-embedding.mat" "Notebooks/Clustering/data/text/abstract.csv" "Research/Research Papers/Attention is all you need.pdf" "Research/Research Papers/LoRA- Low-Rank Adaptation of Large Language Models.pdf" "Research/Research Papers/QLoRA- Efficient Finetuning of Quantized LLMs.pdf" "src/aws/test.wav" ' --prune-empty --tag-name-filter cat -- --all
           
       # Force push the updated history
       - name: Force push to origin
