@@ -11,6 +11,11 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+
+      - name: Github reset commands
+        run: git filter-branch --index-filter --f "git rm -rf --cached --ignore-unmatch src/aws/IB4005.wav HEAD
+        run: git push origin --force --all
+
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
