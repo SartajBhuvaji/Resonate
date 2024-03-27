@@ -15,6 +15,7 @@ torch
 openai
 langchain-community
 langchain-openai
+langchain_google_genai
 langchain
 pinecone-client
 streamlit

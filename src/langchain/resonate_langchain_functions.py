@@ -6,7 +6,8 @@ from src.pinecone.resonate_pinecone_functions import PineconeServerless
 from langchain_community.callbacks import get_openai_callback
 from dotenv import load_dotenv
 from datetime import datetime
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
+from google.generativeai.types.safety_types import HarmBlockThreshold, HarmCategory
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import (
     ConversationSummaryBufferMemory,
@@ -27,12 +28,15 @@ class LangChain:
     def __init__(self):
 
         json_config = load_json_config()
+        
         # check if the .env file exists using os
         if os.path.exists("./config/.env"):
             load_dotenv("./config/.env")
 
+       
         self.PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
         self.OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+        self.GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
         print("PINECONE_API_KEY: ", self.PINECONE_API_KEY)
         if self.PINECONE_API_KEY and self.OPENAI_API_KEY :
             self.pinecone = PineconeServerless()
@@ -46,11 +50,24 @@ class LangChain:
                 "LC_CONV_BUFFER_MEMORY_WINDOW"
             ]
 
-            self.llm = ChatOpenAI(
-                temperature=self.llm_temperature,
-                model_name=self.llm_model,
-                streaming=False,
-            )
+            # self.llm = ChatOpenAI(
+            #     temperature=self.llm_temperature,
+            #     model_name=self.llm_model,
+            #     streaming=False,
+            # )
+            safety_settings = {
+                #HarmCategory.HARM_CATEGORY_UNSPECIFIED: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+            }
+
+            self.llm = ChatGoogleGenerativeAI(model="gemini-pro",
+                                              google_api_key=self.GOOGLE_API_KEY,
+                                              temperature=0.01,
+                                              convert_system_message_to_human = False,
+                                              safety_settings=safety_settings)
 
             self.conversation_bufw = ConversationChain(
                 llm=self.llm,
@@ -146,3 +163,9 @@ class LangChain:
             response = chain(query)
             print(f"Call Back:  {callback}")
         return response
+
+
+    #  { category: HARM_CATEGORY_SEXUALLY_EXPLICIT probability: NEGLIGIBLE } 
+    # safety_ratings { category: HARM_CATEGORY_HATE_SPEECH probability: HIGH }
+    # safety_ratings { category: HARM_CATEGORY_HARASSMENT probability: MEDIUM }
+    # safety_ratings { category: HARM_CATEGORY_DANGEROUS_CONTENT probability: NEGLIGIBLE }
